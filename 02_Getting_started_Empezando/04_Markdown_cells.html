@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown cells &#8212; Plants &amp; Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Celdas de markdown" href="05_Celdas_de_markdown.html" />
+    <link rel="prev" title="Coding cells" href="02_Coding_cells.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00_Introduction.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_Welcome_Bienvenid%40/00_Welcome.html">
+   Welcome to Plants &amp; Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_Welcome_Bienvenid%40/01_Bienvenid%40.html">
+   Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="00_Installing_Anaconda.html">
+   Installing Anaconda and using Jupyter notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_Instalar_Anaconda.html">
+   Instalar Anaconda y usar Jupyter notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_Coding_cells.html">
+   Coding cells
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Markdown cells
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_Celdas_de_markdown.html">
+   Celdas de markdown
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/02_Getting_started_Empezando/04_Markdown_cells.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/02_Getting_started_Empezando/04_Markdown_cells.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Markdown cells
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#heading-1">
+   Heading 1
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heading-2">
+     Heading 2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#heading-3">
+       Heading 3
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#heading-4">
+         Heading 4
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="markdown-cells">
+<h1>Markdown cells<a class="headerlink" href="#markdown-cells" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p><em><strong>Watch this video from 9:51 to 19:07</strong></em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># To load the video, execute this cell by pressing shift + enter</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+<span class="n">start</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">51</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+<span class="n">end</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">19</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;FrDYpLVuTkQ&quot;</span><span class="p">,</span><span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">640</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">360</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="640"
+    height="360"
+    src="https://www.youtube.com/embed/FrDYpLVuTkQ?start=591&end=1147"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p><em><strong>The following is a transcript of the video.</strong></em></p>
+<p>Let’s learn about the other type of cell which is markdown. We can convert between coding and markdown cells by pressing “y” or “m”. Markdown is a type of code but it’s a type of code that gives you back a very nicely formatted text when you execute a cell. So let’s say we wanted to create a beautiful type of heading we can use. When it’s a markdown cell, a hashtag <code class="docutils literal notranslate"><span class="pre">#</span></code> will be a heading whereas in a coding cell a hashtag is for comments and will be ignored by Python. So it matters if you have a markdown or a coding cell.</p>
+<p>One hashtag will give you a very large heading, two hashtags will give you a smaller one, three hashtags will give you an even smaller 
+heading. And then four hashtags will give you an even smaller heading. So you can choose the the heading style that you want.</p>
+<p><img alt="headings.png" src="02_Getting_started_Empezando/attachment:headings.png" /></p>
+</div>
+<div class="section" id="heading-1">
+<h1>Heading 1<a class="headerlink" href="#heading-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="heading-2">
+<h2>Heading 2<a class="headerlink" href="#heading-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="heading-3">
+<h3>Heading 3<a class="headerlink" href="#heading-3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="heading-4">
+<h4>Heading 4<a class="headerlink" href="#heading-4" title="Permalink to this headline">¶</a></h4>
+<p>You can use underscores, for example, to create a dividing line using markdown. I hope you can see, that that’s a very faint dividing line.</p>
+<p><img alt="divider.png" src="02_Getting_started_Empezando/attachment:divider.png" /></p>
+<hr class="docutils" />
+<p>You can write a lot of text and you can use italics and bold using asterisks. One asterisk will make it italic. So we put an asterisk and we put the asterisks before and after the text that we want to be 
+italicized. And then when you hit shift + enter then the text will be italics. You can also use an underscore to create italics, and we create this with markdown, and using underscore we get that too. Two asterisks or two underscores will be bold. So we can use two and this will be bold. You can put two spaces and enter and you’ll get a new line. Remember we can use underscores as well. Two of them will give you bold. And then you can even do three. So three asterisks will be italic and bold. Or three underscores. This will be italic and bold too, with three underscores. And you can execute those cells and that’s how you get bold, and bold and italic.</p>
+<p><img alt="markdown_text.png" src="02_Getting_started_Empezando/attachment:markdown_text.png" /></p>
+<p>I am writing some text and want to write in <em>italics</em></p>
+<p>(Remember, use two spaces after a line to create a newline)</p>
+<p><em>this will be italics</em></p>
+<p><strong>this will be bold</strong></p>
+<p><strong>this will be bold also</strong></p>
+<p><em><strong>this will be italic bold</strong></em></p>
+<p><em><strong>this will be italic bold too</strong></em></p>
+<p>You can also make lists. So let us create a list. To make a list, it can be a numbered list, and you can just do “1”, “.”, space (“1. “) and just start creating the elements. This will be the first element. And then you can do two dot space (“2. “), this will be the second, and three dot space (“3. “), the third. And you can use two spaces and a asterisk (”  *”) to create  an unmarked sub heading. So if we press shift + enter you can see we have a numbered list and we even have a subheading.</p>
+<p><img alt="numbered_list.png" src="02_Getting_started_Empezando/attachment:numbered_list.png" /></p>
+<p>Let us create a list</p>
+<ol class="simple">
+<li><p>this will be the first element</p></li>
+<li><p>this will be the second element</p></li>
+<li><p>and this will be the third element</p></li>
+</ol>
+<ul class="simple">
+<li><p>this is an unmarked subheading</p></li>
+</ul>
+<p>You can even create an unnumbered list just by using the asterisk straight. Asterisks space (“* “), first; asterisk space (“* “), second; and asterisk space (“* “), third element. So that’s how you get an unordered list.</p>
+<p><img alt="unnumbered_list.png" src="02_Getting_started_Empezando/attachment:unnumbered_list.png" /></p>
+<ul class="simple">
+<li><p>an element of an unnumbered list</p></li>
+<li><p>the second element of an unnumbered list</p></li>
+<li><p>the final element of an unnumbered list</p></li>
+</ul>
+<p>And importantly you can create links as well. So to create a link you can say “for the link, click here” and what you want the actual text to be 
+that’s hyperlinked, you use the square brackets (“[ ]”). So click “[here]” and we can say <code class="docutils literal notranslate"><span class="pre">https://google.com</span></code> in parentheses (“(  )”) and you can see it shows up as red. So if we shift + enter that and now we click there, we will be at google. So that’s how you create 
+a link.</p>
+<p><img alt="hyperlink.png" src="02_Getting_started_Empezando/attachment:hyperlink.png" /></p>
+<p>for the link, click <a class="reference external" href="https://google.com">here</a></p>
+<p>So that’s just the basics: that’s how you use coding cells, that’s how you use markdown. Be sure to give your notebook a name. You can always save wherever you are and create a checkpoint by just clicking on the save icon. You can always download your notebook if you’ve completed an assignment. You want to download it and send it to your instructor 
+now: you go to “File”, “Download as” and we’re always working with ipython notebooks and they have this very long extension: it’s ”.ipynb” for i python notebook. “i”, “p”, “y”, “n”, “b” and you just go to “File”, “Download as”, your notebook and it should go to your Downloads folder.</p>
+<p><img alt="saveas.jpg" src="02_Getting_started_Empezando/attachment:saveas.jpg" /></p>
+<p>There’ll be several notebooks that you’ll have as assignments and that you’ll need to upload into Jupyter to go over them as a lesson and review them. You can just click the upload button here and you can select the file, an ipython notebook (.ipynb) that you want to upload.</p>
+<p><img alt="upload.jpg" src="02_Getting_started_Empezando/attachment:upload.jpg" /></p>
+<p>And I hope now that you can see some of the really positive things that come out of using a Jupyter notebook. When you have these lessons, 
+you can double click on the cells themselves and you can see the all the code that goes behind it, here, you can see all the markdown that goes into the formatting of all of the text. You will have cells that you can put your answers into for these lessons and there will also be embedded youtube videos that will go over these lessons.</p>
+<p>You’ll notice that these videos are actually made using Jupyter notebooks too. And these videos are meant for you to follow along and go at your own pace and if you ever need to go back and review something, pause. You can take all the time you need to review the material. That’s the point of having these youtube video tutorials in the notebook. So that is some of the basics of how to download Anaconda, how to load and get Jupyter started, the very basics of using Jupyter notebooks, of creating coding and markdown cells, and how to upload and save your Jupyter 
+notebooks.</p>
+<p><strong>Thank you!</strong></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./02_Getting_started_Empezando"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="02_Coding_cells.html" title="previous page">Coding cells</a>
+    <a class='right-next' id="next-link" href="05_Celdas_de_markdown.html" title="next page">Celdas de markdown</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Dan Chitwood<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
