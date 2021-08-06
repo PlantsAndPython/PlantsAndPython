@@ -1,6 +1,3 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
 root: 00_Introduction
 parts:
@@ -9,9 +6,11 @@ parts:
     - file: 01_Welcome_Bienvenid@/00_Welcome
     - file: 01_Welcome_Bienvenid@/01_Bienvenid@
   - caption: Getting started / Empezando
+    chapters:
     - file: 02_Getting_started_Empezando/00_Installing_Anaconda
     - file: 02_Getting_started_Empezando/01_Instalar_Anaconda
     - file: 02_Getting_started_Empezando/02_Coding_cells
     - file: 02_Getting_started_Empezando/03_Celdas_de_código
     - file: 02_Getting_started_Empezando/04_Markdown_cells
     - file: 02_Getting_started_Empezando/05_Celdas_de_markdown
+
