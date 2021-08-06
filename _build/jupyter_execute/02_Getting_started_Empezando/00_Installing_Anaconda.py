@@ -6,7 +6,7 @@
 
 # ***Watch this video from 0:00 to 3:33***
 
-# In[2]:
+# In[1]:
 
 
 # To load the video, execute this cell by pressing shift + enter

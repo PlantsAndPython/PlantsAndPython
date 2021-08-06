@@ -8,7 +8,7 @@
 title                       : Plants & Python  # The title of the book. Will be placed in the left navbar.
 author                      : Dr. Dan Chitwood  # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
-logo                        : plants_python_logo.jpg  # A path to the book logo
+logo                        : ./images/plants_python_logo.jpg  # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 # Auto-exclude files not in the toc
@@ -17,7 +17,7 @@ only_build_toc_files        : false
 #######################################################################################
 # Execution settings
 execute:
-  execute_notebooks         : auto  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+  execute_notebooks         : force  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
   cache                     : ""    # A path to the jupyter cache that will be used to store execution artifacts. Defaults to `_build/.jupyter_cache/`
   exclude_patterns          : []    # A list of patterns to *skip* in execution (e.g. a notebook that takes a really long time)
   timeout                   : 30    # The maximum time (in seconds) each notebook cell is allowed to run.
