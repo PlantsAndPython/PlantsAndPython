@@ -10,4 +10,4 @@
 
 # <sup>1</sup>Michigan State University, East Lasing, Michigan, USA; <sup>2</sup>Laboratorio Nacional de Genómica para la Biodiversidad (Langebio), Irapuato, Guanajuato, México; <sup>3</sup>La Escuela Nacional de Estudios Superiores (ENES) Unidad León, León, Guanajauto, México; <sup>4</sup>Desert Botanical Garden, Phoenix, Arizona, USA
 
-# ![plants_python_logo.jpg](attachment:plants_python_logo.jpg)
+# ![plants_python_logo.jpg](./images/plants_python_logo.jpg)
