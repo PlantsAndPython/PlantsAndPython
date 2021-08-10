@@ -36,7 +36,7 @@ parts:
     - file: 3_Variables_lists_and_indexing/3_Practice
       title: Practice
     - file: 3_Variables_lists_and_indexing/3_Activity_Plants_and_climate
-      title: Activity - Plants & Climate
+      title: Plants & Climate
 
   - caption: Visualizing Data with Matplotlib
     chapters:
@@ -51,7 +51,7 @@ parts:
     - file: 4_Visualizing_data_with_matplotlib/4_Practice
       title: Practice
     - file: 4_Visualizing_data_with_matplotlib/4_Activity_Leaf_and_sunflower_shape
-      title: Activity - Leaf & Sunflower Shapes
+      title: Leaf & Sunflower Shapes
 
   - caption: Loops & the Golden Angle
     chapters:
@@ -67,7 +67,23 @@ parts:
     - file: 5_Loops_and_the_golden_angle/5_Practice
       title: Practice
     - file: 5_Loops_and_the_golden_angle/5_Activity_Modeling_sunflowers
-      title: Activity - Modeling Sunflowers
+      title: Modeling Sunflowers
+
+  - caption: Loops & el Angulo dorado
+    chapters:
+    - file: 5_Loops_and_el_angulo_dorado/5_Overview
+      title: Lecciones
+      sections:
+      - file: 5_Loops_and_el_angulo_dorado/5_Lecciones/5.0_La_funcion_range
+      - file: 5_Loops_and_el_angulo_dorado/5_Lecciones/5.1_Loops_for
+      - file: 5_Loops_and_el_angulo_dorado/5_Lecciones/5.2_Contadores
+      - file: 5_Loops_and_el_angulo_dorado/5_Lecciones/5.3_Usando_listas_y_loops
+      - file: 5_Loops_and_el_angulo_dorado/5_Lecciones/5.4_Calcular_Fibonacci
+      - file: 5_Loops_and_el_angulo_dorado/5_Lecciones/5.5_Loops_while
+    - file: 5_Loops_and_el_angulo_dorado/5_Practica
+      title: Práctica
+    - file: 5_Loops_and_el_angulo_dorado/5_Activity_Como_construir_un_girasol
+      title: Cómo Construir un Girasol
 
   - caption: Data Analysis with Pandas
     chapters:
@@ -84,7 +100,24 @@ parts:
     - file: 6_Data_analysis_with_pandas/6_Practice
       title: Practice
     - file: 6_Data_analysis_with_pandas/6_Activity_Grapes_in_a_warming_world
-      title: Activity - Grapes in a Warming World
+      title: Grapes in a Warming World
+
+  - caption: Análisis de datos con pandas
+    chapters:
+    - file: 6_Analisis_de_datos_con_pandas/6_Overview
+      title: Lecciones
+      sections:
+      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.0_Leyendo_en_data
+      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.1_Head_y_tail
+      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.2_Seleccionando_columnas
+      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.3_Estadisticas_descriptivas
+      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.4_Enmascaramiento
+      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.5_Usando_iloc
+      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.6_Seaborn
+    - file: 6_Analisis_de_datos_con_pandas/6_Practica
+      title: Práctica
+    - file: 6_Analisis_de_datos_con_pandas/6_Activity_Vides_en_un_mundo_que_se_calienta
+      title: Vides en un Mundo que se Calienta
 
 
 #parts:
