@@ -19,10 +19,10 @@ parts:
       - file: 2_Getting_started_Empezando/2.4_Markdown_cells
       - file: 2_Getting_started_Empezando/2.5_Celdas_de_markdown
 
-  - caption: Lessons
+  - caption: Variables, lists, & indexing
     chapters:
     - file: 3_Variables_lists_and_indexing/3_Overview
-      title: Variables, lists, & indexing
+      title: Lessons
       sections:
       - file: 3_Variables_lists_and_indexing/3_Lessons/3.0_Variables
       - file: 3_Variables_lists_and_indexing/3_Lessons/3.1_Functions
@@ -33,22 +33,30 @@ parts:
       - file: 3_Variables_lists_and_indexing/3_Lessons/3.6_List_of_Lists
       - file: 3_Variables_lists_and_indexing/3_Lessons/3.7_Slicing
       - file: 3_Variables_lists_and_indexing/3_Lessons/3.8_Data_Types
-      - file: 3_Variables_lists_and_indexing/3_Practice
-      - file: 3_Variables_lists_and_indexing/3_Activity_Plants_and_climate
+    - file: 3_Variables_lists_and_indexing/3_Practice
+      title: Practice
+    - file: 3_Variables_lists_and_indexing/3_Activity_Plants_and_climate
+      title: Activity - Plants & Climate
 
+  - caption: Visualizing Data with Matplotlib
+    chapters:
     - file: 4_Visualizing_data_with_matplotlib/4_Overview
-      title: Visualizing Data with Matplotlib
+      title: Lessons
       sections:
       - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.0_Modules
       - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.1_Plots
       - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.2_Shape_Size_and_Color
       - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.3_Legends
       - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.4_Subplots
-      - file: 4_Visualizing_data_with_matplotlib/4_Practice
-      - file: 4_Visualizing_data_with_matplotlib/4_Activity_Leaf_and_sunflower_shape
+    - file: 4_Visualizing_data_with_matplotlib/4_Practice
+      title: Practice
+    - file: 4_Visualizing_data_with_matplotlib/4_Activity_Leaf_and_sunflower_shape
+      title: Activity - Leaf & Sunflower Shapes
 
+  - caption: Loops & the Golden Angle
+    chapters:
     - file: 5_Loops_and_the_golden_angle/5_Overview
-      title: Loops & the Golden Angle
+      title: Lessons
       sections:
       - file: 5_Loops_and_the_golden_angle/5_Lessons/5.0_Range_Function
       - file: 5_Loops_and_the_golden_angle/5_Lessons/5.1_For_Loops
@@ -56,11 +64,15 @@ parts:
       - file: 5_Loops_and_the_golden_angle/5_Lessons/5.3_Using_Lists_and_Loops
       - file: 5_Loops_and_the_golden_angle/5_Lessons/5.4_Calculating_Fibonacci
       - file: 5_Loops_and_the_golden_angle/5_Lessons/5.5_While_Loops
-      - file: 5_Loops_and_the_golden_angle/5_Practice
-      - file: 5_Loops_and_the_golden_angle/5_Activity_Modeling_sunflowers
+    - file: 5_Loops_and_the_golden_angle/5_Practice
+      title: Practice
+    - file: 5_Loops_and_the_golden_angle/5_Activity_Modeling_sunflowers
+      title: Activity - Modeling Sunflowers
 
+  - caption: Data Analysis with Pandas
+    chapters:
     - file: 6_Data_analysis_with_pandas/6_Overview
-      title: Data Analysis with Pandas
+      title: Lessons
       sections:
       - file: 6_Data_analysis_with_pandas/6_Lessons/6.0_Reading_in_Data
       - file: 6_Data_analysis_with_pandas/6_Lessons/6.1_Head_and_Tail
@@ -69,8 +81,10 @@ parts:
       - file: 6_Data_analysis_with_pandas/6_Lessons/6.4_Masks
       - file: 6_Data_analysis_with_pandas/6_Lessons/6.5_Using_iloc
       - file: 6_Data_analysis_with_pandas/6_Lessons/6.6_Seaborn
-      - file: 6_Data_analysis_with_pandas/6_Practice
-      - file: 6_Data_analysis_with_pandas/6_Activity_Grapes_in_a_warming_world
+    - file: 6_Data_analysis_with_pandas/6_Practice
+      title: Practice
+    - file: 6_Data_analysis_with_pandas/6_Activity_Grapes_in_a_warming_world
+      title: Activity - Grapes in a Warming World
 
 
 #parts:
