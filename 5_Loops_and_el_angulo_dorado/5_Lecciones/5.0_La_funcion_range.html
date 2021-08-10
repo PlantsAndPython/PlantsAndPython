@@ -1,0 +1,900 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lección 3.0 &#8212; Plants &amp; Python</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lección 3.1" href="5.1_Loops_for.html" />
+    <link rel="prev" title="Loops &amp; el ángulo dorado" href="../5_Overview.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../0_Introduction.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../1_Welcome_Bienvenido/1_Overview.html">
+   Welcome / Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../1_Welcome_Bienvenido/1.0_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../1_Welcome_Bienvenido/1.1_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../2_Getting_started_Empezando/2_Overview.html">
+   Getting Started /  Empezando
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2_Getting_started_Empezando/2.0_Installing_Anaconda.html">
+     Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2_Getting_started_Empezando/2.1_Instalar_Anaconda.html">
+     Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2_Getting_started_Empezando/2.2_Coding_cells.html">
+     Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2_Getting_started_Empezando/2.3_Celdas_de_codigo.html">
+     Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2_Getting_started_Empezando/2.4_Markdown_cells.html">
+     Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2_Getting_started_Empezando/2.5_Celdas_de_markdown.html">
+     Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Variables, lists, &amp; indexing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../3_Variables_lists_and_indexing/3_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3_Variables_lists_and_indexing/3_Lessons/3.0_Variables.html">
+     Lesson 1.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3_Variables_lists_and_indexing/3_Lessons/3.1_Functions.html">
+     Lesson 1.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3_Variables_lists_and_indexing/3_Lessons/3.2_Indexing.html">
+     Lesson 1.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3_Variables_lists_and_indexing/3_Lessons/3.3_Lists.html">
+     Lesson 1.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3_Variables_lists_and_indexing/3_Lessons/3.4_Indexing_List_Elements.html">
+     Lesson 1.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3_Variables_lists_and_indexing/3_Lessons/3.5_Modifying_Lists.html">
+     Lesson 1.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3_Variables_lists_and_indexing/3_Lessons/3.6_List_of_Lists.html">
+     Lesson 1.6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3_Variables_lists_and_indexing/3_Lessons/3.7_Slicing.html">
+     Lesson 1.7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3_Variables_lists_and_indexing/3_Lessons/3.8_Data_Types.html">
+     Lesson 1.8
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../3_Variables_lists_and_indexing/3_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../3_Variables_lists_and_indexing/3_Activity_Plants_and_climate.html">
+   Plants &amp; Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualizing Data with Matplotlib
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../4_Visualizing_data_with_matplotlib/4_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4_Visualizing_data_with_matplotlib/4_Lessons/4.0_Modules.html">
+     Lesson 2.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4_Visualizing_data_with_matplotlib/4_Lessons/4.1_Plots.html">
+     Lesson 2.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4_Visualizing_data_with_matplotlib/4_Lessons/4.2_Shape_Size_and_Color.html">
+     Lesson 2.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4_Visualizing_data_with_matplotlib/4_Lessons/4.3_Legends.html">
+     Lesson 2.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4_Visualizing_data_with_matplotlib/4_Lessons/4.4_Subplots.html">
+     Lesson 2.4
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../4_Visualizing_data_with_matplotlib/4_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../4_Visualizing_data_with_matplotlib/4_Activity_Leaf_and_sunflower_shape.html">
+   Leaf &amp; Sunflower Shapes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Loops &amp; the Golden Angle
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../5_Loops_and_the_golden_angle/5_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5_Loops_and_the_golden_angle/5_Lessons/5.0_Range_Function.html">
+     Lesson 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5_Loops_and_the_golden_angle/5_Lessons/5.1_For_Loops.html">
+     Lesson 3.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5_Loops_and_the_golden_angle/5_Lessons/5.2_Counters.html">
+     Lesson 3.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5_Loops_and_the_golden_angle/5_Lessons/5.3_Using_Lists_and_Loops.html">
+     Lesson 3.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5_Loops_and_the_golden_angle/5_Lessons/5.4_Calculating_Fibonacci.html">
+     Lesson 3.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5_Loops_and_the_golden_angle/5_Lessons/5.5_While_Loops.html">
+     Lesson 3.5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../5_Loops_and_the_golden_angle/5_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../5_Loops_and_the_golden_angle/5_Activity_Modeling_sunflowers.html">
+   Modeling Sunflowers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Loops &amp; el Angulo dorado
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../5_Overview.html">
+   Lecciones
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Lección 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.1_Loops_for.html">
+     Lección 3.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.2_Contadores.html">
+     Lección 3.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.3_Usando_listas_y_loops.html">
+     Lección 3.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.4_Calcular_Fibonacci.html">
+     Lección 3.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.5_Loops_while.html">
+     Lección 3.5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5_Activity_Como_construir_un_girasol.html">
+   Cómo Construir un Girasol
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Data Analysis with Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../6_Data_analysis_with_pandas/6_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Data_analysis_with_pandas/6_Lessons/6.0_Reading_in_Data.html">
+     Lesson 4.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Data_analysis_with_pandas/6_Lessons/6.1_Head_and_Tail.html">
+     Lesson 4.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Data_analysis_with_pandas/6_Lessons/6.2_Selecting_Columns.html">
+     Lesson 4.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Data_analysis_with_pandas/6_Lessons/6.3_Descriptive_Statistics.html">
+     Lesson 4.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Data_analysis_with_pandas/6_Lessons/6.4_Masks.html">
+     Lesson 4.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Data_analysis_with_pandas/6_Lessons/6.5_Using_iloc.html">
+     Lesson 4.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Data_analysis_with_pandas/6_Lessons/6.6_Seaborn.html">
+     Lesson 4.6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../6_Data_analysis_with_pandas/6_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../6_Data_analysis_with_pandas/6_Activity_Grapes_in_a_warming_world.html">
+   Grapes in a Warming World
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis de datos con pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../6_Analisis_de_datos_con_pandas/6_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Analisis_de_datos_con_pandas/6_Lecciones/6.0_Leyendo_en_data.html">
+     Lección 4.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Analisis_de_datos_con_pandas/6_Lecciones/6.1_Head_y_tail.html">
+     Lección 4.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Analisis_de_datos_con_pandas/6_Lecciones/6.2_Seleccionando_columnas.html">
+     Lección 4.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Analisis_de_datos_con_pandas/6_Lecciones/6.3_Estadisticas_descriptivas.html">
+     Lección 4.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Analisis_de_datos_con_pandas/6_Lecciones/6.4_Enmascaramiento.html">
+     Lección 4.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Analisis_de_datos_con_pandas/6_Lecciones/6.5_Usando_iloc.html">
+     Lección 4.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6_Analisis_de_datos_con_pandas/6_Lecciones/6.6_Seaborn.html">
+     Lección 4.6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../6_Analisis_de_datos_con_pandas/6_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../6_Analisis_de_datos_con_pandas/6_Activity_Vides_en_un_mundo_que_se_calienta.html">
+   Vides en un Mundo que se Calienta
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/5_Loops_and_el_angulo_dorado/5_Lecciones/5.0_La_funcion_range.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2F5_Loops_and_el_angulo_dorado/5_Lecciones/5.0_La_funcion_range.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/5_Loops_and_el_angulo_dorado/5_Lecciones/5.0_La_funcion_range.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/5_Loops_and_el_angulo_dorado/5_Lecciones/5.0_La_funcion_range.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Lección 3.0
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-razon-dorada-calculada-con-loops">
+   La razón dorada calculada con loops 🌻
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#looping-hacia-la-razon-dorada">
+     ‘Looping’ hacia la razón dorada
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objetivos-de-aprendizaje-de-python">
+     🐍 Objetivos de aprendizaje de python
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objetivos-de-aprendizaje-de-plantas">
+     🌻 Objetivos de aprendizaje de plantas
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-funcion-range-y-como-esta-produce-una-sucesion-de-enteros-para-iterar-en-un-loop">
+     La función
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       range()
+      </span>
+     </code>
+     y cómo ésta produce una sucesión de enteros para iterar en un loop
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="leccion-3-0">
+<h1>Lección 3.0<a class="headerlink" href="#leccion-3-0" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="la-razon-dorada-calculada-con-loops">
+<h1>La razón dorada calculada con loops 🌻<a class="headerlink" href="#la-razon-dorada-calculada-con-loops" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>Las plantas exhiben patrones hermosos: desde los patrones de ramificación de los árboles hasta las formas de las hojas y los patrones en espiral de un girasol. Este último patrón, las espirales, surge de la filotaxia (que literalmente significa “hoja” + “arreglo”). La filotaxia es más que el arreglo de las flores de un girasol, es la disposición de todos los órganos laterales (hojas y partes de flores). Hay muchos más patrones además de la espiral, pero para esta lección y la siguiente, nos centraremos en la filotaxia en espiral y trataremos de recrear los patrones inspiradores en las cabezas de girasoles.</p>
+<p>¿Cuál es la sucesión de Fibonacci? ¿Cómo se relaciona con los patrones en espiral que se encuentran en los girasoles y en todas las plantas terrestres? La sucesión de Fibonacci es una serie de números que comienza con “0, 1” o “1, 1”. Después de los dos primeros números, el siguiente número se define como la suma de los dos anteriores. Entonces, de <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1</span></code> surge la sucesión <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">8,</span> <span class="pre">13,</span> <span class="pre">21,</span> <span class="pre">34,</span> <span class="pre">55,</span> <span class="pre">89,</span> <span class="pre">144,.</span> <span class="pre">.</span> <span class="pre">.</span></code>.</p>
+<p>Al observar un girasol, surgen patrones filotácticos en espiral que se proyectan en un disco, patrones de brazos en espiral que emanan del centro. Estos se llaman <em>parastichies</em> y surgen de vecinos cercanos en el patrón filotáctico general que están separados por <em>n</em> primordios secuenciales, donde <em>n</em> es un término de la sucesión de Fibonacci.</p>
+<p>Por ejemplo, en una familia parastichy de 5, la espiral surge de conectar cada quinto primordio. Una de las conexiones más fuertes entre la filotaxia y la secuencia de Fibonacci es que las familias parastichy que van en direcciones opuestas son números consecutivos de la sucesión de Fibonacci.</p>
+<p>Pero la conexión entre la sucesión de Fibonacci y la filotaxia en espiral es incluso más fuerte que las familias parastichy. La razón dorada (también llamada razón áurea) se puede aproximar como la razón de dos números de Fibbonaci consecutivos. La aproximación se vuelve más precisa a medida que avanzamos en la sucesión. El valor de la razón dorada es $<span class="math notranslate nohighlight">\(\varphi=\frac{1 + \sqrt{5}}{2}\approx1.61.\)</span>$</p>
+<p>Si la circunferencia de un círculo se divide en dos arcos, la razón de cuyas longitudes forman la razón dorada, el ángulo resultante se llama el ángulo dorado. El valor del ángulo dorado es</p>
+<div class="math notranslate nohighlight">
+\[\pi(3 - \sqrt {5})\;\text{radianes ó } 180(3 - \sqrt{5})\approx137.5^\circ.\]</div>
+<p>El valor del ángulo entre primordios sucesivos en filotaxia en espiral es el ángulo dorado.</p>
+<p>En esta lección aproximaremos los valores de la razón dorada y el ángulo dorado usando loops. En la siguiente actividad, usaremos el valor del ángulo dorado para recrear una cabeza de girasol.</p>
+<p><img alt="parastichy.jpg" src="../../_images/parastichy.jpg" /></p>
+<hr class="docutils" />
+<div class="section" id="looping-hacia-la-razon-dorada">
+<h2>‘Looping’ hacia la razón dorada<a class="headerlink" href="#looping-hacia-la-razon-dorada" title="Permalink to this headline">¶</a></h2>
+<p>Las computadoras son realmente buenas para realizar tareas repetitivas. Un loop es una de las principales formas en que le decimos a una computadora que ejecute un fragmento de código una y otra vez.</p>
+<p>Los loops vienen de dos maneras:</p>
+<ul class="simple">
+<li><p>loops <code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
+<li><p>loops <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
+</ul>
+<p>Un loop <code class="docutils literal notranslate"><span class="pre">for</span></code> iterará sobre un fragmento de código <em><strong>por</strong></em> un número específico de veces. Un loop <code class="docutils literal notranslate"><span class="pre">while</span></code> seguirá iterando sobre un fragmento de código <em><strong>mientras</strong></em> una condición sea verdadera.</p>
+<p>No es estrictamente cierto que el loops simplemente repita lo mismo una y otra vez. Más bien, está iterando sobre un <em>índice</em>. Un índice es un recuento de cuántas veces se repitió el ciclo, <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,...</span></code> (recordemos que toda la indexación comienza con 0 en python). El índice es un valor que usamos para variar, con cada iteración, lo que hace el loop.</p>
+<p>El índice podría ser simplemente un recuento que continúa sucesivamente +1 con cada iteración. O bien usamos el índice para obtener otros valores. Por ejemplo, el índice de un loop podría usarse para iterar sobre los elementos de una lista, que pueden ser cualquier valor que elijamos. Podríamos realizar una función matemática en cada valor del índice del loop para transformarlo en otro conjunto de valores que necesitemos.</p>
+<p>Dos formas comunes de iterar sobre un loop son usando la función <code class="docutils literal notranslate"><span class="pre">range</span> <span class="pre">()</span></code> o simplemente una lista. La función <code class="docutils literal notranslate"><span class="pre">range</span> <span class="pre">()</span></code> toma un valor de inicio, parada y paso, o simplemente el valor de parada por sí mismo. Por ejemplo, <code class="docutils literal notranslate"><span class="pre">range</span> <span class="pre">(2,10,3)</span></code> daría como resultado <code class="docutils literal notranslate"><span class="pre">2,5,8</span></code>, comenzando en 2 agregando 3 para cada paso hasta detenerse en un valor <em><strong>estrictamente menor</strong></em> a 10. También podemos proporcionar simplemente un valor de parada para el rango. Por ejemplo, <code class="docutils literal notranslate"><span class="pre">range(3)</span></code> produciría <code class="docutils literal notranslate"><span class="pre">0,1,2</span></code>. Es importante recordar con <code class="docutils literal notranslate"><span class="pre">range</span> <span class="pre">()</span></code> que el inicio es inclusivo y la parada es exclusiva.</p>
+<p>Los loops <code class="docutils literal notranslate"><span class="pre">for</span></code> tienen una estructura estricta, en la que se proporciona un nombre arbitrario para la variable iterable, y un conjunto de valores sobre los que iterar esa variable. La primera línea termina en un <code class="docutils literal notranslate"><span class="pre">:</span></code> y el código dentro del loop está sangrado. Python es sensible tanto al <code class="docutils literal notranslate"><span class="pre">:</span></code> como a la sangría. Por ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+    <span class="c1"># Tu código aquí</span>
+    <span class="c1"># Usemos print mientras tanto</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    
+<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+    <span class="c1"># Tu código aquí</span>
+    <span class="c1"># Usemos print mientras tanto</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A diferencia de un loop <code class="docutils literal notranslate"><span class="pre">for</span></code>, un loop <code class="docutils literal notranslate"><span class="pre">while</span></code> seguirá iterando <em><strong>mientras</strong></em> una condición sea verdadera y dejará de iterar cuando dicha condición ya no lo sea. Una forma común de estructurar un loop <code class="docutils literal notranslate"><span class="pre">while</span></code> es agregar un contador. Un contador es una variable fuera del ciclo que aumentará su valor cada vez que se ejecute el ciclo.</p>
+<p>Configuramos un loop <code class="docutils literal notranslate"><span class="pre">while</span></code> para que se ejecute hasta que el contador supere un cierto valor. El valor del contador aumenta con el signo <code class="docutils literal notranslate"><span class="pre">+=</span></code>, que es equivalente a <code class="docutils literal notranslate"><span class="pre">counter</span> <span class="pre">=</span> <span class="pre">counter</span> <span class="pre">+</span> <span class="pre">1</span></code> en el ejemplo que se muestra a continuación. Una forma de pensar en <code class="docutils literal notranslate"><span class="pre">+=</span></code> es que agrega un valor al valor anterior del contador para llegar a un nuevo valor de contador.</p>
+<p>A continuación se muestra un ejemplo de un loop <code class="docutils literal notranslate"><span class="pre">while</span></code> con un contador:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="c1"># Tu código aquí</span>
+    <span class="c1"># Usemos print mientras tanto</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+    <span class="c1"># Incrementemos el counter cada vez que el loop itera</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Vale la pena invertir algo de tiempo en comprender los loops ¡son un elemento clave de la codificación en python! Los loops se vuelven muy poderosos cuando se usan inteligentemente con el código dentro de ellos, y también al crear valores y listas fuera de los loops que los loops modifican a medida que se ejecutan.</p>
+<p>Prestemos atención a la forma en que se usan los loops en el tutorial a continuación, y cómo se pueden usar para calcular algo como la sucesión de Fibonacci.</p>
+</div>
+<div class="section" id="objetivos-de-aprendizaje-de-python">
+<h2>🐍 Objetivos de aprendizaje de python<a class="headerlink" href="#objetivos-de-aprendizaje-de-python" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>La función <code class="docutils literal notranslate"><span class="pre">range</span> <span class="pre">()</span></code> y cómo ésta produce una sucesión de enteros para iterar en un loop (<em>1:20</em>)</p></li>
+<li><p>Cómo escribir un loop <code class="docutils literal notranslate"><span class="pre">for</span></code> (<em>2:40</em>)</p></li>
+<li><p>Cómo utilizar el signo <code class="docutils literal notranslate"><span class="pre">+=</span></code> en un contador (<em>7:25</em>)</p></li>
+<li><p>Cómo crear una lista vacía fuera de un loop y llenarla con resultados del loop (<em>13:09</em>)</p></li>
+<li><p>Cómo utilizar un loop <code class="docutils literal notranslate"><span class="pre">for</span></code> para calcular la suceción de Fibonacci (<em>20:33</em>)</p></li>
+<li><p>Cómo escribir un loop <code class="docutils literal notranslate"><span class="pre">while</span></code> usando un contador (<em>26:29</em>)</p></li>
+</ul>
+</div>
+<div class="section" id="objetivos-de-aprendizaje-de-plantas">
+<h2>🌻 Objetivos de aprendizaje de plantas<a class="headerlink" href="#objetivos-de-aprendizaje-de-plantas" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>¡Las plantas son computadoras!</p></li>
+<li><p>Éstas producen resultados de forma iterativa (como hojas y flores), al igual que lo hacen los loops.</p></li>
+<li><p>El modelado computacional intenta replicar fenómenos de la naturaleza. Ningún modelo es perfecto.</p></li>
+<li><p>El ángulo dorado que usan las plantas y que calcularemos se basa en matemáticas computacionales.</p></li>
+<li><p>Usaremos los girasoles y el ángulo dorado como inspiración para aprender de las plantas.</p></li>
+</ul>
+</div>
+<div class="section" id="la-funcion-range-y-como-esta-produce-una-sucesion-de-enteros-para-iterar-en-un-loop">
+<h2>La función <code class="docutils literal notranslate"><span class="pre">range()</span></code> y cómo ésta produce una sucesión de enteros para iterar en un loop<a class="headerlink" href="#la-funcion-range-y-como-esta-produce-una-sucesion-de-enteros-para-iterar-en-un-loop" title="Permalink to this headline">¶</a></h2>
+<p><em><strong>Mira este video de 0:00 a 2:35</strong></em></p>
+<p>Para español, haga click en configuración, seleccione “español” debajo de los subtítulos.</p>
+<p>Traducción por Erik Amézquita (Michigan State University)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Para reproducir el siguiente tutorial, presiona shift + enter</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+<span class="n">start</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+<span class="n">end</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">35</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;Cvi3dByz9SE&quot;</span><span class="p">,</span><span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">640</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">360</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="640"
+    height="360"
+    src="https://www.youtube.com/embed/Cvi3dByz9SE?start=0&end=155"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p><em><strong>La siguiente es una transcripción del video.</strong></em></p>
+<p>Empecemos entonces. Empezaremos con la función <code class="docutils literal notranslate"><span class="pre">range()</span></code> y cómo se usa para producir una sucesión de enteros sobre los que iteramos en un loop.</p>
+<p>Este es un buen momento para repasar la función de ayuda. Si tenemos algunas dudas sobre qué hace cierta función, podemos simplemente escribir el signo <code class="docutils literal notranslate"><span class="pre">?</span></code> delante de ella. Si presionamos <code class="docutils literal notranslate"><span class="pre">Shift</span></code> + <code class="docutils literal notranslate"><span class="pre">Enter</span></code>, obtenemos un pequeño cuadro de ayuda. Puede no ser tan útil, pero intentará decirte algo. Por ejemplo, podemos ver que las entradas a la función <code class="docutils literal notranslate"><span class="pre">range()</span></code> son inicio, parada y paso. Esto es muy parecido a indexación y segmentación que hemos aprendido antes y dice que devuelve un objeto que produce una secuencia de enteros desde el inicio, inclusivo, hasta el final, exclusivo, con tamaño de paso. Y esto casi suena exactamente como la indexación y el corte que aprendimos antes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ¿Qué es la función range ()?</span>
+<span class="c1"># Si tiene alguna duda, utilice la función de ayuda con un &quot;?&quot;</span>
+
+<span class="o">?</span>range 
+
+<span class="c1"># range(start, stop[, step]) -&gt; range object</span>
+<span class="c1"># Return an object that produces a sequence of integers</span>
+<span class="c1"># from start (inclusive) to stop (exclusive) by step.  </span>
+<span class="c1"># range(i, j) produces i, i+1, i+2, ..., j-1</span>
+<span class="c1"># start defaults to 0, and stop is omitted! </span>
+<span class="c1"># range(4) produces 0, 1, 2, 3</span>
+<span class="c1"># These are exactly the valid indices for a list of 4 elements</span>
+<span class="c1"># When step is given, it specifies the increment (or decrement)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Basado en ello intentemos ejecutar una función <code class="docutils literal notranslate"><span class="pre">range()</span></code>. Pongamos el número 8. Quizás basado en nuestra indexación anterior esperaríamos que nos devolviese 0, 1, 2, 3, 4, 5, 6, 7. Pero ese no es el caso. En cambio, solo nos da un rango de 0 a 8, que es algo de que esperaríamos basándonos en poner 8 allí. Y bueno, esto es un poco inesperado.</p>
+<p>Así que exploremos más, y como veremos, <code class="docutils literal notranslate"><span class="pre">range()</span></code> solo funciona realmente en el contexto de un loop.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ¡Así que probemos la función de rango!</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>range(0, 8)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./5_Loops_and_el_angulo_dorado/5_Lecciones"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../5_Overview.html" title="previous page">Loops &amp; el ángulo dorado</a>
+    <a class='right-next' id="next-link" href="5.1_Loops_for.html" title="next page">Lección 3.1</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Dan Chitwood<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
