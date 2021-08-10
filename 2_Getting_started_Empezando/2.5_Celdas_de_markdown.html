@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celdas de markdown &#8212; Plants &amp; Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting started / Empezando" href="../3_Variables_lists_and_indexing/3_Overview.html" />
+    <link rel="prev" title="Markdown cells" href="2.4_Markdown_cells.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_Introduction.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../1_Welcome_Bienvenido/1_Overview.html">
+   Welcome / Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Welcome_Bienvenido/1.0_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Welcome_Bienvenido/1.1_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="2_Overview.html">
+   Getting Started /  Empezando
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.0_Installing_Anaconda.html">
+     Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.1_Instalar_Anaconda.html">
+     Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.2_Coding_cells.html">
+     Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.3_Celdas_de_codigo.html">
+     Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.4_Markdown_cells.html">
+     Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lessons
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Overview.html">
+   Variables, lists, &amp; indexing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.0_Variables.html">
+     Lesson 1.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.1_Functions.html">
+     Lesson 1.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.2_Indexing.html">
+     Lesson 1.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.3_Lists.html">
+     Lesson 1.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.4_Indexing_List_Elements.html">
+     Lesson 1.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.5_Modifying_Lists.html">
+     Lesson 1.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.6_List_of_Lists.html">
+     Lesson 1.6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.7_Slicing.html">
+     Lesson 1.7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.8_Data_Types.html">
+     Lesson 1.8
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Practice.html">
+     Lesson 1.9
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Activity_Plants_and_climate.html">
+     Activity 1: Plants and climate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Overview.html">
+   Visualizing Data with Matplotlib
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.0_Modules.html">
+     Lesson 2.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.1_Plots.html">
+     Lesson 2.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.2_Shape_Size_and_Color.html">
+     Lesson 2.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.3_Legends.html">
+     Lesson 2.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.4_Subplots.html">
+     Lesson 2.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Practice.html">
+     Lesson 2.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Activity_Leaf_and_sunflower_shape.html">
+     Activity 2: The shapes of leaves and sunflowers 🍃🌻
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Overview.html">
+   Loops &amp; the Golden Angle
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Lessons/5.0_Range_Function.html">
+     Lesson 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Lessons/5.1_For_Loops.html">
+     Lesson 3.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Lessons/5.2_Counters.html">
+     Lesson 3.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Lessons/5.3_Using_Lists_and_Loops.html">
+     Lesson 3.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Lessons/5.4_Calculating_Fibonacci.html">
+     Lesson 3.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Lessons/5.5_While_Loops.html">
+     Lesson 3.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Practice.html">
+     Lesson 3.6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Activity_Modeling_sunflowers.html">
+     Activity 3: How to Build a Sunflower 🌻
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Overview.html">
+   Data Analysis with Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.0_Reading_in_Data.html">
+     Lesson 4.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.1_Head_and_Tail.html">
+     Lesson 4.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.2_Selecting_Columns.html">
+     Lesson 4.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.3_Descriptive_Statistics.html">
+     Lesson 4.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.4_Masks.html">
+     Lesson 4.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.5_Using_iloc.html">
+     Lesson 4.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.6_Seaborn.html">
+     Lesson 4.6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Practice.html">
+     Lesson 4.7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Activity_Grapes_in_a_warming_world.html">
+     Activity 4: Grapevines in a warming world
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/2_Getting_started_Empezando/2.5_Celdas_de_markdown.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2F2_Getting_started_Empezando/2.5_Celdas_de_markdown.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/2_Getting_started_Empezando/2.5_Celdas_de_markdown.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/2_Getting_started_Empezando/2.5_Celdas_de_markdown.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Celdas de markdown
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#heading-1">
+   Heading 1
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heading-2">
+     Heading 2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#heading-3">
+       Heading 3
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#heading-4">
+         Heading 4
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="celdas-de-markdown">
+<h1>Celdas de markdown<a class="headerlink" href="#celdas-de-markdown" title="Permalink to this headline">¶</a></h1>
+<p>Traducción por Dra. Alejandra Rougon (UNAM ENES León, México)</p>
+<hr class="docutils" />
+<p><em><strong>Mira este video de 9:51 a 19:07</strong></em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Para reproducir el siguiente tutorial, presiona shift + enter</span>
+
+<span class="c1"># Para español, haga click en configuración,</span>
+<span class="c1"># seleccione &quot;español&quot; debajo de los subtítulos.</span>
+<span class="c1"># Traducción por Dra. Alejandra Rougon (UNAM ENES León, México)</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+<span class="n">start</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">51</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+<span class="n">end</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">19</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;FrDYpLVuTkQ&quot;</span><span class="p">,</span><span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">640</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">360</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="640"
+    height="360"
+    src="https://www.youtube.com/embed/FrDYpLVuTkQ?start=591&end=1147"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p><em><strong>La siguiente es una transcripción del video.</strong></em></p>
+<p>Aprendamos sobre el otro tipo de celda, que es markdown. Podemos convertir entre celdas de código y markdown presionando “y” o “m”. Markdown es un tipo de código, pero es un tipo de código que te devuelve un texto muy bien formateado cuando ejecutas una celda. Entonces, digamos que queremos crear un bonito tipo de encabezado que podamos usar. Cuando se trata de una celda de markdown, un hashtag <code class="docutils literal notranslate"><span class="pre">#</span></code> será un encabezado, mientras que en una celda de código un hashtag se usa para comentarios y Python lo ignorará. Por lo tanto, es importante saber si tienes una celda de markdown o de código.</p>
+<p>Un hashtag te dará un encabezado muy grande, dos hashtags te darán uno más pequeño, tres hashtags te darán un título aún más pequeño. Y luego, cuatrohashtags te darán un título aún más pequeño. Entonces puedes elegir el estilo de título que desees.</p>
+<p><img alt="headings.png" src="../_images/headings.png" /></p>
+</div>
+<div class="section" id="heading-1">
+<h1>Heading 1<a class="headerlink" href="#heading-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="heading-2">
+<h2>Heading 2<a class="headerlink" href="#heading-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="heading-3">
+<h3>Heading 3<a class="headerlink" href="#heading-3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="heading-4">
+<h4>Heading 4<a class="headerlink" href="#heading-4" title="Permalink to this headline">¶</a></h4>
+<p>Puede utilizar guiones bajos “_”, por ejemplo, para crear una línea divisoria usando markdown. Espero que puedas ver que esa es una línea divisoria muy tenue.</p>
+<p><img alt="divider.png" src="../_images/divider.png" /></p>
+<hr class="docutils" />
+<p>Puedes escribir mucho texto y puedes usar cursiva y negrita usando asteriscos. Un asterisco “*” lo pondrá en cursiva. Entonces ponemos un
+asterisco antes y después del texto que queremos que esté en cursiva.
+Y luego, cuando tu presiones shift + enter, entonces el texto estará en cursiva. También puedes utilizar un guión bajo “_” para crear cursiva, y creamos esto con markdown, y usando guiones bajos obtenemos eso también. Dos asteriscos “**” o dos guiones bajos “__” estarán en negrita. Entonces podemos usar dos y esto será negrita. Puedes poner dos
+espacios e ingresar y obtendrás una nueva línea. Recuerda que también podemos usar guiones bajos. Dos de  ellos te darán negrita. Y luego
+incluso puedes hacer tres asteriscos. Entonces tres asteriscos serán cursiva y negrita. O tres guiones bajos. Esto también estará en cursiva y negrita, con tres guiones bajos. Y puedes ejecutar estas celdas y así es como se pone en negrita o negrita y cursiva.</p>
+<p><img alt="markdown_text.png" src="../_images/markdown_text.png" /></p>
+<p>I am writing some text and want to write in <em>italics</em></p>
+<p>(Remember, use two spaces after a line to create a newline)</p>
+<p><em>this will be italics</em></p>
+<p><strong>this will be bold</strong></p>
+<p><strong>this will be bold also</strong></p>
+<p><em><strong>this will be italic bold</strong></em></p>
+<p><em><strong>this will be italic bold too</strong></em></p>
+<p>También puedes hacer listas. Entonces vamos a crear una lista. Y presionas enter. Para hacer una lista, puede ser una lista numerada y puede simplemente poner “1”, “.”, espacio (“1.”) y simplemente comienza a crear los elementos. Este será el primer elemento. Y luego puedes hacer 2 punto espacio (“2. “), este será el segundo, y tres punto espacio (“3.”), el tercero. Y puedes utilizar dos espacios y un asterisco (”  *”) para crear un subtítulo sin marcar. Entonces, si presionamos shift + enter, puedes ver que tenemos una lista numerada e incluso tenemos un subtítulo.</p>
+<p><img alt="numbered_list.png" src="../_images/numbered_list.png" /></p>
+<p>Let us create a list</p>
+<ol class="simple">
+<li><p>this will be the first element</p></li>
+<li><p>this will be the second element</p></li>
+<li><p>and this will be the third element</p></li>
+</ol>
+<ul class="simple">
+<li><p>this is an unmarked subheading</p></li>
+</ul>
+<p>Incluso puedes crear una lista sin numerar con solo usar el asterisco. Asterisco espacio (“* “), primero; asterisco espacio(“* “), segundo; y asterisco espacio (“* “), tercer elemento. Así es como obtienes una
+lista sin numeración.</p>
+<p><img alt="unnumbered_list.png" src="../_images/unnumbered_list.png" /></p>
+<ul class="simple">
+<li><p>an element of an unnumbered list</p></li>
+<li><p>the second element of an unnumbered list</p></li>
+<li><p>the final element of an unnumbered list</p></li>
+</ul>
+<p>Y puedes crear enlaces también. Entonces, para crear un enlace, puedes decir “for the link, click here” y puedes poner el texto que quieras
+que esté hipervinculado dentro de los corchetes (“[ ]”). Entonces haz clic “[aquí]” y podemos decir <code class="docutils literal notranslate"><span class="pre">http://google.com</span></code> entre paréntesis (“( )”) y puedes ver que se muestra en rojo. Entonces, si presionamos shift+ enter y hacemos clic ahí, estaremos en google. Así es como creas
+un enlace.</p>
+<p><img alt="hyperlink.png" src="../_images/hyperlink.png" /></p>
+<p>for the link, click <a class="reference external" href="https://google.com">here</a></p>
+<p>Así que eso es solo lo básico: así es como se usan las celdas de código y así es como se usa markdown. Asegúrate de darle un nombre a tu notebook. Siempre puedes guardar donde quiera que estés y crear un punto de control con solo hacer clic en el icono de guardar. Siempre puedes descargar tu notebook si has completado una tarea. Quieres descargarlo y enviarlo a tu instructor ahora: Ve a “File”, “Download as” y siempre estamos trabajando con notebooks de ipython y tienen esta extensión muy larga que es “.ipynb” para I PYthon NoteBook. “i”, “p”,
+“y”, “n”, “b” y simplemente ve a “Archivo”, “Download as”, tu notebook y debería irse a tu carpeta de Descargas.</p>
+<p><img alt="saveas.jpg" src="../_images/saveas.jpg" /></p>
+<p>Habrá varios notebooks que tendrás como tareas y que deberás cargar en Jupyter para que realices los ejercicios y repasarlos como una lección. Puedes simplemente hacer clic en “upload” aquí y puedes seleccionar el archivo, un cuaderno ipython (.ipynb) que desea cargar.</p>
+<p><img alt="upload.jpg" src="../_images/upload.jpg" /></p>
+<p>Y espero que ahora puedas ver algunas de las cosas realmente positivas que surgen al usar un Jupyter notebook. Cuando tengas estas lecciones, puedes hacer doble clic en las celdas mismas y puedes ver todo el código que hay detrás de él, aquí puedes ver todo el markdown que entra para dar formato de todo el texto. Tendrás celdas en las que podrás poner tus respuestas para estas lecciones y también habrá videos de youtube incrustados que repasarán estas lecciones.</p>
+<p>Notan que estos videos en realidad también se hicieron con cuadernos de Jupyter. Y
+estos videos están pensados para que los sigas y vayas a tu propio ritmo. Y si alguna vez necesitas volver a revisar algo, haz una pausa. Puedes llevarte todo el tiempo que necesites para revisar el material. Ese es el punto de tener estos videos tutoriales de youtube en el notebook. Así que esos son algunos de los conceptos básicos de cómo descargar Anaconda, cómo cargar y comenzar a usar Jupyter, los conceptos básicos del uso de Jupyter notebooks, de la creación de celdas de código y markdown, y cómo cargar y guardar tusJupyter notebooks.</p>
+<p><strong>¡Gracias!</strong></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./2_Getting_started_Empezando"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="2.4_Markdown_cells.html" title="previous page">Markdown cells</a>
+    <a class='right-next' id="next-link" href="../3_Variables_lists_and_indexing/3_Overview.html" title="next page">Getting started / Empezando</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Dan Chitwood<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

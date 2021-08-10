@@ -1,0 +1,920 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 4: Grapevines in a warming world &#8212; Plants &amp; Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Lesson 4.7" href="6_Practice.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_Introduction.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../1_Welcome_Bienvenido/1_Overview.html">
+   Welcome / Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Welcome_Bienvenido/1.0_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Welcome_Bienvenido/1.1_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../2_Getting_started_Empezando/2_Overview.html">
+   Getting Started /  Empezando
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Getting_started_Empezando/2.0_Installing_Anaconda.html">
+     Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Getting_started_Empezando/2.1_Instalar_Anaconda.html">
+     Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Getting_started_Empezando/2.2_Coding_cells.html">
+     Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Getting_started_Empezando/2.3_Celdas_de_codigo.html">
+     Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Getting_started_Empezando/2.4_Markdown_cells.html">
+     Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Getting_started_Empezando/2.5_Celdas_de_markdown.html">
+     Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lessons
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Overview.html">
+   Variables, lists, &amp; indexing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.0_Variables.html">
+     Lesson 1.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.1_Functions.html">
+     Lesson 1.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.2_Indexing.html">
+     Lesson 1.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.3_Lists.html">
+     Lesson 1.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.4_Indexing_List_Elements.html">
+     Lesson 1.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.5_Modifying_Lists.html">
+     Lesson 1.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.6_List_of_Lists.html">
+     Lesson 1.6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.7_Slicing.html">
+     Lesson 1.7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.8_Data_Types.html">
+     Lesson 1.8
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Practice.html">
+     Lesson 1.9
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Activity_Plants_and_climate.html">
+     Activity 1: Plants and climate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Overview.html">
+   Visualizing Data with Matplotlib
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.0_Modules.html">
+     Lesson 2.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.1_Plots.html">
+     Lesson 2.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.2_Shape_Size_and_Color.html">
+     Lesson 2.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.3_Legends.html">
+     Lesson 2.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.4_Subplots.html">
+     Lesson 2.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Practice.html">
+     Lesson 2.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Activity_Leaf_and_sunflower_shape.html">
+     Activity 2: The shapes of leaves and sunflowers 🍃🌻
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Overview.html">
+   Loops &amp; the Golden Angle
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Lessons/5.0_Range_Function.html">
+     Lesson 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Lessons/5.1_For_Loops.html">
+     Lesson 3.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Lessons/5.2_Counters.html">
+     Lesson 3.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Lessons/5.3_Using_Lists_and_Loops.html">
+     Lesson 3.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Lessons/5.4_Calculating_Fibonacci.html">
+     Lesson 3.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Lessons/5.5_While_Loops.html">
+     Lesson 3.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Practice.html">
+     Lesson 3.6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Loops_and_the_golden_angle/5_Activity_Modeling_sunflowers.html">
+     Activity 3: How to Build a Sunflower 🌻
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="6_Overview.html">
+   Data Analysis with Pandas
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="6_Lessons/6.0_Reading_in_Data.html">
+     Lesson 4.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6_Lessons/6.1_Head_and_Tail.html">
+     Lesson 4.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6_Lessons/6.2_Selecting_Columns.html">
+     Lesson 4.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6_Lessons/6.3_Descriptive_Statistics.html">
+     Lesson 4.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6_Lessons/6.4_Masks.html">
+     Lesson 4.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6_Lessons/6.5_Using_iloc.html">
+     Lesson 4.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6_Lessons/6.6_Seaborn.html">
+     Lesson 4.6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6_Practice.html">
+     Lesson 4.7
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Activity 4: Grapevines in a warming world
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/6_Data_analysis_with_pandas/6_Activity_Grapes_in_a_warming_world.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2F6_Data_analysis_with_pandas/6_Activity_Grapes_in_a_warming_world.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/6_Data_analysis_with_pandas/6_Activity_Grapes_in_a_warming_world.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/6_Data_analysis_with_pandas/6_Activity_Grapes_in_a_warming_world.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#masking">
+   Masking
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determining-the-earliest-and-latest-harvest-dates-and-where-they-occurred">
+     Determining the earliest and latest harvest dates and where they occurred
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finding-median-harvest-dates-in-50-year-intervals">
+     Finding median harvest dates in 50 year intervals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualization-and-correlation">
+   Visualization and correlation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#looking-for-correlation-in-harvest-date-between-burgundy-and-switzerland">
+     Looking for correlation in harvest date between Burgundy and Switzerland
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphing-temperature-anomaly-vs-year-and-harvest-date-vs-temperature-anomaly">
+   Graphing temperature anomaly vs year and harvest date vs temperature anomaly
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modeling-harvest-date-as-a-function-of-temperature-anomaly-using-seaborn">
+     Modeling harvest date as a function of temperature anomaly using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       seaborn
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="activity-4-grapevines-in-a-warming-world">
+<h1>Activity 4: Grapevines in a warming world<a class="headerlink" href="#activity-4-grapevines-in-a-warming-world" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>In the last lesson, you learned about pandas, dataframes, and seaborn. You learned that the harvest dates of grapevines in Europe have been recorded for centuries and you read the data in to Jupyter to analyze using <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
+<p>In the cell below, import <code class="docutils literal notranslate"><span class="pre">pandas</span></code> again, use the <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> function to read the <a class="reference external" href="https://github.com/DanChitwood/PlantsAndPython/blob/master/grape_harvest.csv">data</a> (<code class="docutils literal notranslate"><span class="pre">grape_harvest.csv</span></code>) in using the <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> function, and make sure the data is ready to analyze by printing the outputs of <code class="docutils literal notranslate"><span class="pre">.head()</span></code>, <code class="docutils literal notranslate"><span class="pre">.tail()</span></code>, <code class="docutils literal notranslate"><span class="pre">.describe()</span></code>, and <code class="docutils literal notranslate"><span class="pre">.columns</span></code> functions in the cell below.</p>
+<p>Remember to import <code class="docutils literal notranslate"><span class="pre">pandas</span></code>!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read in the grape_harvest.csv dataset here</span>
+<span class="c1"># Use pandas functions to verify that the dataset has been read in correctly</span>
+<span class="c1"># Print the outputs of the .head(), .tail(), .describe(), and .columns functions</span>
+<span class="c1"># Remember to import pandas!</span>
+
+<span class="c1"># You can use the following url from GitHub to read in the data:</span>
+<span class="c1"># https://raw.githubusercontent.com/DanChitwood/PlantsAndPython/master/grape_harvest.csv</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that your data is read in, let’s use masking, data visualization, and line fitting to explore the relationship between grape harvest date and climate over the centuries.</p>
+<hr class="docutils" />
+<div class="section" id="masking">
+<h2>Masking<a class="headerlink" href="#masking" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="determining-the-earliest-and-latest-harvest-dates-and-where-they-occurred">
+<h3>Determining the earliest and latest harvest dates and where they occurred<a class="headerlink" href="#determining-the-earliest-and-latest-harvest-dates-and-where-they-occurred" title="Permalink to this headline">¶</a></h3>
+<p>We’ll start off our exploration of grape harvest dates by figuring out when and where the earliest and latest harvest dates occurred.</p>
+<p>The pandas dataframe you just created should have four columns, which are:</p>
+<ul class="simple">
+<li><p><strong>‘year’</strong>: the year the data was collected</p></li>
+<li><p><strong>‘region’</strong>: the region in Europe that the data was collected from</p></li>
+<li><p><strong>‘harvest’</strong>: the harvest date recorded. Harvest date is defined as number of days after August 31st. A negative number means the grapes were harvested before August 31st that year, and a positive number after.</p></li>
+<li><p><strong>‘anomaly’</strong>: the temperature anomaly. For a given year, this number represents how much colder (negative) or hotter (positive) Europe was compared to a long term reference value, in degrees Celsius</p></li>
+</ul>
+<p>Below, print out statements answering the following questions using masking techniques that you have learned:</p>
+<ol class="simple">
+<li><p><strong>Which year did the earliest harvest happen, which region did it occur in, and how early was the harvest?</strong></p></li>
+<li><p><strong>Which year did the latest harvest happen, which region did it occur in, and how late was the harvest?</strong></p></li>
+</ol>
+<p><strong>Hint</strong>: Remember, a mask is a Boolean statement. But that Boolean statement can be combined with pandas functions, like .min() or .max(). Also remember that masking, the Boolean statement, and pandas functions can be combined with specific columns by name.</p>
+<p><strong>Second hint</strong>: After implementing your mask, you can append to it the .values() function within your print statement. This will allow you to print the values retrieved using your mask.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here to print which year the earliest harvest occured,</span>
+<span class="c1"># the region it occurred in, and how early the harvest was</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here to print which year the latest harvest occured,</span>
+<span class="c1"># the region it occurred in, and how late the harvest was</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="finding-median-harvest-dates-in-50-year-intervals">
+<h3>Finding median harvest dates in 50 year intervals<a class="headerlink" href="#finding-median-harvest-dates-in-50-year-intervals" title="Permalink to this headline">¶</a></h3>
+<p>You want to know if the grape harvest date is changing, and if so, is it getting earlier or later?</p>
+<p>You decide that you would like to know the median grape harvest date for the following 50 year intervals, as well as the median since the year 2000:</p>
+<ul class="simple">
+<li><p>1800-1849</p></li>
+<li><p>1850-1899</p></li>
+<li><p>1900-1949</p></li>
+<li><p>1950-1999</p></li>
+<li><p>2000-2007</p></li>
+</ul>
+<p><strong>For each of the above intervals, calculate the median grape harvest date. For each interval print out statements saying “The median harvest date for years (<em>insert interval here</em>) is: x.”</strong></p>
+<p><strong>Hint:</strong> You can write Boolean statements for values within an interval as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;column&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">value</span> <span class="o">&amp;</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;column&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">value</span>
+</pre></div>
+</div>
+<p><strong>Is the harvest date for grapes getting earlier or later?</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="visualization-and-correlation">
+<h2>Visualization and correlation<a class="headerlink" href="#visualization-and-correlation" title="Permalink to this headline">¶</a></h2>
+<p>Now that you understand a bit about the overall trends in the data, you want to examine other factors that might influence grape harvest date besides historical changes in climate.</p>
+<p>You see that the data comes from many regions, all the way from sunny Spain to Germany. You wonder if these latitudinal differences would have any effect on the grape harvest dates.</p>
+<p><strong>Make a boxplot comparing the distributions of grape harvest dates where the x-axis is “region” and the y-axis “harvest”. The regions will be ordered by latitude, from the most southern to northern. This will allow you to assess visually if latitude is affecting grape harvest date.</strong></p>
+<p>Your plot should:</p>
+<ol class="simple">
+<li><p>include axis labels (use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> functions that you have already learned about)</p></li>
+<li><p>have a title (use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> functions that you have already learned about)</p></li>
+<li><p>keep the figure size and x ticks commands provided in the code below</p></li>
+<li><p>import <code class="docutils literal notranslate"><span class="pre">seaborn</span></code></p></li>
+<li><p>finally, arrange the regions by latitude, from the most southern to the most northern. To do this, use the provided list <code class="docutils literal notranslate"><span class="pre">latitude_order</span></code>. Within the <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> boxplot function, specify the <code class="docutils literal notranslate"><span class="pre">order</span></code> argument as follows: <code class="docutils literal notranslate"><span class="pre">order</span> <span class="pre">=</span> <span class="pre">latitude_order</span></code>. This will arrange the regions in your boxplot from the most southern to northern.</p></li>
+</ol>
+<p><strong>Hint:</strong> Notice that you can combine <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>! You can call the <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> boxplot function and apply the styles that you like, but use the <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> functions you already know to modify the title, axes labels, and other plot attributes. The best of both worlds!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import matplotlib and seaborn</span>
+<span class="c1"># Remember the line of code to set matplotlib figures to inline in Jupyter</span>
+
+<span class="c1">## DO NOT DELETE THE PROVIDED LINES OF CODE</span>
+<span class="c1">## (they are included to make sure you get decent looking plots)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="c1">#a list of regions, from the most southern to northern </span>
+<span class="n">latitude_order</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;spain&#39;</span><span class="p">,</span><span class="s1">&#39;maritime_alps&#39;</span><span class="p">,</span><span class="s1">&#39;languedoc&#39;</span><span class="p">,</span><span class="s1">&#39;various_south_east&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;gaillac_south_west&#39;</span><span class="p">,</span><span class="s1">&#39;southern_rhone_valley&#39;</span><span class="p">,</span><span class="s1">&#39;bordeaux&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;northern_rhone_valley&#39;</span><span class="p">,</span><span class="s1">&#39;auvergne&#39;</span><span class="p">,</span><span class="s1">&#39;savoie&#39;</span><span class="p">,</span><span class="s1">&#39;northern_italy&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;beaujolais_maconnais&#39;</span><span class="p">,</span><span class="s1">&#39;vendee_poitou_charente&#39;</span><span class="p">,</span><span class="s1">&#39;switzerland_leman_lake&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;jura&#39;</span><span class="p">,</span><span class="s1">&#39;high_loire_valley&#39;</span><span class="p">,</span><span class="s1">&#39;low_loire_valley&#39;</span><span class="p">,</span><span class="s1">&#39;burgundy&#39;</span><span class="p">,</span><span class="s1">&#39;auxerre_avalon&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;champagne_2&#39;</span><span class="p">,</span><span class="s1">&#39;southern_lorraine&#39;</span><span class="p">,</span><span class="s1">&#39;alsace&#39;</span><span class="p">,</span><span class="s1">&#39;northern_lorraine&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;germany&#39;</span><span class="p">,</span><span class="s1">&#39;ile_de_france&#39;</span><span class="p">,</span><span class="s1">&#39;champagne_1&#39;</span><span class="p">,</span><span class="s1">&#39;luxembourg&#39;</span><span class="p">]</span> 
+                    
+<span class="c1"># Put your code here</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span> <span class="c1">#Rotates x axis labels so that they are readable</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_21784</span><span class="o">/</span><span class="mf">3708331264.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1">## DO NOT DELETE THE PROVIDED LINES OF CODE</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1">## (they are included to make sure you get decent looking plots)</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> 
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1">#a list of regions, from the most southern to northern</span>
+
+<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Based on your graph, do you believe that latitude affects the harvest date?</strong> Explain your reasoning. If harvest date changes going south to north, how does this impact your analysis of the effect of history and climate change on harvest date? If harvest date is not affected by latitude, what are the implications for your analysis then?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Provide your interpretation from your plot of the relationship between harvest date and latitude</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="looking-for-correlation-in-harvest-date-between-burgundy-and-switzerland">
+<h3>Looking for correlation in harvest date between Burgundy and Switzerland<a class="headerlink" href="#looking-for-correlation-in-harvest-date-between-burgundy-and-switzerland" title="Permalink to this headline">¶</a></h3>
+<p>You wonder if the grape harvest dates in different regions are correlated with each other. Two regions with some of the longest records of grape harvest dates are Burgundy (“burgundy”) and Switzerland (“switzerland_leman_lake”). You would like to examine the correlation between the grape harvest dates at these two locations. But first, you need to make sure there is a matching grape harvest date for every year between these regions.</p>
+<p>Your task below is to:</p>
+<p><strong>1. Create two masked dataframes, one named “burgundy” with only “burgundy” data and the other named “switzerland”, with only “switzerland_leman_lake” data.</strong></p>
+<p><strong>2. Then, using the “merge” function code provided below, create a dataset where every year of recorded “burgundy” data has a matching year or recorded “switzerland” data. Be sure to inspect the column names</strong></p>
+<p><strong>3. Using your new merged dataframe named “burgundy_switzerland”, print out the earliest and latest year in your new merged data.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT DELETE THE PROVIDED CODE FOR MERGING DATAFRAMES</span>
+
+<span class="c1"># Below this point, first create two masked datasets, &quot;burgundy&quot; and &quot;switzerland&quot;, that contain only the data for </span>
+<span class="c1"># &quot;burgundy&quot; and &quot;switzerland_leman_lake&quot; regions, respectively by using masks</span>
+
+<span class="c1"># Put your code here for the &quot;burgundy&quot; and &quot;switzerland&quot; masked dataframes</span>
+
+<span class="n">burgandy</span> <span class="o">=</span>
+
+<span class="n">switzerland</span> <span class="o">=</span>
+
+<span class="c1"># After creating your masked dataframes above, use the merge function below to create a single dataframe</span>
+<span class="c1"># Check the column names of your new merged dataset. The &quot;burgundy&quot; data will have &quot;x&quot; after it and the</span>
+<span class="c1"># &quot;switzerland&quot; data &quot;y&quot;. &quot;year&quot; will have neither &quot;x&quot; nor &quot;y&quot; because it is shared between the dataframes</span>
+
+<span class="n">burgundy_switzerland</span> <span class="o">=</span> <span class="n">burgundy</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">switzerland</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">burgundy_switzerland</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="c1"># Next, find the minimum and maximum years represented in this new merged dataset</span>
+<span class="c1"># Below, print out statements of what the earliest and latest years are</span>
+
+<span class="c1"># Put your code here for the minimum and maximum years in your merged &quot;burgundy_switzerland&quot; dataframe</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that you have data that is matched, with exactly one “burgundy” and one “switzerland_leman_lake” observation for each year, you can examine if the grape harvest dates are correlated.</p>
+<p>Using the seaborn <code class="docutils literal notranslate"><span class="pre">jointplot()</span></code> function (documentation <a class="reference external" href="https://seaborn.pydata.org/generated/seaborn.jointplot.html">here</a>), make a scatterplot with distributions on the sides to look at this correaltion. <strong>Make sure that your plot includes the regression line!</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question</strong>: Correlation is the relationship between two variables: for example, when one variable increases in value, the other increases as well (positive correlation) or when one variable increases in value the other decreases (negative correlation). Variability is how spread the data is or how clustered.</p>
+<p>Do you think that harvest date between the two regions is correlated? Positive or negative? How variable is the data? Is the variability constant across harvest dates? What can you learn from your graph?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Provide your interpretation of your plot here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="graphing-temperature-anomaly-vs-year-and-harvest-date-vs-temperature-anomaly">
+<h2>Graphing temperature anomaly vs year and harvest date vs temperature anomaly<a class="headerlink" href="#graphing-temperature-anomaly-vs-year-and-harvest-date-vs-temperature-anomaly" title="Permalink to this headline">¶</a></h2>
+<p>You have been wondering this whole time: is the temperature increasing with time?</p>
+<p>To find out the answer to this question, <strong>below create a scatter plot with “anomaly” on the y-axis and “year” on the x-axis.</strong> Make sure your plots have labels and a title.</p>
+<p><strong>Remember:</strong> If you have already imported in <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>, if you use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> functions, your plots will still have the style of <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> and you can refer to dataframes and specific columns within <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> functions that you have already learned about! Use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> functions and refer to your dataframe and columns by name and see what happens!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## DO NOT DELETE THE PROVIDED LINES OF CODE</span>
+<span class="c1">## (they are included to make sure you get decent looking plots)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+
+<span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You see that indeed, temperature is increasing with time. The classic “hockey stick” pattern. You want to see if the harvest date is impacted by the temperature anomaly. As above, <strong>below create a scatterplot with “harvest date” on the y-axis and “anomaly” on the x-axis.</strong>  Make sure your plots have labels and a title.</p>
+<p><strong>Hint</strong>: you are plotting lots of data and it will be hard to see the underlying relationship because of overplotting. You can insert the <code class="docutils literal notranslate"><span class="pre">alpha</span></code> argument into the <code class="docutils literal notranslate"><span class="pre">scatter()</span></code> function to create transparency and see your data better. You can start with an alpha as low as 0.1 (e.g., <code class="docutils literal notranslate"><span class="pre">alpha=0.1</span></code>) and adjust it higher if you like.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## DO NOT DELETE THE PROVIDED LINES OF CODE</span>
+<span class="c1">## (they are included to make sure you get decent looking plots)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+
+<span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question:</strong> Based on your graph, is there a correaltion between harvest date and temperature anamoly? If so, is it positive or negative? Do you think the relationship is linear or is curved, like your temperature anomaly vs. year graph?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your thoughts here about the relationship between harvest date and temperature here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="modeling-harvest-date-as-a-function-of-temperature-anomaly-using-seaborn">
+<h3>Modeling harvest date as a function of temperature anomaly using <code class="docutils literal notranslate"><span class="pre">seaborn</span></code><a class="headerlink" href="#modeling-harvest-date-as-a-function-of-temperature-anomaly-using-seaborn" title="Permalink to this headline">¶</a></h3>
+<p>You wonder if “harvest” date can be modeled as a function of temperature “anomaly”. You even suspect, after plotting “harvest” vs. “anomaly” above, if this relationship might be linear. You are amazed to learn that in fact others suggest this relationship is linear! In the <a class="reference external" href="https://www.clim-past.net/8/1403/2012/cp-8-1403-2012.pdf">publication</a> where you got this data from, it suggests that others have found that <em>for every 1C rise in temperature, harvest date is on average 10 days earlier!</em></p>
+<p>You set out to create a linear model predicting “harvest” as a function of “anomaly” and realize that this is wasy to do using the <code class="docutils literal notranslate"><span class="pre">sns.lmplot()</span></code> function! Read the documentation for <code class="docutils literal notranslate"><span class="pre">sns.lmplot()</span></code> <a class="reference external" href="https://seaborn.pydata.org/generated/seaborn.lmplot.html">here</a> and make a plot, with a linear fit displayed, of harvest date versus temperature anomaly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make your sns.lmplot() here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>There seems to be a lot of overplotting with too many points! In the cell below, use the <code class="docutils literal notranslate"><span class="pre">scatter=False</span></code> argument to remove the datapoints for us to see only the fitted line!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove the datapoints from your plot in this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Look at your fitted line and try to estimate the slope. Remember, the slope is the unit change in <span class="math notranslate nohighlight">\(y\)</span> values divided by the unit change in <span class="math notranslate nohighlight">\(x\)</span> values. For each degree Celsius, by how many days does the harvest change approximately?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your estimate of how many days the harvest changes per each degree of temperature anomaly in Celsius.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remember in Activity 1, that you indexed the global temperature anomaly during your lifetime to see how much global temperatures have changed since you were born. As a rough estimate, let’s see by how many days such a temperature increase could have affected the harvest of grapes.</p>
+<p>In the cell below, the temperature anamoly values starting at year 1900 to 2020 are provided in a list called <code class="docutils literal notranslate"><span class="pre">temp_anomaly</span></code>. These data are from <a class="reference external" href="https://climate.nasa.gov/vital-signs/global-temperature/">NASA</a>. Execute the cell below to create the list.</p>
+<p><strong>Remember:</strong> This list starts at 1900 to 2020 and indexing in python starts at 0.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_anomaly</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.19</span><span class="p">,</span><span class="o">-</span><span class="mf">0.23</span><span class="p">,</span><span class="o">-</span><span class="mf">0.25</span><span class="p">,</span><span class="o">-</span><span class="mf">0.28</span><span class="p">,</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span><span class="o">-</span><span class="mf">0.33</span><span class="p">,</span><span class="o">-</span><span class="mf">0.36</span><span class="p">,</span><span class="o">-</span><span class="mf">0.37</span><span class="p">,</span><span class="o">-</span><span class="mf">0.39</span><span class="p">,</span><span class="o">-</span><span class="mf">0.4</span><span class="p">,</span><span class="o">-</span><span class="mf">0.41</span><span class="p">,</span><span class="o">-</span><span class="mf">0.38</span><span class="p">,</span>
+                <span class="o">-</span><span class="mf">0.35</span><span class="p">,</span><span class="o">-</span><span class="mf">0.32</span><span class="p">,</span><span class="o">-</span><span class="mf">0.31</span><span class="p">,</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span><span class="o">-</span><span class="mf">0.29</span><span class="p">,</span><span class="o">-</span><span class="mf">0.29</span><span class="p">,</span><span class="o">-</span><span class="mf">0.29</span><span class="p">,</span><span class="o">-</span><span class="mf">0.29</span><span class="p">,</span><span class="o">-</span><span class="mf">0.27</span><span class="p">,</span><span class="o">-</span><span class="mf">0.26</span><span class="p">,</span><span class="o">-</span><span class="mf">0.25</span><span class="p">,</span><span class="o">-</span><span class="mf">0.24</span><span class="p">,</span>
+                <span class="o">-</span><span class="mf">0.23</span><span class="p">,</span><span class="o">-</span><span class="mf">0.22</span><span class="p">,</span><span class="o">-</span><span class="mf">0.21</span><span class="p">,</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="o">-</span><span class="mf">0.19</span><span class="p">,</span><span class="o">-</span><span class="mf">0.19</span><span class="p">,</span><span class="o">-</span><span class="mf">0.19</span><span class="p">,</span><span class="o">-</span><span class="mf">0.19</span><span class="p">,</span><span class="o">-</span><span class="mf">0.18</span><span class="p">,</span><span class="o">-</span><span class="mf">0.17</span><span class="p">,</span><span class="o">-</span><span class="mf">0.16</span><span class="p">,</span><span class="o">-</span><span class="mf">0.14</span><span class="p">,</span>
+                <span class="o">-</span><span class="mf">0.11</span><span class="p">,</span><span class="o">-</span><span class="mf">0.06</span><span class="p">,</span><span class="o">-</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.06</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span><span class="mf">0.11</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.07</span><span class="p">,</span><span class="mf">0.04</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mf">0.04</span><span class="p">,</span><span class="o">-</span><span class="mf">0.07</span><span class="p">,</span><span class="o">-</span><span class="mf">0.08</span><span class="p">,</span>
+                <span class="o">-</span><span class="mf">0.08</span><span class="p">,</span><span class="o">-</span><span class="mf">0.07</span><span class="p">,</span><span class="o">-</span><span class="mf">0.07</span><span class="p">,</span><span class="o">-</span><span class="mf">0.07</span><span class="p">,</span><span class="o">-</span><span class="mf">0.07</span><span class="p">,</span><span class="o">-</span><span class="mf">0.06</span><span class="p">,</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span><span class="o">-</span><span class="mf">0.04</span><span class="p">,</span><span class="o">-</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span>
+                <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span><span class="o">-</span><span class="mf">0.03</span><span class="p">,</span><span class="o">-</span><span class="mf">0.04</span><span class="p">,</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span><span class="o">-</span><span class="mf">0.06</span><span class="p">,</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span><span class="o">-</span><span class="mf">0.03</span><span class="p">,</span><span class="o">-</span><span class="mf">0.02</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.02</span><span class="p">,</span><span class="mf">0.04</span><span class="p">,</span>
+                <span class="mf">0.07</span><span class="p">,</span><span class="mf">0.12</span><span class="p">,</span><span class="mf">0.16</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.21</span><span class="p">,</span><span class="mf">0.22</span><span class="p">,</span><span class="mf">0.21</span><span class="p">,</span><span class="mf">0.21</span><span class="p">,</span><span class="mf">0.22</span><span class="p">,</span><span class="mf">0.24</span><span class="p">,</span><span class="mf">0.27</span><span class="p">,</span><span class="mf">0.31</span><span class="p">,</span><span class="mf">0.33</span><span class="p">,</span><span class="mf">0.34</span><span class="p">,</span>
+                <span class="mf">0.33</span><span class="p">,</span><span class="mf">0.33</span><span class="p">,</span><span class="mf">0.34</span><span class="p">,</span><span class="mf">0.34</span><span class="p">,</span><span class="mf">0.37</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.43</span><span class="p">,</span><span class="mf">0.45</span><span class="p">,</span><span class="mf">0.48</span><span class="p">,</span><span class="mf">0.51</span><span class="p">,</span><span class="mf">0.53</span><span class="p">,</span><span class="mf">0.55</span><span class="p">,</span><span class="mf">0.59</span><span class="p">,</span><span class="mf">0.61</span><span class="p">,</span>
+                <span class="mf">0.62</span><span class="p">,</span><span class="mf">0.63</span><span class="p">,</span><span class="mf">0.64</span><span class="p">,</span><span class="mf">0.65</span><span class="p">,</span><span class="mf">0.65</span><span class="p">,</span><span class="mf">0.65</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.74</span><span class="p">,</span><span class="mf">0.79</span><span class="p">,</span><span class="mf">0.83</span><span class="p">,</span><span class="mf">0.88</span><span class="p">,</span><span class="mf">0.91</span><span class="p">,</span><span class="mf">0.95</span><span class="p">,</span>
+                <span class="mf">0.98</span><span class="p">,</span><span class="mf">1.01</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the cell below, index the list from the year of your birth to 2020. Look at the anomaly difference from your birth to 2020 and roughly estimate by how much such a change in temperature would affect the harvest date of grapevines.</p>
+<p><strong>Hint:</strong> Remember that -1 can index the last element of a list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Reexamining your graph of temperature anomaly versus year, does your result make sense? What does this say about the pace of climate change and implications for agriculture?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your thoughts about the pace of climate change and its implications</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./6_Data_analysis_with_pandas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="6_Practice.html" title="previous page">Lesson 4.7</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Dan Chitwood<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
