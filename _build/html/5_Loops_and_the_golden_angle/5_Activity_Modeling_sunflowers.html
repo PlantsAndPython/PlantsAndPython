@@ -1,0 +1,865 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 3: How to Build a Sunflower 🌻 &#8212; Plants &amp; Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting started / Empezando" href="../6_Data_analysis_with_pandas/6_Overview.html" />
+    <link rel="prev" title="Lesson 3.6" href="5_Practice.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_Introduction.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../1_Welcome_Bienvenido/1_Overview.html">
+   Welcome / Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Welcome_Bienvenido/1.0_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Welcome_Bienvenido/1.1_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../2_Getting_started_Empezando/2_Overview.html">
+   Getting Started /  Empezando
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Getting_started_Empezando/2.0_Installing_Anaconda.html">
+     Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Getting_started_Empezando/2.1_Instalar_Anaconda.html">
+     Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Getting_started_Empezando/2.2_Coding_cells.html">
+     Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Getting_started_Empezando/2.3_Celdas_de_codigo.html">
+     Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Getting_started_Empezando/2.4_Markdown_cells.html">
+     Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Getting_started_Empezando/2.5_Celdas_de_markdown.html">
+     Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lessons
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Overview.html">
+   Variables, lists, &amp; indexing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.0_Variables.html">
+     Lesson 1.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.1_Functions.html">
+     Lesson 1.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.2_Indexing.html">
+     Lesson 1.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.3_Lists.html">
+     Lesson 1.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.4_Indexing_List_Elements.html">
+     Lesson 1.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.5_Modifying_Lists.html">
+     Lesson 1.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.6_List_of_Lists.html">
+     Lesson 1.6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.7_Slicing.html">
+     Lesson 1.7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Lessons/3.8_Data_Types.html">
+     Lesson 1.8
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Practice.html">
+     Lesson 1.9
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Variables_lists_and_indexing/3_Activity_Plants_and_climate.html">
+     Activity 1: Plants and climate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Overview.html">
+   Visualizing Data with Matplotlib
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.0_Modules.html">
+     Lesson 2.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.1_Plots.html">
+     Lesson 2.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.2_Shape_Size_and_Color.html">
+     Lesson 2.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.3_Legends.html">
+     Lesson 2.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Lessons/4.4_Subplots.html">
+     Lesson 2.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Practice.html">
+     Lesson 2.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Visualizing_data_with_matplotlib/4_Activity_Leaf_and_sunflower_shape.html">
+     Activity 2: The shapes of leaves and sunflowers 🍃🌻
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="5_Overview.html">
+   Loops &amp; the Golden Angle
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="5_Lessons/5.0_Range_Function.html">
+     Lesson 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5_Lessons/5.1_For_Loops.html">
+     Lesson 3.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5_Lessons/5.2_Counters.html">
+     Lesson 3.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5_Lessons/5.3_Using_Lists_and_Loops.html">
+     Lesson 3.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5_Lessons/5.4_Calculating_Fibonacci.html">
+     Lesson 3.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5_Lessons/5.5_While_Loops.html">
+     Lesson 3.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5_Practice.html">
+     Lesson 3.6
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Activity 3: How to Build a Sunflower 🌻
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Overview.html">
+   Data Analysis with Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.0_Reading_in_Data.html">
+     Lesson 4.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.1_Head_and_Tail.html">
+     Lesson 4.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.2_Selecting_Columns.html">
+     Lesson 4.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.3_Descriptive_Statistics.html">
+     Lesson 4.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.4_Masks.html">
+     Lesson 4.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.5_Using_iloc.html">
+     Lesson 4.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Lessons/6.6_Seaborn.html">
+     Lesson 4.6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Practice.html">
+     Lesson 4.7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Data_analysis_with_pandas/6_Activity_Grapes_in_a_warming_world.html">
+     Activity 4: Grapevines in a warming world
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/5_Loops_and_the_golden_angle/5_Activity_Modeling_sunflowers.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2F5_Loops_and_the_golden_angle/5_Activity_Modeling_sunflowers.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/5_Loops_and_the_golden_angle/5_Activity_Modeling_sunflowers.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/5_Loops_and_the_golden_angle/5_Activity_Modeling_sunflowers.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-formula-for-a-sunflower">
+   The formula for a sunflower
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#build-a-sunflower">
+   Build a sunflower!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-a-difference-an-angle-makes">
+   What a difference an angle makes!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#but-sunflowers-grow">
+   But sunflowers grow!
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="activity-3-how-to-build-a-sunflower">
+<h1>Activity 3: How to Build a Sunflower 🌻<a class="headerlink" href="#activity-3-how-to-build-a-sunflower" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>In this activity, you will learn how to code the intricate, beautiful packing of florets in a sunflower head, explore the sensitivity of the arrangement of florets to the golden angle, and create animations of a growing sunflower.</p>
+<p>Your reading assignment before this activity is <a class="reference external" href="http://algorithmicbotany.org/papers/abop/abop-ch4.pdf">“Chapter 4 - Phyllotaxis”</a> from <a class="reference external" href="http://algorithmicbotany.org/papers/#abop"><em>The Algorithmic Beauty of Plants</em></a>. The inspiration and theory behind the coding you will be doing today comes from there. The formulas, too, also come from the chapter, but ultimately derive from the classic work by Vogel, “A better way to construct the sunflower head”. Both of these works form the basis for today’s activity. Skim over the reading assignment if you have the chance (there is no need to) to get a feel for some of the math we will be using in today’s activity.</p>
+<blockquote>
+<div><p><strong>References:</strong></p>
+<p>P. Prusinkiewicz and A. Lindenmayer. <a class="reference external" href="http://algorithmicbotany.org/papers/#abop">The algorithmic beauty of plants</a>. Springer-Verlag, Berlin, Heidelberg, 1990. ISBN:0-387-97297-8</p>
+<p>H. Vogel. <a class="reference external" href="https://doi.org/10.1016/0025-5564(79)90080-4">A better way to construct the sunflower head</a>. <em>Mathematical Biosciences</em>, 44:179–189, 1979.</p>
+</div></blockquote>
+<hr class="docutils" />
+<div class="section" id="the-formula-for-a-sunflower">
+<h2>The formula for a sunflower<a class="headerlink" href="#the-formula-for-a-sunflower" title="Permalink to this headline">¶</a></h2>
+<p>From <em>The Algorithmic Beauty of Plants</em> chapter you read, you learned that Vogel had proposed the following formulas to calculate the angle and radius of each floret on a sunflower head:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">theta</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">phi</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the ordered number of each floret on a sunflower head, <code class="docutils literal notranslate"><span class="pre">theta</span></code> is the angle of the floret, <code class="docutils literal notranslate"><span class="pre">phi</span></code> is the golden angle, and <code class="docutils literal notranslate"><span class="pre">r</span></code> is radius, the floret’s distance from the center of the sunflower. You should think of each sequential floret as having one more “turn” of <code class="docutils literal notranslate"><span class="pre">phi</span></code> and having a longer radius than the previous, following a square root function.</p>
+<p>Also remember back to trigonometry (nobody’s favorite class, but let’s try to recall) that in a right triangle, <code class="docutils literal notranslate"><span class="pre">cos</span></code> and <code class="docutils literal notranslate"><span class="pre">sin</span></code> are the adjacent and opposite sides divided by the hypotenuse, respectively. In the context of a radial Cartesian plane centered at (0,0), to retrieve the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinates we use the following equations:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, we will be working in radians, not degrees. Remember also from trigonometry that to convert degrees into radians, we multiply degrees by <span class="math notranslate nohighlight">\(\displaystyle\frac{\pi}{180}\)</span>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="build-a-sunflower">
+<h2>Build a sunflower!<a class="headerlink" href="#build-a-sunflower" title="Permalink to this headline">¶</a></h2>
+<p>Using the equations above, build a sunflower!</p>
+<p>But first, since we will be using the golden angle quite a lot, let’s just make that a variable. In the cell below, the golden angle is provided in degrees. Create a new variable called <code class="docutils literal notranslate"><span class="pre">phi</span></code> that is the golden angle in radians.</p>
+<p>It would be convenient to have <span class="math notranslate nohighlight">\(\pi\)</span>. The cell below imports the <code class="docutils literal notranslate"><span class="pre">math</span></code> module, which you will often likely need! To retrieve the value of <span class="math notranslate nohighlight">\(\pi\)</span>, simply type <code class="docutils literal notranslate"><span class="pre">math.pi</span></code>. You are also going to need <code class="docutils literal notranslate"><span class="pre">math</span></code> for the <code class="docutils literal notranslate"><span class="pre">math.sqrt()</span></code>, <code class="docutils literal notranslate"><span class="pre">math.cos()</span></code>, and <code class="docutils literal notranslate"><span class="pre">math.sin()</span></code> functions in this lesson.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>  
+
+<span class="c1"># From the online encyclopedia of integer sequences: </span>
+<span class="c1"># https://oeis.org/A096627</span>
+
+<span class="n">golden_angle</span> <span class="o">=</span> <span class="mf">137.5077640500378546463487396283702776206886952699253696312384958261062333851951</span>
+
+<span class="c1"># Convert golden_angle to radians here. Call the variable phi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, write a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to calculate the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinates for each floret.</p>
+<p><strong>Do the following:</strong></p>
+<ul class="simple">
+<li><p>Create two lists for your coordinates outside of the loop: a list for the <code class="docutils literal notranslate"><span class="pre">x</span></code> values and a list for the <code class="docutils literal notranslate"><span class="pre">y</span></code> values</p></li>
+<li><p>Your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop should iterate 1000 times, calculating the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinate values for 1000 florets</p></li>
+<li><p>Within your loop, for each floret calculate:</p>
+<ul>
+<li><p>Radius</p></li>
+<li><p>Theta</p></li>
+<li><p>x coordinate value</p></li>
+<li><p>y coordinate value</p></li>
+</ul>
+</li>
+<li><p>Append <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinate values to their respective lists</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, plot your results using matplotlib!</p>
+<ul class="simple">
+<li><p>Pay attention to the size of the points, not too much overlap but not too small, either</p></li>
+<li><p>Pick an appropriate color</p></li>
+<li><p>Adjust the alpha appropriately</p></li>
+<li><p>Consider scaling the x and y axes equal and setting a fixed aspect ratio</p></li>
+<li><p>Turn the axes off</p></li>
+<li><p>Always make aesthetically pleasing figures, <em><strong>especially</strong></em> when plotting sunflowers</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You must alway import matplotlib before using it and use the inline code</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="c1"># Put the code for your plot here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="what-a-difference-an-angle-makes">
+<h2>What a difference an angle makes!<a class="headerlink" href="#what-a-difference-an-angle-makes" title="Permalink to this headline">¶</a></h2>
+<p>You learned in the <em>The Algorithmic Beauty of Plants</em> chapter that you read that the packing of florets in a sunflower is extremely sensitive to the exact value of the golden angle. A little bit more or less and the beautifully-spaced arrangement that is readily apparent to the eye is destroyed. This is because of the special mathematical properties of the golden angle.</p>
+<p>In this exercise, you will be taking the sunflower florets you just created using your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop and creating an animation, where the value of the golden angle deviates from -1 to +1 degrees over 100 steps. Using this animation, you will observe the sensitivity of the packing of florets in a sunflower to the golden angle, and how this sensitivity varies closer to and farther from the center.</p>
+<p>Our strategy will be to create a loop within a loop! The logic is this: you have already created a loop that will calculate all the <code class="docutils literal notranslate"><span class="pre">x</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinates in a sunflower. You put that loop into another loop! The outer loop will iterate over deviations of the golden angle. So, the flow will look like this:</p>
+<ol class="simple">
+<li><p>Outer loop creates a new angle value,</p></li>
+<li><p>Inner loop caclulates all the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinate values for the new angle value,</p></li>
+<li><p>The inner loop is exited, you are back in the outer loop,</p></li>
+<li><p>Your previous code to plot a sunflower plots the florets for the current angle,</p></li>
+<li><p>The outer loop repeats with a new angle value and a new frame of the animation!</p></li>
+</ol>
+<p>Just one more thing. We will be iterating in 100 steps from -1 to +1 degrees of the golden angle. How do you specify a set number of steps between two values? One function to do this is <code class="docutils literal notranslate"><span class="pre">linspace()</span></code>, from the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> module. <code class="docutils literal notranslate"><span class="pre">linspace()</span></code> takes a start value (inclusive), stop value (inclusive), and a number of steps to incrementally iterate over the interval. Use this for your outer loop to minutely adjust the angle value from +- 1 degree of the golden angle!</p>
+<p>In the cell below, pseudo-code is provided to help guide you in constructing your first loop of a loop! Remember, you can almost use the previous code (with some modifications) for your loop to calculate <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinate values and to plot your sunflower in the loop of loops below.</p>
+<p>This exercise is meant for you to spend time thinking about how complex loops work and how to modify and adjust code for different purposes. So spend time thinking through this.</p>
+<p>If you’re successful, you will create a beautiful sunflower animation!</p>
+<p>Follow the pseudo-code and fill out the missing parts!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports to get the animation to work</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">clear_output</span> 
+<span class="kn">import</span> <span class="nn">time</span>  
+
+<span class="c1"># Import numpy to use linspace</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># For animation, you need to call a figure</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span> 
+
+<span class="c1"># Using linspace() to create 100 increments between -1 and +1</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
+    
+    <span class="c1"># Here, create a &quot;new_angle&quot; variable that is golden_angle + i</span>
+    <span class="c1"># Remember the new angle must be in radians!</span>
+    
+    
+    
+    <span class="c1"># This is where to insert your previous loop to calculate x and y coords for the new angle</span>
+    <span class="c1"># Remember, theta will be calculated from your new angle! So be sure to change that!</span>
+    <span class="c1"># Remember, properly indent your for loop within the other for loop: indents of indents!</span>
+    <span class="c1"># Remember, keep the x and y coordinate lists outside of this loop (but within the first loop)</span>
+    <span class="c1"># Still calculate x and y values for 1000 florets using your previous loop</span>
+    
+    <span class="c1"># Your previous loop code goes in this space!</span>
+    
+    
+    
+    
+    
+    
+    
+    
+    <span class="c1"># You are now outside of the inner loop and back in the outer loops</span>
+    
+    
+
+    
+    <span class="c1"># Put your code for your plot of the sunflower here</span>
+    
+    
+
+    <span class="c1"># This is the code that creates the animation</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span> 
+    <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 720x720 with 0 Axes&gt;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 720x720 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="but-sunflowers-grow">
+<h2>But sunflowers grow!<a class="headerlink" href="#but-sunflowers-grow" title="Permalink to this headline">¶</a></h2>
+<p>Yes, it’s nice to create an animation changing the angle of florets with a fixed radius. But in the real world a sunflower is growing! The florets arise from a meristem (a population of stem cells) at the center of the sunflower. At the periphery of the shoot apical meristem in the center of the sunflower, cells are determined to become a floret. We call the ability of cells, like meristems, to produce different types of tissues “pluripotent”. We say that cells are “determined” or “fated” to become a particular type of tissue as they lose pluripotency. “Differentiated” cells have already become a particular tissue. After a floret has differentiated, it moves away from the center of the sunflower.</p>
+<p>In your previous plots, the florets at the periphery were the first to arise, and were “pushed” from the center by all the other florets that subsequently arose. Let’s create an animation where we watch florets arise at the center and move outwards!</p>
+<p>You will:</p>
+<ol class="simple">
+<li><p>Create pre-populated lists of <code class="docutils literal notranslate"><span class="pre">thetas</span></code> and <code class="docutils literal notranslate"><span class="pre">radii</span></code>. Simply use the code you already have to calculate the thetas and radii.</p></li>
+<li><p>Once born, a floret <em><strong>always</strong></em> keeps the same theta. But the radius gets longer and longer.</p></li>
+<li><p>Our first loop will create lists of theta and radii that increase in length with each iteration. Because of this, we will start with one floret, then two, and so on, and with each additional floret, the radii of the first florets will become longer and longer. We will start with no florets and grow our sunflower, adding more and more. This loop takes one more member of your pre-specified <code class="docutils literal notranslate"><span class="pre">thetas</span></code> and <code class="docutils literal notranslate"><span class="pre">radii</span></code> lists with each iteration.</p></li>
+<li><p>There is a problem, though. Each time we add more <code class="docutils literal notranslate"><span class="pre">thetas</span></code> (which are associated with unique florets), the oldest/first <code class="docutils literal notranslate"><span class="pre">thetas</span></code> are at the <em><strong>beginning</strong></em> of the list. The oldest <code class="docutils literal notranslate"><span class="pre">radii</span></code>, too, are at the beginning of their list and they will be the shortest radii! The oldest/first <code class="docutils literal notranslate"><span class="pre">thetas</span></code> should have the longest radii, not the shortest!</p></li>
+<li><p>We will use the <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code> function, which reverses the order of elements of a list. What this will do is insure that the oldest/first <code class="docutils literal notranslate"><span class="pre">thetas</span></code> of the thetas list correspond to the longest radii after the radii list is reversed.</p></li>
+<li><p>Think through the reasoning above, it’s complicated. We are adding one more floret with each iteration. But the first floret would always have the shortest radius, unless we reversed the radii list. By reversing the radii list, the first floret will have an increasing radius.</p></li>
+</ol>
+<p>Follow the reasoning above and make sure you understand it. Pseudo-code with comments is provided in the cells below. Using the skeleton, fill out the rest of the code. The code is in two parts:</p>
+<ol class="simple">
+<li><p>First, using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, create two lists: <code class="docutils literal notranslate"><span class="pre">thetas</span></code> and <code class="docutils literal notranslate"><span class="pre">radii</span></code>. These lists should contain <strong>750</strong> theta and radius values for florets.</p></li>
+<li><p>Using the pseudo-code provided, create an animation of a growing sunflower.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># In this cell, create two emtpy lists: &quot;thetas&quot; and &quot;radii&quot;</span>
+<span class="c1"># Then, using a for loop, populate your two lists with theta and radii values for 750 florets</span>
+<span class="c1"># You can use the code you have already produced</span>
+<span class="c1"># Put your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Next, using the pseudo-code below, create an animation of growing florets in a sunflower</span>
+<span class="c1"># Pay attention to what the two loops are doing and how they function in real time</span>
+<span class="c1"># Pay attention to indexing of lists</span>
+<span class="c1"># Pay attention to the use of the .reverse() function</span>
+<span class="c1"># Understand how this code creates an animation of a growing sunflower, frame-by-frame</span>
+<span class="c1"># Put your answer below</span>
+
+
+<span class="c1"># Imports to get the animation to work</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">clear_output</span>
+<span class="kn">import</span> <span class="nn">time</span>  
+
+<span class="c1"># For animation, you need to call a figure</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">radii</span><span class="p">)):</span>
+
+    <span class="n">xlist</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">ylist</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="c1"># This selects the current set of thetas to use</span>
+    <span class="n">current_thetas</span> <span class="o">=</span> <span class="n">thetas</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+    <span class="c1"># This selects the current set of radii to use</span>
+    <span class="c1"># Everytime the loop runs, this list will be recreated in the &quot;forward&quot; direction</span>
+    <span class="c1"># When created, shortest radii are first, longest radii are last</span>
+    <span class="n">current_radii</span> <span class="o">=</span> <span class="n">radii</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+    <span class="c1"># After creating the list of radii, &quot;reverse&quot; its order</span>
+    <span class="c1"># Reversing the order of the radii means that the </span>
+    <span class="c1"># florets first specified (the first thetas) have the longest radius</span>
+    <span class="c1"># After reversing, longest radii are first, shortest radii are last</span>
+    <span class="n">current_radii</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span> 
+        
+        <span class="c1"># Here, for each floret n caclulate r, theta, x, y, and append x &amp; y to their lists</span>
+
+        
+        
+        
+        
+        
+        
+        
+    <span class="c1"># You are now back in the outer loop</span>
+    
+    
+
+    
+    <span class="c1"># Put your code to make a plot of a sunflower here</span>
+    
+    
+    
+    <span class="c1"># This is the code that creates the animation</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span> 
+    <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+<span class="c1"># Closes the figure animation once complete</span>
+<span class="c1"># plt.close()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_19890/2711649133.py&quot;</span><span class="gt">, line </span><span class="mi">54</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./5_Loops_and_the_golden_angle"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="5_Practice.html" title="previous page">Lesson 3.6</a>
+    <a class='right-next' id="next-link" href="../6_Data_analysis_with_pandas/6_Overview.html" title="next page">Getting started / Empezando</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Dan Chitwood<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

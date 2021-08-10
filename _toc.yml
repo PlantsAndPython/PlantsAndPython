@@ -1,17 +1,90 @@
 format: jb-book
-root: 00_Introduction
+root: 0_Introduction
 parts:
-  - caption: Welcome / Bienvenid@
+  - caption: Preface
     chapters:
-      - file: 01_Welcome_Bienvenid@/00_Welcome
-      - file: 01_Welcome_Bienvenid@/01_Bienvenid@
-parts:
-  - caption: Getting started / Empezando
+    - file: 1_Welcome_Bienvenido/1_Overview
+      title: Welcome / Bienvenid@
+      sections:
+      - file: 1_Welcome_Bienvenido/1.0_Welcome
+      - file: 1_Welcome_Bienvenido/1.1_Bienvenido
+
+    - file: 2_Getting_started_Empezando/2_Overview
+      title: Getting Started /  Empezando
+      sections:
+      - file: 2_Getting_started_Empezando/2.0_Installing_Anaconda
+      - file: 2_Getting_started_Empezando/2.1_Instalar_Anaconda
+      - file: 2_Getting_started_Empezando/2.2_Coding_cells
+      - file: 2_Getting_started_Empezando/2.3_Celdas_de_codigo
+      - file: 2_Getting_started_Empezando/2.4_Markdown_cells
+      - file: 2_Getting_started_Empezando/2.5_Celdas_de_markdown
+
+  - caption: Lessons
     chapters:
-      - file: 02_Getting_started_Empezando/00_Installing_Anaconda
-      - file: 02_Getting_started_Empezando/01_Instalar_Anaconda
-      - file: 02_Getting_started_Empezando/02_Coding_cells
-      - file: 02_Getting_started_Empezando/03_Celdas_de_código
-      - file: 02_Getting_started_Empezando/04_Markdown_cells
-      - file: 02_Getting_started_Empezando/05_Celdas_de_markdown
+    - file: 3_Variables_lists_and_indexing/3_Overview
+      title: Variables, lists, & indexing
+      sections:
+      - file: 3_Variables_lists_and_indexing/3_Lessons/3.0_Variables
+      - file: 3_Variables_lists_and_indexing/3_Lessons/3.1_Functions
+      - file: 3_Variables_lists_and_indexing/3_Lessons/3.2_Indexing
+      - file: 3_Variables_lists_and_indexing/3_Lessons/3.3_Lists
+      - file: 3_Variables_lists_and_indexing/3_Lessons/3.4_Indexing_List_Elements
+      - file: 3_Variables_lists_and_indexing/3_Lessons/3.5_Modifying_Lists
+      - file: 3_Variables_lists_and_indexing/3_Lessons/3.6_List_of_Lists
+      - file: 3_Variables_lists_and_indexing/3_Lessons/3.7_Slicing
+      - file: 3_Variables_lists_and_indexing/3_Lessons/3.8_Data_Types
+      - file: 3_Variables_lists_and_indexing/3_Practice
+      - file: 3_Variables_lists_and_indexing/3_Activity_Plants_and_climate
+
+    - file: 4_Visualizing_data_with_matplotlib/4_Overview
+      title: Visualizing Data with Matplotlib
+      sections:
+      - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.0_Modules
+      - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.1_Plots
+      - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.2_Shape_Size_and_Color
+      - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.3_Legends
+      - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.4_Subplots
+      - file: 4_Visualizing_data_with_matplotlib/4_Practice
+      - file: 4_Visualizing_data_with_matplotlib/4_Activity_Leaf_and_sunflower_shape
+
+    - file: 5_Loops_and_the_golden_angle/5_Overview
+      title: Loops & the Golden Angle
+      sections:
+      - file: 5_Loops_and_the_golden_angle/5_Lessons/5.0_Range_Function
+      - file: 5_Loops_and_the_golden_angle/5_Lessons/5.1_For_Loops
+      - file: 5_Loops_and_the_golden_angle/5_Lessons/5.2_Counters
+      - file: 5_Loops_and_the_golden_angle/5_Lessons/5.3_Using_Lists_and_Loops
+      - file: 5_Loops_and_the_golden_angle/5_Lessons/5.4_Calculating_Fibonacci
+      - file: 5_Loops_and_the_golden_angle/5_Lessons/5.5_While_Loops
+      - file: 5_Loops_and_the_golden_angle/5_Practice
+      - file: 5_Loops_and_the_golden_angle/5_Activity_Modeling_sunflowers
+
+    - file: 6_Data_analysis_with_pandas/6_Overview
+      title: Data Analysis with Pandas
+      sections:
+      - file: 6_Data_analysis_with_pandas/6_Lessons/6.0_Reading_in_Data
+      - file: 6_Data_analysis_with_pandas/6_Lessons/6.1_Head_and_Tail
+      - file: 6_Data_analysis_with_pandas/6_Lessons/6.2_Selecting_Columns
+      - file: 6_Data_analysis_with_pandas/6_Lessons/6.3_Descriptive_Statistics
+      - file: 6_Data_analysis_with_pandas/6_Lessons/6.4_Masks
+      - file: 6_Data_analysis_with_pandas/6_Lessons/6.5_Using_iloc
+      - file: 6_Data_analysis_with_pandas/6_Lessons/6.6_Seaborn
+      - file: 6_Data_analysis_with_pandas/6_Practice
+      - file: 6_Data_analysis_with_pandas/6_Activity_Grapes_in_a_warming_world
+
+
+#parts:
+#  - caption: Welcome / Bienvenid@
+#    chapters:
+#      - file: 01_Welcome_Bienvenid@/00_Welcome
+#      - file: 01_Welcome_Bienvenid@/01_Bienvenid@
+#parts:
+#  - caption: Getting started / Empezando
+#    chapters:
+#      - file: 02_Getting_started_Empezando/00_Installing_Anaconda
+#      - file: 02_Getting_started_Empezando/01_Instalar_Anaconda
+#      - file: 02_Getting_started_Empezando/02_Coding_cells
+#      - file: 02_Getting_started_Empezando/03_Celdas_de_código
+#      - file: 02_Getting_started_Empezando/04_Markdown_cells
+#      - file: 02_Getting_started_Empezando/05_Celdas_de_markdown
 
