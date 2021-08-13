@@ -1,137 +1,174 @@
 format: jb-book
-root: 0_Introduction
+root: 00_Opening_page
 parts:
   - caption: Preface
     chapters:
-    - file: 1_Welcome_Bienvenido/1_Overview
-      title: Welcome / Bienvenid@
+    - file: 00_PREFACE/01_Overview
+      title: "Welcome : Bienvenid@"
       sections:
-      - file: 1_Welcome_Bienvenido/1.0_Welcome
-      - file: 1_Welcome_Bienvenido/1.1_Bienvenido
+      - file: 00_PREFACE/01_Welcome_Bienvenido/00_Welcome
+      - file: 00_PREFACE/01_Welcome_Bienvenido/01_Bienvenido
 
-    - file: 2_Getting_started_Empezando/2_Overview
-      title: Getting Started /  Empezando
+    - file: 00_PREFACE/02_Overview
+      title: "Getting Started : Empezando"
       sections:
-      - file: 2_Getting_started_Empezando/2.0_Installing_Anaconda
-      - file: 2_Getting_started_Empezando/2.1_Instalar_Anaconda
-      - file: 2_Getting_started_Empezando/2.2_Coding_cells
-      - file: 2_Getting_started_Empezando/2.3_Celdas_de_codigo
-      - file: 2_Getting_started_Empezando/2.4_Markdown_cells
-      - file: 2_Getting_started_Empezando/2.5_Celdas_de_markdown
+      - file: 00_PREFACE/02_Getting_started_Empezando/00_Installing_Anaconda
+      - file: 00_PREFACE/02_Getting_started_Empezando/01_Instalar_Anaconda
+      - file: 00_PREFACE/02_Getting_started_Empezando/02_Coding_cells
+      - file: 00_PREFACE/02_Getting_started_Empezando/03_Celdas_de_codigo
+      - file: 00_PREFACE/02_Getting_started_Empezando/04_Markdown_cells
+      - file: 00_PREFACE/02_Getting_started_Empezando/05_Celdas_de_markdown
 
-  - caption: Variables, lists, & indexing
+
+  - caption: 1. Variables, lists, & indexing
     chapters:
-    - file: 3_Variables_lists_and_indexing/3_Overview
+    - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Overview
       title: Lessons
       sections:
-      - file: 3_Variables_lists_and_indexing/3_Lessons/3.0_Variables
-      - file: 3_Variables_lists_and_indexing/3_Lessons/3.1_Functions
-      - file: 3_Variables_lists_and_indexing/3_Lessons/3.2_Indexing
-      - file: 3_Variables_lists_and_indexing/3_Lessons/3.3_Lists
-      - file: 3_Variables_lists_and_indexing/3_Lessons/3.4_Indexing_List_Elements
-      - file: 3_Variables_lists_and_indexing/3_Lessons/3.5_Modifying_Lists
-      - file: 3_Variables_lists_and_indexing/3_Lessons/3.6_List_of_Lists
-      - file: 3_Variables_lists_and_indexing/3_Lessons/3.7_Slicing
-      - file: 3_Variables_lists_and_indexing/3_Lessons/3.8_Data_Types
-    - file: 3_Variables_lists_and_indexing/3_Practice
+      - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.0_Variables
+        title: 1.0 Variables
+      - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.1_Functions
+        title: 1.1 Functions
+      - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.2_Indexing
+        title: 1.2 Indexing
+      - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.3_Lists
+        title: 1.3 Lists
+      - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.4_Indexing_List_Elements
+        title: 1.4 Indexing List Elements
+      - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.5_Modifying_Lists
+        title: 1.5 Modifying Lists
+      - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.6_List_of_Lists
+        title: 1.6 List of Lists
+      - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.7_Slicing
+        title: 1.7 Slicing
+      - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.8_Data_Types
+        title: 1.8 Data Types
+    - file: A_1_VARIABLES_LISTS_AND_INDEXING/1_Practice
       title: Practice
-    - file: 3_Variables_lists_and_indexing/3_Activity_Plants_and_climate
+    - file: A_1_VARIABLES_LISTS_AND_INDEXING/2_Plants_And_Climate
       title: Plants & Climate
 
-  - caption: Visualizing Data with Matplotlib
+
+  - caption: 1. Variables, listas, & indexacion
     chapters:
-    - file: 4_Visualizing_data_with_matplotlib/4_Overview
+    - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Overview
       title: Lessons
       sections:
-      - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.0_Modules
-      - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.1_Plots
-      - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.2_Shape_Size_and_Color
-      - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.3_Legends
-      - file: 4_Visualizing_data_with_matplotlib/4_Lessons/4.4_Subplots
-    - file: 4_Visualizing_data_with_matplotlib/4_Practice
+      - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.0_Variables
+      - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.1_Funciones
+      - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.2_Indexacion
+      - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.3_Listas
+      - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.4_Indexando_los_elementos_de_una_lista
+      - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.5_Modificando_listas
+      - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.6_Lista_de_listas
+      - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.7_Rebanar
+      - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.8_Tipos_de_datos
+    - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/1_Practica
+      title: Práctica
+    - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima
+      title: Las plantas y el clima
+
+
+  - caption: 2. Visualizing Data with Matplotlib
+    chapters:
+    - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview
+      title: Lessons
+      sections:
+      - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.0_Modules
+        title: 2.0 Modules
+      - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.1_Plots
+        title: 2.1 Plots
+      - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.2_Shape_Size_and_Color
+        title: 2.2 Shape, Size, and Color
+      - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.3_Legends
+        title: 2.3 Legends
+      - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.4_Subplots
+        title: 2.4 Subplots
+    - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/1_Practice
       title: Practice
-    - file: 4_Visualizing_data_with_matplotlib/4_Activity_Leaf_and_sunflower_shape
+    - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/2_Leaf_And_Sunflower_Shapes
       title: Leaf & Sunflower Shapes
 
-  - caption: Loops & the Golden Angle
+
+  - caption: 3. Loops & the Golden Angle
     chapters:
-    - file: 5_Loops_and_the_golden_angle/5_Overview
+    - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview
       title: Lessons
       sections:
-      - file: 5_Loops_and_the_golden_angle/5_Lessons/5.0_Range_Function
-      - file: 5_Loops_and_the_golden_angle/5_Lessons/5.1_For_Loops
-      - file: 5_Loops_and_the_golden_angle/5_Lessons/5.2_Counters
-      - file: 5_Loops_and_the_golden_angle/5_Lessons/5.3_Using_Lists_and_Loops
-      - file: 5_Loops_and_the_golden_angle/5_Lessons/5.4_Calculating_Fibonacci
-      - file: 5_Loops_and_the_golden_angle/5_Lessons/5.5_While_Loops
-    - file: 5_Loops_and_the_golden_angle/5_Practice
+      - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.0_Range_Function
+        title: 3.0 Range_Function
+      - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.1_For_Loops
+        title: 3.1 For Loops
+      - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.2_Counters
+        title: 3.2 Counters
+      - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.3_Using_Lists_and_Loops
+        title: 3.3 Using Lists and Loops
+      - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.4_Calculating_Fibonacci
+        title: 3.4 Calculating Fibonacci
+      - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.5_While_Loops
+        title: 3.5 While Loops
+    - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/1_Practice
       title: Practice
-    - file: 5_Loops_and_the_golden_angle/5_Activity_Modeling_sunflowers
+    - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/2_Modeling_Sunflowers
       title: Modeling Sunflowers
 
-  - caption: Loops & el Angulo dorado
+
+  - caption: 3. Loops & el angulo dorado
     chapters:
-    - file: 5_Loops_and_el_angulo_dorado/5_Overview
+    - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Overview
       title: Lecciones
       sections:
-      - file: 5_Loops_and_el_angulo_dorado/5_Lecciones/5.0_La_funcion_range
-      - file: 5_Loops_and_el_angulo_dorado/5_Lecciones/5.1_Loops_for
-      - file: 5_Loops_and_el_angulo_dorado/5_Lecciones/5.2_Contadores
-      - file: 5_Loops_and_el_angulo_dorado/5_Lecciones/5.3_Usando_listas_y_loops
-      - file: 5_Loops_and_el_angulo_dorado/5_Lecciones/5.4_Calcular_Fibonacci
-      - file: 5_Loops_and_el_angulo_dorado/5_Lecciones/5.5_Loops_while
-    - file: 5_Loops_and_el_angulo_dorado/5_Practica
+      - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.0_La_funcion_range
+      - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.1_Loops_for
+      - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.2_Contadores
+      - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.3_Usando_listas_y_loops
+      - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci
+      - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.5_Loops_while
+    - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/1_Practica
       title: Práctica
-    - file: 5_Loops_and_el_angulo_dorado/5_Activity_Como_construir_un_girasol
-      title: Cómo Construir un Girasol
+    - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/2_Como_construir_un_girasol
+      title: Cómo construir un girasol
 
-  - caption: Data Analysis with Pandas
+
+  - caption: 4. Data Analysis with Pandas
     chapters:
-    - file: 6_Data_analysis_with_pandas/6_Overview
+    - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Overview
       title: Lessons
       sections:
-      - file: 6_Data_analysis_with_pandas/6_Lessons/6.0_Reading_in_Data
-      - file: 6_Data_analysis_with_pandas/6_Lessons/6.1_Head_and_Tail
-      - file: 6_Data_analysis_with_pandas/6_Lessons/6.2_Selecting_Columns
-      - file: 6_Data_analysis_with_pandas/6_Lessons/6.3_Descriptive_Statistics
-      - file: 6_Data_analysis_with_pandas/6_Lessons/6.4_Masks
-      - file: 6_Data_analysis_with_pandas/6_Lessons/6.5_Using_iloc
-      - file: 6_Data_analysis_with_pandas/6_Lessons/6.6_Seaborn
-    - file: 6_Data_analysis_with_pandas/6_Practice
+      - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.0_Reading_in_Data
+        title: 4.0 Reading in Data
+      - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.1_Head_and_Tail
+        title: 4.1 Head and Tail
+      - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.2_Selecting_Columns
+        title: 4.2 Selecting Columns
+      - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.3_Descriptive_Statistics
+        title: 4.3 Descriptive Statistics
+      - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.4_Masks
+        title: 4.4 Masks
+      - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.5_Using_iloc
+        title: 4.5 Using iloc
+      - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.6_Seaborn
+        title: 4.6 Seaborn
+    - file: G_4_DATA_ANALYSIS_WITH_PANDAS/1_Practice
       title: Practice
-    - file: 6_Data_analysis_with_pandas/6_Activity_Grapes_in_a_warming_world
+    - file: G_4_DATA_ANALYSIS_WITH_PANDAS/2_Grapes_in_a_Warming_World
       title: Grapes in a Warming World
 
-  - caption: Análisis de datos con pandas
+
+  - caption: 4. Análisis de datos con pandas
     chapters:
-    - file: 6_Analisis_de_datos_con_pandas/6_Overview
+    - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Overview
       title: Lecciones
       sections:
-      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.0_Leyendo_en_data
-      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.1_Head_y_tail
-      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.2_Seleccionando_columnas
-      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.3_Estadisticas_descriptivas
-      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.4_Enmascaramiento
-      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.5_Usando_iloc
-      - file: 6_Analisis_de_datos_con_pandas/6_Lecciones/6.6_Seaborn
-    - file: 6_Analisis_de_datos_con_pandas/6_Practica
+      - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.0_Leyendo_en_data
+      - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.1_Head_y_tail
+      - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.2_Seleccionando_columnas
+      - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.3_Estadisticas_descriptivas
+      - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.4_Enmascaramiento
+      - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.5_Usando_iloc
+      - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn
+    - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/1_Practica
       title: Práctica
-    - file: 6_Analisis_de_datos_con_pandas/6_Activity_Vides_en_un_mundo_que_se_calienta
-      title: Vides en un Mundo que se Calienta
-
-
-#parts:
-#  - caption: Welcome / Bienvenid@
-#    chapters:
-#      - file: 01_Welcome_Bienvenid@/00_Welcome
-#      - file: 01_Welcome_Bienvenid@/01_Bienvenid@
-#parts:
-#  - caption: Getting started / Empezando
-#    chapters:
-#      - file: 02_Getting_started_Empezando/00_Installing_Anaconda
-#      - file: 02_Getting_started_Empezando/01_Instalar_Anaconda
-#      - file: 02_Getting_started_Empezando/02_Coding_cells
-#      - file: 02_Getting_started_Empezando/03_Celdas_de_código
-#      - file: 02_Getting_started_Empezando/04_Markdown_cells
-#      - file: 02_Getting_started_Empezando/05_Celdas_de_markdown
+    - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/2_Vides_en_un_mundo_que_se_calienta
+      title: Vides en un mundo que se calienta
 
