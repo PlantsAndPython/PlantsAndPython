@@ -1,0 +1,1004 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 1: Las plantas y el clima &#8212; Plants &amp; Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Welcome / Bienvenid@" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview.html" />
+    <link rel="prev" title="Práctica con variables, funciones, listas e índices" href="1_Practica.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00_Opening_page.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../00_PREFACE/01_Overview.html">
+   Welcome : Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/01_Welcome_Bienvenido/00_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/01_Welcome_Bienvenido/01_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../00_PREFACE/02_Overview.html">
+   Getting Started : Empezando
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/00_Installing_Anaconda.html">
+     Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/01_Instalar_Anaconda.html">
+     Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/02_Coding_cells.html">
+     Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/03_Celdas_de_codigo.html">
+     Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/04_Markdown_cells.html">
+     Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/05_Celdas_de_markdown.html">
+     Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, lists, &amp; indexing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.1_Functions.html">
+     1.1 Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.2_Indexing.html">
+     1.2 Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.3_Lists.html">
+     1.3 Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.4_Indexing_List_Elements.html">
+     1.4 Indexing List Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.5_Modifying_Lists.html">
+     1.5 Modifying Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.6_List_of_Lists.html">
+     Lesson 1.6 List of Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.7_Slicing.html">
+     Lesson 1.7 Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.8_Data_Types.html">
+     Lesson 1.8 Data Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/2_Plants_And_Climate.html">
+   Plants &amp; Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, listas, &amp; indexacion
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/1.0_Variables.html">
+     Lección 1.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/1.1_Funciones.html">
+     Lección 1.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/1.2_Indexacion.html">
+     Lección 1.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/1.3_Listas.html">
+     Lección 1.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/1.4_Indexando_los_elementos_de_una_lista.html">
+     Lección 1.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/1.5_Modificando_listas.html">
+     Lección 1.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/1.6_Lista_de_listas.html">
+     Lección 1.6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/1.7_Rebanar.html">
+     Lección 1.7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/1.8_Tipos_de_datos.html">
+     Lección 1.8
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Las plantas y el clima
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. Visualizing Data with Matplotlib
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.0_Modules.html">
+     Lesson 2.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.1_Plots.html">
+     2.1 Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.2_Shape_Size_and_Color.html">
+     2.2 Shape, Size, and Color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.3_Legends.html">
+     2.3 Legends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.4_Subplots.html">
+     Lesson 2.4
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/2_Leaf_And_Sunflower_Shapes.html">
+   Leaf &amp; Sunflower Shapes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; the Golden Angle
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.0_Range_Function.html">
+     Lesson 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.1_For_Loops.html">
+     3.1 For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.2_Counters.html">
+     3.2 Counters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.3_Using_Lists_and_Loops.html">
+     3.3 Using Lists and Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.4_Calculating_Fibonacci.html">
+     3.4 Calculating Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.5_While_Loops.html">
+     Lesson 3.5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/2_Modeling_Sunflowers.html">
+   Modeling Sunflowers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; el angulo dorado
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.0_La_funcion_range.html">
+     Lección 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.1_Loops_for.html">
+     Lección 3.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.2_Contadores.html">
+     Lección 3.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.3_Usando_listas_y_loops.html">
+     Lección 3.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci.html">
+     Lección 3.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.5_Loops_while.html">
+     Lección 3.5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/2_Como_construir_un_girasol.html">
+   Cómo construir un girasol
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Data Analysis with Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.0_Reading_in_Data.html">
+     Lesson 4.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.1_Head_and_Tail.html">
+     4.1 Head and Tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.2_Selecting_Columns.html">
+     4.2 Selecting Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.3_Descriptive_Statistics.html">
+     4.3 Descriptive Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.4_Masks.html">
+     4.4 Masks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.5_Using_iloc.html">
+     4.5 Using iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.6_Seaborn.html">
+     Lesson 4.6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/2_Grapes_in_a_Warming_World.html">
+   Grapes in a Warming World
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Análisis de datos con pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.0_Leyendo_en_data.html">
+     Lección 4.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.1_Head_y_tail.html">
+     Lección 4.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.2_Seleccionando_columnas.html">
+     Lección 4.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.3_Estadisticas_descriptivas.html">
+     Lección 4.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.4_Enmascaramiento.html">
+     Lección 4.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.5_Usando_iloc.html">
+     Lección 4.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn.html">
+     Lección 4.6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/2_Vides_en_un_mundo_que_se_calienta.html">
+   Vides en un mundo que se calienta
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/B_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2FB_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/B_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/B_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#que-es-una-planta">
+   ¿Qué es una planta?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#viridiplantae-las-plantas-verdes">
+   Viridiplantae, las plantas verdes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chlorophyta">
+     Chlorophyta
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#charophyta">
+     Charophyta
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#embryophyta">
+     Embryophyta
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#briofitas">
+       Briofitas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pteridofitas">
+       Pteridofitas 🌿
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gimnospermas">
+       Gimnospermas 🌲
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#angiospermas">
+       Angiospermas 🌸
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lista-de-plantas">
+   Lista de plantas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indice-del-clima">
+   Índice del clima
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="actividad-1-las-plantas-y-el-clima">
+<h1>Actividad 1: Las plantas y el clima<a class="headerlink" href="#actividad-1-las-plantas-y-el-clima" title="Permalink to this headline">¶</a></h1>
+<p><em><strong>Traducción por Pablo Y. Rosiles-Loeza (Langebio-Cinvestav, Irapuato, Gto., México)</strong></em></p>
+<hr class="docutils" />
+<div class="section" id="que-es-una-planta">
+<h2>¿Qué es una planta?<a class="headerlink" href="#que-es-una-planta" title="Permalink to this headline">¶</a></h2>
+<p>La humanidad tiene una relación íntima con las plantas. A través de la fotosíntesis, las plantas son la fuente última de casi todos los alimentos que los humanos consumen. Las plantas son la fuente de muchos productos medicinales, así como de sustancias psicoactivas religiosas y recreativas. Además proporcionan fibras para hacer nuestra ropa y materiales estructurales para edificios. A partir del año 10.000 a.C., la humanidad comenzó a domesticar diferentes cultivares. El cultivo de especies de plantas que habían sido alteradas drásticamente por los humanos (debido principalmente al proceso de domesticación) aumentó las calorías disponibles e impulsó el crecimiento de las civilizaciones en todo el mundo.</p>
+<p>Como las plantas son tan diversas y varían en la composición de sus comunidades en todo el mundo, la definición de “planta” es culturalmente específica y refleja la relación de una cultura con la flora local. Aquí vamos a centrarnos en una definición científica de las plantas. Una característica que define a las plantas es que son autótrofas: es decir, son capaces de sintetizar su alimento a partir de sustancias inorgánicas. La fotosíntesis es el proceso por el que las plantas y otros organismos convierten el agua y el dióxido de carbono en carbohidratos, utilizando la luz solar como energía. Las cianobacterias son un grupo de bacterias existentes que también realizan fotosíntesis. Se especula que hace mucho tiempo una cianobacteria fue engullida por un eucariota unicelular (un organismo con un núcleo que contiene la mayor parte de su ADN). La cianobacteria y la eucariota desarrollaron una simbiosis, en la que la cianobacteria engullida permaneció en la célula eucariota proporcionando carbohidratos derivados de la fotosíntesis. A través de esta endosimbiosis, la cianobacteria evolucionó hasta convertirse en un cloroplasto, un orgánulo dentro de las células vegetales donde se produce la fotosíntesis.</p>
+<p>De este único evento endosimbiótico surgieron todas las plantas (y su cianobacteria capturada que proporciona la fotosíntesis en sus células como cloroplasto). Los descendientes de la célula simbiótica se denominan Archaeplastida (“antiguo” + “plástido”). Los Archaeplastida constan de tres grupos principales: Glaucophyta (glaucofitas), Rhodophyta (algas rojas) y Viridiplantae (plantas verdes). Las glaucofitas son un pequeño grupo de algas unicelulares de agua dulce de las que sólo se han descrito 15 especies. Las algas rojas son en su mayoría multicelulares y marinas. Se han descrito más de 7.000 especies. Poseen hermosas arquitecturas ramificadas y un característico color rojo que surge de los pigmentos accesorios fotosintéticos llamados ficobiliproteínas, que captan la energía luminosa que pasa a las moléculas de clorofila. El último grupo es el de las Viridiplantae, o las “plantas verdes”. A continuación se describen brevemente los principales grupos de plantas verdes.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="viridiplantae-las-plantas-verdes">
+<h2>Viridiplantae, las plantas verdes<a class="headerlink" href="#viridiplantae-las-plantas-verdes" title="Permalink to this headline">¶</a></h2>
+<p>Las plantas verdes se componen de dos grandes grupos: la Chlorophyta y la Charophyta (algas de agua dulce) + Embryophyta (plantas terrestres)</p>
+<div class="section" id="chlorophyta">
+<h3>Chlorophyta<a class="headerlink" href="#chlorophyta" title="Permalink to this headline">¶</a></h3>
+<p>La Chlorophyta (“verde” + “planta”) se separó del linaje de las plantas terrestres (Embryophyta) y de las algas de agua dulce (Charophyta)hace unos 1.200 a 725 millones de años. A diferencia de las plantas terrestres, la espectacular diversidad de las clorofitas está infravalorada. Existen unas 4.000 especies de Chlorophyta que habitan principalmente en hábitats marinos, pero también de agua dulce y terrestres. La complejidad macroscópica surgió en múltiples ocasiones en Chlorophyta, a través de la multicelularidad (por ejemplo, la lechuga de mar, <em>Ulva</em>), las colonias multicelulares (<em>Volvox</em>) y los organismos gigantes unicelulares (algas como <em>Caulerpa</em> y <em>Acetabularia</em>). Al igual que las plantas terrestres, algunas clorofitas llegaron a la tierra de forma independiente, mediante simbiosis. Los líquenes son organismos simbióticos terrestres que surgen de la interacción entre un hongo y un socio fotosintético. Éste fotobionte suele ser un alga clorofítica, pero también puede incluir cianobacterias u otras algas (o combinaciones de ellas).</p>
+</div>
+<div class="section" id="charophyta">
+<h3>Charophyta<a class="headerlink" href="#charophyta" title="Permalink to this headline">¶</a></h3>
+<p>Las carofitas son algas complejas de agua dulce. Existen entre 2.800 y 6.000 especies de carófitos. Las plantas terrestres (Embryophyta) probablemente surgieron de un ancestro Charophycean, aunque sigue siendo discutible de cuál concretamente. Los carófitos reciben su nombre de <em>Chara</em>, un alga multicelular que se se asemeja superficialmente a las plantas terrestres, con estructuras similares a tallos y hojas. El <em>Choleochaete</em> es otra alga multicelular que forma un disco plano y con muchas características de las plantas terrestres, incluyendo la retención de cigotos después de la fertilización y los plasmodesmos (conexiones citoplasmáticas entre células adyacentes). Sorpresivamente, estas características probablemente surgieron de manera independientemente a las plantas terrestres.</p>
+</div>
+<div class="section" id="embryophyta">
+<h3>Embryophyta<a class="headerlink" href="#embryophyta" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="briofitas">
+<h4>Briofitas<a class="headerlink" href="#briofitas" title="Permalink to this headline">¶</a></h4>
+<p>Las briofitas son plantas no vasculares, lo que significa que no tienen un verdadero tejido vascular que contenga lignina (un polímero rígido que es vital para el crecimiento erecto de las plantas vasculares). Las briofitas se dividen en tres grupos: las hepáticas (Marchantiophyta, de 6.000 a 8.000 especies), los antocerotes (Anthocerotophyta, de 100 a 200 especies) y los musgos (Bryophyta, 12.000 especies). Todas las plantas se caracterizan por la “alteración de las generaciones”: alternan entre gametofitos haploides con un solo juego de cromosomas que surgen de las esporas y producen gametos, y esporofitos diploides con dos juegos de cromosomas que surgen por la fusión de dos gametos y producen esporas. En las briofitas, el estadio de vida más grande y longevo es el gametofito (a diferencia de otras plantas terrestres, en las que el esporofito es el estadio de vida dominante). A diferencia de los elaborados esporofitos de otras plantas terrestres, los esporofitos de las briofitas no están ramificados.</p>
+</div>
+<div class="section" id="pteridofitas">
+<h4>Pteridofitas 🌿<a class="headerlink" href="#pteridofitas" title="Permalink to this headline">¶</a></h4>
+<p>Las pteridofitas son plantas vasculares, con verdaderos tejidos de xilema (transporte de agua y nutrientes) y floema (transporte de compuestos orgánicos solubles producidos durante la fotosíntesis). Las pteridofitas también son plantas sin semillas. Aunque el estadio de esporofito diploide es dominante, el gametofito es más prominente que la mayoría de las plantas con semillas. Las pteridofitas comprenden las Lycopodiophyta (musgos, 1.200 especies) y las Pteridophyta (helechos, helechos batidores y colas de caballo, 11.000 especies). Los helechos tienen hojas muy elaboradas, llamadas megafilos, que están muy ramificados. Estas hojas se desarrollan de forma acrópeta (de la punta a la base) y se despliegan a partir de una estructura llamada “cabeza de chorlito (fiddlehead, en inglés)”. La historia evolutiva de los helechos es complicada y elaborada, y es probable que los megafilos hayan evolucionado varias veces, independientemente de los demás y de las hojas de las gimnospermas y las angiospermas.</p>
+</div>
+<div class="section" id="gimnospermas">
+<h4>Gimnospermas 🌲<a class="headerlink" href="#gimnospermas" title="Permalink to this headline">¶</a></h4>
+<p>Las gimnospermas son plantas con semillas. El nombre de gimnosperma significa “semilla desnuda”, y se refiere al óvulo no cerrado que es fecundado para producir la semilla. Las semillas se desarrollan en la superficie de las hojas, en las escamas de los conos o en solitario. Las coníferas (Pinophyta, 630 especies) y las cícadas (Cycadophyta, 160 especies) son los grupos de gimnospermas dominantes. Gnetophyta (70 especies) incluye los géneros <em>Gnetum</em> (árboles tropicales de hoja perenne, arbustos, lianas), <em>Ephedra</em> (incluyendo especies con propiedades medicinales y “té mormón”), y <em>Welwitschia</em> (endémica del desierto de Namibia y que produce dos hojas opuestas y permanentes que crecen desde la base). La Ginkgophyta sólo contiene una especie: <em>Ginkgo biloba</em>.</p>
+</div>
+<div class="section" id="angiospermas">
+<h4>Angiospermas 🌸<a class="headerlink" href="#angiospermas" title="Permalink to this headline">¶</a></h4>
+<p>Las angiospermas son las plantas con flores. El nombre de angiosperma deriva de “carcasa” y “semilla”. A diferencia de las gimnospermas, las angiospermas producen semillas dentro de un ovario. Las angiospermas se caracterizan por tener flores, endospermo dentro de las semillas y frutos que las contienen. Se conocen más de 300.000 especies de plantas con flores. Las primeras plantas con flores surgieron hace 160 millones de años, se diversificaron rápidamente y sustituyeron a las coníferas como árboles dominantes hace ~ 100-60 millones de años.</p>
+<p>Los principales grupos de angiospermas son las magnolíticas (9.000 especies, entre las que se encuentran las magnolias, el laurel, la pimienta negra y el aguacate 🥑), las monocotiledóneas (70.000 especies, entre las que se encuentran el arroz 🌾, el plátano 🍌, la piña 🍍, el maíz 🌽, el coco 🥥, las palmeras 🌴 y los tulipanes 🌷) y las eudicotas (175.000 especies). Las eudicotas se componen de dos grandes grupos, las rosáceas (que incluyen los pepinos 🥒, la fresa 🍓, las cerezas 🍒, los melocotones 🍑, las peras 🍐, las manzanas 🍎, los limones 🍋, las naranjas 🍊, sandía 🍉, y melón 🍈) y Asteridáceas (entre las que se encuentran las zanahorias 🥕, las patatas 🥔, los kiwis 🥝, los pimientos 🌶, las berenjenas 🍆, los tomates 🍅, y el girasol 🌻).</p>
+<p>Las características típicas de las monocotiledóneas son un solo cotiledón (u hoja de la semilla), flores con tres pétalos, polen con un solo poro y, a menudo, hojas con venación paralela. Las características típicas de las dicotiledóneas son dos cotiledones, flores con cuatro o cinco pétalos, polen con tres poros y, normalmente, hojas con venación ramificada.</p>
+<p><img alt="Haeckel.jpg" src="../_images/Haeckel.jpg" /></p>
+<p><img alt="Plant_evolution.jpg" src="../_images/Plant_evolution.jpg" /></p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="lista-de-plantas">
+<h2>Lista de plantas<a class="headerlink" href="#lista-de-plantas" title="Permalink to this headline">¶</a></h2>
+<p>Habrás observado que las plantas se describen de forma jerárquica. Hay un gran grupo único (las plantas) que se subdivide cada vez más hasta llegar al nivel de las especies. Por ejemplo, las uvas se clasifican de la siguiente manera: Plantae, Angiospermas, Eudicotas, Rosidas, Orden Vitales, Familia Vitaceae, Género <em>Vitis</em>, Especie <em>V. vinifera</em>. El nombre de la especie se compone del nombre del género (abreviado tras su primer uso) y del epíteto de la especie.</p>
+<p>Acabamos de cubrir la historia evolutiva de todas las plantas, pero las plantas con flor son especialmente numerosas y diversas y la fuente de nuestros principales cultivos.</p>
+<p>Este <a class="reference external" href="http://danchitwood.github.io/CropPhylogeny/">gráfico</a> interactivo muestra la clasificación taxonómica anidada de las especies de cultivos de angiospermas, donde los círculos representan la producción en toneladas de cada cultivo en 2011 (datos de <a class="reference external" href="http://www.fao.org/home/en">aquí</a>). Los cultivos están dentro de círculos que denotan familias de plantas (que siempre terminan con “-aceae”).</p>
+<p>En la lección anterior, aprendiste a indexar y crear listas (¡y a crear e indexar una lista de listas!). En la celda de abajo, crea una lista de listas con tres niveles:</p>
+<ul class="simple">
+<li><p>El primer nivel de tu lista debe ser “monocotiledóneas”, “rosáceas” y “asteráceas”</p></li>
+<li><p>Para el segundo nivel de tu lista, elija dos familias para cada uno de los grupos anteriores (recuerda, las familias de plantas terminan en “-aceae” y sí, ¡los nombres son complicados y largos!)</p></li>
+<li><p>Para el tercer nivel, añade tantas especies de cultivos pertenecientes a cada familia como desees a la lista respectiva.</p></li>
+<li><p>Sugerencia: es más fácil hacer tus listas empezando por el nivel de familia y trabajando hacia arriba para añadir estas listas a las monocotiledóneas, las rosáceas y las asteráceas.</p></li>
+<li><p>Nombre tu lista general “mis_cultivos”.</p></li>
+<li><p>Por último, imprime tu lista para poder ver los resultados</p></li>
+<li><p>Recuerda, no tengas miedo de añadir comentarios a tu código usando <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p></li>
+</ul>
+<p>Utiliza este ejercicio para explorar las relaciones evolutivas de los cultivos dentro de las plantas con flor. También puedes buscar tu especie de cultivo favorita (la wikipedia es un gran recurso) y colocarla como corresponde en tu lista. Compartiremos y discutiremos los cultivos que elijas en clase.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Coloca tu respuesta aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ahora, desde tu lista “mis_cultivos”, seleccione su cultivo favorito utilizando la indexación e imprima su nombre. Recuerda: ¡tu lista tiene tres niveles!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Coloca tu respuesta aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="indice-del-clima">
+<h2>Índice del clima<a class="headerlink" href="#indice-del-clima" title="Permalink to this headline">¶</a></h2>
+<p>Más arriba ha aprendido sobre la diversidad evolutiva de las plantas. Esta diversidad es intrínsecamente genética: las diferencias entre especies están codificadas en el ADN. Pero el medio ambiente también desempeña un papel en la determinación de lo que son las plantas. Los efectos del medio ambiente pueden ser a largo plazo, actuando a lo largo de períodos de tiempo geológicos en forma de presión de selección que impulsa la evolución. O bien, los efectos del clima pueden producirse en escalas de tiempo más pequeñas, durante la vida de una planta. La plasticidad se refiere a los efectos del medio ambiente en el cambio del fenotipo de un organismo, lo que es. Las plantas suelen ser muy sensibles a su entorno: la cantidad y calidad de luz que reciben, la competencia con otras plantas o la respuesta a los animales depredadores, y la temperatura.</p>
+<p>El cambio climático afecta a las plantas de muchas maneras. Estas responderán directamente a los factores abióticos afectados por el cambio climático, como la temperatura y las precipitaciones. Pero también responderán a los efectos indirectos del cambio climático que resultan en la transformación de ecosistemas enteros. El cambio climático es importante para nosotros de múltiples maneras, siendo las dos más obvias: 1) los efectos sobre los cultivos y otras plantas de las que dependemos para sobrevivir y 2) la pérdida de biodiversidad.</p>
+<p>Más adelante analizaremos los efectos a largo plazo del clima en los cultivos. Pero por ahora, utilicemos las habilidades de indexación que acabamos de aprender para observar algunas tendencias y también para obtener una vista previa de la visualización de datos que aprenderás en la próxima lección.</p>
+<p>En la celda de abajo, los valores de la anomalia de temperatura desde el año 1900 hasta el 2020 se proporcionan en una lista llamada <code class="docutils literal notranslate"><span class="pre">temp_anomaly</span></code>. Estos datos provienen de <a class="reference external" href="https://climate.nasa.gov/vital-signs/global-temperature/">NASA</a>. Ejecuta la celda de abajo para crear la lista:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_anomaly</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.19</span><span class="p">,</span><span class="o">-</span><span class="mf">0.23</span><span class="p">,</span><span class="o">-</span><span class="mf">0.25</span><span class="p">,</span><span class="o">-</span><span class="mf">0.28</span><span class="p">,</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span><span class="o">-</span><span class="mf">0.33</span><span class="p">,</span><span class="o">-</span><span class="mf">0.36</span><span class="p">,</span><span class="o">-</span><span class="mf">0.37</span><span class="p">,</span><span class="o">-</span><span class="mf">0.39</span><span class="p">,</span><span class="o">-</span><span class="mf">0.4</span><span class="p">,</span><span class="o">-</span><span class="mf">0.41</span><span class="p">,</span><span class="o">-</span><span class="mf">0.38</span><span class="p">,</span>
+                <span class="o">-</span><span class="mf">0.35</span><span class="p">,</span><span class="o">-</span><span class="mf">0.32</span><span class="p">,</span><span class="o">-</span><span class="mf">0.31</span><span class="p">,</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span><span class="o">-</span><span class="mf">0.29</span><span class="p">,</span><span class="o">-</span><span class="mf">0.29</span><span class="p">,</span><span class="o">-</span><span class="mf">0.29</span><span class="p">,</span><span class="o">-</span><span class="mf">0.29</span><span class="p">,</span><span class="o">-</span><span class="mf">0.27</span><span class="p">,</span><span class="o">-</span><span class="mf">0.26</span><span class="p">,</span><span class="o">-</span><span class="mf">0.25</span><span class="p">,</span><span class="o">-</span><span class="mf">0.24</span><span class="p">,</span>
+                <span class="o">-</span><span class="mf">0.23</span><span class="p">,</span><span class="o">-</span><span class="mf">0.22</span><span class="p">,</span><span class="o">-</span><span class="mf">0.21</span><span class="p">,</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="o">-</span><span class="mf">0.19</span><span class="p">,</span><span class="o">-</span><span class="mf">0.19</span><span class="p">,</span><span class="o">-</span><span class="mf">0.19</span><span class="p">,</span><span class="o">-</span><span class="mf">0.19</span><span class="p">,</span><span class="o">-</span><span class="mf">0.18</span><span class="p">,</span><span class="o">-</span><span class="mf">0.17</span><span class="p">,</span><span class="o">-</span><span class="mf">0.16</span><span class="p">,</span><span class="o">-</span><span class="mf">0.14</span><span class="p">,</span>
+                <span class="o">-</span><span class="mf">0.11</span><span class="p">,</span><span class="o">-</span><span class="mf">0.06</span><span class="p">,</span><span class="o">-</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.06</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span><span class="mf">0.11</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.07</span><span class="p">,</span><span class="mf">0.04</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mf">0.04</span><span class="p">,</span><span class="o">-</span><span class="mf">0.07</span><span class="p">,</span><span class="o">-</span><span class="mf">0.08</span><span class="p">,</span>
+                <span class="o">-</span><span class="mf">0.08</span><span class="p">,</span><span class="o">-</span><span class="mf">0.07</span><span class="p">,</span><span class="o">-</span><span class="mf">0.07</span><span class="p">,</span><span class="o">-</span><span class="mf">0.07</span><span class="p">,</span><span class="o">-</span><span class="mf">0.07</span><span class="p">,</span><span class="o">-</span><span class="mf">0.06</span><span class="p">,</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span><span class="o">-</span><span class="mf">0.04</span><span class="p">,</span><span class="o">-</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span>
+                <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span><span class="o">-</span><span class="mf">0.03</span><span class="p">,</span><span class="o">-</span><span class="mf">0.04</span><span class="p">,</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span><span class="o">-</span><span class="mf">0.06</span><span class="p">,</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span><span class="o">-</span><span class="mf">0.03</span><span class="p">,</span><span class="o">-</span><span class="mf">0.02</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.02</span><span class="p">,</span><span class="mf">0.04</span><span class="p">,</span>
+                <span class="mf">0.07</span><span class="p">,</span><span class="mf">0.12</span><span class="p">,</span><span class="mf">0.16</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.21</span><span class="p">,</span><span class="mf">0.22</span><span class="p">,</span><span class="mf">0.21</span><span class="p">,</span><span class="mf">0.21</span><span class="p">,</span><span class="mf">0.22</span><span class="p">,</span><span class="mf">0.24</span><span class="p">,</span><span class="mf">0.27</span><span class="p">,</span><span class="mf">0.31</span><span class="p">,</span><span class="mf">0.33</span><span class="p">,</span><span class="mf">0.34</span><span class="p">,</span>
+                <span class="mf">0.33</span><span class="p">,</span><span class="mf">0.33</span><span class="p">,</span><span class="mf">0.34</span><span class="p">,</span><span class="mf">0.34</span><span class="p">,</span><span class="mf">0.37</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.43</span><span class="p">,</span><span class="mf">0.45</span><span class="p">,</span><span class="mf">0.48</span><span class="p">,</span><span class="mf">0.51</span><span class="p">,</span><span class="mf">0.53</span><span class="p">,</span><span class="mf">0.55</span><span class="p">,</span><span class="mf">0.59</span><span class="p">,</span><span class="mf">0.61</span><span class="p">,</span>
+                <span class="mf">0.62</span><span class="p">,</span><span class="mf">0.63</span><span class="p">,</span><span class="mf">0.64</span><span class="p">,</span><span class="mf">0.65</span><span class="p">,</span><span class="mf">0.65</span><span class="p">,</span><span class="mf">0.65</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.74</span><span class="p">,</span><span class="mf">0.79</span><span class="p">,</span><span class="mf">0.83</span><span class="p">,</span><span class="mf">0.88</span><span class="p">,</span><span class="mf">0.91</span><span class="p">,</span><span class="mf">0.95</span><span class="p">,</span>
+                <span class="mf">0.98</span><span class="p">,</span><span class="mf">1.01</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si hay datos de 1900 a 2020, entonces debería haber 121 valores en la lista. Utilizando una función que hayas aprendido, comprueba la longitud de la lista <code class="docutils literal notranslate"><span class="pre">temp_anomaly</span></code> en la celda de abajo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Coloca tu respuesta aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A continuación, crea una lista llamada <code class="docutils literal notranslate"><span class="pre">mi_vida</span></code> utilizando la indexación que comienza en el año en que naciste y llega hasta el final de los datos proporcionados. Esta lista comienza con los datos de 1900, lo que es una pista sobre cómo indexar adecuadamente los datos. Crea tu lista a través de la indexación en la celda de abajo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Coloca tu respuesta aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comprueba la longitud de tu lista usando una función en la celda de abajo para asegurarte de que has indexado correctamente. ¡Debería estar cerca de la edad que tienes! (dependiendo del día de tu cumpleaños… ¡recuerda que esta lista sólo llega hasta el 2020!)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Coloca tu respuesta aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>En la siguiente lección, aprenderemos a trazar y visualizar nuestros datos. Para ello, necesitaremos <em>importar</em> conjuntos de funciones llamados <em>módulos</em>. Como aprenderás en la siguiente lección, lo hacemos escribiendo <code class="docutils literal notranslate"><span class="pre">import</span></code>, el módulo que deseamos importar, y utilizando <code class="docutils literal notranslate"><span class="pre">as</span></code> para decir cómo nos gustaría referirnos al módulo en forma abreviada cuando lo usemos. Hay algunas otras líneas de código que utilizamos para que los gráficos que hacemos se muestren en línea en el cuaderno Jupyter.</p>
+<p>Ejecuta la celda de abajo para importar el módulo <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> y un submódulo <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> para que podamos intentar trazar los datos de las anomalías de temperatura.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aprenderás más sobre cómo trazar los datos en la próxima lección, pero ahora vamos a intentar visualizar los cambios de la anomalía de la temperatura durante tu vida. La función <code class="docutils literal notranslate"><span class="pre">plot</span></code> de <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> toma una lista de números y los gráfica. En los paréntesis vacíos de abajo, saca tu lista <code class="docutils literal notranslate"><span class="pre">mi_vida</span></code> y sustituye la cadena por el título, la etiqueta del eje x y la etiqueta del eje y para crear un gráfico. Una vez que haya hecho los cambios en el código de abajo, sólo tiene que pulsar shift + Enter y deberá aparecer un gráfico en tu pantalla.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Coloca tu respuesta aquí</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="p">)</span> <span class="c1"># Ponga la lista con sus anomalías de temperatura en su vida aquí</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Título&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span> <span class="c1"># Ponga un título al gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Eje X&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="c1"># Ponga un nombre a su eje X</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Eje Y&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="c1"># Ponga un nombre a su eje Y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Eje Y&#39;)
+</pre></div>
+</div>
+<img alt="../_images/2_Las_plantas_y_el_clima_41_1.png" src="../_images/2_Las_plantas_y_el_clima_41_1.png" />
+</div>
+</div>
+<p>¡Enhorabuena por tu primer gráfico en Python 🐍! Mira tu gráfico e interprétalo: ¿qué significa? En la próxima lección aprenderás a trazar más a fondo, pero por ahora, ¡eso es todo!</p>
+<p>Gracias por participar en esta actividad.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./B_1_VARIABLES_LISTAS_Y_INDEXACION"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="1_Practica.html" title="previous page">Práctica con variables, funciones, listas e índices</a>
+    <a class='right-next' id="next-link" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview.html" title="next page">Welcome / Bienvenid&#64;</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Dan Chitwood<br/>
+        
+            &copy; Copyright By the authors.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
