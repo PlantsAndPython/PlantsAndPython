@@ -1,0 +1,981 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lección 4.6 &#8212; Plants &amp; Python</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Práctica con Pandas, Dataframes y Seaborn 🐼" href="../1_Practica.html" />
+    <link rel="prev" title="Lección 4.5" href="4.5_Usando_iloc.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00_Opening_page.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/01_Overview.html">
+   Welcome : Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/01_Welcome_Bienvenido/00_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/01_Welcome_Bienvenido/01_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/02_Overview.html">
+   Getting Started : Empezando
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/00_Installing_Anaconda.html">
+     Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/01_Instalar_Anaconda.html">
+     Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/02_Coding_cells.html">
+     Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/03_Celdas_de_codigo.html">
+     Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/04_Markdown_cells.html">
+     Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/05_Celdas_de_markdown.html">
+     Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, lists, &amp; indexing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.1_Functions.html">
+     1.1 Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.2_Indexing.html">
+     1.2 Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.3_Lists.html">
+     1.3 Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.4_Indexing_List_Elements.html">
+     1.4 Indexing List Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.5_Modifying_Lists.html">
+     1.5 Modifying Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.6_List_of_Lists.html">
+     Lesson 1.6 List of Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.7_Slicing.html">
+     Lesson 1.7 Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.8_Data_Types.html">
+     Lesson 1.8 Data Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/2_Plants_And_Climate.html">
+   Plants &amp; Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, listas, &amp; indexacion
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.0_Variables.html">
+     Lección 1.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.1_Funciones.html">
+     Lección 1.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.2_Indexacion.html">
+     Lección 1.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.3_Listas.html">
+     Lección 1.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.4_Indexando_los_elementos_de_una_lista.html">
+     Lección 1.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.5_Modificando_listas.html">
+     Lección 1.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.6_Lista_de_listas.html">
+     Lección 1.6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.7_Rebanar.html">
+     Lección 1.7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.8_Tipos_de_datos.html">
+     Lección 1.8
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima.html">
+   Las plantas y el clima
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. Visualizing Data with Matplotlib
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.0_Modules.html">
+     Lesson 2.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.1_Plots.html">
+     2.1 Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.2_Shape_Size_and_Color.html">
+     2.2 Shape, Size, and Color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.3_Legends.html">
+     2.3 Legends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.4_Subplots.html">
+     Lesson 2.4
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/2_Leaf_And_Sunflower_Shapes.html">
+   Leaf &amp; Sunflower Shapes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; the Golden Angle
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.0_Range_Function.html">
+     Lesson 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.1_For_Loops.html">
+     3.1 For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.2_Counters.html">
+     3.2 Counters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.3_Using_Lists_and_Loops.html">
+     3.3 Using Lists and Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.4_Calculating_Fibonacci.html">
+     3.4 Calculating Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.5_While_Loops.html">
+     Lesson 3.5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/2_Modeling_Sunflowers.html">
+   Modeling Sunflowers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; el angulo dorado
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.0_La_funcion_range.html">
+     Lección 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.1_Loops_for.html">
+     Lección 3.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.2_Contadores.html">
+     Lección 3.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.3_Usando_listas_y_loops.html">
+     Lección 3.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci.html">
+     Lección 3.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.5_Loops_while.html">
+     Lección 3.5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/2_Como_construir_un_girasol.html">
+   Cómo construir un girasol
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Data Analysis with Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.0_Reading_in_Data.html">
+     Lesson 4.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.1_Head_and_Tail.html">
+     4.1 Head and Tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.2_Selecting_Columns.html">
+     4.2 Selecting Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.3_Descriptive_Statistics.html">
+     4.3 Descriptive Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.4_Masks.html">
+     4.4 Masks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.5_Using_iloc.html">
+     4.5 Using iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.6_Seaborn.html">
+     Lesson 4.6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/2_Grapes_in_a_Warming_World.html">
+   Grapes in a Warming World
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Análisis de datos con pandas
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../0_Overview.html">
+   Lecciones
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="4.0_Leyendo_en_data.html">
+     Lección 4.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4.1_Head_y_tail.html">
+     Lección 4.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4.2_Seleccionando_columnas.html">
+     Lección 4.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4.3_Estadisticas_descriptivas.html">
+     Lección 4.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4.4_Enmascaramiento.html">
+     Lección 4.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4.5_Usando_iloc.html">
+     Lección 4.5
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Lección 4.6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Vides_en_un_mundo_que_se_calienta.html">
+   Vides en un mundo que se calienta
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2FH_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trazado-con-seaborn-trazado-especializado-para-estadisticas">
+   Trazado con seaborn (trazado especializado para estadísticas)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="leccion-4-6">
+<h1>Lección 4.6<a class="headerlink" href="#leccion-4-6" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="trazado-con-seaborn-trazado-especializado-para-estadisticas">
+<h2>Trazado con seaborn (trazado especializado para estadísticas)<a class="headerlink" href="#trazado-con-seaborn-trazado-especializado-para-estadisticas" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p><em><strong>Mira este video de 16:25 a 25:29</strong></em></p>
+<p>Para español, haga click en configuración, seleccione “español” debajo de los subtítulos.</p>
+<p>Traducción por Guillermo Rodríguez Guerrero (UNAM ENES León, México).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Para reproducir el siguiente tutorial, presiona shift + enter</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+<span class="n">start</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+<span class="n">end</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">29</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;jEQRU55x0e4&quot;</span><span class="p">,</span><span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">640</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">360</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="640"
+    height="360"
+    src="https://www.youtube.com/embed/jEQRU55x0e4?start=985&end=1529"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p><em><strong>La siguiente es una transcripción del video.</strong></em></p>
+<blockquote>
+<div><p>💡 <em><strong>Recuerde:</strong></em> Importe <code class="docutils literal notranslate"><span class="pre">pandas</span></code> y lea el conjunto de datos a continuación para completar esta lección</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importe pandas</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Decargue el conunto de datos del</span>
+<span class="c1"># Jupyter Book para leer localmente o</span>
+<span class="c1"># leer desde GitHub, a continuación:</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/DanChitwood/PlantsAndPython/master/co2_mlo_weekly.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A continuación echemos un vistazo a seaborn, que es una
+forma alternativa a matplotlib para ver tus datos. Y como verás, seaborn es mucho más especializado para graficar datos estadísticos que matplotlib.</p>
+<p>Entonces ya has visto cómo usar matplotlib antes. Carga en el módulo de esta manera. Pero para seaborn funciona mucho mejor con pandas. Como verás, funciona mucho mejor con marcos de datos y puedes realizarfunciones estadísticas muy sofisticadas y también es un poco más estético en producir figuras atractivas rápidamente que matplotlib. Así que importamos seaborn como sns.
+Además, seaborn tiene algo llamado estilos y puedes usarlos usando “sns.set” y puedes buscar los diferentes estilos. Y
+es una forma fácil de cambiar, por ejemplo el fondo, las líneas de la cuadrícula, los ejes de los ticks y cosas por el estilo en los gráficos que realices. Así que presionamos shift + enter para importar seaborn.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hemos visto cómo se puede usar matplotlib para trazar y visualizar datos</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="c1"># Pero también hay otro paquete llamado seaborn</span>
+<span class="c1"># seaborn es mejor que matplotlib con respecto a</span>
+<span class="c1"># jugando bien con pandas y marcos de datos</span>
+<span class="c1"># y para funciones estadísticas específicas</span>
+
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span> <span class="c1"># sets different styles, for figures/presentation/poster</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Es útil mirar a través de la galería seaborn. Busque la grafica, la función o el estilo que necesita y observe el ejemplo.</p>
+<p>Galería: <a class="reference external" href="https://seaborn.pydata.org/examples/index.html">https://seaborn.pydata.org/examples/index.html</a></p>
+<p>Explore los estilos seaborn aquí: <a class="reference external" href="http://seaborn.pydata.org/tutorial/aesthetics.html">http://seaborn.pydata.org/tutorial/aesthetics.html</a></p>
+<p>Entonces, una de las funciones máscomunes para hacer diagramas en seabornse llama “lmplot()”. Así que nosotros lo llamamos por “sns.lmplot()” y así de fáciles usar seaborn. Con solo hacer referencia a tu marco de datos, diciendo que datos son iguales a tu marco de datos, en nuestro caso es data, tan pronto como le digas a seaborn cuál es el marco de datos, puedes hacer referencia a tus datos por el nombre de la columna.</p>
+<p>Entonces digamos que queremos diagrama lineal del modelo utilizando lmplot, donde el eje x es lacolumna “running_date” y el eje y son las partes de CO2 por millón y decimos que nuestro marco de datos es “data” y muy rápidamente seaborn llegará a este hermoso diagrama. Puedes ver los datos aquí. Veseste cíclico cíclico de partes por millón de CO2 esto sucede todos los años, tiene que ver con la variación estacional de la tierra, y esto se debe literalmente a que las plantas están
+muriendo en el invierno en el hemisferio norte y viceversa en el hemisferio sur y la cantidad de dióxido de carbono que están absorbiendo y liberando y descomponiendo y otras cosas que contribuyen al CO2 crea estos estos ciclos realmente sorprendentes. Estos datos, si recuerdas, son de 2017,
+2018 y 2019 y, aunque está subiendo y bajando, la tendencia general es subir. Entonces la función de gráfico lineal se refiere al modelado lineal, por lo que trazará tus datos como un gráfico de dispersión como puedes ver con estos puntos. Estos son los valores de CO2 que especificamos para nuestro eje y, pero automáticamente intentará ajustar una línea a tus datos. Una línea no es apropiada para la naturaleza cíclica de estos datos como puede ver. Tendrías que usar algo como una función sinusoidal para eso, pero puedes ver porque el nivel de CO2 está aumentando en general que la función lineal es apropiada por observar ese aumento general.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lm se refiere a &quot;linear model&quot;</span>
+<span class="c1"># La función sns.lmplot ajustará una línea a sus datos</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;running_date&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;CO2ppm&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x7fee3eee5cd0&gt;
+</pre></div>
+</div>
+<img alt="../../_images/4.6_Seaborn_12_11.png" src="../../_images/4.6_Seaborn_12_11.png" />
+</div>
+</div>
+<p>Sinembargo, digamos que solo queremos el diagrama de dispersión,
+no queremos una línea en él. Entonces puedes ejecutar la
+misma línea de código con lmplot() pero este argumento
+“fit_reg” es si seaborn debería intentar ajustarse a un
+modelo lineal y se puede decir Falso. Entonces, si dices falso
+luego, se obtiene el diagrama de dispersión de partes de CO2
+por millón.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pero tal vez no quieras la línea</span>
+<span class="c1"># ¡Establezca fit_reg en False y obtendrá solo el diagrama de dispersión!</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;running_date&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;CO2ppm&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">fit_reg</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x7fedab63d610&gt;
+</pre></div>
+</div>
+<img alt="../../_images/4.6_Seaborn_14_11.png" src="../../_images/4.6_Seaborn_14_11.png" />
+</div>
+</div>
+<p>Otra función realmente genial en seaborn es “distplot”, esto es comoun diagrama de densidad o histograma y tú solo dices qué columna quieres crear el diagrama de histograma de densidad ysi queremos ver partes de CO2 por millón y obtendrás un hermoso histograma, pero lo más importante es que obtienes la densidad
+estimada de la distribución de los datos también.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Utilice sns.distplot () para trazar una gráfica de densidad / histograma</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;CO2ppm&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/sourabh/miniconda3/envs/jbook/lib/python3.8/site-packages/seaborn/distributions.py:2557: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;CO2ppm&#39;, ylabel=&#39;Density&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/4.6_Seaborn_16_21.png" src="../../_images/4.6_Seaborn_16_21.png" />
+</div>
+</div>
+<p>Digamos que queremos ser mas específicos. Queremos observar las diferentes densidades de los años 2017, 2018 y 2019. Así que recuerda que ya convertimos el año en una variable categórica, pero podemos crear máscaras. Entonces vamos a decir que queremos los datos de CO2, verdad? Entonces nos referimos a la columna de CO2 como un stringn en los corchetes y luego ponemos un segundo par de corchetes con nuestra máscara. Decimos que queremos todos los datos para el CO2 para el año 2017. Entonces decimos dónde año, dónde es cierto que ese año es igual a 2017, y creamos un objeto para almacenar esos datos y lo llamamos año 2017. Hacemos lo mismo para el año 2018 y hacemos lo mismo para el año 2019. Así que ahora tenemos nuestros años separados.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ¿Qué pasa si queremos separar nuestros datos por categorías?</span>
+<span class="c1"># Por ejemplo, ¿por año?</span>
+
+<span class="c1"># Hacemos mascaras!</span>
+
+<span class="n">year2017</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;CO2ppm&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2017</span><span class="p">]</span>
+<span class="n">year2018</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;CO2ppm&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2018</span><span class="p">]</span>
+<span class="n">year2019</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;CO2ppm&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2019</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Usamos enmascaramiento y es como matplotlib: puedes seguir llamando a las funciones de diagramas una tras otra y simplemente pegaránlos datos en la parte superior del diagrama que estás haciendo. Así que queremos un diagrama de densidad de losvalores de CO2 del año 2017, una gráfica de densidad del año 2018, y la gráfica de densidad del año 2019, y puedes ver que los teníamos todos combinados antes ahora está creando estos diferentes diagramas de densidad y podemos ver que hay diferencias claras en los niveles de CO2 entre años y que están aumentando.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Al igual que matplotlib, puede seguir llamando a una función</span>
+<span class="c1"># para seguir trazando categorías de datos en el mismo gráfico</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">year2017</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;2017&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">year2018</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;2018&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">year2019</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;2019&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/sourabh/miniconda3/envs/jbook/lib/python3.8/site-packages/seaborn/distributions.py:2557: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+/home/sourabh/miniconda3/envs/jbook/lib/python3.8/site-packages/seaborn/distributions.py:2557: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+/home/sourabh/miniconda3/envs/jbook/lib/python3.8/site-packages/seaborn/distributions.py:2557: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;CO2ppm&#39;, ylabel=&#39;Density&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/4.6_Seaborn_20_21.png" src="../../_images/4.6_Seaborn_20_21.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="4.5_Usando_iloc.html" title="previous page">Lección 4.5</a>
+    <a class='right-next' id="next-link" href="../1_Practica.html" title="next page">Práctica con Pandas, Dataframes y Seaborn 🐼</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Dan Chitwood<br/>
+        
+            &copy; Copyright By the authors.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,951 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lección 1.3 &#8212; Plants &amp; Python</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lección 1.4" href="1.4_Indexando_los_elementos_de_una_lista.html" />
+    <link rel="prev" title="Lección 1.2" href="1.2_Indexacion.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00_Opening_page.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/01_Overview.html">
+   Welcome : Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/01_Welcome_Bienvenido/00_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/01_Welcome_Bienvenido/01_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/02_Overview.html">
+   Getting Started : Empezando
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/00_Installing_Anaconda.html">
+     Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/01_Instalar_Anaconda.html">
+     Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/02_Coding_cells.html">
+     Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/03_Celdas_de_codigo.html">
+     Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/04_Markdown_cells.html">
+     Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/05_Celdas_de_markdown.html">
+     Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, lists, &amp; indexing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.1_Functions.html">
+     1.1 Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.2_Indexing.html">
+     1.2 Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.3_Lists.html">
+     1.3 Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.4_Indexing_List_Elements.html">
+     1.4 Indexing List Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.5_Modifying_Lists.html">
+     1.5 Modifying Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.6_List_of_Lists.html">
+     Lesson 1.6 List of Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.7_Slicing.html">
+     Lesson 1.7 Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.8_Data_Types.html">
+     Lesson 1.8 Data Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/2_Plants_And_Climate.html">
+   Plants &amp; Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, listas, &amp; indexacion
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../0_Overview.html">
+   Lessons
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1.0_Variables.html">
+     Lección 1.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1.1_Funciones.html">
+     Lección 1.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1.2_Indexacion.html">
+     Lección 1.2
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Lección 1.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1.4_Indexando_los_elementos_de_una_lista.html">
+     Lección 1.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1.5_Modificando_listas.html">
+     Lección 1.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1.6_Lista_de_listas.html">
+     Lección 1.6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1.7_Rebanar.html">
+     Lección 1.7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1.8_Tipos_de_datos.html">
+     Lección 1.8
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Las_plantas_y_el_clima.html">
+   Las plantas y el clima
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. Visualizing Data with Matplotlib
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.0_Modules.html">
+     Lesson 2.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.1_Plots.html">
+     2.1 Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.2_Shape_Size_and_Color.html">
+     2.2 Shape, Size, and Color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.3_Legends.html">
+     2.3 Legends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.4_Subplots.html">
+     Lesson 2.4
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/2_Leaf_And_Sunflower_Shapes.html">
+   Leaf &amp; Sunflower Shapes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; the Golden Angle
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.0_Range_Function.html">
+     Lesson 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.1_For_Loops.html">
+     3.1 For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.2_Counters.html">
+     3.2 Counters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.3_Using_Lists_and_Loops.html">
+     3.3 Using Lists and Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.4_Calculating_Fibonacci.html">
+     3.4 Calculating Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.5_While_Loops.html">
+     Lesson 3.5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/2_Modeling_Sunflowers.html">
+   Modeling Sunflowers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; el angulo dorado
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.0_La_funcion_range.html">
+     Lección 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.1_Loops_for.html">
+     Lección 3.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.2_Contadores.html">
+     Lección 3.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.3_Usando_listas_y_loops.html">
+     Lección 3.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci.html">
+     Lección 3.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.5_Loops_while.html">
+     Lección 3.5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/2_Como_construir_un_girasol.html">
+   Cómo construir un girasol
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Data Analysis with Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.0_Reading_in_Data.html">
+     Lesson 4.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.1_Head_and_Tail.html">
+     4.1 Head and Tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.2_Selecting_Columns.html">
+     4.2 Selecting Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.3_Descriptive_Statistics.html">
+     4.3 Descriptive Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.4_Masks.html">
+     4.4 Masks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.5_Using_iloc.html">
+     4.5 Using iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.6_Seaborn.html">
+     Lesson 4.6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/2_Grapes_in_a_Warming_World.html">
+   Grapes in a Warming World
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Análisis de datos con pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.0_Leyendo_en_data.html">
+     Lección 4.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.1_Head_y_tail.html">
+     Lección 4.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.2_Seleccionando_columnas.html">
+     Lección 4.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.3_Estadisticas_descriptivas.html">
+     Lección 4.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.4_Enmascaramiento.html">
+     Lección 4.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.5_Usando_iloc.html">
+     Lección 4.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn.html">
+     Lección 4.6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/2_Vides_en_un_mundo_que_se_calienta.html">
+   Vides en un mundo que se calienta
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.3_Listas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2FB_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.3_Listas.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.3_Listas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.3_Listas.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#como-crear-listas">
+   ¿Cómo crear listas?
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="leccion-1-3">
+<h1>Lección 1.3<a class="headerlink" href="#leccion-1-3" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="como-crear-listas">
+<h2>¿Cómo crear listas?<a class="headerlink" href="#como-crear-listas" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Utilizar paréntesis vacíos [ ]</p></li>
+<li><p>Rellenar con variables o cadenas</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Mira este video de 9:10 a 12:22</strong></p>
+<p>Para español, haga click en configuración, seleccione “español” debajo de los subtítulos.</p>
+<p>Traducción por Alice Luckie (UNAM ENES León, México)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Para reproducir el siguiente tutorial, presiona shift + enter</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+<span class="n">start</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+<span class="n">end</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;4XIllJVnT4Y&quot;</span><span class="p">,</span><span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">640</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">360</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="640"
+    height="360"
+    src="https://www.youtube.com/embed/4XIllJVnT4Y?start=550&end=742"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p><em><strong>La siguiente es una transcripción del video.</strong></em></p>
+<blockquote>
+<div><p>💡 <em><strong>Recuerde:</strong></em> en el cuaderno anterior creó variables llamadas <code class="docutils literal notranslate"><span class="pre">wine</span></code>, <code class="docutils literal notranslate"><span class="pre">tequila</span></code> y <code class="docutils literal notranslate"><span class="pre">beer</span></code>. Cree las variables nuevamente en la celda de abajo para completar esta lección</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cree las variables wine, tequila, and beer</span>
+
+<span class="n">wine</span> <span class="o">=</span> <span class="s2">&quot;Vitis_vinifera&quot;</span>
+<span class="n">tequila</span> <span class="o">=</span> <span class="s2">&quot;Agave_tequilana&quot;</span>
+<span class="n">beer</span> <span class="o">=</span> <span class="s2">&quot;Hordeum_vulgare&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Entonces hicimos todas esas variables porque ahora vamos a llegar a algo llamado listas. Listas tal y como suenan. Son una lista de tipos de datos. Los tipos de datos pueden ser cadenas, ser números, ser enteros, flotantes, e incluso pueden ser listas y hablaremos sobre la creación de una lista de listas en un segundo. Puede poner cualquier cosa que desee en su lista. Crear listas es muy fácil. Solo usa corchetes vacíos . Estos corchetes no se tocarán otra palabra como cuando indexa y esto inicializará una lista vacía. Entonces simplemente llenamos los corchetes con variables o cadenas separados por comas.</p>
+<p>Así que creemos una lista vacía. Creemos una variable llamada <code class="docutils literal notranslate"><span class="pre">angiosperms</span></code>, llamémosla como el nombre de las plantas con flores. Y lo vamos a igualar a una lista vacía. Y toda una lista vacía es solo un conjunto vacío de corchetes. Presionamos shift + enter y habremos creado nuestra nueva variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creemos una lista vacía llamada angiospermas, o las plantas con flores</span>
+
+<span class="n">angiosperms</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Es muy conveniente saber que todas estas variables que podemos tener,
+son solo una colección de letras, tienen un nombre, y a veces pueden confundirte. ¿Que es lo que tengo? ¿Es una cadena, es una lista,
+es un numero? Aprendamos sobre nuestra segunda función en Python que se llama <code class="docutils literal notranslate"><span class="pre">type()</span></code>. Entonces en la función <code class="docutils literal notranslate"><span class="pre">type()</span></code> tenemos un conjunto de paréntesis y ponemos una entrada en él, una variable de algún tipo,
+y <code class="docutils literal notranslate"><span class="pre">type()</span></code> nos devolverá el tipo de variable que es. Así que acabamos de crear una lista vacía para nuestra variable <code class="docutils literal notranslate"><span class="pre">angiosperms</span></code> y de hecho lo que tenemos, es una lista.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Siempre podemos comprobar qué tipo de variable tenemos con la función type()</span>
+<span class="c1"># Comprobemos si las angiospermas son una lista</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">angiosperms</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si quisieras probar esto, por ejemplo, <code class="docutils literal notranslate"><span class="pre">wine</span></code>, si recuerdas fue una cadena, es “Vitis_vinifera”, es solo una colección de caracteres y no es una lista, es una cadena, por lo que <code class="docutils literal notranslate"><span class="pre">type()</span></code> le dirá con qué tipo de tipo de datos está trabajando.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A diferencia de la lista de angiospermas, el vino es una cadena</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">wine</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si miramos el contenido de nuestra lista de <code class="docutils literal notranslate"><span class="pre">angiosperms</span></code>, debería estar vacío, ¿Verdad?, no hemos puesto nada en él y, de hecho, solo obtenemos corchetes vacíos de vuelta.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Si miramos el contenido de nuestra lista de angiospermas,</span>
+<span class="c1"># debe estar vacío</span>
+
+<span class="n">angiosperms</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pero llenémoslo ahora. Llenar una lista es realmente fácil. Todo lo que haces es poner variables separado por comas. Entonces, en nuestra lista de <code class="docutils literal notranslate"><span class="pre">angiosperms</span></code> agregaremos <code class="docutils literal notranslate"><span class="pre">wine</span></code>, <code class="docutils literal notranslate"><span class="pre">tequila</span></code> y <code class="docutils literal notranslate"><span class="pre">beer</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Completemos nuestra lista de angiospermas!</span>
+<span class="c1"># Simplemente escribimos nuestras variables, separadas por comas</span>
+
+<span class="n">angiosperms</span> <span class="o">=</span> <span class="p">[</span><span class="n">wine</span><span class="p">,</span> <span class="n">tequila</span><span class="p">,</span> <span class="n">beer</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ejecutamos esa celda y ahora si vemos nuestras listas en ella porque pusimos vino, tequila y cerveza. Recuperamos los valores de esas variables, que son “Vitis_vinifera”, “Agave_tequilana”, y “Hordeum_vulgare”. Así es como se crea una lista, un conjunto de corchetes vacíos. Pones en variables, números, cadenas, otras listas y, como te darás cuenta, cualquier cosa que desee.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ahora, cuando miramos el contenido de las angiospermas</span>
+<span class="c1"># deberíamos recuperar las variables que ingresamos</span>
+
+<span class="n">angiosperms</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Vitis_vinifera&#39;, &#39;Agave_tequilana&#39;, &#39;Hordeum_vulgare&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Otra función conveniente es algo llamado <code class="docutils literal notranslate"><span class="pre">len()</span></code>, por longitud (length). Length te devolverá la longitud de una lista, cuántos elementos hay en
+ella. Por ejemplo, sabemos que nuestra lista de angiospermas tiene tres elementos. Entonces, si ponemosla lista en la función <code class="docutils literal notranslate"><span class="pre">len()</span></code>, obtenemos
+Tres.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Otra función conveniente es len()</span>
+<span class="c1"># len() devuelve la longitud de una lista, cuántos elementos tiene</span>
+<span class="c1"># Por ejemplo, nuestra lista de angiosperms tiene 3 elementos</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">angiosperms</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="1.2_Indexacion.html" title="previous page">Lección 1.2</a>
+    <a class='right-next' id="next-link" href="1.4_Indexando_los_elementos_de_una_lista.html" title="next page">Lección 1.4</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Dan Chitwood<br/>
+        
+            &copy; Copyright By the authors.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

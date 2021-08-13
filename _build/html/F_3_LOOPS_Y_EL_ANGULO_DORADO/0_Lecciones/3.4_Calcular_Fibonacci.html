@@ -1,0 +1,952 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lección 3.4 &#8212; Plants &amp; Python</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lección 3.5" href="3.5_Loops_while.html" />
+    <link rel="prev" title="Lección 3.3" href="3.3_Usando_listas_y_loops.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00_Opening_page.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/01_Overview.html">
+   Welcome : Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/01_Welcome_Bienvenido/00_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/01_Welcome_Bienvenido/01_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/02_Overview.html">
+   Getting Started : Empezando
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/00_Installing_Anaconda.html">
+     Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/01_Instalar_Anaconda.html">
+     Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/02_Coding_cells.html">
+     Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/03_Celdas_de_codigo.html">
+     Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/04_Markdown_cells.html">
+     Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/05_Celdas_de_markdown.html">
+     Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, lists, &amp; indexing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.1_Functions.html">
+     1.1 Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.2_Indexing.html">
+     1.2 Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.3_Lists.html">
+     1.3 Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.4_Indexing_List_Elements.html">
+     1.4 Indexing List Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.5_Modifying_Lists.html">
+     1.5 Modifying Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.6_List_of_Lists.html">
+     Lesson 1.6 List of Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.7_Slicing.html">
+     Lesson 1.7 Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.8_Data_Types.html">
+     Lesson 1.8 Data Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/2_Plants_And_Climate.html">
+   Plants &amp; Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, listas, &amp; indexacion
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.0_Variables.html">
+     Lección 1.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.1_Funciones.html">
+     Lección 1.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.2_Indexacion.html">
+     Lección 1.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.3_Listas.html">
+     Lección 1.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.4_Indexando_los_elementos_de_una_lista.html">
+     Lección 1.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.5_Modificando_listas.html">
+     Lección 1.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.6_Lista_de_listas.html">
+     Lección 1.6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.7_Rebanar.html">
+     Lección 1.7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.8_Tipos_de_datos.html">
+     Lección 1.8
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima.html">
+   Las plantas y el clima
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. Visualizing Data with Matplotlib
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.0_Modules.html">
+     Lesson 2.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.1_Plots.html">
+     2.1 Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.2_Shape_Size_and_Color.html">
+     2.2 Shape, Size, and Color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.3_Legends.html">
+     2.3 Legends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.4_Subplots.html">
+     Lesson 2.4
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/2_Leaf_And_Sunflower_Shapes.html">
+   Leaf &amp; Sunflower Shapes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; the Golden Angle
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.0_Range_Function.html">
+     Lesson 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.1_For_Loops.html">
+     3.1 For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.2_Counters.html">
+     3.2 Counters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.3_Using_Lists_and_Loops.html">
+     3.3 Using Lists and Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.4_Calculating_Fibonacci.html">
+     3.4 Calculating Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.5_While_Loops.html">
+     Lesson 3.5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/2_Modeling_Sunflowers.html">
+   Modeling Sunflowers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; el angulo dorado
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../0_Overview.html">
+   Lecciones
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.0_La_funcion_range.html">
+     Lección 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.1_Loops_for.html">
+     Lección 3.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2_Contadores.html">
+     Lección 3.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.3_Usando_listas_y_loops.html">
+     Lección 3.3
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Lección 3.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.5_Loops_while.html">
+     Lección 3.5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Como_construir_un_girasol.html">
+   Cómo construir un girasol
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Data Analysis with Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.0_Reading_in_Data.html">
+     Lesson 4.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.1_Head_and_Tail.html">
+     4.1 Head and Tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.2_Selecting_Columns.html">
+     4.2 Selecting Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.3_Descriptive_Statistics.html">
+     4.3 Descriptive Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.4_Masks.html">
+     4.4 Masks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.5_Using_iloc.html">
+     4.5 Using iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.6_Seaborn.html">
+     Lesson 4.6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/2_Grapes_in_a_Warming_World.html">
+   Grapes in a Warming World
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Análisis de datos con pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.0_Leyendo_en_data.html">
+     Lección 4.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.1_Head_y_tail.html">
+     Lección 4.1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.2_Seleccionando_columnas.html">
+     Lección 4.2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.3_Estadisticas_descriptivas.html">
+     Lección 4.3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.4_Enmascaramiento.html">
+     Lección 4.4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.5_Usando_iloc.html">
+     Lección 4.5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn.html">
+     Lección 4.6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/2_Vides_en_un_mundo_que_se_calienta.html">
+   Vides en un mundo que se calienta
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2FF_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#como-utilizar-un-loop-for-para-calcular-la-sucecion-de-fibonacci">
+   Cómo utilizar un loop
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   para calcular la suceción de Fibonacci
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="leccion-3-4">
+<h1>Lección 3.4<a class="headerlink" href="#leccion-3-4" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="como-utilizar-un-loop-for-para-calcular-la-sucecion-de-fibonacci">
+<h2>Cómo utilizar un loop <code class="docutils literal notranslate"><span class="pre">for</span></code> para calcular la suceción de Fibonacci<a class="headerlink" href="#como-utilizar-un-loop-for-para-calcular-la-sucecion-de-fibonacci" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p><em><strong>Mira este video de 20:31 a 26:29</strong></em></p>
+<p>Para español, haga click en configuración, seleccione “español” debajo de los subtítulos.</p>
+<p>Traducción por Erik Amézquita (Michigan State University)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Para reproducir el siguiente tutorial, presiona shift + enter</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+<span class="n">start</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">31</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+<span class="n">end</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">26</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">29</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;Cvi3dByz9SE&quot;</span><span class="p">,</span><span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">640</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">360</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="640"
+    height="360"
+    src="https://www.youtube.com/embed/Cvi3dByz9SE?start=1231&end=1589"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p><em><strong>La siguiente es una transcripción del video.</strong></em></p>
+<p>Así que veamos cómo podemos usar loops <code class="docutils literal notranslate"><span class="pre">for</span></code> para hacer algo matemáticamente útil. Intentemos calcular la secuencia de Fibonacci.</p>
+<p>Acordémonos que cada número de la secuencia de Fibonacci es la suma de los dos valores anteriores. Si vamos a crear la secuencia de Fibonacci, es importante que no creemos una lista vacía inicialmente, sino que la inicializamos con dos valores iniciales. La razón es porque nosotros necesitamos dos valores para calcular el siguiente. Muchas personas comienzan con la secuencia de Fibonacci con 1 y 1, por lo que el siguiente valor sería 2. Después de eso, el siguiente valor es 3, después de eso, el el siguiente valor es 5. Pero también podemos comenzar la secuencia con 0 y 1, y porque comenzamos con índice 0 en python, tal vez esto tenga sentido y lo haremos de esta manera para este loop.</p>
+<p>Así que tenemos definidos dos elementos en nuestra lista. Vamos a decir para <code class="docutils literal notranslate"><span class="pre">i</span></code> en el rango de 2 a 10. Es importante que comencemos con 2 porque 2 es el siguiente elemento de esta secuencia. Recordemos que la indexación indica que esta es la posición 0. Esta es la posición 1 y, por lo tanto, el siguiente número de la secuencia está en la posición 2. Entonces, comenzaremos en la siguiente posición de la secuencia, que es 2. La siguiente posición de la secuencia será la suma de estos dos números. Por ello, creamos una variable. Lo vamos a llamar <code class="docutils literal notranslate"><span class="pre">two_previous</span></code>. Queremos el número dos índices antes del índice del número actual en que estamos. Entonces, usando la indexación, esta sería la lista de Fibonacci <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span></code>, que en la primera iteración va a ser 2, recordemos, menos 2, porque queremos dos índices anteriores. Entonces, al principio, esta será la posición 0, que es exactamente lo que queremos que sea. Luego crearemos una variable llamada <code class="docutils literal notranslate"><span class="pre">one_previous</span></code> y tendrá <code class="docutils literal notranslate"><span class="pre">i-1</span></code>. Con <code class="docutils literal notranslate"><span class="pre">i</span></code> iniciando en 2, si restamos 1, tendremos la posición uno,
+que es exactamente lo que queremos. Podemos ver que va a ser apropiado para la posición que estamos tratando de calcular. Estos siempre nos darán el valor dos índices anteriores o el valor del índice anterior.</p>
+<p>El siguiente valor, <code class="docutils literal notranslate"><span class="pre">new_value</span></code>, de la secuencia de Fibonacci, será <code class="docutils literal notranslate"><span class="pre">two_previous</span></code> más <code class="docutils literal notranslate"><span class="pre">one_previous</span></code>. Entonces creamos <code class="docutils literal notranslate"><span class="pre">new_value</span></code> como
+<code class="docutils literal notranslate"><span class="pre">two_previous</span></code> más <code class="docutils literal notranslate"><span class="pre">one_previous</span></code>. Luego anexamos <code class="docutils literal notranslate"><span class="pre">new_value</span></code> a la lista. Ahora, cuando pasamos al siguiente valor de <code class="docutils literal notranslate"><span class="pre">i</span></code>, este valor <code class="docutils literal notranslate"><span class="pre">new_value</span></code>,
+ahora será el nuevo valor <code class="docutils literal notranslate"><span class="pre">one_previous</span></code> y, por supuesto, siempre tendremos <code class="docutils literal notranslate"><span class="pre">two_previous</span></code>, los sumaremos de nuevo y agregaremos el nuevo <code class="docutils literal notranslate"><span class="pre">new_value</span></code>.</p>
+<p>Tomemos un tiempo para revisar este loop y veamos si no tenemos problemas para entenderlo. Estamos utilizando todos los conceptos de índice que hemos practicado, la indexación que hemos aprendido antes, excepto
+que lo estamos ejecutando con este valor de i y estamos modificando el valor del índice en -2 o -1 para que podamos obtener los valores previos,
+los dos valores previos de nuestra lista para calcular el siguiente valor de la secuencia. Agregamos el siguiente valor de la secuencia y nuestra lista crece y crece a medida que seguimos ascendiendo. De nuevo siempre imprimimos <code class="docutils literal notranslate"><span class="pre">i</span></code>, solo para asegurarnos de que el loop esté funcionando.</p>
+<p>Podemos ver que funcionó. Queríamos empezar en la segunda posición del índice, comienza en 2, y sube hasta el 10, pero sin incluirlo, hasta el 9.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># usemos un loop `for` para calcular la secuencia de Fibonacci</span>
+<span class="c1"># Cada valor en la secuencia de Fibonacci es la suma de los</span>
+<span class="c1"># dos valores antes que él</span>
+
+<span class="c1"># Necesitamos inicializar nuestra lista con dos valores,</span>
+<span class="c1"># Porque necesitamos sumarlos para calcular el siguiente!</span>
+
+<span class="n">fibonacci</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    
+    <span class="n">two_previous</span> <span class="o">=</span> <span class="n">fibonacci</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">one_previous</span> <span class="o">=</span> <span class="n">fibonacci</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">new_value</span> <span class="o">=</span> <span class="n">two_previous</span> <span class="o">+</span> <span class="n">one_previous</span>
+    <span class="n">fibonacci</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_value</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1"># always use print to make sure loop worked!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+3
+4
+5
+6
+7
+8
+9
+</pre></div>
+</div>
+</div>
+</div>
+<p>Debemos de comprobar la longitud de nuestra secuencia de Fibonacci. Asegurémonos de hacerlo bien. Recordemos que comenzamos con dos elementos y luego vamos del 2 al 10. Así que esto sería 3, 4, 5, 6, 7, 8, 9,
+que son ocho elementos, por lo que 2 más 8 deben ser 10. La longitud de nuestra secuencia de Fibonacci debería ser 10 y lo es.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Comprobar la longitud</span>
+<span class="c1"># Empezamos con dos elementos</span>
+<span class="c1"># Luego, range(2,10), por lo que 8 elementos más</span>
+<span class="c1"># Debería ser 10</span>
+ 
+<span class="nb">len</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finalmente revisemos la secuencia de Fibonacci. Este fue el elemento con el que comenzamos, 1 es la suma de 0 y 1, sigue que 2 es la suma de 1 y 1; 3 es la suma de 1 y 2; 5 es la suma de 2 y 3; 8 es la suma de 3 y 5. Parece ser que está funcionando.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># comprobamos la secuencia!</span>
+
+<span class="n">fibonacci</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vale la pena resaltar que siempre podemos hacer que su código sea más eficiente, pero a veces ayuda realmente primero escribir cada paso de manera individual. Después de escribir cada paso, siempre podemos retroceder e intentar ver si podemos hacerlo más eficiente.</p>
+<p>Por ejemplo, vamos a cortar y pegar un poco para ver a que me refiero. Tenemos <code class="docutils literal notranslate"><span class="pre">two_previous</span></code> es igual a esto, <code class="docutils literal notranslate"><span class="pre">one_previous</span></code> es igual a esto y <code class="docutils literal notranslate"><span class="pre">new_value</span></code> es igual a <code class="docutils literal notranslate"><span class="pre">two_previous</span></code> más <code class="docutils literal notranslate"><span class="pre">one_previous</span></code>. Podríamos simplemente tomar <code class="docutils literal notranslate"><span class="pre">two_previous</span></code> y reemplazarlo aquí y podemos cortar <code class="docutils literal notranslate"><span class="pre">one_previous</span></code> y reemplazarlo aquí, de modo que estamos calculando ambos
+mientras calculamos <code class="docutils literal notranslate"><span class="pre">new_value</span></code>, pero luego notamos que solo estamos agregando el nuevo valor a la secuencia de Fibonacci. Así que podríamos poner <code class="docutils literal notranslate"><span class="pre">new_value</span></code> en la función <code class="docutils literal notranslate"><span class="pre">.append()</span></code> para agregar directamente a la secuencia de Fibonacci.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Siempre puedes hacer que tu código sea más eficiente</span>
+
+<span class="c1"># Después de reducir el código</span>
+
+<span class="n">fibonacci</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">fibonacci</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comparamos antes y después de hacer al loop más eficiente. Vemos que hemos reducido todo a una sola línea de código que podemos ejecutar y ver
+¿obtenemos el mismo resultado? En efecto lo hacemos.</p>
+<p>Recuperamos la secuencia de Fibonacci y podemos ver que simplemente reemplazamos las variables y redujimos las líneas en nuestro código
+pero siempre podemos escribir cada paso, lo cual a veces ayuda mucho para tratar de elaborar nuestras ideas a través del código.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mismo resultado con código abreviado</span>
+
+<span class="n">fibonacci</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">fibonacci</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="3.3_Usando_listas_y_loops.html" title="previous page">Lección 3.3</a>
+    <a class='right-next' id="next-link" href="3.5_Loops_while.html" title="next page">Lección 3.5</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Dan Chitwood<br/>
+        
+            &copy; Copyright By the authors.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
