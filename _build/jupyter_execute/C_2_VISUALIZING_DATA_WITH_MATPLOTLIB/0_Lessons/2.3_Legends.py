@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 2.3
+# # 2.3 Legends
 
 # ## How to plot data on top of each other and use a legend
 # ___

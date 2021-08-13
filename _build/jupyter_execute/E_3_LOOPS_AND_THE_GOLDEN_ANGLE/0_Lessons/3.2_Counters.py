@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 3.2
+# # 3.2 Counters
 
 # ## How to use the `+=` sign as a counter
 # ____

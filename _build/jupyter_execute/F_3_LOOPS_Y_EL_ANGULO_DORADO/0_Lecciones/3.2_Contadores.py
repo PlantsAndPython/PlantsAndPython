@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 3.2
+# # 3.2 Contadores
 
 # ## Cómo utilizar el signo `+=` en un contador
 # ____

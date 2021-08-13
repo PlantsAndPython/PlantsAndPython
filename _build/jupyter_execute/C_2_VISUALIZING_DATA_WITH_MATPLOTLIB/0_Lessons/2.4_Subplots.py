@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 2.4
+# # 2.4 Subplots
 
 # ## How to create subplots
 # ___

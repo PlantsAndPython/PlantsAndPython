@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 4.4
+# # 4.4 Masks
 
 # ## How to mask data (a Boolean statement to fish out data that you want, square brackets after a dataframe)
 # _____

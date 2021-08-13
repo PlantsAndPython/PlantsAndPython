@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 4.1
+# # 4.1 Head y tail
 
 # ## Cómo evaluar rápidamente las propiedades del marco de datos, usando `head` y `tail`
 # _____

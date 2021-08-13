@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 4.5
+# # 4.5 Using iloc
 
 # ## How to use `iloc` to isolate data within a dataframe (rows first, columns second, start:end, and square brackets)
 # ____

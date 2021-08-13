@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 1.2
+# # 1.2 Indexación
 # 
 # ## ¿Qué es la indexación?
 # - La indexación tiene la forma de `[start:end]`

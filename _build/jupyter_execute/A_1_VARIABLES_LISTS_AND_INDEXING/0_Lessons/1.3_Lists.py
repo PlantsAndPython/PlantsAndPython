@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 1.3 Lists
+# # 1.3 Lists
 
 # ## How to create lists
 # 

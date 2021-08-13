@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 1.4 Indexing List Elements
+# # 1.4 Indexing List Elements
 
 # ## How to use indexing to access specific list elements
 # ___

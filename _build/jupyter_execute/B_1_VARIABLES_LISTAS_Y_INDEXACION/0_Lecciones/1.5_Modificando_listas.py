@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 1.5
+# # 1.5 Modificando listas
 # ## ¿Cómo modificar listas?
 # ____
 

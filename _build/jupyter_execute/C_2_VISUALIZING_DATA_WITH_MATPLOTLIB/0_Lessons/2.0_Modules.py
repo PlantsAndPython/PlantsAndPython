@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 2.0
+# # 2.0 Modules
 
 # # Visualizing data using matplotlib
 

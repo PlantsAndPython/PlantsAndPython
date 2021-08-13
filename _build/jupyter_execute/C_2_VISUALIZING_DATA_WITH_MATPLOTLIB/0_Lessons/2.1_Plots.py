@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 2.1
+# # 2.1 Plots
 
 # ## How to create plots, scatter plots, and filled polygons
 # ___

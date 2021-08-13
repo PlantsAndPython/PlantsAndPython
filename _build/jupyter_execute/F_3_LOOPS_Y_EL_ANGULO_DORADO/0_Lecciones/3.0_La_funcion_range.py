@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 3.0
+# # 3.0 La función range
 # 
 # # La razón dorada calculada con loops 🌻 
 

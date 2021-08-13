@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 1.1 Functions
+# # 1.1 Functions
 
 # ## Our first function: `print()`
 # ___

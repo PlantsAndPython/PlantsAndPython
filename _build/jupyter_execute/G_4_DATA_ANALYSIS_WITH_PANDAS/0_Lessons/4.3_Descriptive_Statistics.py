@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 4.3
+# # 4.3 Descriptive Statistics
 
 # ## How to perform descriptive statistics using `pandas` (`.min`, `.max`, `.std`, `.value_count`)
 # ____

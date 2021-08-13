@@ -49,10 +49,10 @@ parts:
       title: Plants & Climate
 
 
-  - caption: 1. Variables, listas, & indexacion
+  - caption: 1. Variables, listas, & INDEXACIÓN
     chapters:
     - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Overview
-      title: Lessons
+      title: Lecciones
       sections:
       - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.0_Variables
       - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.1_Funciones
@@ -113,7 +113,7 @@ parts:
       title: Modeling Sunflowers
 
 
-  - caption: 3. Loops & el angulo dorado
+  - caption: 3. LOOPS & EL ÁNGULO ÁUREO
     chapters:
     - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Overview
       title: Lecciones

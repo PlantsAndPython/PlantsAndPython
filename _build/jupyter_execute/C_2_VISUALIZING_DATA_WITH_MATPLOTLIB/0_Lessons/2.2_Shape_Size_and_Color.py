@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 2.2
+# # 2.2 Shape, Size, and Color
 
 # ## How to manipulate shape, size, and color in plots
 # ___

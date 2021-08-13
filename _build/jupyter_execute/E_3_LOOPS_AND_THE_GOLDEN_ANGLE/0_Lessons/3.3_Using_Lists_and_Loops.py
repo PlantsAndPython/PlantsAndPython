@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 3.3
+# # 3.3 Using Lists and Loops
 
 # ## How to create an empty list outside of a loop and fill it with loop outputs
 # ______

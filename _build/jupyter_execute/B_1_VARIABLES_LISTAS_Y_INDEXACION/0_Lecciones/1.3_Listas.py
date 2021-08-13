@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 1.3
+# # 1.3 Listas
 # 
 # ## ¿Cómo crear listas?
 # - Utilizar paréntesis vacíos [ ]

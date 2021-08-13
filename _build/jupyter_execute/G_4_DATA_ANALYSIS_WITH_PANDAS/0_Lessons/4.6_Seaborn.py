@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 4.6
+# # 4.6 Seaborn
 
 # ## Plotting with `seaborn` (specialized plotting for statistics)
 # ____

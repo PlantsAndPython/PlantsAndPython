@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 4.6
+# # 4.6 Seaborn
 
 # ## Trazado con seaborn (trazado especializado para estadísticas)
 # ______

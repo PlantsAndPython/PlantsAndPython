@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 1.8 Data Types
+# # 1.8 Data Types
 
 # ## Different data types in Python and converting between them
 # ____

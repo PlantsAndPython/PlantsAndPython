@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 4.0
+# # 4.0 Leyendo en data
 # 
 # # Pandas, dataframes y seaborn 🐼
 

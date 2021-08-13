@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 3.1
+# # 3.1 Loops for
 
 # ## Cómo escribir un loop `for`
 # ____

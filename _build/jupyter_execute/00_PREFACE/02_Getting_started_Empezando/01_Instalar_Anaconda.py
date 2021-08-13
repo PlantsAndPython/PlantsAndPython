@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Instalar Anaconda y usar Jupyter notebooks
+# # 1. Instalar Anaconda y usar Jupyter notebooks
 # 
 # ***Traducción por Dr. Alejandra Rougon (UNAM ENES León, México)***
 # _____

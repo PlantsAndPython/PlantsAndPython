@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 1.0
+# # 1.0 Variables
 # # Variables, funciones, listas e índices
 # ______
 

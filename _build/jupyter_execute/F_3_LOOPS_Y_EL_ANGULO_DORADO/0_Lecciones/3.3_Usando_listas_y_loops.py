@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 3.3
+# # 3.3 Usando listas y loops
 
 # ## Cómo crear una lista vacía fuera de un loop y llenarla con resultados del loop
 # ____

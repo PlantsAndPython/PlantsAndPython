@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 1.2 Indexing
+# # 1.2 Indexing
 
 # ## What is indexing?
 # - Indexing is a way for us to keep track of and to access characters in a string or elements of a list

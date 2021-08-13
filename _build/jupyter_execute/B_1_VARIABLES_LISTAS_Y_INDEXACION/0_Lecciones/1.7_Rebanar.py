@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 1.7
+# # 1.7 Rebanar
 # # Rebanar y tipos de datos
 # ____
 

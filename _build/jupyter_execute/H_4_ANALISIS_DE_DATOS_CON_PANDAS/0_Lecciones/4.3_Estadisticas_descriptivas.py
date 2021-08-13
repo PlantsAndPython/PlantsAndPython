@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 4.3
+# # 4.3 Estadísticas descriptivas
 
 # ## Cómo realizar estadísticas descriptivas usando pandas (`.min`, `.max`, `.std`, `.value_counts`)
 # _____

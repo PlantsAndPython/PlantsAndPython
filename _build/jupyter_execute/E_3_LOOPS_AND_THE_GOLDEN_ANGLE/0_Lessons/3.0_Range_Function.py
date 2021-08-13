@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 3.0
+# # 3.0 Range Function
 
 # # Calculating the Golden Angle with Loops 🌻 
 

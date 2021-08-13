@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 4.4
+# # 4.4 Enmascaramiento
 
 # ## Cómo enmascarar datos (una declaración booleana para pescar los datos que desea, corchetes después de un marco de datos
 # ____

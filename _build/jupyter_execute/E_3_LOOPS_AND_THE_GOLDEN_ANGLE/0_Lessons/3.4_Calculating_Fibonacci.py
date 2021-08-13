@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 3.4
+# # 3.4 Calculating Fibonacci
 
 # ## How to use a `for` loop to calculate the Fibonacci sequence
 # ____

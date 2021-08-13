@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 1.4
+# # 1.4 Indexando los elementos de una lista
 # ## ¿Cómo utilizar la indexación para acceder a elementos específicos de una lista?
 # ______
 

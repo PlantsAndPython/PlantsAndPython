@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 4.2
+# # 4.2 Seleccionando columnas
 
 # Cómo seleccionar columnas de un marco de datos
 # _____

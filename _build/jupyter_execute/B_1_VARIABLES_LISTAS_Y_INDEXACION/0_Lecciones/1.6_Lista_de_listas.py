@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 1.6
+# # 1.6 Lista de listas
 # ## ¿Cómo crear una lista de listas?
 # _____
 

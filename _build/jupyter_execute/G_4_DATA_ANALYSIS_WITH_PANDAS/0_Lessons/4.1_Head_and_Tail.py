@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 4.1
+# # 4.1 Head and Tail
 
 # ## How to quickly assess dataframe properties, using `head` and `tail`
 # ______

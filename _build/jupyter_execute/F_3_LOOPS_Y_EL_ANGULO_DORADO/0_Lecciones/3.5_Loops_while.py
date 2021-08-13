@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 3.5
+# # 3.5 Loops while
 
 # ## Cómo escribir un loop while usando un contador
 # ____

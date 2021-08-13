@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lección 4.5
+# # 4.5 Usando iloc
 
 # ## Cómo usar `iloc` para aislar datos dentro de un marco de datos (filas primero, columnas segundo, inicio:final y corchetes)
 # ______

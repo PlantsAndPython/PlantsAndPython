@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Celdas de código
+# # 2. Celdas de código
 # 
 # ***Traducción por Dr. Alejandra Rougon (UNAM ENES León, México)***
 # _____

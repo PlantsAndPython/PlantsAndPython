@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Coding cells
+# # 2. Coding cells
 # _____
 
 # ***Watch this video from 3:33 to 9:51***

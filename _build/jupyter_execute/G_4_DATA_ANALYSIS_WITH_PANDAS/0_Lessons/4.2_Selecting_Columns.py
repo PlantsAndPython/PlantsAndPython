@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lesson 4.2
+# # 4.2 Selecting Columns
 
 # ## How to select columns of a dataframe
 # ____
