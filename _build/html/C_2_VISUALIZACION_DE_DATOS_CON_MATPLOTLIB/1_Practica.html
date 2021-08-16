@@ -1,0 +1,937 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica con Visualización de gráficos con Matplotlib &#8212; Plants &amp; Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Welcome / Bienvenid@" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview.html" />
+    <link rel="prev" title="2.4 Subgráficos" href="0_Lecciones/2.4_Subgraficos.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00_Opening_page.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../00_PREFACE/01_Overview.html">
+   Welcome : Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/01_Welcome_Bienvenido/00_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/01_Welcome_Bienvenido/01_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../00_PREFACE/02_Overview.html">
+   Getting Started : Empezando
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/00_Installing_Anaconda.html">
+     1. Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/01_Instalar_Anaconda.html">
+     1. Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/02_Coding_cells.html">
+     2. Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/03_Celdas_de_codigo.html">
+     2. Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/04_Markdown_cells.html">
+     3. Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/05_Celdas_de_markdown.html">
+     3. Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, lists, &amp; indexing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.1_Functions.html">
+     1.1 Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.2_Indexing.html">
+     1.2 Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.3_Lists.html">
+     1.3 Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.4_Indexing_List_Elements.html">
+     1.4 Indexing List Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.5_Modifying_Lists.html">
+     1.5 Modifying Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.6_List_of_Lists.html">
+     1.6 List of Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.7_Slicing.html">
+     1.7 Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.8_Data_Types.html">
+     1.8 Data Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/2_Plants_And_Climate.html">
+   Plants &amp; Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, listas, &amp; INDEXACIÓN
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.1_Funciones.html">
+     1.1 Funciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.2_Indexacion.html">
+     1.2 Indexación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.3_Listas.html">
+     1.3 Listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.4_Indexando_los_elementos_de_una_lista.html">
+     1.4 Indexando los elementos de una lista
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.5_Modificando_listas.html">
+     1.5 Modificando listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.6_Lista_de_listas.html">
+     1.6 Lista de listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.7_Rebanar.html">
+     1.7 Rebanar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.8_Tipos_de_datos.html">
+     1.8 Tipos de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima.html">
+   Las plantas y el clima
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. Visualizing Data with Matplotlib
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.0_Modules.html">
+     2.0 Modules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.1_Plots.html">
+     2.1 Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.2_Shape_Size_and_Color.html">
+     2.2 Shape, Size, and Color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.3_Legends.html">
+     2.3 Legends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.4_Subplots.html">
+     2.4 Subplots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/2_Leaf_And_Sunflower_Shapes.html">
+   Leaf &amp; Sunflower Shapes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. VISUALIZACIÓN DE DATOS CON MATPLOTLIB
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/2.0_Modulos.html">
+     2.0 Módulos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/2.1_Graficos.html">
+     2.1 Gráficos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/2.2_Forma_tamano_y_color.html">
+     2.2 Forma, tamaño y color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/2.3_Leyendas.html">
+     2.3 Leyendas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lecciones/2.4_Subgraficos.html">
+     2.4 Subgráficos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Práctica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; the Golden Angle
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.0_Range_Function.html">
+     3.0 Range Function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.1_For_Loops.html">
+     3.1 For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.2_Counters.html">
+     3.2 Counters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.3_Using_Lists_and_Loops.html">
+     3.3 Using Lists and Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.4_Calculating_Fibonacci.html">
+     3.4 Calculating Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.5_While_Loops.html">
+     3.5 While Loops
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/2_Modeling_Sunflowers.html">
+   Modeling Sunflowers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. LOOPS &amp; EL ÁNGULO ÁUREO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.0_La_funcion_range.html">
+     3.0 La función range
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.1_Loops_for.html">
+     3.1 Loops for
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.2_Contadores.html">
+     3.2 Contadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.3_Usando_listas_y_loops.html">
+     3.3 Usando listas y loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci.html">
+     3.4 Calcular Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.5_Loops_while.html">
+     3.5 Loops while
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/2_Como_construir_un_girasol.html">
+   Cómo construir un girasol
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Data Analysis with Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.0_Reading_in_Data.html">
+     4.0 Reading in Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.1_Head_and_Tail.html">
+     4.1 Head and Tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.2_Selecting_Columns.html">
+     4.2 Selecting Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.3_Descriptive_Statistics.html">
+     4.3 Descriptive Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.4_Masks.html">
+     4.4 Masks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.5_Using_iloc.html">
+     4.5 Using iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.6_Seaborn.html">
+     4.6 Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/2_Grapes_in_a_Warming_World.html">
+   Grapes in a Warming World
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Análisis de datos con pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.0_Leyendo_en_data.html">
+     4.0 Leyendo en data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.1_Head_y_tail.html">
+     4.1 Head y tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.2_Seleccionando_columnas.html">
+     4.2 Seleccionando columnas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.3_Estadisticas_descriptivas.html">
+     4.3 Estadísticas descriptivas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.4_Enmascaramiento.html">
+     4.4 Enmascaramiento
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.5_Usando_iloc.html">
+     4.5 Usando iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn.html">
+     4.6 Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/2_Vides_en_un_mundo_que_se_calienta.html">
+   Vides en un mundo que se calienta
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/1_Practica.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2FC_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/1_Practica.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/1_Practica.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/1_Practica.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="practica-con-visualizacion-de-graficos-con-matplotlib">
+<h1>Práctica con Visualización de gráficos con Matplotlib<a class="headerlink" href="#practica-con-visualizacion-de-graficos-con-matplotlib" title="Permalink to this headline">¶</a></h1>
+<p><em><strong>Traducción por Aarón E. Jaime (ENES León - UNAM, León, Gto., México)</strong></em></p>
+<hr class="docutils" />
+<p>Ahora ya has aprendido cómo importar y usar <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> para graficar y elegir entre una serie de opciones para crear visualizaciones estéticas e informativas. Los datos están ya cargados en este notebook, ¡ahora ya puedes hacer tus gráficos!</p>
+<p><strong>Realiza lo siguiente:</strong></p>
+<p>En la celda a continuación, elige y pega las coordenadas de hojas de una de las especies que tienes enlistadas arriba y crea una gráfica. <em><strong>¡Explora y sé creativo!</strong></em>. Con base a lo que aprendiste en el video, trata de de hacerlo por tu cuenta con los distintos parámetros. Trata de pensar en cómo quieres que luzca tu visualización y si no sabes cómo hacer algo en específico intenta googlearlo para ver si puedes encontrar la respuesta.
+Puedes guardar tus gráficos usando la función <code class="docutils literal notranslate"><span class="pre">plt.savefig(</span> <span class="pre">)</span></code>. Simplemente agrega la función al final del código de tu gráfico y agrega el nombre que quieres darle, por ejemplo <code class="docutils literal notranslate"><span class="pre">plt.savefig(&quot;myfile.jpg&quot;)</span></code>. Puedes usar las siguientes extensiones de formato: <code class="docutils literal notranslate"><span class="pre">.png</span></code>, <code class="docutils literal notranslate"><span class="pre">.pdf</span></code>, <code class="docutils literal notranslate"><span class="pre">.svg</span></code>, <code class="docutils literal notranslate"><span class="pre">.eps</span></code>, or <code class="docutils literal notranslate"><span class="pre">.jpg</span></code>. Por default, el archivo será guardado en tu folder o directorio de trabajo actual pero puedes cambiar la dirección en la que quieres que se guarde, por ejemplo: <code class="docutils literal notranslate"><span class="pre">&quot;./Desktop/myfile.jpg&quot;</span></code>.</p>
+<p>Recuerda, antes necesitas importar el módulo <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
+<p>!Éxito con las visualizaciones!</p>
+<blockquote>
+<div><p>💡 <em><strong>Recuerde:</strong></em> primero debe importar <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> para poder hacer gráficos. A continuación se muestran los datos con los que trabajaremos en esta lección que se utilizan en el video. Estas son listas de valores de coordenadas <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code> para 15 especies diferentes de <em>Vitis</em> y <em>Ampelopsis</em>. Ejecute la celda a continuación para leer los datos para completar esta lección.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ejecute esta celda para importar matplotlib</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Esta celda contiene la lista de valores x y y para  </span>
+<span class="c1"># las formas de las hojas de las 15 especies de Vitis y Ampelopsis.</span>
+<span class="c1"># Cada lista está abreviada con la inicial del género y epíteto de la especie.</span>
+
+<span class="c1"># Ampelopsis acoutifolia (en realidad aconitifolia)</span>
+
+<span class="c1"># NOTA: Hay un error de transcripción para esta especie, que en realidad es</span>
+<span class="c1"># Ampelopsis aconitifolia (no es A. &quot;acoutifolia&quot;)</span>
+<span class="c1"># El error se propaga en los videos, narración, texto y cuadernos</span>
+<span class="c1"># pero no afecta la lección en cuestión para trazar en matplotlib</span>
+<span class="n">Aaco_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">13.81197507</span><span class="p">,</span><span class="o">-</span><span class="mf">14.58128237</span><span class="p">,</span><span class="o">-</span><span class="mf">135.3576208</span><span class="p">,</span><span class="o">-</span><span class="mf">3.48017966</span><span class="p">,</span><span class="o">-</span><span class="mf">285.0289837</span><span class="p">,</span><span class="o">-</span><span class="mf">4.874351136</span><span class="p">,</span><span class="o">-</span><span class="mf">126.9904669</span><span class="p">,</span><span class="mf">10.54932685</span><span class="p">,</span><span class="mf">170.4482865</span><span class="p">,</span><span class="mf">40.82555888</span><span class="p">,</span><span class="mf">205.158889</span><span class="p">,</span><span class="mf">124.6343366</span><span class="p">,</span><span class="mf">13.81197507</span><span class="p">]</span>
+<span class="n">Aaco_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">27.83951365</span><span class="p">,</span><span class="mf">148.6870909</span><span class="p">,</span><span class="mf">157.2273013</span><span class="p">,</span><span class="mf">35.73510131</span><span class="p">,</span><span class="o">-</span><span class="mf">30.02915903</span><span class="p">,</span><span class="mf">9.54075375</span><span class="p">,</span><span class="o">-</span><span class="mf">280.2095191</span><span class="p">,</span><span class="mf">0.200400495</span><span class="p">,</span><span class="o">-</span><span class="mf">234.1044141</span><span class="p">,</span><span class="mf">20.41991159</span><span class="p">,</span><span class="mf">41.33121759</span><span class="p">,</span><span class="mf">96.75084391</span><span class="p">,</span><span class="mf">27.83951365</span><span class="p">]</span>
+
+<span class="c1"># Ampelopsis brevipedunculata</span>
+<span class="c1"># NOTA: Esta especie ahora se conoce como A. glandulosa var. brevipedunculata</span>
+<span class="n">Abre_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">40.00325135</span><span class="p">,</span><span class="o">-</span><span class="mf">81.37047548</span><span class="p">,</span><span class="o">-</span><span class="mf">186.835592</span><span class="p">,</span><span class="o">-</span><span class="mf">139.3272085</span><span class="p">,</span><span class="o">-</span><span class="mf">287.5337006</span><span class="p">,</span><span class="o">-</span><span class="mf">89.61277053</span><span class="p">,</span><span class="o">-</span><span class="mf">134.9263008</span><span class="p">,</span><span class="mf">47.43458846</span><span class="p">,</span><span class="mf">144.6301719</span><span class="p">,</span><span class="mf">163.5438321</span><span class="p">,</span><span class="mf">225.9684307</span><span class="p">,</span><span class="mf">204.719859</span><span class="p">,</span><span class="mf">40.00325135</span><span class="p">]</span>
+<span class="n">Abre_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">96.8926433</span><span class="p">,</span><span class="mf">203.3273536</span><span class="p">,</span><span class="mf">134.0172438</span><span class="p">,</span><span class="mf">99.7070006</span><span class="p">,</span><span class="o">-</span><span class="mf">81.35389923</span><span class="p">,</span><span class="o">-</span><span class="mf">17.90701212</span><span class="p">,</span><span class="o">-</span><span class="mf">335.624547</span><span class="p">,</span><span class="o">-</span><span class="mf">80.02986776</span><span class="p">,</span><span class="o">-</span><span class="mf">262.0385648</span><span class="p">,</span><span class="o">-</span><span class="mf">27.31979918</span><span class="p">,</span><span class="o">-</span><span class="mf">42.24377429</span><span class="p">,</span><span class="mf">82.08218538</span><span class="p">,</span><span class="mf">96.8926433</span><span class="p">]</span>
+
+<span class="c1"># Ampelopsis cordata</span>
+<span class="n">Acor_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">41.26484889</span><span class="p">,</span><span class="o">-</span><span class="mf">99.68651819</span><span class="p">,</span><span class="o">-</span><span class="mf">203.5550411</span><span class="p">,</span><span class="o">-</span><span class="mf">181.4080156</span><span class="p">,</span><span class="o">-</span><span class="mf">226.4063517</span><span class="p">,</span><span class="o">-</span><span class="mf">174.1104713</span><span class="p">,</span><span class="o">-</span><span class="mf">142.2197176</span><span class="p">,</span><span class="mf">81.25359041</span><span class="p">,</span><span class="mf">113.9079805</span><span class="p">,</span><span class="mf">205.9930561</span><span class="p">,</span><span class="mf">230.8000389</span><span class="p">,</span><span class="mf">226.6914467</span><span class="p">,</span><span class="mf">41.26484889</span><span class="p">]</span>
+<span class="n">Acor_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">105.1580727</span><span class="p">,</span><span class="mf">209.8514829</span><span class="p">,</span><span class="mf">131.8410788</span><span class="p">,</span><span class="mf">111.9833751</span><span class="p">,</span><span class="o">-</span><span class="mf">70.79184424</span><span class="p">,</span><span class="o">-</span><span class="mf">60.25829908</span><span class="p">,</span><span class="o">-</span><span class="mf">326.5994491</span><span class="p">,</span><span class="o">-</span><span class="mf">170.6003249</span><span class="p">,</span><span class="o">-</span><span class="mf">223.0042176</span><span class="p">,</span><span class="o">-</span><span class="mf">44.58524791</span><span class="p">,</span><span class="o">-</span><span class="mf">45.80679706</span><span class="p">,</span><span class="mf">71.64004113</span><span class="p">,</span><span class="mf">105.1580727</span><span class="p">]</span>
+
+<span class="c1"># Vitis acerifolia</span>
+<span class="n">Vace_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">47.55748802</span><span class="p">,</span><span class="o">-</span><span class="mf">102.1666218</span><span class="p">,</span><span class="o">-</span><span class="mf">218.3415108</span><span class="p">,</span><span class="o">-</span><span class="mf">183.5085694</span><span class="p">,</span><span class="o">-</span><span class="mf">234.8755094</span><span class="p">,</span><span class="o">-</span><span class="mf">152.1581487</span><span class="p">,</span><span class="o">-</span><span class="mf">113.8943819</span><span class="p">,</span><span class="mf">53.48770667</span><span class="p">,</span><span class="mf">84.83899263</span><span class="p">,</span><span class="mf">206.557697</span><span class="p">,</span><span class="mf">240.589609</span><span class="p">,</span><span class="mf">243.5717264</span><span class="p">,</span><span class="mf">47.55748802</span><span class="p">]</span>
+<span class="n">Vace_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">111.9982016</span><span class="p">,</span><span class="mf">241.5287104</span><span class="p">,</span><span class="mf">125.6905949</span><span class="p">,</span><span class="mf">110.350904</span><span class="p">,</span><span class="o">-</span><span class="mf">108.1932176</span><span class="p">,</span><span class="o">-</span><span class="mf">74.67866027</span><span class="p">,</span><span class="o">-</span><span class="mf">283.2678229</span><span class="p">,</span><span class="o">-</span><span class="mf">161.1592736</span><span class="p">,</span><span class="o">-</span><span class="mf">243.1116283</span><span class="p">,</span><span class="o">-</span><span class="mf">54.52616737</span><span class="p">,</span><span class="o">-</span><span class="mf">68.953011</span><span class="p">,</span><span class="mf">95.74558526</span><span class="p">,</span><span class="mf">111.9982016</span><span class="p">]</span>
+
+<span class="c1"># Vitis aestivalis</span>
+<span class="n">Vaes_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">34.13897003</span><span class="p">,</span><span class="o">-</span><span class="mf">59.06591289</span><span class="p">,</span><span class="o">-</span><span class="mf">192.0336456</span><span class="p">,</span><span class="o">-</span><span class="mf">169.5476603</span><span class="p">,</span><span class="o">-</span><span class="mf">261.8813454</span><span class="p">,</span><span class="o">-</span><span class="mf">154.4511279</span><span class="p">,</span><span class="o">-</span><span class="mf">132.6031657</span><span class="p">,</span><span class="mf">56.04516606</span><span class="p">,</span><span class="mf">119.9789735</span><span class="p">,</span><span class="mf">205.0834004</span><span class="p">,</span><span class="mf">246.928663</span><span class="p">,</span><span class="mf">209.2801298</span><span class="p">,</span><span class="mf">34.13897003</span><span class="p">]</span>
+<span class="n">Vaes_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">80.26320349</span><span class="p">,</span><span class="mf">227.2107718</span><span class="p">,</span><span class="mf">155.0919347</span><span class="p">,</span><span class="mf">123.2629647</span><span class="p">,</span><span class="o">-</span><span class="mf">86.47992069</span><span class="p">,</span><span class="o">-</span><span class="mf">70.12024178</span><span class="p">,</span><span class="o">-</span><span class="mf">317.80585</span><span class="p">,</span><span class="o">-</span><span class="mf">156.8388147</span><span class="p">,</span><span class="o">-</span><span class="mf">247.9415158</span><span class="p">,</span><span class="o">-</span><span class="mf">31.73423173</span><span class="p">,</span><span class="o">-</span><span class="mf">28.37195726</span><span class="p">,</span><span class="mf">120.2692722</span><span class="p">,</span><span class="mf">80.26320349</span><span class="p">]</span>
+
+<span class="c1"># Vitis amurensis</span>
+<span class="n">Vamu_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">36.94310365</span><span class="p">,</span><span class="o">-</span><span class="mf">63.29959989</span><span class="p">,</span><span class="o">-</span><span class="mf">190.35653</span><span class="p">,</span><span class="o">-</span><span class="mf">180.9243738</span><span class="p">,</span><span class="o">-</span><span class="mf">255.6224889</span><span class="p">,</span><span class="o">-</span><span class="mf">172.8141253</span><span class="p">,</span><span class="o">-</span><span class="mf">123.8350652</span><span class="p">,</span><span class="mf">60.05314983</span><span class="p">,</span><span class="mf">113.598307</span><span class="p">,</span><span class="mf">218.8144919</span><span class="p">,</span><span class="mf">238.6851057</span><span class="p">,</span><span class="mf">210.9383524</span><span class="p">,</span><span class="mf">36.94310365</span><span class="p">]</span>
+<span class="n">Vamu_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">87.06305005</span><span class="p">,</span><span class="mf">230.9299013</span><span class="p">,</span><span class="mf">148.431809</span><span class="p">,</span><span class="mf">128.4087423</span><span class="p">,</span><span class="o">-</span><span class="mf">88.67075769</span><span class="p">,</span><span class="o">-</span><span class="mf">84.47396366</span><span class="p">,</span><span class="o">-</span><span class="mf">298.5959647</span><span class="p">,</span><span class="o">-</span><span class="mf">181.4317592</span><span class="p">,</span><span class="o">-</span><span class="mf">241.2343437</span><span class="p">,</span><span class="o">-</span><span class="mf">37.53203788</span><span class="p">,</span><span class="o">-</span><span class="mf">30.63962885</span><span class="p">,</span><span class="mf">115.7064075</span><span class="p">,</span><span class="mf">87.06305005</span><span class="p">]</span>
+
+<span class="c1"># Vitis cinerea</span>
+<span class="n">Vcin_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">41.13786595</span><span class="p">,</span><span class="o">-</span><span class="mf">78.14668163</span><span class="p">,</span><span class="o">-</span><span class="mf">195.0747469</span><span class="p">,</span><span class="o">-</span><span class="mf">185.81005</span><span class="p">,</span><span class="o">-</span><span class="mf">238.1427795</span><span class="p">,</span><span class="o">-</span><span class="mf">181.5728492</span><span class="p">,</span><span class="o">-</span><span class="mf">127.6203541</span><span class="p">,</span><span class="mf">65.24059352</span><span class="p">,</span><span class="mf">103.8414516</span><span class="p">,</span><span class="mf">214.1320626</span><span class="p">,</span><span class="mf">233.1457326</span><span class="p">,</span><span class="mf">222.7549456</span><span class="p">,</span><span class="mf">41.13786595</span><span class="p">]</span>
+<span class="n">Vcin_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">98.40296936</span><span class="p">,</span><span class="mf">233.6652514</span><span class="p">,</span><span class="mf">136.6641628</span><span class="p">,</span><span class="mf">117.9719613</span><span class="p">,</span><span class="o">-</span><span class="mf">86.41814245</span><span class="p">,</span><span class="o">-</span><span class="mf">86.14771041</span><span class="p">,</span><span class="o">-</span><span class="mf">310.2979998</span><span class="p">,</span><span class="o">-</span><span class="mf">190.9232443</span><span class="p">,</span><span class="o">-</span><span class="mf">230.5027809</span><span class="p">,</span><span class="o">-</span><span class="mf">50.27050419</span><span class="p">,</span><span class="o">-</span><span class="mf">42.94757891</span><span class="p">,</span><span class="mf">107.8271097</span><span class="p">,</span><span class="mf">98.40296936</span><span class="p">]</span>
+
+<span class="c1"># Vitis coignetiae</span>
+<span class="n">Vcoi_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">36.29348151</span><span class="p">,</span><span class="o">-</span><span class="mf">51.46279315</span><span class="p">,</span><span class="o">-</span><span class="mf">183.6256382</span><span class="p">,</span><span class="o">-</span><span class="mf">176.7604659</span><span class="p">,</span><span class="o">-</span><span class="mf">253.3454527</span><span class="p">,</span><span class="o">-</span><span class="mf">191.8067468</span><span class="p">,</span><span class="o">-</span><span class="mf">123.413666</span><span class="p">,</span><span class="mf">66.11061054</span><span class="p">,</span><span class="mf">111.4950714</span><span class="p">,</span><span class="mf">215.7579824</span><span class="p">,</span><span class="mf">236.7136632</span><span class="p">,</span><span class="mf">197.5512918</span><span class="p">,</span><span class="mf">36.29348151</span><span class="p">]</span>
+<span class="n">Vcoi_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">86.42303732</span><span class="p">,</span><span class="mf">222.7808161</span><span class="p">,</span><span class="mf">150.0993737</span><span class="p">,</span><span class="mf">127.4697835</span><span class="p">,</span><span class="o">-</span><span class="mf">85.23634837</span><span class="p">,</span><span class="o">-</span><span class="mf">93.3122815</span><span class="p">,</span><span class="o">-</span><span class="mf">301.819185</span><span class="p">,</span><span class="o">-</span><span class="mf">203.7840759</span><span class="p">,</span><span class="o">-</span><span class="mf">239.8063423</span><span class="p">,</span><span class="o">-</span><span class="mf">35.30522815</span><span class="p">,</span><span class="o">-</span><span class="mf">25.15349577</span><span class="p">,</span><span class="mf">121.1295308</span><span class="p">,</span><span class="mf">86.42303732</span><span class="p">]</span>
+
+<span class="c1"># Vitis labrusca</span>
+<span class="n">Vlab_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">33.83997254</span><span class="p">,</span><span class="o">-</span><span class="mf">63.35703212</span><span class="p">,</span><span class="o">-</span><span class="mf">191.4861127</span><span class="p">,</span><span class="o">-</span><span class="mf">184.3259869</span><span class="p">,</span><span class="o">-</span><span class="mf">257.3706479</span><span class="p">,</span><span class="o">-</span><span class="mf">179.056825</span><span class="p">,</span><span class="o">-</span><span class="mf">124.0669143</span><span class="p">,</span><span class="mf">68.23202857</span><span class="p">,</span><span class="mf">123.213115</span><span class="p">,</span><span class="mf">222.8908464</span><span class="p">,</span><span class="mf">243.056641</span><span class="p">,</span><span class="mf">205.2845683</span><span class="p">,</span><span class="mf">33.83997254</span><span class="p">]</span>
+<span class="n">Vlab_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">81.34077013</span><span class="p">,</span><span class="mf">222.8158575</span><span class="p">,</span><span class="mf">153.7885633</span><span class="p">,</span><span class="mf">132.4995037</span><span class="p">,</span><span class="o">-</span><span class="mf">80.2253417</span><span class="p">,</span><span class="o">-</span><span class="mf">80.67586345</span><span class="p">,</span><span class="o">-</span><span class="mf">296.8245229</span><span class="p">,</span><span class="o">-</span><span class="mf">185.0516494</span><span class="p">,</span><span class="o">-</span><span class="mf">238.8655248</span><span class="p">,</span><span class="o">-</span><span class="mf">38.2316427</span><span class="p">,</span><span class="o">-</span><span class="mf">29.21879919</span><span class="p">,</span><span class="mf">111.424232</span><span class="p">,</span><span class="mf">81.34077013</span><span class="p">]</span>
+
+<span class="c1"># Vitis palmata</span>
+<span class="n">Vpal_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">31.97986731</span><span class="p">,</span><span class="o">-</span><span class="mf">68.77672824</span><span class="p">,</span><span class="o">-</span><span class="mf">189.26295</span><span class="p">,</span><span class="o">-</span><span class="mf">164.4563595</span><span class="p">,</span><span class="o">-</span><span class="mf">260.2149738</span><span class="p">,</span><span class="o">-</span><span class="mf">149.3150935</span><span class="p">,</span><span class="o">-</span><span class="mf">131.5419837</span><span class="p">,</span><span class="mf">65.86738801</span><span class="p">,</span><span class="mf">127.3624336</span><span class="p">,</span><span class="mf">202.6655429</span><span class="p">,</span><span class="mf">240.0477009</span><span class="p">,</span><span class="mf">219.0385121</span><span class="p">,</span><span class="mf">31.97986731</span><span class="p">]</span>
+<span class="n">Vpal_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">78.75737572</span><span class="p">,</span><span class="mf">232.9714762</span><span class="p">,</span><span class="mf">149.7873103</span><span class="p">,</span><span class="mf">124.8439354</span><span class="p">,</span><span class="o">-</span><span class="mf">71.09770423</span><span class="p">,</span><span class="o">-</span><span class="mf">56.52814058</span><span class="p">,</span><span class="o">-</span><span class="mf">329.0863141</span><span class="p">,</span><span class="o">-</span><span class="mf">149.308084</span><span class="p">,</span><span class="o">-</span><span class="mf">231.1263997</span><span class="p">,</span><span class="o">-</span><span class="mf">33.22358667</span><span class="p">,</span><span class="o">-</span><span class="mf">33.0517181</span><span class="p">,</span><span class="mf">114.3110289</span><span class="p">,</span><span class="mf">78.75737572</span><span class="p">]</span>
+
+<span class="c1"># Vitis piasezkii</span>
+<span class="n">Vpia_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">18.70342336</span><span class="p">,</span><span class="o">-</span><span class="mf">28.68239983</span><span class="p">,</span><span class="o">-</span><span class="mf">133.7834969</span><span class="p">,</span><span class="o">-</span><span class="mf">32.76128224</span><span class="p">,</span><span class="o">-</span><span class="mf">305.3467215</span><span class="p">,</span><span class="o">-</span><span class="mf">7.429223951</span><span class="p">,</span><span class="o">-</span><span class="mf">146.2207875</span><span class="p">,</span><span class="mf">21.81934547</span><span class="p">,</span><span class="mf">163.1265031</span><span class="p">,</span><span class="mf">65.21695943</span><span class="p">,</span><span class="mf">203.4902238</span><span class="p">,</span><span class="mf">139.6214571</span><span class="p">,</span><span class="mf">18.70342336</span><span class="p">]</span>
+<span class="n">Vpia_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">41.05946323</span><span class="p">,</span><span class="mf">160.3488167</span><span class="p">,</span><span class="mf">157.9775135</span><span class="p">,</span><span class="mf">64.93177072</span><span class="p">,</span><span class="o">-</span><span class="mf">59.68750782</span><span class="p">,</span><span class="mf">18.85909594</span><span class="p">,</span><span class="o">-</span><span class="mf">362.1788431</span><span class="p">,</span><span class="mf">7.556816875</span><span class="p">,</span><span class="o">-</span><span class="mf">253.8796355</span><span class="p">,</span><span class="mf">21.33965973</span><span class="p">,</span><span class="mf">17.69878265</span><span class="p">,</span><span class="mf">93.72614181</span><span class="p">,</span><span class="mf">41.05946323</span><span class="p">]</span>
+
+<span class="c1"># Vitis riparia</span>
+<span class="n">Vrip_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">44.65674776</span><span class="p">,</span><span class="o">-</span><span class="mf">85.47236587</span><span class="p">,</span><span class="o">-</span><span class="mf">205.1031097</span><span class="p">,</span><span class="o">-</span><span class="mf">174.088415</span><span class="p">,</span><span class="o">-</span><span class="mf">239.9704675</span><span class="p">,</span><span class="o">-</span><span class="mf">161.1277029</span><span class="p">,</span><span class="o">-</span><span class="mf">125.4900046</span><span class="p">,</span><span class="mf">58.08609552</span><span class="p">,</span><span class="mf">89.2307808</span><span class="p">,</span><span class="mf">204.9127104</span><span class="p">,</span><span class="mf">236.0709257</span><span class="p">,</span><span class="mf">229.8098573</span><span class="p">,</span><span class="mf">44.65674776</span><span class="p">]</span>
+<span class="n">Vrip_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">106.5948187</span><span class="p">,</span><span class="mf">235.8791214</span><span class="p">,</span><span class="mf">130.341464</span><span class="p">,</span><span class="mf">116.8318515</span><span class="p">,</span><span class="o">-</span><span class="mf">110.5506636</span><span class="p">,</span><span class="o">-</span><span class="mf">76.73562488</span><span class="p">,</span><span class="o">-</span><span class="mf">300.1092173</span><span class="p">,</span><span class="o">-</span><span class="mf">169.0146383</span><span class="p">,</span><span class="o">-</span><span class="mf">247.0956802</span><span class="p">,</span><span class="o">-</span><span class="mf">42.2253331</span><span class="p">,</span><span class="o">-</span><span class="mf">54.23469169</span><span class="p">,</span><span class="mf">103.9732427</span><span class="p">,</span><span class="mf">106.5948187</span><span class="p">]</span>
+
+<span class="c1"># Vitis rupestris</span>
+<span class="n">Vrup_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">51.29642881</span><span class="p">,</span><span class="o">-</span><span class="mf">132.9650549</span><span class="p">,</span><span class="o">-</span><span class="mf">227.6059714</span><span class="p">,</span><span class="o">-</span><span class="mf">201.31783</span><span class="p">,</span><span class="o">-</span><span class="mf">207.965755</span><span class="p">,</span><span class="o">-</span><span class="mf">149.2265432</span><span class="p">,</span><span class="o">-</span><span class="mf">98.64097334</span><span class="p">,</span><span class="mf">48.33648281</span><span class="p">,</span><span class="mf">75.91437502</span><span class="p">,</span><span class="mf">208.7784453</span><span class="p">,</span><span class="mf">237.4842778</span><span class="p">,</span><span class="mf">263.3479415</span><span class="p">,</span><span class="mf">51.29642881</span><span class="p">]</span>
+<span class="n">Vrup_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">123.7557878</span><span class="p">,</span><span class="mf">233.5830974</span><span class="p">,</span><span class="mf">109.6847731</span><span class="p">,</span><span class="mf">95.43848563</span><span class="p">,</span><span class="o">-</span><span class="mf">95.82512925</span><span class="p">,</span><span class="o">-</span><span class="mf">80.06286127</span><span class="p">,</span><span class="o">-</span><span class="mf">236.7411071</span><span class="p">,</span><span class="o">-</span><span class="mf">163.7331427</span><span class="p">,</span><span class="o">-</span><span class="mf">213.2925544</span><span class="p">,</span><span class="o">-</span><span class="mf">77.04510916</span><span class="p">,</span><span class="o">-</span><span class="mf">86.40789274</span><span class="p">,</span><span class="mf">69.86940263</span><span class="p">,</span><span class="mf">123.7557878</span><span class="p">]</span>
+
+<span class="c1"># Vitis thunbergii</span>
+<span class="n">Vthu_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">22.61260382</span><span class="p">,</span><span class="o">-</span><span class="mf">3.204532702</span><span class="p">,</span><span class="o">-</span><span class="mf">150.3627277</span><span class="p">,</span><span class="o">-</span><span class="mf">79.39836351</span><span class="p">,</span><span class="o">-</span><span class="mf">271.8885204</span><span class="p">,</span><span class="o">-</span><span class="mf">70.74704134</span><span class="p">,</span><span class="o">-</span><span class="mf">168.6002498</span><span class="p">,</span><span class="mf">36.68300146</span><span class="p">,</span><span class="mf">172.978549</span><span class="p">,</span><span class="mf">116.9174032</span><span class="p">,</span><span class="mf">227.8346055</span><span class="p">,</span><span class="mf">148.3453958</span><span class="p">,</span><span class="mf">22.61260382</span><span class="p">]</span>
+<span class="n">Vthu_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">50.82336098</span><span class="p">,</span><span class="mf">194.3865012</span><span class="p">,</span><span class="mf">181.2536906</span><span class="p">,</span><span class="mf">86.8671412</span><span class="p">,</span><span class="o">-</span><span class="mf">57.33457233</span><span class="p">,</span><span class="o">-</span><span class="mf">23.85610668</span><span class="p">,</span><span class="o">-</span><span class="mf">334.279317</span><span class="p">,</span><span class="o">-</span><span class="mf">67.36542042</span><span class="p">,</span><span class="o">-</span><span class="mf">234.1205595</span><span class="p">,</span><span class="mf">7.151772223</span><span class="p">,</span><span class="mf">28.16801823</span><span class="p">,</span><span class="mf">138.9705667</span><span class="p">,</span><span class="mf">50.82336098</span><span class="p">]</span>
+
+<span class="c1"># Vitis vulpina</span>
+<span class="n">Vvul_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">39.44771371</span><span class="p">,</span><span class="o">-</span><span class="mf">83.62933643</span><span class="p">,</span><span class="o">-</span><span class="mf">194.2000993</span><span class="p">,</span><span class="o">-</span><span class="mf">175.9638941</span><span class="p">,</span><span class="o">-</span><span class="mf">227.8323987</span><span class="p">,</span><span class="o">-</span><span class="mf">180.8587446</span><span class="p">,</span><span class="o">-</span><span class="mf">135.986247</span><span class="p">,</span><span class="mf">71.94543538</span><span class="p">,</span><span class="mf">99.8983207</span><span class="p">,</span><span class="mf">207.0950158</span><span class="p">,</span><span class="mf">231.7808734</span><span class="p">,</span><span class="mf">222.7645396</span><span class="p">,</span><span class="mf">39.44771371</span><span class="p">]</span>
+<span class="n">Vvul_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">96.44934373</span><span class="p">,</span><span class="mf">230.0148139</span><span class="p">,</span><span class="mf">136.3702366</span><span class="p">,</span><span class="mf">119.8017341</span><span class="p">,</span><span class="o">-</span><span class="mf">83.09830126</span><span class="p">,</span><span class="o">-</span><span class="mf">75.38247957</span><span class="p">,</span><span class="o">-</span><span class="mf">332.9188424</span><span class="p">,</span><span class="o">-</span><span class="mf">184.4324688</span><span class="p">,</span><span class="o">-</span><span class="mf">222.8532423</span><span class="p">,</span><span class="o">-</span><span class="mf">41.89574792</span><span class="p">,</span><span class="o">-</span><span class="mf">44.70218529</span><span class="p">,</span><span class="mf">101.9138055</span><span class="p">,</span><span class="mf">96.44934373</span><span class="p">]</span>
+
+<span class="c1"># Average grape leaf</span>
+<span class="n">avg_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">35.60510804</span><span class="p">,</span><span class="o">-</span><span class="mf">67.88314703</span><span class="p">,</span><span class="o">-</span><span class="mf">186.9749654</span><span class="p">,</span><span class="o">-</span><span class="mf">149.5049396</span><span class="p">,</span><span class="o">-</span><span class="mf">254.2293735</span><span class="p">,</span><span class="o">-</span><span class="mf">135.3520852</span><span class="p">,</span><span class="o">-</span><span class="mf">130.4632741</span><span class="p">,</span><span class="mf">54.4100207</span><span class="p">,</span><span class="mf">120.7064692</span><span class="p">,</span><span class="mf">180.696724</span><span class="p">,</span><span class="mf">232.2550642</span><span class="p">,</span><span class="mf">204.8782463</span><span class="p">,</span><span class="mf">35.60510804</span><span class="p">]</span>
+<span class="n">avg_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">84.95317026</span><span class="p">,</span><span class="mf">215.7238025</span><span class="p">,</span><span class="mf">143.85314</span><span class="p">,</span><span class="mf">106.742536</span><span class="p">,</span><span class="o">-</span><span class="mf">80.06000256</span><span class="p">,</span><span class="o">-</span><span class="mf">57.00477464</span><span class="p">,</span><span class="o">-</span><span class="mf">309.8290405</span><span class="p">,</span><span class="o">-</span><span class="mf">137.6340316</span><span class="p">,</span><span class="o">-</span><span class="mf">237.7960327</span><span class="p">,</span><span class="o">-</span><span class="mf">31.10365842</span><span class="p">,</span><span class="o">-</span><span class="mf">30.0828468</span><span class="p">,</span><span class="mf">103.1501279</span><span class="p">,</span><span class="mf">84.95317026</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tu respuesta</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="0_Lecciones/2.4_Subgraficos.html" title="previous page">2.4 Subgráficos</a>
+    <a class='right-next' id="next-link" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview.html" title="next page">Welcome / Bienvenid&#64;</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By  <br/>
+        
+            &copy; Copyright By the authors.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -90,6 +90,20 @@ parts:
       title: Leaf & Sunflower Shapes
 
 
+  - caption: 2. VISUALIZACIÓN DE DATOS CON MATPLOTLIB
+    chapters:
+    - file: C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Overview
+      title: Lecciones
+      sections:
+      - file: C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.0_Modulos
+      - file: C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.1_Graficos
+      - file: C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.2_Forma_tamano_y_color
+      - file: C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.3_Leyendas
+      - file: C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.4_Subgraficos
+    - file: C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/1_Practica
+      title: Práctica
+
+
   - caption: 3. Loops & the Golden Angle
     chapters:
     - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview
