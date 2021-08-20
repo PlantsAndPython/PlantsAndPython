@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.4 Subgráficos &#8212; Plants &amp; Python</title>
+    <title>2.1 Gráficos &#8212; Plants &amp; Python</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Práctica con Visualización de gráficos con Matplotlib" href="../1_Practica.html" />
-    <link rel="prev" title="2.3 Leyendas" href="2.3_Leyendas.html" />
+    <link rel="next" title="2.2 Forma, tamaño y color" href="2.2_Forma_tamano_y_color.html" />
+    <link rel="prev" title="2.0 Módulos" href="2.0_Modulos.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -383,8 +383,8 @@
      2.0 Módulos
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.1_Graficos.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      2.1 Gráficos
     </a>
    </li>
@@ -398,8 +398,8 @@
      2.3 Leyendas
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.4_Subgraficos.html">
      2.4 Subgráficos
     </a>
    </li>
@@ -408,6 +408,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../1_Practica.html">
    Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Las_formas_de_las_hojas_y_girasoles.html">
+   Las formas de las hojas y girasoles
   </a>
  </li>
 </ul>
@@ -697,7 +702,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.4_Subgraficos.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.1_Graficos.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -717,7 +722,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2FC_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.4_Subgraficos.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2FD_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.1_Graficos.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -738,7 +743,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.4_Subgraficos.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.1_Graficos.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -746,7 +751,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.4_Subgraficos.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.1_Graficos.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -769,8 +774,8 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#crear-subgraficos">
-   Crear subgráficos
+  <a class="reference internal nav-link" href="#crear-graficos-diagramas-de-dispersion-y-figuras">
+   Crear gráficos, diagramas de dispersión y figuras
   </a>
  </li>
 </ul>
@@ -784,12 +789,12 @@
         
               <div>
                 
-  <div class="section" id="subgraficos">
-<h1>2.4 Subgráficos<a class="headerlink" href="#subgraficos" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="crear-subgraficos">
-<h2>Crear subgráficos<a class="headerlink" href="#crear-subgraficos" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="graficos">
+<h1>2.1 Gráficos<a class="headerlink" href="#graficos" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="crear-graficos-diagramas-de-dispersion-y-figuras">
+<h2>Crear gráficos, diagramas de dispersión y figuras<a class="headerlink" href="#crear-graficos-diagramas-de-dispersion-y-figuras" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
-<p><strong>Mira este video de 19:11 a 26:34</strong></p>
+<p><strong>Mira este video de 4:09 a 8:12</strong></p>
 <p>Para español, haga click en configuración, seleccione “español” debajo de los subtítulos.</p>
 <p>Traducción por Evelia L. Coss-Navarrete, Langebio-Cinvestav, Irapuato, México)</p>
 <div class="cell docutils container">
@@ -798,8 +803,8 @@
 
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
-<span class="n">start</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">19</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
-<span class="n">end</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">26</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">34</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+<span class="n">start</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+<span class="n">end</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
 
 <span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;PJ1dvAgOAj0&quot;</span><span class="p">,</span><span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">640</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">360</span><span class="p">)</span>
 </pre></div>
@@ -810,7 +815,7 @@
 <iframe
     width="640"
     height="360"
-    src="https://www.youtube.com/embed/PJ1dvAgOAj0?start=1151&end=1594"
+    src="https://www.youtube.com/embed/PJ1dvAgOAj0?start=249&end=492"
     frameborder="0"
     allowfullscreen
 ></iframe>
@@ -909,69 +914,129 @@
 </div>
 </div>
 </div>
-<p>Y finalmente hablemos de subgráficas. ¿Y si quisiéramos crear una gráfica? pero tenía múltiples paneles, múltiples gráficas
-dentro de una misma figura, y aquí es donde las subgráficas entran en juego.</p>
-<p>No mentiré, el código de las subgráficas es un poco complicado. Yo mismo a menudo, simplemente vaya y búsquelo cada vez que quiera usarlo y usted debería hacer lo mismo. Lo pondré en los cuadernos siempre que lo necesite en la clase, pero esta es la general esbozo de cómo se ve una subgráfica. Repasemos esto para que sepamos cómo usarlo cuando se necesite.</p>
-<p>Una forma alternativa de crear una gráfica en matplotlib es crear una variable esa es tu figura. Entonces puede usar una función llamada <code class="docutils literal notranslate"><span class="pre">plt.figure()</span></code> y asignarla a una variable. Normalmente lo llamamos <code class="docutils literal notranslate"><span class="pre">fig</span></code> donde guardas todos los elementos de tu figura. Puedes poner otro atributos en esto. Por ejemplo <code class="docutils literal notranslate"><span class="pre">figsize</span></code>. Esto significa crear una figura de 10 por 10 pulgadas, usando este argumento cuando creamos la figura en sí.</p>
-<p>Una vez que tengas tu figura, luego usa la función punto subplots (“.subplots”) para crear lo que llamamos una matriz. Y entonces lo que estamos haciendo aquí estamos modificando la figura que acabamos de crear usando la función “subplots”. Lo mas lo importante que debe saber sobre las subgráficas es que debe especificar cuántas subgráficasdesea. Entonces en este caso, creemos una subgráfica de dos por dos. Por lo tanto, siempre se trata de filas primero seguidas de columnas. Entonces esta es una subgráfica de 2x2. Recuerde: filas seguidas de columnas. Esto está creando otra variable y se llama array (arreglo) y, básicamente, lo que hemos hecho aquí es que aprendiste sobre indexación antes, cómo si tiene una lista, por ejemplo, hay un comienzo y un final, y cada elemento en esa lista tiene un número y un índice asociados. Este es un esquema de indexación de dos dimensiones en esencia. Recuerde que estábamos especificando dos filas y dos columnas y eso es básicamente lo que esta variable es, una array.</p>
-<p>Una vez que tenemos estas dos líneas de código, hemos creado nuestros subgráficos y podemos entrar al negocio creando nuestro subgráfico. Puede modificar la figura directamente, por lo que, esto se llama “superior title”, el título en la parte superior de la figura general , porque modifica la figura directamente. Vamos a llamar a nuestro título de figura general “La forma de las hojas de vid”. Podemos darle un tamaño de fuente y modificarlo como queramos.</p>
-<p>Pero para crear las subgráficas, aquí es donde ocurre toda la magia. Tú creaste este array antes y recuerde que esta es una indexación bidimensional, por lo que, las filas, el primer valor separado por una coma, entre corchetes, porque hay dos. Hay cero y uno. Es la fila superior o inferior, 0 o 1. El segundo valor se referirá a las columnas que van de izquierda a derecha. Es la primera columna, 0, o es la segunda, 1. Entonces, podemos referirnos a una de las subgráficas: tenemos cuatro de ellas, ¿verdad? en la esquina superior izquierda como 0, 0; el de la esquina superior derecha es 0, 1; el único en la esquina inferior izquierda como 1, 0; y el de la esquina inferior derecha como 1, 1. Cuando se indexa bidimensionalmente, indexando el objeto de matriz de esta manera, por <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0]</span></code> por ejemplo, las funciones que usa, <code class="docutils literal notranslate"><span class="pre">.plot()</span></code>, <code class="docutils literal notranslate"><span class="pre">.fill()</span></code>, <code class="docutils literal notranslate"><span class="pre">.scatter()</span></code>, todas modificarán solo en una subgráfica. Entonces puedes hacer <code class="docutils literal notranslate"><span class="pre">.plot()</span></code>, <code class="docutils literal notranslate"><span class="pre">.fill()</span></code>, <code class="docutils literal notranslate"><span class="pre">.scatter()</span></code>. Puede establecer un título incluso para esta subgráfica. Puede modificar su relación de aspecto, apagar y encender el eje.</p>
-<p>Por ejemplo, esto es la trama que crearemos en la esquina superior izquierda de nuestra subgráfica. Y nuevamente, simplemente crea la trama que le gustaría para la esquina superior derecha, la esquina inferior izquierda y la esquina inferior derecha. Puedes ver que esto es mucho código e hicimos muchas cosas aquí. Creamos un objeto de figura, luego modificamos el objeto de figura con subgráficas para crear un array. Este array nos permite a través de la indexación bidimensional para referirnos a cada una de las gráficas que queremos crear.</p>
-<p>Así que esto es mucho, pero siempre puedes buscar el esqueleto de cómo hacer subgráficasen línea y simplemente copiarlo y pegarlo desde que lo usó antes o incluso en este cuaderno. Así que ejecutemos la celda y así es como se ve. Así que creamos la figura general, podemos crear un título para la figura general, “Las formas de las hojas de vid”. Pero debido a que creamos este array con dos filas y dos columnas, donde las filas son cero y uno y las columnas son cero y uno, cuando nos referimos a un índice en ese objeto de array, podemos modificar cada uno de estos gráficos como queramos. Así que esto crea una única figura general con subgráficas y así es como podemos controlar y crear diferentes gráficas dentro de una figura general.</p>
+<p>Bien, hemos cargado datos, estas son listas de valores de <code class="docutils literal notranslate"><span class="pre">x</span></code> y de <code class="docutils literal notranslate"><span class="pre">y</span></code>. Tenemos matplotlib importado, por lo que, tenemos las funciones
+para crear gráficos. Así que ahora creemos algunos gráficos.</p>
+<p>Entonces, si recuerdas, tenemos estas listas para cada especie. Este en este ejemplo es <em>Ampelopsis aconitifolia</em>. Estas listas eran para los valores <code class="docutils literal notranslate"><span class="pre">x</span></code> y los valores en <code class="docutils literal notranslate"><span class="pre">y</span></code>. Así que recuerda eso cuando usamos una función en matplotlib (una de estas funciones es plot, porque como verás sirve para crear un gráfico) tenemos que referirnos al módulo y lo importamos como <code class="docutils literal notranslate"><span class="pre">plt</span></code>. Entonces escribimos plt punto y luego escribimos la función (<code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>) y luego colocamos como argumento en esta función una lista de valores.</p>
+<p>Entonces estos son los valores <code class="docutils literal notranslate"><span class="pre">x</span></code> para <em>Ampelopsis aconitifolia</em>, para su hoja, y veamos qué sucede cuando presionamos shift + enter.</p>
+<p>Puedes ver que obtenemos una gráfica. Se debe mostrar dentro de su Jupyter notebook. El eje “y” es en realidad los valores de <code class="docutils literal notranslate"><span class="pre">x</span></code>, por lo que, esta línea, son los valores de <code class="docutils literal notranslate"><span class="pre">x</span></code> a lo largo de “y” eje. Y el eje “x” aquí es el orden de esos valores. La razón por la que se ve así es porque solo tenemos valores de <code class="docutils literal notranslate"><span class="pre">x</span></code>, por lo que solo traza los valores a lo largo del eje “y” y su orden tal como los encuentra en la lista.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crea una variable &quot;fig&quot; usando plt.figure ()</span>
-<span class="c1"># Puede usar figsize para ajustar el tamaño</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solo valores x</span>
+<span class="c1"># Ampelopsis aconitifolia</span>
 
-<span class="c1"># Luego, use la función .subplots () en su nueva fig.</span>
-<span class="c1"># Especifique cuántas filas y cuántas columnas separadas por una coma</span>
-<span class="c1"># Esto es indexar en 2 dimensiones: una matriz</span>
-<span class="c1"># Esto crea una matriz que contiene cada una de sus subtramas</span>
-<span class="c1"># Cada gráfico está indexado por fila, columna</span>
-<span class="n">ax_array</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="c1"># Puedes darle un título a tu figura general</span>
-<span class="c1"># modificando fig con .suptitle ()</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;The shapes of grapevine leaves&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">33</span><span class="p">)</span>
-
-<span class="c1"># Luego, usando la indexación, consulte cada subparcela en su matriz</span>
-<span class="c1"># Especifique la forma en que desea cada parcela de forma independiente</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Aaco_x</span><span class="p">,</span> <span class="n">Aaco_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">Aaco_x</span><span class="p">,</span> <span class="n">Aaco_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Aaco_x</span><span class="p">,</span> <span class="n">Aaco_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;limegreen&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Ampelopsis aconitifolia&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;italic&quot;</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">,</span> <span class="s2">&quot;datalim&quot;</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
-
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Abre_x</span><span class="p">,</span> <span class="n">Abre_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span> 
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">Abre_x</span><span class="p">,</span> <span class="n">Abre_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;peru&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> 
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Abre_x</span><span class="p">,</span> <span class="n">Abre_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gold&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> 
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Ampelopsis brevipedunculata&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;italic&quot;</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">,</span> <span class="s2">&quot;datalim&quot;</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
-
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Acor_x</span><span class="p">,</span> <span class="n">Acor_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">Acor_x</span><span class="p">,</span> <span class="n">Acor_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;limegreen&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Acor_x</span><span class="p">,</span> <span class="n">Acor_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Ampelopsis cordata&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;italic&quot;</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">,</span> <span class="s2">&quot;datalim&quot;</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
-
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Vace_x</span><span class="p">,</span> <span class="n">Vace_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkorchid&quot;</span><span class="p">)</span> 
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">Vace_x</span><span class="p">,</span> <span class="n">Vace_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gold&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> 
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Vace_x</span><span class="p">,</span> <span class="n">Vace_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;peru&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> 
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Vitis acerifolia&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;italic&quot;</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">,</span> <span class="s2">&quot;datalim&quot;</span><span class="p">)</span>
-<span class="n">ax_array</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Aaco_x</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-258.79787119, 267.49408819, -309.507649565, 267.768537065)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f162adb4490&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/2.4_Subgraficos_8_1.png" src="../../_images/2.4_Subgraficos_8_1.png" />
+<img alt="../../_images/2.1_Graficos_8_1.png" src="../../_images/2.1_Graficos_8_1.png" />
+</div>
+</div>
+<p>Sin embargo, podríamos hacer esto para los valores de <code class="docutils literal notranslate"><span class="pre">y</span></code>. Entonces puedes decir <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> e ingrese una lista de valores <code class="docutils literal notranslate"><span class="pre">y</span></code> y ahora obtendrá lo mismo. Son solo valores <code class="docutils literal notranslate"><span class="pre">y</span></code> en el orden que matplotlib los encuentra.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solo valores y</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Aaco_y</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f1622d139d0&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/2.1_Graficos_10_1.png" src="../../_images/2.1_Graficos_10_1.png" />
+</div>
+</div>
+<p>El punto aquí, sin embargo, es que estamos tratando de visualizar hojas y entonces tenemos una lista de valores de <code class="docutils literal notranslate"><span class="pre">x</span></code> y de <code class="docutils literal notranslate"><span class="pre">y</span></code> que necesitamos juntarlos para tener coordenadas reales. Y esto es muy sencillo. Tienes tu función de gráfico nuevamente y solo haces una lista de valores <code class="docutils literal notranslate"><span class="pre">x</span></code> y pones en una lista de valores de <code class="docutils literal notranslate"><span class="pre">y</span></code>. Y ahora, cuando creas el gráfico, puedes ver que matplotlib pone los valores de <code class="docutils literal notranslate"><span class="pre">x</span></code> y de <code class="docutils literal notranslate"><span class="pre">y</span></code> juntos y crea una línea en el orden en que encuentra estas coordenadas y aquí tenemos algo que parece una hoja. Esta es la punta de la hoja, esta es la base de la hoja, y se puede ver que se trata de una hoja muy profundamente lobulada que parece una estrella.</p>
+<p>Así que esto es la función de la trama. Crea una línea que conecta los puntos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # Poniendo los valores x e y juntos</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Aaco_x</span><span class="p">,</span> <span class="n">Aaco_y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f1622c826d0&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/2.1_Graficos_12_1.png" src="../../_images/2.1_Graficos_12_1.png" />
+</div>
+</div>
+<p>Pero hay otras funciones. Así que tal vez has oído hablar de algo llamado diagrama de dispersión (scatter plot). Un diagrama de dispersión, si tiene datos puntuales como nosotros tener aquí, solo creará puntos. Entonces, si decimos <code class="docutils literal notranslate"><span class="pre">plt.scatter()</span></code> pero ponemos los mismos valores de <code class="docutils literal notranslate"><span class="pre">x</span></code> y de <code class="docutils literal notranslate"><span class="pre">y</span></code>. En cambio, lo que obtenemos son esos puntos, no una línea.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># En lugar de plt.plot () que da líneas que conectan el punto</span>
+<span class="c1"># podemos usar plt.scatter () en su lugar</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Aaco_x</span><span class="p">,</span> <span class="n">Aaco_y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f1622c55310&gt;
+</pre></div>
+</div>
+<img alt="../../_images/2.1_Graficos_14_1.png" src="../../_images/2.1_Graficos_14_1.png" />
+</div>
+</div>
+<p>Otra función es llenar. Entonces, si decimos <code class="docutils literal notranslate"><span class="pre">plt.fill()</span></code>, no recuperaremos líneas o puntos, en su lugar obtendremos un polígono relleno.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plt.fill () rellenará un polígono que forman los puntos</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">Aaco_x</span><span class="p">,</span> <span class="n">Aaco_y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.patches.Polygon at 0x7f1622bd2190&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/2.1_Graficos_16_1.png" src="../../_images/2.1_Graficos_16_1.png" />
+</div>
+</div>
+<p>Usted puede en realidad, siga agregando estas funciones una encima de la otra y verá que esto es una de las formas más poderosas de crear visualizaciones complejas . Puede utilizar la función de trazado (<code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>), la función de dispersión (<code class="docutils literal notranslate"><span class="pre">plt.scatter()</span></code>) y la función de relleno (<code class="docutils literal notranslate"><span class="pre">plt.fill()</span></code>), todas juntas y puedes ver lo que obtienes si obtienes una línea, un contorno de la hoja que conecta los puntos, obtienes los puntos, y también obtienes un relleno polígono. Así que puedes seguir agregando diferentes funciones en matpotlib, ejecutándolas una tras otra el otro, y es como pegar encima de lo que ya ha trazado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Puede usar plt.plot (), plt.scatter () y plt.fill () juntos</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Aaco_x</span><span class="p">,</span> <span class="n">Aaco_y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Aaco_x</span><span class="p">,</span> <span class="n">Aaco_y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">Aaco_x</span><span class="p">,</span> <span class="n">Aaco_y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.patches.Polygon at 0x7f1622b317c0&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/2.1_Graficos_18_1.png" src="../../_images/2.1_Graficos_18_1.png" />
+</div>
+</div>
+<p>Hay numerosos otras funciones que puede utilizar. Por ejemplo, puede utilizar <code class="docutils literal notranslate"><span class="pre">plt.xlim()</span></code> y <code class="docutils literal notranslate"><span class="pre">plt.ylim()</span></code> para modificar tu trama. Entonces, digamos que queríamos limitar los valores de <code class="docutils literal notranslate"><span class="pre">x</span></code> y de <code class="docutils literal notranslate"><span class="pre">y</span></code> a entre 100 negativos y positivos. Ahora puede ver, por ejemplo, que esto nos corta la hoja.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Puede usar plt.xlim () y plt.ylim () para establecer rangos de ejes</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Aaco_x</span><span class="p">,</span> <span class="n">Aaco_y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Aaco_x</span><span class="p">,</span> <span class="n">Aaco_y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">Aaco_x</span><span class="p">,</span> <span class="n">Aaco_y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-100.0, 100.0)
+</pre></div>
+</div>
+<img alt="../../_images/2.1_Graficos_20_1.png" src="../../_images/2.1_Graficos_20_1.png" />
 </div>
 </div>
 </div>
@@ -990,7 +1055,7 @@ dentro de una misma figura, y aquí es donde las subgráficas entran en juego.</
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./C_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones"
+            path: "./D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones"
         },
         predefinedOutput: true
     }
@@ -1002,8 +1067,8 @@ dentro de una misma figura, y aquí es donde las subgráficas entran en juego.</
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2.3_Leyendas.html" title="previous page">2.3 Leyendas</a>
-    <a class='right-next' id="next-link" href="../1_Practica.html" title="next page">Práctica con Visualización de gráficos con Matplotlib</a>
+    <a class='left-prev' id="prev-link" href="2.0_Modulos.html" title="previous page">2.0 Módulos</a>
+    <a class='right-next' id="next-link" href="2.2_Forma_tamano_y_color.html" title="next page">2.2 Forma, tamaño y color</a>
 
         </div>
         
