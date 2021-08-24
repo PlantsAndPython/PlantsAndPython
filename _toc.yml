@@ -19,6 +19,12 @@ parts:
       - file: 00_PREFACE/02_Getting_started_Empezando/04_Markdown_cells
       - file: 00_PREFACE/02_Getting_started_Empezando/05_Celdas_de_markdown
 
+    - file: 00_PREFACE/03_Overview
+      title: "Using : Usando Jupyter Book"
+      sections:
+      - file: 00_PREFACE/03_Using_Usando_Jupyter_Book/How_to_use_this_Jupyter_Book
+      - file: 00_PREFACE/03_Using_Usando_Jupyter_Book/Como_usar_este_Jupyter_Book
+
 
   - caption: 1. Variables, lists, & indexing
     chapters:
