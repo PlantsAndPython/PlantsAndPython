@@ -140,34 +140,30 @@
 # 
 # **Ejemplo del archivo con uno de los pares de cada registro** `1:N:0:1`
 
-# In[1]:
+# ```
+# @M02586:164:000000000-AYBV7:1:2119:13975:24958 1:N:0:1
+# ACGTTGTGCCAGCCGGGTGAGAAAGTAGCTGTCCGTTTCGCTGGTCTGGTCAATATGCGGGATCTTAACGCTATCAAGTTCCTGCGGGATTACTGGCAGATCTAATTTATTCCGGCTTGAAATGATTCTGACAATCGCGCCGAGCGTGTAATCATCGTAAGACTGG
+# +
+# CCCCCGGGGGGGFGGGGGGFFEGGGGGGGFCFEEGFGFFFGGGGGGGGGGGGGGFGGFG@:CFGGGGGGGGGGGGGGFFGGFFGGDGGGGGGGGFGFGGFGGGGGGGGGGD<FGGGGGGGGGGGGGGGFFFFGFF8CGGDFFEGGGGGGFGGDFGGG<DCFGGCFG
+# @M02586:164:000000000-AYBV7:1:2119:13272:24958 1:N:0:1
+# CACTCACTAGCGACCCACTTGGAGGTCGCCAAAAGCAATATTATCCATATCTCGGAGGATTTGGACCAGATCCAGGTCGTCATCGAATTGCCTGGAGAACGGCACGAACTTGGTGCTACGACGAAGTGGAAACGCACAGCAACTTCTGGAGGGAGTGTTGGATCGA
+# +
+# CCCCCGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGFGGGGGGGGGGGGGGGGGGGGGGGGGGGDFFGGGGGGGGGGGGGGGGGGGGGGGGCFGGGGGGGGGGDGGGGGGGGGGGGFFG:@GGFGGGGGGG5>,
+# ```
 
-
-@M02586:164:000000000-AYBV7:1:2119:13975:24958 1:N:0:1
-ACGTTGTGCCAGCCGGGTGAGAAAGTAGCTGTCCGTTTCGCTGGTCTGGTCAATATGCGGGATCTTAACGCTATCAAGTTCCTGCGGGATTACTGGCAGATCTAATTTATTCCGGCTTGAAATGATTCTGACAATCGCGCCGAGCGTGTAATCATCGTAAGACTGG
-+
-CCCCCGGGGGGGFGGGGGGFFEGGGGGGGFCFEEGFGFFFGGGGGGGGGGGGGGFGGFG@:CFGGGGGGGGGGGGGGFFGGFFGGDGGGGGGGGFGFGGFGGGGGGGGGGD<FGGGGGGGGGGGGGGGFFFFGFF8CGGDFFEGGGGGGFGGDFGGG<DCFGGCFG
-@M02586:164:000000000-AYBV7:1:2119:13272:24958 1:N:0:1
-CACTCACTAGCGACCCACTTGGAGGTCGCCAAAAGCAATATTATCCATATCTCGGAGGATTTGGACCAGATCCAGGTCGTCATCGAATTGCCTGGAGAACGGCACGAACTTGGTGCTACGACGAAGTGGAAACGCACAGCAACTTCTGGAGGGAGTGTTGGATCGA
-+
-CCCCCGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGFGGGGGGGGGGGGGGGGGGGGGGGGGGGDFFGGGGGGGGGGGGGGGGGGGGGGGGCFGGGGGGGGGGDGGGGGGGGGGGGFFG:@GGFGGGGGGG5>,
-
-
+# 
 # **Ejemplo del archivo del segundo par de cada registro** `2:N:0:1`
 
-# In[ ]:
-
-
-
-@M02586:164:000000000-AYBV7:1:2119:13975:24958 2:N:0:1
-TNNNNNNNNNCAGTTACCCGTGGGGGCTCGCATCGCACCCGCATTCACGCTGACGATAAAAAATAAGGTGCTGGAAGAAAATATCTCTGCTCGGATCATCAGTTTATCTGTCACGGATAACAGCGGTTTTACCGCAGACACCTTGAATTTAACCTTCGATGACAGC
-+
-8#########==CFCEDCFEGGGGGGCCGFGEGEGGCGGGGGGGD9@FFCFGFDGEGCFFCCCFGGEFGG8FFGGGFGFFFCCFA<FFGFGGGG:FEFGGFGGGFGGFGGGGA?CCFGGFFGGEG7CF@FGEF8+=CFGFEFF:=CFGGGAFGFFG6C?(*-1*)/
-@M02586:164:000000000-AYBV7:1:2119:13272:24958 2:N:0:1
-ANNNNNNNNNCTGGAAATTGTAACCCATAGGCGGTCCATGTGCGTTTCGTTCTGAGATCGTTTTTTCGTACATCGTTGACAAGCCCAAGTTCTCACCACAAGATTCGTTAGGCTCGTATCGTAATGTGGAAAGGTAGACAGGCGATTCGAGCGAGATCAAGTCGAC
-+
-8#########=:CFGGFFGGGGGGGGG8FFGGGGFGGGGGG9FEGGGGGGGGFGGGGGGGF@FGGGGGGGGGGGGGGGGGFFGGEFGGGGGFGGCGGGGGEGFFGFFGFF7FFE<FCGGGGFEF@FGFF9EF<FFG,?;<F+DEGGCCGGGGECE*.4)72*)-5(
-
+# ```
+# @M02586:164:000000000-AYBV7:1:2119:13975:24958 2:N:0:1
+# TNNNNNNNNNCAGTTACCCGTGGGGGCTCGCATCGCACCCGCATTCACGCTGACGATAAAAAATAAGGTGCTGGAAGAAAATATCTCTGCTCGGATCATCAGTTTATCTGTCACGGATAACAGCGGTTTTACCGCAGACACCTTGAATTTAACCTTCGATGACAGC
+# +
+# 8#########==CFCEDCFEGGGGGGCCGFGEGEGGCGGGGGGGD9@FFCFGFDGEGCFFCCCFGGEFGG8FFGGGFGFFFCCFA<FFGFGGGG:FEFGGFGGGFGGFGGGGA?CCFGGFFGGEG7CF@FGEF8+=CFGFEFF:=CFGGGAFGFFG6C?(*-1*)/
+# @M02586:164:000000000-AYBV7:1:2119:13272:24958 2:N:0:1
+# ANNNNNNNNNCTGGAAATTGTAACCCATAGGCGGTCCATGTGCGTTTCGTTCTGAGATCGTTTTTTCGTACATCGTTGACAAGCCCAAGTTCTCACCACAAGATTCGTTAGGCTCGTATCGTAATGTGGAAAGGTAGACAGGCGATTCGAGCGAGATCAAGTCGAC
+# +
+# 8#########=:CFGGFFGGGGGGGGG8FFGGGGFGGGGGG9FEGGGGGGGGFGGGGGGGF@FGGGGGGGGGGGGGGGGGFFGGEFGGGGGFGGCGGGGGEGFFGFFGFF7FFE<FCGGGGFEF@FGFF9EF<FFG,?;<F+DEGGCCGGGGECE*.4)72*)-5(
+# ```
 
 # 
 # 
@@ -187,17 +183,14 @@ ANNNNNNNNNCTGGAAATTGTAACCCATAGGCGGTCCATGTGCGTTTCGTTCTGAGATCGTTTTTTCGTACATCGTTGAC
 # 
 # 
 
-# In[3]:
-
-
-
-@HD     VN:1.0  SO:unsorted
-@SQ     SN:12   LN:50697278
-@PG     ID:bowtie2 PN:bowtie2  VN:2.2.5  CL:"bowtie2 -x ZV9 -S 2cells.sam -1 1.fq -2 2.fq"
-
-ERR022484.110   137     chr12      4627377 42      76M     =       4627377 0       TTGTTCTCCACCAAGCCGCCCAGTTT    EEEEEEEEEEEEEE@EBBEEE;C AS:i:0  XN:i:0  XM:i:0  XO:i:0  XG:i:0  NM:i:0  MD:Z:76 YT:Z:UP
-ERR022484.110   69      chr12      4627377 0       *       =       4627377 0       CNGAAGCAAAGTGTGTGCGCGAAATG    !AA=CCCDBHAG=ADHADD>D>D    YT:Z:UP
-
+# ```
+# @HD     VN:1.0  SO:unsorted
+# @SQ     SN:12   LN:50697278
+# @PG     ID:bowtie2 PN:bowtie2  VN:2.2.5  CL:"bowtie2 -x ZV9 -S 2cells.sam -1 1.fq -2 2.fq"
+# 
+# ERR022484.110   137     chr12      4627377 42      76M     =       4627377 0       TTGTTCTCCACCAAGCCGCCCAGTTT    EEEEEEEEEEEEEE@EBBEEE;C AS:i:0  XN:i:0  XM:i:0  XO:i:0  XG:i:0  NM:i:0  MD:Z:76 YT:Z:UP
+# ERR022484.110   69      chr12      4627377 0       *       =       4627377 0       CNGAAGCAAAGTGTGTGCGCGAAATG    !AA=CCCDBHAG=ADHADD>D>D    YT:Z:UP
+# ```
 
 # Las principales columnas contienen los siguientes datos: The main columns containg the following data. 
 # 
@@ -277,51 +270,46 @@ ERR022484.110   69      chr12      4627377 0       *       =     
 # 
 # En humanos, existen 0.1% de diferencias entre el genoma de dos individuos. Eso significa que de una secuencia de 3,000 millones de bases existen al rededor de 3 millones de diferencias entre cada dos individuos. Esta variación puede ser debida a sustituciones, inserciones o deleciones. El formato **VCF** [Variant Call Format], y su formato binario  **BCF** se utilizan para dar información sobre la variación entre secuencias. 
 
-# In[ ]:
-
-
-##fileformat=VCFv4.1
-##ApplyRecalibration="analysis_type=ApplyRecalibration input_file=[] read_buffer_size=null phone_home=NO_ET gatk_key=/
-##CombineVariants="analysis_type=CombineVariants input_file=[] read_buffer_size=null phone_home=STANDARD 
-##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
-##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
-##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
-##contig=<ID=chr1,length=101,assembly=Ddip,md5=bd01f7e11515bb6beda8f7257902aa67>
-##contig=<ID=chr2,length=101,assembly=Ddip,md5=31c33e2155b3de5e2554b693c475b310>
-##contig=<ID=chr3,length=101,assembly=Ddip,md5=631593c6dd2048ae88dcce2bd505d295>
-##contig=<ID=chr4,length=101,assembly=Ddip,md5=c60cb92f1ee5b78053c92bdbfa19abf1>
-##source= Ddip haplotype map vcf for testing
-#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  Ddip1
-chr1    75      Dd1     C       A       .       .       .       GT      0/0
-chr3    25      Dd9     C       T       .       .       .       GT      0/1
-chr3    75      Dd6     A       T       .       .       .       GT      1/1
-chr3    100     Dd8     A       T       .       .       .       GT:PS   0/0
-
+# ```bash
+# ##fileformat=VCFv4.1
+# ##ApplyRecalibration="analysis_type=ApplyRecalibration input_file=[] read_buffer_size=null phone_home=NO_ET gatk_key=/
+# ##CombineVariants="analysis_type=CombineVariants input_file=[] read_buffer_size=null phone_home=STANDARD 
+# ##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+# ##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+# ##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+# ##contig=<ID=chr1,length=101,assembly=Ddip,md5=bd01f7e11515bb6beda8f7257902aa67>
+# ##contig=<ID=chr2,length=101,assembly=Ddip,md5=31c33e2155b3de5e2554b693c475b310>
+# ##contig=<ID=chr3,length=101,assembly=Ddip,md5=631593c6dd2048ae88dcce2bd505d295>
+# ##contig=<ID=chr4,length=101,assembly=Ddip,md5=c60cb92f1ee5b78053c92bdbfa19abf1>
+# ##source= Ddip haplotype map vcf for testing
+# #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  Ddip1
+# chr1    75      Dd1     C       A       .       .       .       GT      0/0
+# chr3    25      Dd9     C       T       .       .       .       GT      0/1
+# chr3    75      Dd6     A       T       .       .       .       GT      1/1
+# chr3    100     Dd8     A       T       .       .       .       GT:PS   0/0
+# ```
 
 # ## <p style="color:#2C6A7F"> Alineamiento de secuencias 
 # Después de anotar un genoma estructuralmente seguramente querremos saber las funciones de cada gen en específico. Especialmente si hemos encontrado variación que pueda representar un cambio significativo en el fenotipo (las características)  del individuo. Por ejemplo, una variación que pueda representar la pérdida de función de un gen de resistencia a enfermedades. El proceso para buscar la función de genes es llamado **anotación funcional** e involucra el alineamiento de genes o proteínas a una base de datos para tratar de encontrar homologías a proteínas que ya están anotadas. Los resultados de esos alineamientos pueden ser obtenidos en formato **tabular**. Como vimos anteriormente, una tabla, con filas y columnas. 
 # 
 # Aquí se muestra un ejemplo de un alineamiento obtenido después de ejectutar un programa llamado  **BLAST**
 
-# In[ ]:
-
-
-
-# BLASTP 2.5.0+
-# Query: gi|49146530|ref|YP_026090.1| NADH dehydrogenase subunit 5 (mitochondrion) [Steinernema carpocapsae]
-# Database: PlusMitoDB
-# Fields: query acc., subject acc., % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
-# 500 hits found
-gi|49146530|ref|YP_026090.1|	gi|49146530|ref|YP_026090.1|	100.000	527	0	0	1	527	1	527	0.0	981
-gi|49146530|ref|YP_026090.1|	gi|910356121|ref|YP_009161998.1|	71.619	525	149	0	1	525	1	525	0.0	709
-gi|49146530|ref|YP_026090.1|	gi|910356106|ref|YP_009161984.1|	70.476	525	155	0	1	525	1	525	0.0	709
-gi|49146530|ref|YP_026090.1|	gi|910356145|ref|YP_009162020.1|	70.857	525	153	0	1	525	1	525	0.0	708
-gi|49146530|ref|YP_026090.1|	gi|116510842|ref|YP_817460.1|	70.857	525	153	0	1	525	1	525	0.0	701
-gi|49146530|ref|YP_026090.1|	gi|910356132|ref|YP_009162008.1|	72.800	500	136	0	26	525	27	526	0.0	686
-gi|49146530|ref|YP_026090.1|	gi|5834894|ref|NP_006964.1|ND5_10021	69.714	525	159	0	1	525	1	525	0.0	674
-gi|49146530|ref|YP_026090.1|	gi|188011122|ref|YP_001905895.1|	70.611	524	154	0	1	524	1	524	0.0	669
-gi|49146530|ref|YP_026090.1|	gi|620695076|ref|YP_009027244.1|	69.466	524	160	0	1	524	1	524	0.0	669
-
+# ```bash
+# # BLASTP 2.5.0+
+# # Query: gi|49146530|ref|YP_026090.1| NADH dehydrogenase subunit 5 (mitochondrion) [Steinernema carpocapsae]
+# # Database: PlusMitoDB
+# # Fields: query acc., subject acc., % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# # 500 hits found
+# gi|49146530|ref|YP_026090.1|	gi|49146530|ref|YP_026090.1|	100.000	527	0	0	1	527	1	527	0.0	981
+# gi|49146530|ref|YP_026090.1|	gi|910356121|ref|YP_009161998.1|	71.619	525	149	0	1	525	1	525	0.0	709
+# gi|49146530|ref|YP_026090.1|	gi|910356106|ref|YP_009161984.1|	70.476	525	155	0	1	525	1	525	0.0	709
+# gi|49146530|ref|YP_026090.1|	gi|910356145|ref|YP_009162020.1|	70.857	525	153	0	1	525	1	525	0.0	708
+# gi|49146530|ref|YP_026090.1|	gi|116510842|ref|YP_817460.1|	70.857	525	153	0	1	525	1	525	0.0	701
+# gi|49146530|ref|YP_026090.1|	gi|910356132|ref|YP_009162008.1|	72.800	500	136	0	26	525	27	526	0.0	686
+# gi|49146530|ref|YP_026090.1|	gi|5834894|ref|NP_006964.1|ND5_10021	69.714	525	159	0	1	525	1	525	0.0	674
+# gi|49146530|ref|YP_026090.1|	gi|188011122|ref|YP_001905895.1|	70.611	524	154	0	1	524	1	524	0.0	669
+# gi|49146530|ref|YP_026090.1|	gi|620695076|ref|YP_009027244.1|	69.466	524	160	0	1	524	1	524	0.0	669
+# ```
 
 # 
 # 🔑 **En esta sección has aprendido a**
