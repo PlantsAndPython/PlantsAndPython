@@ -1,0 +1,1339 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06. Copiar, mover y eliminar archivos &#8212; Plants &amp; Python</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="01. Comandos Básicos" href="../1_Practica.html" />
+    <link rel="prev" title="05. Opciones y argumentos" href="5.4_Opciones_y_Argumentos.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00_Opening_page.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/01_Overview.html">
+   Welcome : Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/01_Welcome_Bienvenido/00_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/01_Welcome_Bienvenido/01_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/02_Overview.html">
+   Getting Started : Empezando
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/00_Installing_Anaconda.html">
+     1. Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/01_Instalar_Anaconda.html">
+     1. Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/02_Coding_cells.html">
+     2. Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/03_Celdas_de_codigo.html">
+     2. Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/04_Markdown_cells.html">
+     3. Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/05_Celdas_de_markdown.html">
+     3. Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/03_Overview.html">
+   Using : Usando Jupyter Book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/03_Using_Usando_Jupyter_Book/How_to_use_this_Jupyter_Book.html">
+     How to use this Jupyter Book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/03_Using_Usando_Jupyter_Book/Como_usar_este_Jupyter_Book.html">
+     Cómo usar este Jupyter Book
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, lists, &amp; indexing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.1_Functions.html">
+     1.1 Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.2_Indexing.html">
+     1.2 Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.3_Lists.html">
+     1.3 Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.4_Indexing_List_Elements.html">
+     1.4 Indexing List Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.5_Modifying_Lists.html">
+     1.5 Modifying Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.6_List_of_Lists.html">
+     1.6 List of Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.7_Slicing.html">
+     1.7 Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.8_Data_Types.html">
+     1.8 Data Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/2_Plants_And_Climate.html">
+   Plants &amp; Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, listas, &amp; INDEXACIÓN
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.1_Funciones.html">
+     1.1 Funciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.2_Indexacion.html">
+     1.2 Indexación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.3_Listas.html">
+     1.3 Listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.4_Indexando_los_elementos_de_una_lista.html">
+     1.4 Indexando los elementos de una lista
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.5_Modificando_listas.html">
+     1.5 Modificando listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.6_Lista_de_listas.html">
+     1.6 Lista de listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.7_Rebanar.html">
+     1.7 Rebanar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.8_Tipos_de_datos.html">
+     1.8 Tipos de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima.html">
+   Las plantas y el clima
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. Visualizing Data with Matplotlib
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.0_Modules.html">
+     2.0 Modules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.1_Plots.html">
+     2.1 Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.2_Shape_Size_and_Color.html">
+     2.2 Shape, Size, and Color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.3_Legends.html">
+     2.3 Legends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.4_Subplots.html">
+     2.4 Subplots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/2_Leaf_And_Sunflower_Shapes.html">
+   Leaf &amp; Sunflower Shapes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. VISUALIZACIÓN DE DATOS CON MATPLOTLIB
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.0_Modulos.html">
+     2.0 Módulos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.1_Graficos.html">
+     2.1 Gráficos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.2_Forma_tamano_y_color.html">
+     2.2 Forma, tamaño y color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.3_Leyendas.html">
+     2.3 Leyendas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.4_Subgraficos.html">
+     2.4 Subgráficos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/2_Las_formas_de_las_hojas_y_girasoles.html">
+   Las formas de las hojas y girasoles
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; the Golden Angle
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.0_Range_Function.html">
+     3.0 Range Function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.1_For_Loops.html">
+     3.1 For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.2_Counters.html">
+     3.2 Counters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.3_Using_Lists_and_Loops.html">
+     3.3 Using Lists and Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.4_Calculating_Fibonacci.html">
+     3.4 Calculating Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.5_While_Loops.html">
+     3.5 While Loops
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/2_Modeling_Sunflowers.html">
+   Modeling Sunflowers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. LOOPS &amp; EL ÁNGULO ÁUREO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.0_La_funcion_range.html">
+     3.0 La función range
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.1_Loops_for.html">
+     3.1 Loops for
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.2_Contadores.html">
+     3.2 Contadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.3_Usando_listas_y_loops.html">
+     3.3 Usando listas y loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci.html">
+     3.4 Calcular Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.5_Loops_while.html">
+     3.5 Loops while
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/2_Como_construir_un_girasol.html">
+   Cómo construir un girasol
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Data Analysis with Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.0_Reading_in_Data.html">
+     4.0 Reading in Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.1_Head_and_Tail.html">
+     4.1 Head and Tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.2_Selecting_Columns.html">
+     4.2 Selecting Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.3_Descriptive_Statistics.html">
+     4.3 Descriptive Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.4_Masks.html">
+     4.4 Masks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.5_Using_iloc.html">
+     4.5 Using iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.6_Seaborn.html">
+     4.6 Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/2_Grapes_in_a_Warming_World.html">
+   Grapes in a Warming World
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Análisis de datos con pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.0_Leyendo_en_data.html">
+     4.0 Leyendo en data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.1_Head_y_tail.html">
+     4.1 Head y tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.2_Seleccionando_columnas.html">
+     4.2 Seleccionando columnas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.3_Estadisticas_descriptivas.html">
+     4.3 Estadísticas descriptivas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.4_Enmascaramiento.html">
+     4.4 Enmascaramiento
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.5_Usando_iloc.html">
+     4.5 Usando iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn.html">
+     4.6 Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/2_Vides_en_un_mundo_que_se_calienta.html">
+   Vides en un mundo que se calienta
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  5. Unix Command Line
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.0_Introduction_to_Command_Line.html">
+     <p style="color:#2C6A7F">
+      Introduction to Command Line
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.1_TheVirtual_Terminal.html">
+     <p style="color:#2C6A7F">
+      02. Virtual Terminal
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.2_Exploring_Folders.html">
+     <p style="color:#2C6A7F">
+      03. Exploring Folders
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.3_Working_with_Files.html">
+     <p style="color:#2C6A7F">
+      04. Working with Files
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.5_Copy_Move_and_Remove_Files.html">
+     <p style="color:#2C6A7F">
+      06. Copy, Move &amp; Remove Files
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.4_Options_and_Arguments.html">
+     <p style="color:#2C6A7F">
+      05. Options and Arguments
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  5. LINEA DE COMANDOS DE UNIX
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../0_Overview.html">
+   Lecciones
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.0_IntroduccionLineaDeComandos.html">
+     <p style="color:#2C6A7F">
+      Introducción a la línea de comandos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.1_LaTerminal_Virtual.html">
+     <p style="color:#2C6A7F">
+      02. Terminal Virtual
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.2_ExplorandoDirectorios.html">
+     <p style="color:#2C6A7F">
+      03. Explorando directorios
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.3_Trabajando_con_archivos.html">
+     <p style="color:#2C6A7F">
+      04. Trabajando con archivos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.4_Opciones_y_Argumentos.html">
+     <p style="color:#2C6A7F">
+      05. Opciones y argumentos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     <p style="color:#2C6A7F">
+      06. Copiar, mover y eliminar archivos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  6. Unix Commands For Data Mining
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.0_Edit_Sort_Cut_grep.html">
+     <p style="color:#2C6A7F">
+      01. EDIT, SORT, CUT &amp; GREP
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.1_Word_Count_Pipelines_Permissions.html">
+     <p style="color:#2C6A7F">
+      02. Word Count, Pipelines &amp; Permissions
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.2_Biological_Data_Formats.html">
+     <p style="color:#2C6A7F">
+      03. Biological Data Formats
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../K_6_UNIX_COMMANDS_FOR_DATA_MINING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  6. MINERIA DE DATOS EN LA LINEA DE COMANDOS DE UNIX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.0_Editar_Ordentar_Cortar_grep.html">
+     <p style="color:#2C6A7F">
+      01. Editar, ordenar, cortar y grep
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.1_Contar_Palabras_Tuberias_Permisos.html">
+     <p style="color:#2C6A7F">
+      02. Contar palabras, tuberías &amp; permisos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.2_Formatos_Biologicos.html">
+     <p style="color:#2C6A7F">
+      03. Formatos de Datos Biológicos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  7. SCRIPTING WITH BASH
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.0_WorkingRemotely.html">
+     <p style="color:#2C6A7F">
+      01. Working Remotely
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.1_Scripting_with_bash.html">
+     <p style="color:#2C6A7F">
+      03. Scripting with Bash
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.3_Summary_of_Commands.html">
+     <p style="color:#2C6A7F">
+      3. Summary of Commands
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  7. PROGRAMANDO CON BASH
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.0_Trabajando_de_manera_remota.html">
+     <p style="color:#2C6A7F">
+      09. Trabajando de manera remota
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.1_Programando_con_Bash.html">
+     <p style="color:#2C6A7F">
+      03. Programando con Bash
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.3_Resumen_de_comandos.html">
+     <p style="color:#2C6A7F">
+      03. Resumen de comandos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.5_Copiar_Mover_Eliminar_Archivos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2FJ_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.5_Copiar_Mover_Eliminar_Archivos.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.5_Copiar_Mover_Eliminar_Archivos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.5_Copiar_Mover_Eliminar_Archivos.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-objetivos-de-aprendizaje">
+   <p style="color:#2C6A7F">
+    🔍
+    <strong>
+     Objetivos de aprendizaje
+    </strong>
+   </p>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-cp">
+   <p style="color:#2C6A7F">
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      cp
+     </span>
+    </code>
+   </p>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-mv">
+   <p style="color:#2C6A7F">
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      mv
+     </span>
+    </code>
+   </p>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-rm-rmdir">
+   <p style="color:#2C6A7F">
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      rm
+     </span>
+    </code>
+    &amp;
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      rmdir
+     </span>
+    </code>
+   </p>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="p-style-color-2c6a7f-06-copiar-mover-y-eliminar-archivos">
+<h1><p style="color:#2C6A7F"> 06. Copiar, mover y eliminar archivos<a class="headerlink" href="#p-style-color-2c6a7f-06-copiar-mover-y-eliminar-archivos" title="Permalink to this headline">¶</a></h1>
+<p><em><strong>Autora:  Dra. Alejandra Rougon</strong></em></p>
+<p style="color:#9D994B"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Este trabajo está bajo la licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Atribución-NonComercial 4.0 Licencia Internacional</a>.
+<blockquote>
+<div></div></blockquote>
+<div class="section" id="p-style-color-2c6a7f-objetivos-de-aprendizaje">
+<h2><p style="color:#2C6A7F"> 🔍 <strong>Objetivos de aprendizaje</strong><a class="headerlink" href="#p-style-color-2c6a7f-objetivos-de-aprendizaje" title="Permalink to this headline">¶</a></h2>
+<p>Después de completar esta lección aprenderás a:</p>
+<ul class="simple">
+<li><p>copiar archivos y directorios</p></li>
+<li><p>mover archivos y directorios a otra ubicación</p></li>
+<li><p>eliminar archivos y directorios</p></li>
+<li><p>uso de <em>wildcards</em> (comodines) para seleccionar más de un archivo</p></li>
+</ul>
+</div>
+<p><a class="reference external" href="https://youtube.com/embed/tab0cbwOACQ"><img alt="06.Copy Move and Remove Files" src="https://github.com/alerougon/ObjectStorage/blob/main/PP_CommandLine/MiniaturasVideos/Slide6.png?raw=true" /></a></p>
+<div class="section" id="p-style-color-2c6a7f-cp">
+<h2><p style="color:#2C6A7F"><code class="docutils literal notranslate"><span class="pre">cp</span></code><a class="headerlink" href="#p-style-color-2c6a7f-cp" title="Permalink to this headline">¶</a></h2>
+<p>El comando <code class="docutils literal notranslate"><span class="pre">cp</span></code> es utilizado para copiar archivos y directorios. Puedes usarlo de diferentes maneras.</p>
+<ul class="simple">
+<li><p>para copiar un archivo a la misma ubicación pero con diferente nombre <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">file</span> <span class="pre">file.copy</span></code></p></li>
+<li><p>para copiar un archivo a diferente ubicación con el mismo nombre <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">file</span> <span class="pre">new/location/file</span></code></p></li>
+<li><p>para copiar un archivo a diferente ubicación con diferente nombre <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">file</span> <span class="pre">new/location/file.copy</span></code></p></li>
+</ul>
+<p>En los ejemplos anteriores hemos copiado un archivo que estaba en tu directorio de trabajo. También puedes copiar un archivo o directorio desde otra ubicación si especificas la ruta.</p>
+<ul class="simple">
+<li><p>copia desde la ubicación A a la ubicación B <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">/location/A/file</span> <span class="pre">/location/B/file</span></code></p></li>
+<li><p>copia desde la ubicación A al directorio actual de trabajo <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">/location/A</span>&#160; <span class="pre">.</span></code></p></li>
+</ul>
+<p>El actual directorio de trabajo se representa por un punto <code class="docutils literal notranslate"><span class="pre">.</span></code></p>
+<p>Ahora inténtalo en tu <a class="reference external" href="https://bit.ly/3d9BRCG">terminal virtual</a>. También puedes regresar a la terminal en la que estabas trabajando en CS50 Sandbox <a class="reference external" href="https://sandbox.cs50.io/">https://sandbox.cs50.io/</a> en la pestaña de <em>recent sandboxes</em>.</p>
+<p>Primero, ve a tu directorio <strong>home</strong> que es  <code class="docutils literal notranslate"><span class="pre">/root/sandbox/</span></code>. Puedes hacerlo con <code class="docutils literal notranslate"><span class="pre">cd</span></code>. Y luego copia el archivo <code class="docutils literal notranslate"><span class="pre">fruitall</span></code> al directorio <code class="docutils literal notranslate"><span class="pre">Documents</span></code>. Luego verifica que se ha copiado. Cambia de directorio de trabajo con <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Documents</span></code> y luego enlista el contenido. Deberías ver el archivo <code class="docutils literal notranslate"><span class="pre">fruitall</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd
+$ fruitall Documents
+$ cd Documents
+$ ls
+Genomes/  fruitall
+</pre></div>
+</div>
+<p>Ahora copia el archivo <code class="docutils literal notranslate"><span class="pre">fruitall</span></code> a la misma ubicación con otro nombre <code class="docutils literal notranslate"><span class="pre">fruitall.copy</span></code> y de nuevo verifícalo.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cp fruitall fruitall.copy
+$ ls
+Genomes/ fruitall fruitall.copy
+</pre></div>
+</div>
+<p>Recuerda que también puedes verificar el contenido del directorio en el explorador de archivos del lado izquierdo de tu terminal virtual, etiquetado como <em>Filetree</em>. Ahora que estamos en el directorio <code class="docutils literal notranslate"><span class="pre">Documents</span></code>, copiemos de tu directorio <strong>home</strong> al directorio <code class="docutils literal notranslate"><span class="pre">Documents</span></code> que es ahora to directorio de trabajo.</p>
+<p>Tenemos que especificar la ubicación del directorio que queremos copiar. Podemos hacerlo utilizando la ruta <strong>relativa</strong> o la ruta <strong>absoluta</strong>. Aquí voy a usar la ruta relativa. Recuerda que los dos puntos <code class="docutils literal notranslate"><span class="pre">..</span></code> se refieren a un directorio atrás. En otras palabras, el directorio que contiene nuestro directorio actual. Si queremos mantener el mismo nombre, podemos especificar la ubicación; que en este caso, es nuestro directorio de trabajo y puede ser especificado con un punto <code class="docutils literal notranslate"><span class="pre">.</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cp ../Readme.txt .
+</pre></div>
+</div>
+<p>También podemos copiar el mismo archivo pero con un nombre diferente <code class="docutils literal notranslate"><span class="pre">Readme.copy</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cp ../Readme.txt ./Readme.copy
+</pre></div>
+</div>
+<p>Recuerda que <code class="docutils literal notranslate"><span class="pre">cp</span></code> mantendrá el archivo original. Si no quieres mantener el archivo original puedes usar <code class="docutils literal notranslate"><span class="pre">mv</span></code>.</p>
+</div>
+<div class="section" id="p-style-color-2c6a7f-mv">
+<h2><p style="color:#2C6A7F"><code class="docutils literal notranslate"><span class="pre">mv</span></code><a class="headerlink" href="#p-style-color-2c6a7f-mv" title="Permalink to this headline">¶</a></h2>
+<p>El comando <code class="docutils literal notranslate"><span class="pre">mv</span></code> <strong>moverá</strong> tu archivo ya sea a otra ubicación o a la misma ubicación pero con un nombre diferente. El archivo original se eliminará. Vamos a mover el archivo <code class="docutils literal notranslate"><span class="pre">contents.txt</span></code> de tu directorio home a <code class="docutils literal notranslate"><span class="pre">Documents</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mv ../contents.txt .
+</pre></div>
+</div>
+<p>En caso de que quieras usar la ruta absoluta, recuerda que puedes imprimir la ruta de tu directorio de trabajo con <code class="docutils literal notranslate"><span class="pre">pwd</span></code>. Ahora mueve el archivo <code class="docutils literal notranslate"><span class="pre">fruitall</span></code> de tu directorio home a <code class="docutils literal notranslate"><span class="pre">Documents</span></code> pero con un nombre direrente <code class="docutils literal notranslate"><span class="pre">allfruits</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pwd
+/root/sandbox/Documents
+$ mv /root/sandbox/fruitall allfruits
+$
+</pre></div>
+</div>
+<p>El archivo original <code class="docutils literal notranslate"><span class="pre">fruitall</span></code> ha sido eliminado y tenemos una copia de él en el directorio <code class="docutils literal notranslate"><span class="pre">Documents</span></code> llamado <code class="docutils literal notranslate"><span class="pre">allfruits</span></code>.</p>
+<p>Ahora, usa el comando <code class="docutils literal notranslate"><span class="pre">mv</span></code> para cambiar el nombre de <code class="docutils literal notranslate"><span class="pre">fruitall</span></code> a <code class="docutils literal notranslate"><span class="pre">new_fruitall</span></code>. Puedes verificarlo con <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mv fruitall new_fruitall
+$ ls
+Genomes/  Readme.copy  Readme.txt  allfruits  contents.txt  fruitall.copy  new_fruitall
+$
+</pre></div>
+</div>
+</div>
+<div class="section" id="p-style-color-2c6a7f-rm-rmdir">
+<h2><p style="color:#2C6A7F"><code class="docutils literal notranslate"><span class="pre">rm</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">rmdir</span></code><a class="headerlink" href="#p-style-color-2c6a7f-rm-rmdir" title="Permalink to this headline">¶</a></h2>
+<p>El comando <code class="docutils literal notranslate"><span class="pre">rm</span></code> y <code class="docutils literal notranslate"><span class="pre">rmdir</span></code> son usados para eliminar archivos y directorios respectivamente. Ten en cuenta que para eliminar  un directorio, este tiene que estar vacío. Ahora vamos a limpiar nuestro directorio de trabajo. Primero, asegúrate de que estás en tu directorio <em>home</em>. Luego enlista el contenido para ver qué archivos quieres borrar. Elimina el archivo <code class="docutils literal notranslate"><span class="pre">fruit1</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd
+$ pwd
+/root/sandbox
+$ ls
+Documents/  Readme.txt  fruit1  fruit2
+$ rm fruit1
+rm: remove regular file &#39;fruit1&#39;?  y
+
+</pre></div>
+</div>
+<p>La terminal virtual está configurada para preguntare si quieres eliminar el archivo. Puedes confirmarlo con la letra <code class="docutils literal notranslate"><span class="pre">y</span></code>. Sin embargo, la mayoría de las terminales no preguntarán nada y sólo eliminarán el archivo inmediatamente.</p>
+<p>Ahora, si quieres eliminar varios archivos al mismo tiempo, podemos usar <strong>wildcards</strong> (comodines). Se usan para ejecutar acciones en más de un archivo al mismo tiempo o para encontrar parte de una frase en un archivo de texto. De momento vamos a ver únicamente el <em>wildcard</em> asterisco <code class="docutils literal notranslate"><span class="pre">*</span></code>, el cual representa cualquier número de caracteres. Por ejemplo, <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">gen*</span></code> será capaz  de enlistar los archivos <code class="docutils literal notranslate"><span class="pre">gen</span></code> <code class="docutils literal notranslate"><span class="pre">gen1</span></code> <code class="docutils literal notranslate"><span class="pre">genA.txt</span></code> <code class="docutils literal notranslate"><span class="pre">genes_prot</span></code> y <code class="docutils literal notranslate"><span class="pre">genomes</span></code>. También puedes usar <code class="docutils literal notranslate"><span class="pre">*</span></code> para encontrar todos los archivos con una extensión en específico, como por ejemplo  <code class="docutils literal notranslate"><span class="pre">.pdf</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls *.pdf
+my_paper.pdf summary.pdf
+</pre></div>
+</div>
+<p>Ahora vamos a eliminar dos archivos que comienzan con la cadena <code class="docutils literal notranslate"><span class="pre">fruit</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls
+Documents/   fruit1  fruit2
+$ rm fruit*
+$ ls
+Documents/
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>🔑 <strong>En esta lección has aprendido cómo:</strong></p>
+<ul class="simple">
+<li><p>copiar archivos y directorios con <code class="docutils literal notranslate"><span class="pre">cp</span></code></p></li>
+<li><p>mover archivos y directorios a una ubicación diferente con <code class="docutils literal notranslate"><span class="pre">mv</span></code></p></li>
+<li><p>eliminar archivos y directorios <code class="docutils literal notranslate"><span class="pre">rm</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">rmdir</span></code></p></li>
+<li><p>utilizar <em>wildcards</em> para seleccionar más de un archivo <code class="docutils literal notranslate"><span class="pre">*</span></code></p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="5.4_Opciones_y_Argumentos.html" title="previous page"><p style="color:#2C6A7F"> 05. Opciones y argumentos</a>
+    <a class='right-next' id="next-link" href="../1_Practica.html" title="next page"><p style="color:#2C6A7F"> 01. Comandos Básicos</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By  <br/>
+        
+            &copy; Copyright By the authors.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
