@@ -1,0 +1,1492 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01. Editar, ordenar, cortar y grep &#8212; Plants &amp; Python</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="02. Contar palabras, tuberías &amp; permisos" href="6.1_Contar_Palabras_Tuberias_Permisos.html" />
+    <link rel="prev" title="Welcome / Bienvenid@" href="../0_Overview.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00_Opening_page.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/01_Overview.html">
+   Welcome : Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/01_Welcome_Bienvenido/00_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/01_Welcome_Bienvenido/01_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/02_Overview.html">
+   Getting Started : Empezando
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/00_Installing_Anaconda.html">
+     1. Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/01_Instalar_Anaconda.html">
+     1. Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/02_Coding_cells.html">
+     2. Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/03_Celdas_de_codigo.html">
+     2. Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/04_Markdown_cells.html">
+     3. Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/05_Celdas_de_markdown.html">
+     3. Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/03_Overview.html">
+   Using : Usando Jupyter Book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/03_Using_Usando_Jupyter_Book/How_to_use_this_Jupyter_Book.html">
+     How to use this Jupyter Book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/03_Using_Usando_Jupyter_Book/Como_usar_este_Jupyter_Book.html">
+     Cómo usar este Jupyter Book
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, lists, &amp; indexing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.1_Functions.html">
+     1.1 Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.2_Indexing.html">
+     1.2 Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.3_Lists.html">
+     1.3 Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.4_Indexing_List_Elements.html">
+     1.4 Indexing List Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.5_Modifying_Lists.html">
+     1.5 Modifying Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.6_List_of_Lists.html">
+     1.6 List of Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.7_Slicing.html">
+     1.7 Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.8_Data_Types.html">
+     1.8 Data Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/2_Plants_And_Climate.html">
+   Plants &amp; Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, listas, &amp; INDEXACIÓN
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.1_Funciones.html">
+     1.1 Funciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.2_Indexacion.html">
+     1.2 Indexación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.3_Listas.html">
+     1.3 Listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.4_Indexando_los_elementos_de_una_lista.html">
+     1.4 Indexando los elementos de una lista
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.5_Modificando_listas.html">
+     1.5 Modificando listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.6_Lista_de_listas.html">
+     1.6 Lista de listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.7_Rebanar.html">
+     1.7 Rebanar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.8_Tipos_de_datos.html">
+     1.8 Tipos de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima.html">
+   Las plantas y el clima
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. Visualizing Data with Matplotlib
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.0_Modules.html">
+     2.0 Modules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.1_Plots.html">
+     2.1 Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.2_Shape_Size_and_Color.html">
+     2.2 Shape, Size, and Color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.3_Legends.html">
+     2.3 Legends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.4_Subplots.html">
+     2.4 Subplots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/2_Leaf_And_Sunflower_Shapes.html">
+   Leaf &amp; Sunflower Shapes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. VISUALIZACIÓN DE DATOS CON MATPLOTLIB
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.0_Modulos.html">
+     2.0 Módulos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.1_Graficos.html">
+     2.1 Gráficos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.2_Forma_tamano_y_color.html">
+     2.2 Forma, tamaño y color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.3_Leyendas.html">
+     2.3 Leyendas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.4_Subgraficos.html">
+     2.4 Subgráficos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/2_Las_formas_de_las_hojas_y_girasoles.html">
+   Las formas de las hojas y girasoles
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; the Golden Angle
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.0_Range_Function.html">
+     3.0 Range Function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.1_For_Loops.html">
+     3.1 For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.2_Counters.html">
+     3.2 Counters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.3_Using_Lists_and_Loops.html">
+     3.3 Using Lists and Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.4_Calculating_Fibonacci.html">
+     3.4 Calculating Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.5_While_Loops.html">
+     3.5 While Loops
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/2_Modeling_Sunflowers.html">
+   Modeling Sunflowers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. LOOPS &amp; EL ÁNGULO ÁUREO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.0_La_funcion_range.html">
+     3.0 La función range
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.1_Loops_for.html">
+     3.1 Loops for
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.2_Contadores.html">
+     3.2 Contadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.3_Usando_listas_y_loops.html">
+     3.3 Usando listas y loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci.html">
+     3.4 Calcular Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.5_Loops_while.html">
+     3.5 Loops while
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/2_Como_construir_un_girasol.html">
+   Cómo construir un girasol
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Data Analysis with Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.0_Reading_in_Data.html">
+     4.0 Reading in Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.1_Head_and_Tail.html">
+     4.1 Head and Tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.2_Selecting_Columns.html">
+     4.2 Selecting Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.3_Descriptive_Statistics.html">
+     4.3 Descriptive Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.4_Masks.html">
+     4.4 Masks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.5_Using_iloc.html">
+     4.5 Using iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.6_Seaborn.html">
+     4.6 Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/2_Grapes_in_a_Warming_World.html">
+   Grapes in a Warming World
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Análisis de datos con pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.0_Leyendo_en_data.html">
+     4.0 Leyendo en data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.1_Head_y_tail.html">
+     4.1 Head y tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.2_Seleccionando_columnas.html">
+     4.2 Seleccionando columnas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.3_Estadisticas_descriptivas.html">
+     4.3 Estadísticas descriptivas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.4_Enmascaramiento.html">
+     4.4 Enmascaramiento
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.5_Usando_iloc.html">
+     4.5 Usando iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn.html">
+     4.6 Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/2_Vides_en_un_mundo_que_se_calienta.html">
+   Vides en un mundo que se calienta
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  5. Unix Command Line
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.0_Introduction_to_Command_Line.html">
+     <p style="color:#2C6A7F">
+      Introduction to Command Line
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.1_TheVirtual_Terminal.html">
+     <p style="color:#2C6A7F">
+      02. Virtual Terminal
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.2_Exploring_Folders.html">
+     <p style="color:#2C6A7F">
+      03. Exploring Folders
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.3_Working_with_Files.html">
+     <p style="color:#2C6A7F">
+      04. Working with Files
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.5_Copy_Move_and_Remove_Files.html">
+     <p style="color:#2C6A7F">
+      06. Copy, Move &amp; Remove Files
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.4_Options_and_Arguments.html">
+     <p style="color:#2C6A7F">
+      05. Options and Arguments
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  5. LINEA DE COMANDOS DE UNIX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.0_IntroduccionLineaDeComandos.html">
+     <p style="color:#2C6A7F">
+      Introducción a la línea de comandos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.1_LaTerminal_Virtual.html">
+     <p style="color:#2C6A7F">
+      02. Terminal Virtual
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.2_ExplorandoDirectorios.html">
+     <p style="color:#2C6A7F">
+      03. Explorando directorios
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.3_Trabajando_con_archivos.html">
+     <p style="color:#2C6A7F">
+      04. Trabajando con archivos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.4_Opciones_y_Argumentos.html">
+     <p style="color:#2C6A7F">
+      05. Opciones y argumentos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.5_Copiar_Mover_Eliminar_Archivos.html">
+     <p style="color:#2C6A7F">
+      06. Copiar, mover y eliminar archivos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  6. Unix Commands For Data Mining
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.0_Edit_Sort_Cut_grep.html">
+     <p style="color:#2C6A7F">
+      01. EDIT, SORT, CUT &amp; GREP
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.1_Word_Count_Pipelines_Permissions.html">
+     <p style="color:#2C6A7F">
+      02. Word Count, Pipelines &amp; Permissions
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.2_Biological_Data_Formats.html">
+     <p style="color:#2C6A7F">
+      03. Biological Data Formats
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../K_6_UNIX_COMMANDS_FOR_DATA_MINING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  6. MINERIA DE DATOS EN LA LINEA DE COMANDOS DE UNIX
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../0_Overview.html">
+   Lecciones
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     <p style="color:#2C6A7F">
+      01. Editar, ordenar, cortar y grep
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6.1_Contar_Palabras_Tuberias_Permisos.html">
+     <p style="color:#2C6A7F">
+      02. Contar palabras, tuberías &amp; permisos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6.2_Formatos_Biologicos.html">
+     <p style="color:#2C6A7F">
+      03. Formatos de Datos Biológicos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  7. SCRIPTING WITH BASH
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.0_WorkingRemotely.html">
+     <p style="color:#2C6A7F">
+      01. Working Remotely
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.1_Scripting_with_bash.html">
+     <p style="color:#2C6A7F">
+      03. Scripting with Bash
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.3_Summary_of_Commands.html">
+     <p style="color:#2C6A7F">
+      3. Summary of Commands
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  7. PROGRAMANDO CON BASH
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.0_Trabajando_de_manera_remota.html">
+     <p style="color:#2C6A7F">
+      09. Trabajando de manera remota
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.1_Programando_con_Bash.html">
+     <p style="color:#2C6A7F">
+      03. Programando con Bash
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.3_Resumen_de_comandos.html">
+     <p style="color:#2C6A7F">
+      03. Resumen de comandos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.0_Editar_Ordentar_Cortar_grep.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2FL_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.0_Editar_Ordentar_Cortar_grep.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.0_Editar_Ordentar_Cortar_grep.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.0_Editar_Ordentar_Cortar_grep.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-objetivos-de-aprendizaje">
+   <p style="color:#2C6A7F">
+    🔍
+    <strong>
+     Objetivos de aprendizaje
+    </strong>
+   </p>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-vim-vi">
+   <p style="color:#2C6A7F">
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      vim
+     </span>
+    </code>
+    &amp;
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      vi
+     </span>
+    </code>
+   </p>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-nano">
+   <p style="color:#2C6A7F">
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      nano
+     </span>
+    </code>
+   </p>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-sort">
+   <p style="color:#2C6A7F">
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      sort
+     </span>
+    </code>
+   </p>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-cut">
+   <p style="color:#2C6A7F">
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      cut
+     </span>
+    </code>
+   </p>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-grep">
+   <p style="color:#2C6A7F">
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      grep
+     </span>
+    </code>
+   </p>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="p-style-color-2c6a7f-01-editar-ordenar-cortar-y-grep">
+<h1><p style="color:#2C6A7F"> 01. Editar, ordenar, cortar y grep<a class="headerlink" href="#p-style-color-2c6a7f-01-editar-ordenar-cortar-y-grep" title="Permalink to this headline">¶</a></h1>
+<p><em><strong>Autora:  Dra. Alejandra Rougon</strong></em></p>
+<p style="color:#9D994B"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Este trabajo está bajo la licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Atribución-NonComercial 4.0 Licencia Internacional</a>.
+<blockquote>
+<div></div></blockquote>
+<div class="section" id="p-style-color-2c6a7f-objetivos-de-aprendizaje">
+<h2><p style="color:#2C6A7F"> 🔍 <strong>Objetivos de aprendizaje</strong><a class="headerlink" href="#p-style-color-2c6a7f-objetivos-de-aprendizaje" title="Permalink to this headline">¶</a></h2>
+<p>Después de completar esta lección aprenderás cómo:</p>
+<ul class="simple">
+<li><p>Editar archivos en la línea de comandos</p></li>
+<li><p>Ordenar el contenido de archivos en orden alfabético y numérico</p></li>
+<li><p>Cortar columnas de archivos</p></li>
+<li><p>Buscar cadenas específicas dentro de archivos</p></li>
+</ul>
+</div>
+<p><a class="reference external" href="https://youtube.com/embed/o7k4Z_enMd0"><img alt="07.Edit, sort, cut &amp; grep" src="https://github.com/alerougon/ObjectStorage/blob/main/PP_CommandLine/MiniaturasVideos/Slide7.png?raw=true" /></a></p>
+<p>Ya has aprendido cómo crear un archivo con <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">&gt;</span> <span class="pre">New_file</span></code>, sin embargo, <code class="docutils literal notranslate"><span class="pre">cat</span></code>no es un editor de texto. Existen varios editores de texto para la línea de comandos. Los más comunes son <code class="docutils literal notranslate"><span class="pre">vi</span></code>, <code class="docutils literal notranslate"><span class="pre">vim</span></code> y <code class="docutils literal notranslate"><span class="pre">nano</span></code>. En tu terminal virtual tienes un editor de texto con una interfaz gráfica. Sin embargo, cuando trabajes de manera remota en un cluster bioinformático para <strong>Cómputo de Alto Desempeño [HPC]</strong> es muy probable que no puedas usar ningún software con interfaz gráfica. Así es que es muy importante que aprendas a usar <strong>editores de texto en la línea de comandos</strong>.</p>
+<div class="section" id="p-style-color-2c6a7f-vim-vi">
+<h2><p style="color:#2C6A7F"> <code class="docutils literal notranslate"><span class="pre">vim</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">vi</span></code><a class="headerlink" href="#p-style-color-2c6a7f-vim-vi" title="Permalink to this headline">¶</a></h2>
+<p>Los editores de texto  <code class="docutils literal notranslate"><span class="pre">vim</span></code> y <code class="docutils literal notranslate"><span class="pre">vi</span></code> son muy similares. Aprenderemos los comandos más importantes para <code class="docutils literal notranslate"><span class="pre">vim</span></code> y también funcionarán para <code class="docutils literal notranslate"><span class="pre">vi</span></code>. Sin embargo si quieres aprender más opciones puedes ver la <a class="reference external" href="https://vimhelp.org/">documentación de vim</a>.</p>
+<ul class="simple">
+<li><p>Crear un nuevo archivo <code class="docutils literal notranslate"><span class="pre">vim</span> <span class="pre">Name_Of_File</span></code></p></li>
+<li><p>Editar el archivo con <code class="docutils literal notranslate"><span class="pre">i</span></code> de <em>insertar</em></p></li>
+<li><p>Guarda los cambios y sal del archivo <code class="docutils literal notranslate"><span class="pre">Esc</span></code> <code class="docutils literal notranslate"><span class="pre">:wq!</span></code></p></li>
+<li><p>Sal del archivo sin guardar cambios <code class="docutils literal notranslate"><span class="pre">Esc</span></code> <code class="docutils literal notranslate"><span class="pre">:q!</span></code></p></li>
+</ul>
+<p>Ahora vamos a crear un directorio dentro del directorio <code class="docutils literal notranslate"><span class="pre">Documents</span></code> llamado <code class="docutils literal notranslate"><span class="pre">Practice</span></code>. Ahora ve dentro de <code class="docutils literal notranslate"><span class="pre">Practice</span></code> y crea un archivo llamado <code class="docutils literal notranslate"><span class="pre">numbers.txt</span></code>
+Now let’s create a folder inside the folder <code class="docutils literal notranslate"><span class="pre">Documents</span></code> named <code class="docutils literal notranslate"><span class="pre">Practice</span></code>. Then go inside <code class="docutils literal notranslate"><span class="pre">Practice</span></code> and create a file called <code class="docutils literal notranslate"><span class="pre">numbers.txt</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd /root/sandbox/Documents
+$ mkdir Practice
+$ cd Practice
+$ vim numbers.txt
+</pre></div>
+</div>
+<p>Entrarás a una nueva pantalla</p>
+<p><img alt="" src="https://github.com/alerougon/ObjectStorage/blob/main/PP_CommandLine/15.vimscreen.png?raw=true" /></p>
+<p>Después tienes que teclear <code class="docutils literal notranslate"><span class="pre">i</span></code> para poder <strong>insertar</strong> texto. Ahora escribe el siguiente texto:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">3</span>
+<span class="mi">2</span>
+<span class="mi">12</span>
+</pre></div>
+</div>
+<p>Cuando hayas terminado de editar tu archivo, tienes que guardar los cambios y salir con la tecla <code class="docutils literal notranslate"><span class="pre">Esc</span></code> seguida de <code class="docutils literal notranslate"><span class="pre">:wq!</span></code> y <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<p><img alt="" src="https://github.com/alerougon/ObjectStorage/blob/main/PP_CommandLine/16.vimSave.png?raw=true" /></p>
+<p>Puedes verificar el contenido con  <code class="docutils literal notranslate"><span class="pre">less</span></code>, <code class="docutils literal notranslate"><span class="pre">more</span></code> or <code class="docutils literal notranslate"><span class="pre">cat</span></code>. <strong>Nota:</strong> *No agregues <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> cuando abras un archivo para leerlo, ya que si lo haces eliminarás el contenido previo y se escribirá sobre él.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat numbers.txt
+1
+3
+2
+12
+$ 
+</pre></div>
+</div>
+</div>
+<div class="section" id="p-style-color-2c6a7f-nano">
+<h2><p style="color:#2C6A7F"> <code class="docutils literal notranslate"><span class="pre">nano</span></code><a class="headerlink" href="#p-style-color-2c6a7f-nano" title="Permalink to this headline">¶</a></h2>
+<p>La ventaja de usar  <code class="docutils literal notranslate"><span class="pre">nano</span></code> es que no tienes que aprenderte el menú, ya que se muestra en la pantalla. La tecla <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> es especificada por un <code class="docutils literal notranslate"><span class="pre">^</span></code>. El problema de <code class="docutils literal notranslate"><span class="pre">nano</span></code> es que algunas veces no está instalado en los servidores. Así es que tendrías que instalarlo.</p>
+<ul class="simple">
+<li><p>Crear un archivo <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">Name_Of_File</span></code></p></li>
+<li><p>Guardar los cambios <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">o</span></code> <code class="docutils literal notranslate"><span class="pre">Enter</span></code></p></li>
+<li><p>Salir <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+</ul>
+<p>Vamos a crear un archivo llamado <code class="docutils literal notranslate"><span class="pre">toygenes.txt</span></code> en el mismo directorio <code class="docutils literal notranslate"><span class="pre">Practice</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ nano toygenes.txt
+</pre></div>
+</div>
+<p>Después verás la siguiente pantalla donde puedes editar tu archivo.</p>
+<p><img alt="" src="https://github.com/alerougon/ObjectStorage/blob/main/PP_CommandLine/18.nano.png?raw=true" /></p>
+<p>En esta ocasión  vamos a escribir un archivo <strong>tabular</strong>. Eso significa que será un archivo con <strong>columnas</strong> y que van a estar separadas por una tabulación utilizando la tecla <code class="docutils literal notranslate"><span class="pre">tab</span></code> en lugar de la <code class="docutils literal notranslate"><span class="pre">barra</span> <span class="pre">espaciadora</span></code>. Escribe el siguiente texto (utilizando un <code class="docutils literal notranslate"><span class="pre">tab</span></code> después de cada nombre.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fly</span>	<span class="mi">20</span>	
+<span class="n">apple</span>	<span class="mi">10</span>
+<span class="n">bear</span>	<span class="mi">40</span>
+<span class="n">tomato</span>	<span class="mi">30</span>
+</pre></div>
+</div>
+<p>Para guardar los cambios [<em>write out</em>] teclea <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> <code class="docutils literal notranslate"><span class="pre">o</span></code>
+Después verás esta pantalla</p>
+<p><img alt="" src="https://github.com/alerougon/ObjectStorage/blob/main/PP_CommandLine/19.NanoSave.png?raw=true" /></p>
+<p>Sólo presiona <code class="docutils literal notranslate"><span class="pre">Enter</span></code> y luego salte con <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+<p>Recuerda verificar que tu archivo está correcto.</p>
+</div>
+<div class="section" id="p-style-color-2c6a7f-sort">
+<h2><p style="color:#2C6A7F"> <code class="docutils literal notranslate"><span class="pre">sort</span></code><a class="headerlink" href="#p-style-color-2c6a7f-sort" title="Permalink to this headline">¶</a></h2>
+<p>El comando <code class="docutils literal notranslate"><span class="pre">sort</span></code> es usado para ordenar un archivo. En otras palabras, acomodar las líneas en una list en un orden en particular. Por defecto, se ordenan en <strong>orden alfabético</strong>.</p>
+<p>Inténtalo con el archivo <code class="docutils literal notranslate"><span class="pre">toygenes.txt</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sort toygenes.txt
+apple   10
+bear    40
+fly     20        
+tomato  30
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">sort</span></code> también ordenará los números en orden <strong>alfabético</strong>. Para ordenar los números en orden <strong>numérico</strong> necesitamos la opción <code class="docutils literal notranslate"><span class="pre">-n</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sort numbers.txt 
+1
+12
+2
+3
+$ sort -n numbers.txt 
+1
+2
+3
+12
+$ 
+</pre></div>
+</div>
+<p>Si tienes una mezcla de letras y números, puedes usar la opción <code class="docutils literal notranslate"><span class="pre">-V</span></code> para ordenar <strong>numéricamente</strong>, como en las <strong>versiones</strong> de software. Como en el siguiente ejemplo.</p>
+<p><img alt="" src="https://github.com/alerougon/ObjectStorage/blob/main/PP_CommandLine/20.sortV.png?raw=true" /></p>
+<p>Ahora crea el archivo llamado <code class="docutils literal notranslate"><span class="pre">amounts.txt</span></code> con el siguiente contenido:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span>
+<span class="mi">50</span>
+<span class="mi">20</span>
+<span class="mi">30</span>
+</pre></div>
+</div>
+<p>Puedes usar cualquier editor de texto que prefieras.</p>
+<p>El comando <code class="docutils literal notranslate"><span class="pre">sort</span></code> tiene varias funciones útiles. Si quieres ordenar en orden reverso usa <code class="docutils literal notranslate"><span class="pre">-r</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ more amounts.txt 
+10
+50
+20
+30
+$ sort -r amounts.txt 
+50
+30
+20
+10
+$ 
+</pre></div>
+</div>
+<p>También puedes ordenar un archivo especificando una columna en particular con <code class="docutils literal notranslate"><span class="pre">-k</span></code>. Por ejemplo, vamos a ordenar <code class="docutils literal notranslate"><span class="pre">toygenes.txt</span></code> basándonos en la segunda columna.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ more toygenes.txt
+fly	20	  
+apple	10
+bear	40
+tomato	30	
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sort -k 2 toygenes.txt
+apple	10
+fly	20
+tomato	30
+bear	40
+</pre></div>
+</div>
+<p>Puedes también ordenar un archivo y eliminar duplicados para obtener únicamente los registros <strong>únicos</strong> con <code class="docutils literal notranslate"><span class="pre">-u</span></code>. Por ejemplo, inténtalo con el siguiente archivo.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ more species.txt
+fly
+fly
+apple
+apple
+apple
+bear
+tomato
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sort -u species.txt
+apple
+bear
+fly
+tomato
+</pre></div>
+</div>
+<p>Recuerda que siempre puedes guardar los resultados dirigiendo la salida con <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> a un nuevo archivo.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sort -u species.txt &gt; sortunique.txt
+$ more sortunique.txt
+apple
+bear
+fly
+tomato
+</pre></div>
+</div>
+<p>También puedes ordenar meses con <code class="docutils literal notranslate"><span class="pre">sort</span> <span class="pre">-M</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ more months.txt
+March
+January
+February
+April
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sort -M months.txt
+January
+Febrary
+March
+April
+</pre></div>
+</div>
+</div>
+<div class="section" id="p-style-color-2c6a7f-cut">
+<h2><p style="color:#2C6A7F"> <code class="docutils literal notranslate"><span class="pre">cut</span></code><a class="headerlink" href="#p-style-color-2c6a7f-cut" title="Permalink to this headline">¶</a></h2>
+<p>El comando <code class="docutils literal notranslate"><span class="pre">cut</span></code> corta columnas específicas, por defecto separadas por una tabulación <code class="docutils literal notranslate"><span class="pre">tab</span></code>. Puedes especificar la columna con <code class="docutils literal notranslate"><span class="pre">-f</span></code> de <em>field</em>. Selecciona la segunda columna por el archivo <strong>toygenes.txt</strong>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ more toygenes.txt
+fly	20
+apple	10
+bear	40
+tomato	30
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cut -f 2 toygenes.txt
+20
+10
+40
+30
+</pre></div>
+</div>
+<p>Para cambiar el separador se utiliza <code class="docutils literal notranslate"><span class="pre">-d</span></code>. Por ejemplo, para una lista que tiene columnas separadas por espacios</p>
+<p><img alt="" src="https://github.com/alerougon/ObjectStorage/blob/main/PP_CommandLine/21.CutSpace.png?raw=true" /></p>
+<p>También puedes seleccionar columnas especificando la posición de los bytes con <code class="docutils literal notranslate"><span class="pre">-b</span></code>. Para ver más opciones, recuerda que siempre puedes ver el manual <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">cut</span></code>.</p>
+</div>
+<div class="section" id="p-style-color-2c6a7f-grep">
+<h2><p style="color:#2C6A7F"> <code class="docutils literal notranslate"><span class="pre">grep</span></code><a class="headerlink" href="#p-style-color-2c6a7f-grep" title="Permalink to this headline">¶</a></h2>
+<p>Uno de los comandos más útiles es <code class="docutils literal notranslate"><span class="pre">grep</span></code>, el cual te permitirá hacer búsquedas de cadenas. Imprimirá sólo las líneas que contienen la cadena que hayas indicado. Por ejemplo, vamos a buscar la cadena <code class="docutils literal notranslate"><span class="pre">tomato</span></code> en el archivo <code class="docutils literal notranslate"><span class="pre">toygenes.txt</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ more toygenes.txt
+fly     20        
+apple   10
+bear    40
+tomato  30
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ grep &#39;tomato&#39; toygenes.txt
+tomato  30
+</pre></div>
+</div>
+<p>También puedes buscar el <strong>inverso</strong> de la cadena con <code class="docutils literal notranslate"><span class="pre">-v</span></code>. Te mostrará las líneas que no contengan la cadena.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ grep -v &#39;tomato&#39; toygenes.txt
+fly     20        
+apple   10
+bear    40
+</pre></div>
+</div>
+<p>También puedes contar el <strong>número de ocurrencias</strong> con <code class="docutils literal notranslate"><span class="pre">-c</span></code>. ¿Cuántas líneas contienen la letra <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">toygenes.txt</span></code>?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ grep -c &#39;a&#39; toygenes.txt
+3
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>🔑 <strong>En esta lección has aprendido a:</strong></p>
+<ul class="simple">
+<li><p>Editar archivos en la línea de comandos con <code class="docutils literal notranslate"><span class="pre">vim</span></code>, <code class="docutils literal notranslate"><span class="pre">vi</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">nano</span></code></p></li>
+<li><p>Ordenar el contenido de un archivo en orden alfabético o numérico con <code class="docutils literal notranslate"><span class="pre">sort</span></code></p></li>
+<li><p>Cortar columnas con <code class="docutils literal notranslate"><span class="pre">cut</span></code></p></li>
+<li><p>Buscar cadenas específicas  dentro de archivos con <code class="docutils literal notranslate"><span class="pre">grep</span></code></p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../0_Overview.html" title="previous page">Welcome / Bienvenid&#64;</a>
+    <a class='right-next' id="next-link" href="6.1_Contar_Palabras_Tuberias_Permisos.html" title="next page"><p style="color:#2C6A7F"> 02. Contar palabras, tuberías &amp; permisos</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By  <br/>
+        
+            &copy; Copyright By the authors.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

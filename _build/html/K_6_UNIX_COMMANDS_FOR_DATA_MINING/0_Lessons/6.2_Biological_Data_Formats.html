@@ -1,0 +1,1666 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03. Biological Data Formats &#8212; Plants &amp; Python</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="02. Unix Commands for Data Mining" href="../1_Practice.html" />
+    <link rel="prev" title="02. Word Count, Pipelines &amp; Permissions" href="6.1_Word_Count_Pipelines_Permissions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00_Opening_page.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/01_Overview.html">
+   Welcome : Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/01_Welcome_Bienvenido/00_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/01_Welcome_Bienvenido/01_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/02_Overview.html">
+   Getting Started : Empezando
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/00_Installing_Anaconda.html">
+     1. Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/01_Instalar_Anaconda.html">
+     1. Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/02_Coding_cells.html">
+     2. Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/03_Celdas_de_codigo.html">
+     2. Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/04_Markdown_cells.html">
+     3. Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/02_Getting_started_Empezando/05_Celdas_de_markdown.html">
+     3. Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00_PREFACE/03_Overview.html">
+   Using : Usando Jupyter Book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/03_Using_Usando_Jupyter_Book/How_to_use_this_Jupyter_Book.html">
+     How to use this Jupyter Book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00_PREFACE/03_Using_Usando_Jupyter_Book/Como_usar_este_Jupyter_Book.html">
+     Cómo usar este Jupyter Book
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, lists, &amp; indexing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.1_Functions.html">
+     1.1 Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.2_Indexing.html">
+     1.2 Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.3_Lists.html">
+     1.3 Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.4_Indexing_List_Elements.html">
+     1.4 Indexing List Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.5_Modifying_Lists.html">
+     1.5 Modifying Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.6_List_of_Lists.html">
+     1.6 List of Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.7_Slicing.html">
+     1.7 Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.8_Data_Types.html">
+     1.8 Data Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../A_1_VARIABLES_LISTS_AND_INDEXING/2_Plants_And_Climate.html">
+   Plants &amp; Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, listas, &amp; INDEXACIÓN
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.1_Funciones.html">
+     1.1 Funciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.2_Indexacion.html">
+     1.2 Indexación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.3_Listas.html">
+     1.3 Listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.4_Indexando_los_elementos_de_una_lista.html">
+     1.4 Indexando los elementos de una lista
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.5_Modificando_listas.html">
+     1.5 Modificando listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.6_Lista_de_listas.html">
+     1.6 Lista de listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.7_Rebanar.html">
+     1.7 Rebanar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.8_Tipos_de_datos.html">
+     1.8 Tipos de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../B_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima.html">
+   Las plantas y el clima
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. Visualizing Data with Matplotlib
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.0_Modules.html">
+     2.0 Modules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.1_Plots.html">
+     2.1 Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.2_Shape_Size_and_Color.html">
+     2.2 Shape, Size, and Color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.3_Legends.html">
+     2.3 Legends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.4_Subplots.html">
+     2.4 Subplots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/2_Leaf_And_Sunflower_Shapes.html">
+   Leaf &amp; Sunflower Shapes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. VISUALIZACIÓN DE DATOS CON MATPLOTLIB
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.0_Modulos.html">
+     2.0 Módulos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.1_Graficos.html">
+     2.1 Gráficos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.2_Forma_tamano_y_color.html">
+     2.2 Forma, tamaño y color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.3_Leyendas.html">
+     2.3 Leyendas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.4_Subgraficos.html">
+     2.4 Subgráficos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/2_Las_formas_de_las_hojas_y_girasoles.html">
+   Las formas de las hojas y girasoles
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; the Golden Angle
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.0_Range_Function.html">
+     3.0 Range Function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.1_For_Loops.html">
+     3.1 For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.2_Counters.html">
+     3.2 Counters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.3_Using_Lists_and_Loops.html">
+     3.3 Using Lists and Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.4_Calculating_Fibonacci.html">
+     3.4 Calculating Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.5_While_Loops.html">
+     3.5 While Loops
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/2_Modeling_Sunflowers.html">
+   Modeling Sunflowers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. LOOPS &amp; EL ÁNGULO ÁUREO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.0_La_funcion_range.html">
+     3.0 La función range
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.1_Loops_for.html">
+     3.1 Loops for
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.2_Contadores.html">
+     3.2 Contadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.3_Usando_listas_y_loops.html">
+     3.3 Usando listas y loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci.html">
+     3.4 Calcular Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.5_Loops_while.html">
+     3.5 Loops while
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../F_3_LOOPS_Y_EL_ANGULO_DORADO/2_Como_construir_un_girasol.html">
+   Cómo construir un girasol
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Data Analysis with Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.0_Reading_in_Data.html">
+     4.0 Reading in Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.1_Head_and_Tail.html">
+     4.1 Head and Tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.2_Selecting_Columns.html">
+     4.2 Selecting Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.3_Descriptive_Statistics.html">
+     4.3 Descriptive Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.4_Masks.html">
+     4.4 Masks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.5_Using_iloc.html">
+     4.5 Using iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.6_Seaborn.html">
+     4.6 Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../G_4_DATA_ANALYSIS_WITH_PANDAS/2_Grapes_in_a_Warming_World.html">
+   Grapes in a Warming World
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Análisis de datos con pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.0_Leyendo_en_data.html">
+     4.0 Leyendo en data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.1_Head_y_tail.html">
+     4.1 Head y tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.2_Seleccionando_columnas.html">
+     4.2 Seleccionando columnas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.3_Estadisticas_descriptivas.html">
+     4.3 Estadísticas descriptivas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.4_Enmascaramiento.html">
+     4.4 Enmascaramiento
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.5_Usando_iloc.html">
+     4.5 Usando iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn.html">
+     4.6 Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../H_4_ANALISIS_DE_DATOS_CON_PANDAS/2_Vides_en_un_mundo_que_se_calienta.html">
+   Vides en un mundo que se calienta
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  5. Unix Command Line
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.0_Introduction_to_Command_Line.html">
+     <p style="color:#2C6A7F">
+      Introduction to Command Line
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.1_TheVirtual_Terminal.html">
+     <p style="color:#2C6A7F">
+      02. Virtual Terminal
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.2_Exploring_Folders.html">
+     <p style="color:#2C6A7F">
+      03. Exploring Folders
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.3_Working_with_Files.html">
+     <p style="color:#2C6A7F">
+      04. Working with Files
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.5_Copy_Move_and_Remove_Files.html">
+     <p style="color:#2C6A7F">
+      06. Copy, Move &amp; Remove Files
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/0_Lessons/5.4_Options_and_Arguments.html">
+     <p style="color:#2C6A7F">
+      05. Options and Arguments
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../I_5_UNIX_COMMAND_LINE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  5. LINEA DE COMANDOS DE UNIX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.0_IntroduccionLineaDeComandos.html">
+     <p style="color:#2C6A7F">
+      Introducción a la línea de comandos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.1_LaTerminal_Virtual.html">
+     <p style="color:#2C6A7F">
+      02. Terminal Virtual
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.2_ExplorandoDirectorios.html">
+     <p style="color:#2C6A7F">
+      03. Explorando directorios
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.3_Trabajando_con_archivos.html">
+     <p style="color:#2C6A7F">
+      04. Trabajando con archivos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.4_Opciones_y_Argumentos.html">
+     <p style="color:#2C6A7F">
+      05. Opciones y argumentos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.5_Copiar_Mover_Eliminar_Archivos.html">
+     <p style="color:#2C6A7F">
+      06. Copiar, mover y eliminar archivos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../J_5_LINEA_DE_COMANDOS_DE_UNIX/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  6. Unix Commands For Data Mining
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../0_Overview.html">
+   Lessons
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="6.0_Edit_Sort_Cut_grep.html">
+     <p style="color:#2C6A7F">
+      01. EDIT, SORT, CUT &amp; GREP
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6.1_Word_Count_Pipelines_Permissions.html">
+     <p style="color:#2C6A7F">
+      02. Word Count, Pipelines &amp; Permissions
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     <p style="color:#2C6A7F">
+      03. Biological Data Formats
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  6. MINERIA DE DATOS EN LA LINEA DE COMANDOS DE UNIX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.0_Editar_Ordentar_Cortar_grep.html">
+     <p style="color:#2C6A7F">
+      01. Editar, ordenar, cortar y grep
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.1_Contar_Palabras_Tuberias_Permisos.html">
+     <p style="color:#2C6A7F">
+      02. Contar palabras, tuberías &amp; permisos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.2_Formatos_Biologicos.html">
+     <p style="color:#2C6A7F">
+      03. Formatos de Datos Biológicos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  7. SCRIPTING WITH BASH
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.0_WorkingRemotely.html">
+     <p style="color:#2C6A7F">
+      01. Working Remotely
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.1_Scripting_with_bash.html">
+     <p style="color:#2C6A7F">
+      03. Scripting with Bash
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.3_Summary_of_Commands.html">
+     <p style="color:#2C6A7F">
+      3. Summary of Commands
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../M_7_SCRIPTING_WITH_BASH/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  7. PROGRAMANDO CON BASH
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.0_Trabajando_de_manera_remota.html">
+     <p style="color:#2C6A7F">
+      09. Trabajando de manera remota
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.1_Programando_con_Bash.html">
+     <p style="color:#2C6A7F">
+      03. Programando con Bash
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.3_Resumen_de_comandos.html">
+     <p style="color:#2C6A7F">
+      03. Resumen de comandos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../N_7_PROGRAMANDO_CON_BASH/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.2_Biological_Data_Formats.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2FK_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.2_Biological_Data_Formats.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.2_Biological_Data_Formats.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.2_Biological_Data_Formats.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-learning-objectives">
+   <p style="color:#2C6A7F">
+    🔍
+    <strong>
+     Learning Objectives
+    </strong>
+   </p>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-fasta">
+   <p style="color:#2C6A7F">
+    FASTA
+   </p>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-fastq">
+   <p style="color:#2C6A7F">
+    FASTQ
+   </p>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#characteristics-of-the-fastq-format">
+     Characteristics of the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       fastq
+      </span>
+     </code>
+     format
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-of-a-single-fastq-record">
+     Example of a single fastq record:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#paired-libraries">
+     Paired libraries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-bam-sam">
+   <p style="color:#2C6A7F">
+    BAM &amp; SAM
+   </p>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-annotation-formats">
+   <p style="color:#2C6A7F">
+    Annotation formats
+   </p>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-sequence-variation">
+   <p style="color:#2C6A7F">
+    Sequence variation
+   </p>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-style-color-2c6a7f-sequence-alignments">
+   <p style="color:#2C6A7F">
+    Sequence alignments
+   </p>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="p-style-color-2c6a7f-03-biological-data-formats">
+<h1><p style="color:#2C6A7F"> 03. Biological Data Formats<a class="headerlink" href="#p-style-color-2c6a7f-03-biological-data-formats" title="Permalink to this headline">¶</a></h1>
+<p><em><strong>Author:  Dr. Alejandra Rougon</strong></em></p>
+<p style="color:#9D994B"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+<blockquote>
+<div></div></blockquote>
+<div class="section" id="p-style-color-2c6a7f-learning-objectives">
+<h2><p style="color:#2C6A7F"> 🔍 <strong>Learning Objectives</strong><a class="headerlink" href="#p-style-color-2c6a7f-learning-objectives" title="Permalink to this headline">¶</a></h2>
+<p>After completing this lesson you will learn:</p>
+<ul class="simple">
+<li><p>to recognize the most common biological data formats</p></li>
+<li><p>DNA and protein sequences [fasta]</p></li>
+<li><p>sequencing format [fastq]</p></li>
+<li><p>mapping formats [sam, bam]</p></li>
+<li><p>annotation formats [bed, gtf, gff, vcf]</p></li>
+<li><p>BLAST alignment results in tabular format</p></li>
+</ul>
+</div>
+<p><a class="reference external" href="https://youtube.com/embed/76v6bI5DEXk"><img alt="09. Biological Data Formats" src="https://github.com/alerougon/ObjectStorage/blob/main/PP_CommandLine/MiniaturasVideos/Slide9.png?raw=true" /></a></p>
+<p>Most biological data is stored in text files. DNA  sequence data is shown in letters <code class="docutils literal notranslate"><span class="pre">A``G``C``T</span></code>. Each character represents the four nucleotides (bases) <em>adenine, guanine, cytosine and thymine</em> respectively. Similarly protein data is represented by letters, where one character is assigned to each amino acid. The letters can be either uppercase or lowercase. When you have a mixture of upper and lowercase letters in the same file it usually means the small letters are <strong>masked bases</strong> and they won’t be taken into account for some processes by specific programs. There are specific letters to represent ambiguos sequences, in other words, where there are various options of nucleotides or amino acids for that particular position. Also if there is an unknown nucleotide it is represented with the letter <code class="docutils literal notranslate"><span class="pre">N</span></code>. If there is an unknown amino acid residue it is represented by an <code class="docutils literal notranslate"><span class="pre">X</span></code>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Amino acid</p></th>
+<th class="text-align:center head"><p>Three letter code</p></th>
+<th class="text-align:center head"><p>One letter code</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>alanine</p></td>
+<td class="text-align:center"><p>ala</p></td>
+<td class="text-align:center"><p>A</p></td>
+</tr>
+<tr class="row-odd"><td><p>arginine</p></td>
+<td class="text-align:center"><p>arg</p></td>
+<td class="text-align:center"><p>R</p></td>
+</tr>
+<tr class="row-even"><td><p>asparagine</p></td>
+<td class="text-align:center"><p>asn</p></td>
+<td class="text-align:center"><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>aspartic acid</p></td>
+<td class="text-align:center"><p>asp</p></td>
+<td class="text-align:center"><p>D</p></td>
+</tr>
+<tr class="row-even"><td><p>asparagine or aspartic acid</p></td>
+<td class="text-align:center"><p>asx</p></td>
+<td class="text-align:center"><p>B</p></td>
+</tr>
+<tr class="row-odd"><td><p>cysteine</p></td>
+<td class="text-align:center"><p>cys</p></td>
+<td class="text-align:center"><p>C</p></td>
+</tr>
+<tr class="row-even"><td><p>glutamic acid</p></td>
+<td class="text-align:center"><p>glu</p></td>
+<td class="text-align:center"><p>E</p></td>
+</tr>
+<tr class="row-odd"><td><p>glutamine</p></td>
+<td class="text-align:center"><p>gln</p></td>
+<td class="text-align:center"><p>Q</p></td>
+</tr>
+<tr class="row-even"><td><p>glutamine or glutamic acid</p></td>
+<td class="text-align:center"><p>glx</p></td>
+<td class="text-align:center"><p>Z</p></td>
+</tr>
+<tr class="row-odd"><td><p>glycine</p></td>
+<td class="text-align:center"><p>gly</p></td>
+<td class="text-align:center"><p>G</p></td>
+</tr>
+<tr class="row-even"><td><p>histidine</p></td>
+<td class="text-align:center"><p>his</p></td>
+<td class="text-align:center"><p>H</p></td>
+</tr>
+<tr class="row-odd"><td><p>isoleucine</p></td>
+<td class="text-align:center"><p>ile</p></td>
+<td class="text-align:center"><p>I</p></td>
+</tr>
+<tr class="row-even"><td><p>leucine</p></td>
+<td class="text-align:center"><p>leu</p></td>
+<td class="text-align:center"><p>L</p></td>
+</tr>
+<tr class="row-odd"><td><p>lysine</p></td>
+<td class="text-align:center"><p>lys</p></td>
+<td class="text-align:center"><p>K</p></td>
+</tr>
+<tr class="row-even"><td><p>methionine</p></td>
+<td class="text-align:center"><p>met</p></td>
+<td class="text-align:center"><p>M</p></td>
+</tr>
+<tr class="row-odd"><td><p>phenylalanine</p></td>
+<td class="text-align:center"><p>phe</p></td>
+<td class="text-align:center"><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>proline</p></td>
+<td class="text-align:center"><p>pro</p></td>
+<td class="text-align:center"><p>P</p></td>
+</tr>
+<tr class="row-odd"><td><p>serine</p></td>
+<td class="text-align:center"><p>ser</p></td>
+<td class="text-align:center"><p>S</p></td>
+</tr>
+<tr class="row-even"><td><p>threonine</p></td>
+<td class="text-align:center"><p>thr</p></td>
+<td class="text-align:center"><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>tryptophan</p></td>
+<td class="text-align:center"><p>trp</p></td>
+<td class="text-align:center"><p>W</p></td>
+</tr>
+<tr class="row-even"><td><p>tyrosine</p></td>
+<td class="text-align:center"><p>tyr</p></td>
+<td class="text-align:center"><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>valine</p></td>
+<td class="text-align:center"><p>val</p></td>
+<td class="text-align:center"><p>V</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="p-style-color-2c6a7f-fasta">
+<h2><p style="color:#2C6A7F"> FASTA<a class="headerlink" href="#p-style-color-2c6a7f-fasta" title="Permalink to this headline">¶</a></h2>
+<p>The most common format to store DNA and protein sequences is the <code class="docutils literal notranslate"><span class="pre">fasta</span></code> format, which was originated from a program that bears the same name. The <code class="docutils literal notranslate"><span class="pre">.fasta</span></code> file contains a <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> sign followed by the sequence identifier and in the next line the sequence in nucleotides or amino acids (represented with a single letter). The sequence could be in a single line</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="n">sequence_1</span>
+<span class="n">ATTTATGGCCCGCGATGTACGCCATCCAGACTTAACAGTGGGACATGGCACACAGTTGAGAGGGCACAAAATATTTAGACAGATAC</span>
+</pre></div>
+</div>
+<p>or in multiple lines, usually of 60 characters each</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="n">sequence_2</span>
+<span class="n">AAGCTTCGGCATAGGACAAGATGGAGAGGGACGCATTGTGGAAGGCGCGCTGGGTGTTTTGGCAACCAGC</span>
+<span class="n">GCAGTTGCCTGTTTGTGGTTAACATAGCTGTTACGAGAAGACGAGCGGCAAAGCTGTCATGCGTCTTGCT</span>
+<span class="n">GTGCGAACGCAGTCGTCGGGCGAATTGTCCGTACGCGGGTGGTGGGGGGTGCAAATAGCCTGCGCTTGCA</span>
+<span class="n">TTTCAGCCTGGGCATTCGAGTGGAATATTATTGTGTTACACTGTACAAAAAAAAAAAGCTT</span>
+</pre></div>
+</div>
+<p>Records in a fasta file can also have descriptions. They will come after the id, usually separated by a space.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="n">QBF53359</span><span class="mf">.1</span> <span class="n">RxLR</span> <span class="p">[</span><span class="n">Phytophthora</span> <span class="n">capsici</span><span class="p">]</span>
+<span class="n">MSKVFLLLVLSVFALVSCDALSAPVGSKLSLSKTDELNAQPIDAKRMLRAQEEPTNAADEERGMTELANK</span>
+<span class="n">FKAWAAAIKTWVTNSKLVQSMNNKLASLTQKGRVGQIEKLLKQDNVNVNVLYQNKVKPDELFLALKLDPK</span>
+<span class="n">LKLIADAPAAWANNPGLSMFYQYATYYAKMTTKA</span>
+</pre></div>
+</div>
+<p>You can also have multiple sequences in a fasta file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="n">QBF53359</span><span class="mf">.1</span> <span class="n">RxLR</span> <span class="p">[</span><span class="n">Phytophthora</span> <span class="n">capsici</span><span class="p">]</span>
+<span class="n">MSKVFLLLVLSVFALVSCDALSAPVGSKLSLSKTDELNAQPIDAKRMLRAQEEPTNAADEERGMTELANK</span>
+<span class="n">FKAWAAAIKTWVTNSKLVQSMNNKLASLTQKGRVGQIEKLLKQDNVNVNVLYQNKVKPDELFLALKLDPK</span>
+<span class="n">LKLIADAPAAWANNPGLSMFYQYATYYAKMTTKA</span>
+
+<span class="o">&gt;</span><span class="n">sp</span><span class="o">|</span><span class="n">D0N607</span><span class="mf">.1</span><span class="o">|</span><span class="n">CRE4_PHYIT</span> <span class="n">RecName</span><span class="p">:</span> <span class="n">Full</span><span class="o">=</span><span class="n">RxLR</span> <span class="n">effector</span> <span class="n">protein</span> <span class="n">CRE4</span><span class="p">;</span> <span class="n">AltName</span><span class="p">:</span> <span class="n">Full</span><span class="o">=</span><span class="n">Core</span> <span class="n">RXLR</span> <span class="n">effector</span> <span class="mi">4</span><span class="p">;</span> <span class="n">Flags</span><span class="p">:</span> <span class="n">Precursor</span>
+<span class="n">MLRSFLLIVATVSLFGQCKPLPLATSPVSDAVRAPHRSTHETRFVRTNDEERGATMTLAGVLRDKAQTKQ</span>
+<span class="n">LLTSWLNSGKSVPSVSNKLGLKRMSLEQAIHHENWKALTTFQRMKSKKAKAYAKYGTGYQTEAKTKENLL</span>
+<span class="n">QWVMRGDSPKEVSSTLGLLGLSRRKIIDHQNYEAFRTFLKYRKQWAEMQGNGFTKLTT</span>
+
+<span class="o">&gt;</span><span class="n">sp</span><span class="o">|</span><span class="n">D0MRS3</span><span class="mf">.1</span><span class="o">|</span><span class="n">RD21_PHYIT</span> <span class="n">RecName</span><span class="p">:</span> <span class="n">Full</span><span class="o">=</span><span class="n">RxLR</span> <span class="n">effector</span> <span class="n">protein</span> <span class="n">PexRD21</span><span class="p">;</span> <span class="n">AltName</span><span class="p">:</span> <span class="n">Full</span><span class="o">=</span><span class="n">Core</span> <span class="n">RXLR</span> <span class="n">effector</span> <span class="mi">1</span><span class="p">;</span> <span class="n">Flags</span><span class="p">:</span> <span class="n">Precursor</span>
+<span class="n">MRLSYILVVVIAVTLQACVCATPVIKEANQAMLANGPLPSIVNTEGGRLLRGVKKRTAEREVQEERMSGA</span>
+<span class="n">KLSEKGKQFLKWFFRGSDTRVKGRSWR</span>
+</pre></div>
+</div>
+<p>The most common extensions used for these files are <code class="docutils literal notranslate"><span class="pre">.fasta</span></code>, <code class="docutils literal notranslate"><span class="pre">.fa</span></code>, <code class="docutils literal notranslate"><span class="pre">.fna</span></code>[for nucleotides], <code class="docutils literal notranslate"><span class="pre">.faa</span></code> [for amino acid residues], <code class="docutils literal notranslate"><span class="pre">.fsa</span></code>, or <code class="docutils literal notranslate"><span class="pre">.fas</span></code>.</p>
+</div>
+<div class="section" id="p-style-color-2c6a7f-fastq">
+<h2><p style="color:#2C6A7F"> FASTQ<a class="headerlink" href="#p-style-color-2c6a7f-fastq" title="Permalink to this headline">¶</a></h2>
+<p>Next generation sequencing data can come in various formats, however, the most common format is <strong>fastq</strong> and the other formats are usually converted to fastq for their analysis.</p>
+<div class="section" id="characteristics-of-the-fastq-format">
+<h3>Characteristics of the <code class="docutils literal notranslate"><span class="pre">fastq</span></code> format<a class="headerlink" href="#characteristics-of-the-fastq-format" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Each record always contains <strong>four</strong> lines</p></li>
+<li><p>The <strong>first line</strong> starts with a <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> sign followed by the <strong>sequence identifier</strong></p></li>
+<li><p>The contents of the first line vary depending on the sequencing machine, version and the conversion software. However, it usually contains information about the sequencing run and cluster location.</p></li>
+<li><p>The <strong>second line</strong> contains the <strong>sequence</strong> or <strong>base calls (A,C,T,G)</strong> or N if the base couldn’t be identified.</p></li>
+<li><p>The <strong>third line</strong> contains a <code class="docutils literal notranslate"><span class="pre">+</span></code> sign and in some cases it repeats the sequence identifier of line one.</p></li>
+<li><p>The <strong>fourth line</strong> contains the <strong>quality scores</strong> of each base in ASCII format</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">@&lt;</span><span class="n">identifier</span> <span class="ow">and</span> <span class="n">expected</span> <span class="n">information</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">sequence</span><span class="o">&gt;</span>
+<span class="o">+&lt;</span><span class="n">identifier</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">information</span> <span class="n">OR</span> <span class="n">empty</span> <span class="n">string</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">quality</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>specific information of the data contained in the description of the first line can be found <a class="reference external" href="https://help.basespace.illumina.com/articles/descriptive/fastq-files/">here</a></p>
+</div>
+<div class="section" id="example-of-a-single-fastq-record">
+<h3>Example of a single fastq record:<a class="headerlink" href="#example-of-a-single-fastq-record" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@SIM</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="n">FCX</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">6329</span><span class="p">:</span><span class="mi">1045</span> <span class="mi">1</span><span class="p">:</span><span class="n">N</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span>
+<span class="n">TCGCACTCAACGCCCTGCATATGACAAGACAGAATC</span>
+<span class="o">+</span>
+<span class="o">&lt;&gt;</span><span class="p">;</span><span class="c1">##=&gt;&lt;9=AAAAAAAAAA9#:&lt;#&lt;;&lt;&lt;&lt;????#=</span>
+
+</pre></div>
+</div>
+<p>Each record represents a sequencing read</p>
+</div>
+<div class="section" id="paired-libraries">
+<h3>Paired libraries<a class="headerlink" href="#paired-libraries" title="Permalink to this headline">¶</a></h3>
+<p>In paired-end or mate-paired libraries we obtain two sequences that are associated to the same record [they have the same identifier]. In fact, they come from both extremes of a single DNA fragment. Both pairs can come in <strong>separated files</strong> or in the same file, <strong>interleaved</strong>. The most common format is in separate files. In either case the pairs (that have the same identifier) have to be differentiated.</p>
+<p>Interleaved files have first the forward <code class="docutils literal notranslate"><span class="pre">F</span></code> pair, followed by the reverse pair <code class="docutils literal notranslate"><span class="pre">R</span></code>. And when they are in separate files they are indicated in the first line as <code class="docutils literal notranslate"><span class="pre">/1</span></code> and <code class="docutils literal notranslate"><span class="pre">/2</span></code> or in newer versions <code class="docutils literal notranslate"><span class="pre">1:Y:18:ATCACG</span></code> and <code class="docutils literal notranslate"><span class="pre">2:Y:18:ATCACG</span></code></p>
+<p><strong>Example of file with the first pair of each record</strong> <code class="docutils literal notranslate"><span class="pre">1:N:0:1</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@M02586</span><span class="p">:</span><span class="mi">164</span><span class="p">:</span><span class="mi">000000000</span><span class="o">-</span><span class="n">AYBV7</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2119</span><span class="p">:</span><span class="mi">13975</span><span class="p">:</span><span class="mi">24958</span> <span class="mi">1</span><span class="p">:</span><span class="n">N</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">ACGTTGTGCCAGCCGGGTGAGAAAGTAGCTGTCCGTTTCGCTGGTCTGGTCAATATGCGGGATCTTAACGCTATCAAGTTCCTGCGGGATTACTGGCAGATCTAATTTATTCCGGCTTGAAATGATTCTGACAATCGCGCCGAGCGTGTAATCATCGTAAGACTGG</span>
+<span class="o">+</span>
+<span class="n">CCCCCGGGGGGGFGGGGGGFFEGGGGGGGFCFEEGFGFFFGGGGGGGGGGGGGGFGGFG</span><span class="o">@</span><span class="p">:</span><span class="n">CFGGGGGGGGGGGGGGFFGGFFGGDGGGGGGGGFGFGGFGGGGGGGGGGD</span><span class="o">&lt;</span><span class="n">FGGGGGGGGGGGGGGGFFFFGFF8CGGDFFEGGGGGGFGGDFGGG</span><span class="o">&lt;</span><span class="n">DCFGGCFG</span>
+<span class="nd">@M02586</span><span class="p">:</span><span class="mi">164</span><span class="p">:</span><span class="mi">000000000</span><span class="o">-</span><span class="n">AYBV7</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2119</span><span class="p">:</span><span class="mi">13272</span><span class="p">:</span><span class="mi">24958</span> <span class="mi">1</span><span class="p">:</span><span class="n">N</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">CACTCACTAGCGACCCACTTGGAGGTCGCCAAAAGCAATATTATCCATATCTCGGAGGATTTGGACCAGATCCAGGTCGTCATCGAATTGCCTGGAGAACGGCACGAACTTGGTGCTACGACGAAGTGGAAACGCACAGCAACTTCTGGAGGGAGTGTTGGATCGA</span>
+<span class="o">+</span>
+<span class="n">CCCCCGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGFGGGGGGGGGGGGGGGGGGGGGGGGGGGDFFGGGGGGGGGGGGGGGGGGGGGGGGCFGGGGGGGGGGDGGGGGGGGGGGGFFG</span><span class="p">:</span><span class="nd">@GGFGGGGGGG5</span><span class="o">&gt;</span><span class="p">,</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_34749/3813790178.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="nd">@M02586</span><span class="p">:</span><span class="mi">164</span><span class="p">:</span><span class="mi">000000000</span><span class="o">-</span><span class="n">AYBV7</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2119</span><span class="p">:</span><span class="mi">13975</span><span class="p">:</span><span class="mi">24958</span> <span class="mi">1</span><span class="p">:</span><span class="n">N</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span>
+           <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Example of file with the second pair of each record</strong> <code class="docutils literal notranslate"><span class="pre">2:N:0:1</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@M02586</span><span class="p">:</span><span class="mi">164</span><span class="p">:</span><span class="mi">000000000</span><span class="o">-</span><span class="n">AYBV7</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2119</span><span class="p">:</span><span class="mi">13975</span><span class="p">:</span><span class="mi">24958</span> <span class="mi">2</span><span class="p">:</span><span class="n">N</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">TNNNNNNNNNCAGTTACCCGTGGGGGCTCGCATCGCACCCGCATTCACGCTGACGATAAAAAATAAGGTGCTGGAAGAAAATATCTCTGCTCGGATCATCAGTTTATCTGTCACGGATAACAGCGGTTTTACCGCAGACACCTTGAATTTAACCTTCGATGACAGC</span>
+<span class="o">+</span>
+<span class="mi">8</span><span class="c1">#########==CFCEDCFEGGGGGGCCGFGEGEGGCGGGGGGGD9@FFCFGFDGEGCFFCCCFGGEFGG8FFGGGFGFFFCCFA&lt;FFGFGGGG:FEFGGFGGGFGGFGGGGA?CCFGGFFGGEG7CF@FGEF8+=CFGFEFF:=CFGGGAFGFFG6C?(*-1*)/</span>
+<span class="nd">@M02586</span><span class="p">:</span><span class="mi">164</span><span class="p">:</span><span class="mi">000000000</span><span class="o">-</span><span class="n">AYBV7</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2119</span><span class="p">:</span><span class="mi">13272</span><span class="p">:</span><span class="mi">24958</span> <span class="mi">2</span><span class="p">:</span><span class="n">N</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">ANNNNNNNNNCTGGAAATTGTAACCCATAGGCGGTCCATGTGCGTTTCGTTCTGAGATCGTTTTTTCGTACATCGTTGACAAGCCCAAGTTCTCACCACAAGATTCGTTAGGCTCGTATCGTAATGTGGAAAGGTAGACAGGCGATTCGAGCGAGATCAAGTCGAC</span>
+<span class="o">+</span>
+<span class="mi">8</span><span class="c1">#########=:CFGGFFGGGGGGGGG8FFGGGGFGGGGGG9FEGGGGGGGGFGGGGGGGF@FGGGGGGGGGGGGGGGGGFFGGEFGGGGGFGGCGGGGGEGFFGFFGFF7FFE&lt;FCGGGGFEF@FGFF9EF&lt;FFG,?;&lt;F+DEGGCCGGGGECE*.4)72*)-5(</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="p-style-color-2c6a7f-bam-sam">
+<h2><p style="color:#2C6A7F"> BAM &amp; SAM<a class="headerlink" href="#p-style-color-2c6a7f-bam-sam" title="Permalink to this headline">¶</a></h2>
+<p>When sequencing a genome, one has to fractionate the DNA so pieces of the genome get sequenced. The result is a file with millions of sequences that have to be assembled back to form a genome. The fragments sizes depend on the technology that we have used. Second generation technologies produce small fragments (~35-400bp). Currently the most common sizes are 50-300bp from Illumina reads. Third generation sequencing technologies (Long Read Sequencing) provide much longer fragments (500bp-2.3Mb although they are usually 10-30kb). The task of reassembling a genome is usually not completely fulfilled. What we get are bigger fragments than those initially sequenced called contigs or scaffolds.</p>
+<p>If we already have a reference genome we can align [map] those sequences [reads] to the reference genome. The most common formats to show the positions at which each read has aligned in relation to the reference sequence are the <strong>sam</strong> format and its compressed binary version, the <strong>bam</strong> format. The bam format cannot be opened directly with a text editor as is in binary.</p>
+<p><img alt="" src="https://github.com/alerougon/ObjectStorage/blob/main/PP_CommandLine/24.MapReads.png?raw=true" /></p>
+<p>The sam format contains two sections. One is the <strong>header</strong> which is identified with an <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> and two Uppercase letters and then the <strong>alignment information section</strong> that contains the positions at which each read has aligned. The header position may be removed for analysis.
+The alignment information is divided into 11 columns. Additionally some optional <strong>tags</strong> can be added for more alignment specifications.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@HD</span>     <span class="n">VN</span><span class="p">:</span><span class="mf">1.0</span>  <span class="n">SO</span><span class="p">:</span><span class="n">unsorted</span>
+<span class="nd">@SQ</span>     <span class="n">SN</span><span class="p">:</span><span class="mi">12</span>   <span class="n">LN</span><span class="p">:</span><span class="mi">50697278</span>
+<span class="nd">@PG</span>     <span class="n">ID</span><span class="p">:</span><span class="n">bowtie2</span> <span class="n">PN</span><span class="p">:</span><span class="n">bowtie2</span>  <span class="n">VN</span><span class="p">:</span><span class="mf">2.2.5</span>  <span class="n">CL</span><span class="p">:</span><span class="s2">&quot;bowtie2 -x ZV9 -S 2cells.sam -1 1.fq -2 2.fq&quot;</span>
+
+<span class="n">ERR022484</span><span class="mf">.110</span>   <span class="mi">137</span>     <span class="n">chr12</span>      <span class="mi">4627377</span> <span class="mi">42</span>      <span class="mi">76</span><span class="n">M</span>     <span class="o">=</span>       <span class="mi">4627377</span> <span class="mi">0</span>       <span class="n">TTGTTCTCCACCAAGCCGCCCAGTTT</span>    <span class="n">EEEEEEEEEEEEEE</span><span class="nd">@EBBEEE</span><span class="p">;</span><span class="n">C</span> <span class="n">AS</span><span class="p">:</span><span class="n">i</span><span class="p">:</span><span class="mi">0</span>  <span class="n">XN</span><span class="p">:</span><span class="n">i</span><span class="p">:</span><span class="mi">0</span>  <span class="n">XM</span><span class="p">:</span><span class="n">i</span><span class="p">:</span><span class="mi">0</span>  <span class="n">XO</span><span class="p">:</span><span class="n">i</span><span class="p">:</span><span class="mi">0</span>  <span class="n">XG</span><span class="p">:</span><span class="n">i</span><span class="p">:</span><span class="mi">0</span>  <span class="n">NM</span><span class="p">:</span><span class="n">i</span><span class="p">:</span><span class="mi">0</span>  <span class="n">MD</span><span class="p">:</span><span class="n">Z</span><span class="p">:</span><span class="mi">76</span> <span class="n">YT</span><span class="p">:</span><span class="n">Z</span><span class="p">:</span><span class="n">UP</span>
+<span class="n">ERR022484</span><span class="mf">.110</span>   <span class="mi">69</span>      <span class="n">chr12</span>      <span class="mi">4627377</span> <span class="mi">0</span>       <span class="o">*</span>       <span class="o">=</span>       <span class="mi">4627377</span> <span class="mi">0</span>       <span class="n">CNGAAGCAAAGTGTGTGCGCGAAATG</span>    <span class="o">!</span><span class="nv">AA</span><span class="o">=</span><span class="nv">CCCDBHAG</span><span class="o">=</span>ADHADD&gt;D&gt;D    YT:Z:UP
+</pre></div>
+</div>
+</div>
+</div>
+<p>The main columns contain the following data.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Col</p></th>
+<th class="head"><p>Field</p></th>
+<th class="head"><p>Brief description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>QNAME</p></td>
+<td><p>Query template NAME</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>FLAG</p></td>
+<td><p>bitwise FLAG</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>RNAME</p></td>
+<td><p>Reference sequence NAME</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>POS</p></td>
+<td><p>leftmost mapping POSition</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>MAPQ</p></td>
+<td><p>MAPping Quality</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>CIGAR</p></td>
+<td><p>CIGAR string</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>RNEXT</p></td>
+<td><p>Reference name of the mate/next read</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>PNEXT</p></td>
+<td><p>Position of the mate/next read</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>TLEN</p></td>
+<td><p>observed Template LENgth</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>SEQ</p></td>
+<td><p>segment SEQuence</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>QUAL</p></td>
+<td><p>ASCII of Phred-scaled base QUALity+33</p></td>
+</tr>
+</tbody>
+</table>
+<p>We won’t enter into detail of what the codes mean in the sam format. For further details you can check the <a class="reference external" href="http://samtools.github.io/hts-specs/SAMv1.pdf">format specifications</a> and the <a class="reference external" href="https://samtools.github.io/hts-specs/SAMtags.pdf">optional tags descriptions</a>.</p>
+</div>
+<div class="section" id="p-style-color-2c6a7f-annotation-formats">
+<h2><p style="color:#2C6A7F"> Annotation formats<a class="headerlink" href="#p-style-color-2c6a7f-annotation-formats" title="Permalink to this headline">¶</a></h2>
+<p>Genome <strong>annotation</strong> is the process of identifying the <strong>locations of genes</strong> and all of the coding regions in a genome [structural annotation] and determining what those genes do [functional annotation]. There are several formats for representing the locations of genes in a genome. Annotation formats contain the name of the gene, the positions at which each gene starts and ends in reference to the genomic sequence, and the positions of the different parts of the gene <strong>[features]</strong> that have been annotated [UTRs, Exons, Promoters, etc]. Some genes can have various forms <strong>[transcripts]</strong> due to <strong>alternative splicing</strong>. The genomic sequence can be in scaffolds or chromosomes. Here you can see some examples of different annotation formats. All of them are basically tables, contain columns that are usually separated by a <code class="docutils literal notranslate"><span class="pre">tab</span></code> and rows. Tables are in <strong>tabular</strong> format. Annotation formats are flexible. They vary since programs may require slight modifications. These are just general examples.</p>
+<p><strong>BED</strong> [Browser Extensible Data]
+Basic format [columns 1-3 are required]. Genome start at position 0 [0-based].</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#chr	start end</span>
+<span class="n">chr12</span>		<span class="mi">10134</span>		<span class="mi">10600</span>		
+<span class="n">chr12</span>		<span class="mi">10977</span>		<span class="mi">11008</span>
+<span class="n">chr12</span>		<span class="mi">13409</span>		<span class="mi">14312</span>
+</pre></div>
+</div>
+<p><strong>BED</strong> Extended format - groups [Each line represents a transcript].</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#chr start end name score strand block_count(number of exons) block_sizes(each exon size)</span>
+<span class="n">chr22</span> <span class="mi">1000</span> <span class="mi">5000</span> <span class="n">cloneA</span> <span class="mi">960</span> <span class="o">+</span> <span class="mi">1000</span> <span class="mi">5000</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">567</span><span class="p">,</span><span class="mi">488</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">3512</span>
+<span class="n">chr22</span> <span class="mi">2000</span> <span class="mi">6000</span> <span class="n">cloneB</span> <span class="mi">900</span> <span class="o">-</span> <span class="mi">2000</span> <span class="mi">6000</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">433</span><span class="p">,</span><span class="mi">399</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">3601</span>
+</pre></div>
+</div>
+<p><strong>BED</strong> Extended format - rgb  [indicates color of thick lines of transcripts in a genome browser].</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#chr	start end	name	score	strand	thick_start	thick_end rb</span>
+<span class="n">chr12</span>	<span class="mi">10134</span>	<span class="mi">10600</span>	<span class="n">Exon1</span> <span class="mi">100</span>	<span class="o">+</span>	<span class="mi">10180</span>	<span class="mi">10600</span>	<span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">chr12</span>	<span class="mi">10977</span>	<span class="mi">11008</span>	<span class="n">Exon2</span> <span class="mi">100</span> <span class="o">+</span> <span class="mi">10977</span>	<span class="mi">11000</span> <span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">chr12</span>	<span class="mi">13409</span>	<span class="mi">14312</span>	<span class="n">Exon3</span> <span class="mi">100</span> <span class="o">+</span> <span class="mi">13409</span>	<span class="mi">14300</span> <span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">chr12</span>	<span class="mi">18114</span>	<span class="mi">18423</span>	<span class="n">Exon4</span> <span class="mi">100</span> <span class="o">-</span> <span class="mi">18150</span>	<span class="mi">18423</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span>
+</pre></div>
+</div>
+<p><strong>GTF</strong> [Gene Transfer Format]
+Genome starts at position 1 [1-base]. Each line represents a feature. The whole transcript is represented in several lines containing all its features.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#chr	program feature start end strand  frame  gene_id; transcript_id</span>
+<span class="n">chr12</span>	<span class="n">GF</span>	<span class="n">Exon</span>	<span class="mi">10135</span>	<span class="mi">10600</span>	<span class="mi">100</span>	<span class="o">+</span>	<span class="o">.</span>	<span class="n">gene_id</span> <span class="s2">&quot;genA&quot;</span><span class="p">;</span> <span class="n">transcript_id</span>	<span class="s2">&quot;geneA.1&quot;</span><span class="p">;</span>
+<span class="n">chr12</span>	<span class="n">GF</span>	<span class="n">Exon</span>	<span class="mi">10978</span>	<span class="mi">11008</span>	<span class="mi">100</span>	<span class="o">+</span>	<span class="o">.</span>	<span class="n">gene_id</span>	<span class="s2">&quot;genA&quot;</span><span class="p">;</span>	<span class="n">transcript_id</span>	<span class="s2">&quot;geneA.1&quot;</span><span class="p">;</span>
+<span class="n">chr12</span>	<span class="n">GF</span>	<span class="n">Exon</span>	<span class="mi">13410</span>	<span class="mi">14312</span>	<span class="mi">100</span>	<span class="o">-</span>	<span class="o">.</span>	<span class="n">gene_id</span>	<span class="s2">&quot;genB&quot;</span><span class="p">;</span>	<span class="n">transcript_id</span>	<span class="s2">&quot;geneB.1&quot;</span><span class="p">;</span>
+<span class="n">chr12</span>	<span class="n">GF</span>	<span class="n">Exon</span>	<span class="mi">18114</span>	<span class="mi">18423</span>	<span class="mi">100</span>	<span class="o">-</span>	<span class="o">.</span>	<span class="n">gene_id</span>	<span class="s2">&quot;genB&quot;</span><span class="p">;</span>	<span class="n">transcript_id</span>	<span class="s2">&quot;geneB.1&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><strong>GFF</strong> [General Feature Format]
+Genome starts at position 1 [1-base]. Each line represents a feature.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">##chr	program feature start end score	strand  frame  attributes</span>
+<span class="n">chr3</span> <span class="n">GF</span> <span class="n">mRNA</span>            <span class="mi">1300</span>  <span class="mi">9000</span>  <span class="o">.</span>  <span class="o">+</span>  <span class="o">.</span>  <span class="n">ID</span><span class="o">=</span><span class="n">mrna0001</span><span class="p">;</span><span class="n">Name</span><span class="o">=</span><span class="n">sonichedgehog</span>
+<span class="n">chr3</span> <span class="n">GF</span> <span class="n">exon</span>            <span class="mi">1300</span>  <span class="mi">1500</span>  <span class="o">.</span>  <span class="o">+</span>  <span class="o">.</span>  <span class="n">ID</span><span class="o">=</span><span class="n">exon00001</span><span class="p">;</span><span class="n">Parent</span><span class="o">=</span><span class="n">mrna0001</span>
+<span class="n">chr3</span> <span class="n">GF</span> <span class="n">exon</span>            <span class="mi">1050</span>  <span class="mi">1500</span>  <span class="o">.</span>  <span class="o">+</span>  <span class="o">.</span>  <span class="n">ID</span><span class="o">=</span><span class="n">exon00002</span><span class="p">;</span><span class="n">Parent</span><span class="o">=</span><span class="n">mrna0001</span>
+<span class="n">chr3</span> <span class="n">GF</span> <span class="n">exon</span>            <span class="mi">3000</span>  <span class="mi">3902</span>  <span class="o">.</span>  <span class="o">+</span>  <span class="o">.</span>  <span class="n">ID</span><span class="o">=</span><span class="n">exon00003</span><span class="p">;</span><span class="n">Parent</span><span class="o">=</span><span class="n">mrna0001</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="p-style-color-2c6a7f-sequence-variation">
+<h2><p style="color:#2C6A7F"> Sequence variation<a class="headerlink" href="#p-style-color-2c6a7f-sequence-variation" title="Permalink to this headline">¶</a></h2>
+<p>Each individual’s genome sequence is unique. The differences in the DNA sequences of individuals are ultimately responsible for differences in observable traits, such as  eye color or height, as well as for the hidden ones. For instance, that differences may determine how susceptible or resistant a plant is to a disease, or how virulent a specific pathogen is.</p>
+<p>In humans, there are 0.1% differences between the genomes of any two individuals.  That means, that out of a three billion base sequence, there is roughly three million differences between any two individuals. This variation can be due to substitutions, insertions or deletions. The <strong>VCF</strong> [Variant Call Format], and its Binary format <strong>BCF</strong>  are  used for giving information about sequence variation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##fileformat=VCFv4.1</span>
+<span class="c1">##ApplyRecalibration=&quot;analysis_type=ApplyRecalibration input_file=[] read_buffer_size=null phone_home=NO_ET gatk_key=/</span>
+<span class="c1">##CombineVariants=&quot;analysis_type=CombineVariants input_file=[] read_buffer_size=null phone_home=STANDARD </span>
+<span class="c1">##FORMAT=&lt;ID=GT,Number=1,Type=String,Description=&quot;Genotype&quot;&gt;</span>
+<span class="c1">##FORMAT=&lt;ID=PL,Number=G,Type=Integer,Description=&quot;Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification&quot;&gt;</span>
+<span class="c1">##INFO=&lt;ID=AF,Number=A,Type=Float,Description=&quot;Allele Frequency, for each ALT allele, in the same order as listed&quot;&gt;</span>
+<span class="c1">##contig=&lt;ID=chr1,length=101,assembly=Ddip,md5=bd01f7e11515bb6beda8f7257902aa67&gt;</span>
+<span class="c1">##contig=&lt;ID=chr2,length=101,assembly=Ddip,md5=31c33e2155b3de5e2554b693c475b310&gt;</span>
+<span class="c1">##contig=&lt;ID=chr3,length=101,assembly=Ddip,md5=631593c6dd2048ae88dcce2bd505d295&gt;</span>
+<span class="c1">##contig=&lt;ID=chr4,length=101,assembly=Ddip,md5=c60cb92f1ee5b78053c92bdbfa19abf1&gt;</span>
+<span class="c1">##source= Ddip haplotype map vcf for testing</span>
+<span class="c1">#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  Ddip1</span>
+<span class="n">chr1</span>    <span class="mi">75</span>      <span class="n">Dd1</span>     <span class="n">C</span>       <span class="n">A</span>       <span class="o">.</span>       <span class="o">.</span>       <span class="o">.</span>       <span class="n">GT</span>      <span class="mi">0</span><span class="o">/</span><span class="mi">0</span>
+<span class="n">chr3</span>    <span class="mi">25</span>      <span class="n">Dd9</span>     <span class="n">C</span>       <span class="n">T</span>       <span class="o">.</span>       <span class="o">.</span>       <span class="o">.</span>       <span class="n">GT</span>      <span class="mi">0</span><span class="o">/</span><span class="mi">1</span>
+<span class="n">chr3</span>    <span class="mi">75</span>      <span class="n">Dd6</span>     <span class="n">A</span>       <span class="n">T</span>       <span class="o">.</span>       <span class="o">.</span>       <span class="o">.</span>       <span class="n">GT</span>      <span class="mi">1</span><span class="o">/</span><span class="mi">1</span>
+<span class="n">chr3</span>    <span class="mi">100</span>     <span class="n">Dd8</span>     <span class="n">A</span>       <span class="n">T</span>       <span class="o">.</span>       <span class="o">.</span>       <span class="o">.</span>       <span class="n">GT</span><span class="p">:</span><span class="n">PS</span>   <span class="mi">0</span><span class="o">/</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="p-style-color-2c6a7f-sequence-alignments">
+<h2><p style="color:#2C6A7F"> Sequence alignments<a class="headerlink" href="#p-style-color-2c6a7f-sequence-alignments" title="Permalink to this headline">¶</a></h2>
+<p>After having a genome structurally annotated we may want to know the functions of each gene. Specially if we have found variation that may represent a significant change in the fenotype of an individual. For example, a variation that may represent the loss of function of a disease resistant gene. The process of finding the function of the genes is called <strong>functional annotation</strong> and it involves the aligning of the genes or proteins to a database to try to find homologies to already annotated proteins. The results of those alignments can be obtained in a <strong>tabular</strong> format; as we saw earlier, this means, a table, with rows and columns.</p>
+<p>Here is an example of an alignment obtained after running a program called <strong>BLAST</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># BLASTP 2.5.0+</span>
+<span class="c1"># Query: gi|49146530|ref|YP_026090.1| NADH dehydrogenase subunit 5 (mitochondrion) [Steinernema carpocapsae]</span>
+<span class="c1"># Database: PlusMitoDB</span>
+<span class="c1"># Fields: query acc., subject acc., % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score</span>
+<span class="c1"># 500 hits found</span>
+<span class="n">gi</span><span class="o">|</span><span class="mi">49146530</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_026090</span><span class="mf">.1</span><span class="o">|</span>	<span class="n">gi</span><span class="o">|</span><span class="mi">49146530</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_026090</span><span class="mf">.1</span><span class="o">|</span>	<span class="mf">100.000</span>	<span class="mi">527</span>	<span class="mi">0</span>	<span class="mi">0</span>	<span class="mi">1</span>	<span class="mi">527</span>	<span class="mi">1</span>	<span class="mi">527</span>	<span class="mf">0.0</span>	<span class="mi">981</span>
+<span class="n">gi</span><span class="o">|</span><span class="mi">49146530</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_026090</span><span class="mf">.1</span><span class="o">|</span>	<span class="n">gi</span><span class="o">|</span><span class="mi">910356121</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_009161998</span><span class="mf">.1</span><span class="o">|</span>	<span class="mf">71.619</span>	<span class="mi">525</span>	<span class="mi">149</span>	<span class="mi">0</span>	<span class="mi">1</span>	<span class="mi">525</span>	<span class="mi">1</span>	<span class="mi">525</span>	<span class="mf">0.0</span>	<span class="mi">709</span>
+<span class="n">gi</span><span class="o">|</span><span class="mi">49146530</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_026090</span><span class="mf">.1</span><span class="o">|</span>	<span class="n">gi</span><span class="o">|</span><span class="mi">910356106</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_009161984</span><span class="mf">.1</span><span class="o">|</span>	<span class="mf">70.476</span>	<span class="mi">525</span>	<span class="mi">155</span>	<span class="mi">0</span>	<span class="mi">1</span>	<span class="mi">525</span>	<span class="mi">1</span>	<span class="mi">525</span>	<span class="mf">0.0</span>	<span class="mi">709</span>
+<span class="n">gi</span><span class="o">|</span><span class="mi">49146530</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_026090</span><span class="mf">.1</span><span class="o">|</span>	<span class="n">gi</span><span class="o">|</span><span class="mi">910356145</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_009162020</span><span class="mf">.1</span><span class="o">|</span>	<span class="mf">70.857</span>	<span class="mi">525</span>	<span class="mi">153</span>	<span class="mi">0</span>	<span class="mi">1</span>	<span class="mi">525</span>	<span class="mi">1</span>	<span class="mi">525</span>	<span class="mf">0.0</span>	<span class="mi">708</span>
+<span class="n">gi</span><span class="o">|</span><span class="mi">49146530</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_026090</span><span class="mf">.1</span><span class="o">|</span>	<span class="n">gi</span><span class="o">|</span><span class="mi">116510842</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_817460</span><span class="mf">.1</span><span class="o">|</span>	<span class="mf">70.857</span>	<span class="mi">525</span>	<span class="mi">153</span>	<span class="mi">0</span>	<span class="mi">1</span>	<span class="mi">525</span>	<span class="mi">1</span>	<span class="mi">525</span>	<span class="mf">0.0</span>	<span class="mi">701</span>
+<span class="n">gi</span><span class="o">|</span><span class="mi">49146530</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_026090</span><span class="mf">.1</span><span class="o">|</span>	<span class="n">gi</span><span class="o">|</span><span class="mi">910356132</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_009162008</span><span class="mf">.1</span><span class="o">|</span>	<span class="mf">72.800</span>	<span class="mi">500</span>	<span class="mi">136</span>	<span class="mi">0</span>	<span class="mi">26</span>	<span class="mi">525</span>	<span class="mi">27</span>	<span class="mi">526</span>	<span class="mf">0.0</span>	<span class="mi">686</span>
+<span class="n">gi</span><span class="o">|</span><span class="mi">49146530</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_026090</span><span class="mf">.1</span><span class="o">|</span>	<span class="n">gi</span><span class="o">|</span><span class="mi">5834894</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">NP_006964</span><span class="mf">.1</span><span class="o">|</span><span class="n">ND5_10021</span>	<span class="mf">69.714</span>	<span class="mi">525</span>	<span class="mi">159</span>	<span class="mi">0</span>	<span class="mi">1</span>	<span class="mi">525</span>	<span class="mi">1</span>	<span class="mi">525</span>	<span class="mf">0.0</span>	<span class="mi">674</span>
+<span class="n">gi</span><span class="o">|</span><span class="mi">49146530</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_026090</span><span class="mf">.1</span><span class="o">|</span>	<span class="n">gi</span><span class="o">|</span><span class="mi">188011122</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_001905895</span><span class="mf">.1</span><span class="o">|</span>	<span class="mf">70.611</span>	<span class="mi">524</span>	<span class="mi">154</span>	<span class="mi">0</span>	<span class="mi">1</span>	<span class="mi">524</span>	<span class="mi">1</span>	<span class="mi">524</span>	<span class="mf">0.0</span>	<span class="mi">669</span>
+<span class="n">gi</span><span class="o">|</span><span class="mi">49146530</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_026090</span><span class="mf">.1</span><span class="o">|</span>	<span class="n">gi</span><span class="o">|</span><span class="mi">620695076</span><span class="o">|</span><span class="n">ref</span><span class="o">|</span><span class="n">YP_009027244</span><span class="mf">.1</span><span class="o">|</span>	<span class="mf">69.466</span>	<span class="mi">524</span>	<span class="mi">160</span>	<span class="mi">0</span>	<span class="mi">1</span>	<span class="mi">524</span>	<span class="mi">1</span>	<span class="mi">524</span>	<span class="mf">0.0</span>	<span class="mi">669</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p>🔑 <strong>In this section you have learned</strong></p>
+<ul class="simple">
+<li><p>to recognize the most common biological data formats</p></li>
+<li><p>DNA and protein sequences [fasta]</p></li>
+<li><p>Sequencing results [fastq]</p></li>
+<li><p>Mapping formats [sam, bam]</p></li>
+<li><p>Annotation formats [bed, gtf, gff, vcf]</p></li>
+<li><p>BLAST alignment results in tabular format</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="6.1_Word_Count_Pipelines_Permissions.html" title="previous page"><p style="color:#2C6A7F"> 02. Word Count, Pipelines &amp; Permissions</a>
+    <a class='right-next' id="next-link" href="../1_Practice.html" title="next page"><p style="color:#2C6A7F"> 02. Unix Commands for Data Mining</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By  <br/>
+        
+            &copy; Copyright By the authors.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
