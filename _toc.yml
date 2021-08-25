@@ -32,23 +32,14 @@ parts:
       title: Lessons
       sections:
       - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.0_Variables
-        title: 1.0 Variables
       - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.1_Functions
-        title: 1.1 Functions
       - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.2_Indexing
-        title: 1.2 Indexing
       - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.3_Lists
-        title: 1.3 Lists
       - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.4_Indexing_List_Elements
-        title: 1.4 Indexing List Elements
       - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.5_Modifying_Lists
-        title: 1.5 Modifying Lists
       - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.6_List_of_Lists
-        title: 1.6 List of Lists
       - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.7_Slicing
-        title: 1.7 Slicing
       - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.8_Data_Types
-        title: 1.8 Data Types
     - file: A_1_VARIABLES_LISTS_AND_INDEXING/1_Practice
       title: Practice
     - file: A_1_VARIABLES_LISTS_AND_INDEXING/2_Plants_And_Climate
@@ -81,15 +72,10 @@ parts:
       title: Lessons
       sections:
       - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.0_Modules
-        title: 2.0 Modules
       - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.1_Plots
-        title: 2.1 Plots
       - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.2_Shape_Size_and_Color
-        title: 2.2 Shape, Size, and Color
       - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.3_Legends
-        title: 2.3 Legends
       - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.4_Subplots
-        title: 2.4 Subplots
     - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/1_Practice
       title: Practice
     - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/2_Leaf_And_Sunflower_Shapes
@@ -118,17 +104,11 @@ parts:
       title: Lessons
       sections:
       - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.0_Range_Function
-        title: 3.0 Range_Function
       - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.1_For_Loops
-        title: 3.1 For Loops
       - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.2_Counters
-        title: 3.2 Counters
       - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.3_Using_Lists_and_Loops
-        title: 3.3 Using Lists and Loops
       - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.4_Calculating_Fibonacci
-        title: 3.4 Calculating Fibonacci
       - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.5_While_Loops
-        title: 3.5 While Loops
     - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/1_Practice
       title: Practice
     - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/2_Modeling_Sunflowers
@@ -158,19 +138,12 @@ parts:
       title: Lessons
       sections:
       - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.0_Reading_in_Data
-        title: 4.0 Reading in Data
       - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.1_Head_and_Tail
-        title: 4.1 Head and Tail
       - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.2_Selecting_Columns
-        title: 4.2 Selecting Columns
       - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.3_Descriptive_Statistics
-        title: 4.3 Descriptive Statistics
       - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.4_Masks
-        title: 4.4 Masks
       - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.5_Using_iloc
-        title: 4.5 Using iloc
       - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.6_Seaborn
-        title: 4.6 Seaborn
     - file: G_4_DATA_ANALYSIS_WITH_PANDAS/1_Practice
       title: Practice
     - file: G_4_DATA_ANALYSIS_WITH_PANDAS/2_Grapes_in_a_Warming_World
@@ -193,4 +166,83 @@ parts:
       title: Práctica
     - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/2_Vides_en_un_mundo_que_se_calienta
       title: Vides en un mundo que se calienta
+
+
+  - caption: 5. Unix Command Line
+    chapters:
+    - file: I_5_UNIX_COMMAND_LINE/0_Overview
+      title: Lessons
+      sections:
+      - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.0_Introduction_to_Command_Line
+      - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.1_TheVirtual_Terminal
+      - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.2_Exploring_Folders
+      - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.3_Working_with_Files
+      - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.5_Copy_Move_and_Remove_Files
+      - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.4_Options_and_Arguments
+    - file: I_5_UNIX_COMMAND_LINE/1_Practice
+      title: Practice
+
+
+  - caption: 5. LINEA DE COMANDOS DE UNIX
+    chapters:
+    - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Overview
+      title: Lecciones
+      sections:
+      - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.0_IntroduccionLineaDeComandos
+      - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.1_LaTerminal_Virtual
+      - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.2_ExplorandoDirectorios
+      - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.3_Trabajando_con_archivos
+      - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.4_Opciones_y_Argumentos
+      - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.5_Copiar_Mover_Eliminar_Archivos
+    - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/1_Practica
+      title: Práctica
+
+
+  - caption: 6. Unix Commands For Data Mining
+    chapters:
+    - file: K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Overview
+      title: Lessons
+      sections:
+      - file: K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.0_Edit_Sort_Cut_grep
+      - file: K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.1_Word_Count_Pipelines_Permissions
+      - file: K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.2_Biological_Data_Formats
+    - file: K_6_UNIX_COMMANDS_FOR_DATA_MINING/1_Practice
+      title: Practice
+
+
+  - caption: 6. MINERIA DE DATOS EN LA LINEA DE COMANDOS DE UNIX
+    chapters:
+    - file: L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Overview
+      title: Lecciones
+      sections:
+      - file: L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.0_Editar_Ordentar_Cortar_grep
+      - file: L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.1_Contar_Palabras_Tuberias_Permisos
+      - file: L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.2_FormatosBiológicos
+    - file: L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/1_Practica
+      title: Práctica
+
+
+  - caption: 7. SCRIPTING WITH BASH
+    chapters:
+    - file: M_7_SCRIPTING_WITH_BASH/0_Overview
+      title: Lessons
+      sections:
+      - file: M_7_SCRIPTING_WITH_BASH/0_Lessons/7.0_WorkingRemotely
+      - file: M_7_SCRIPTING_WITH_BASH/0_Lessons/7.1_Scripting_with_bash
+      - file: M_7_SCRIPTING_WITH_BASH/0_Lessons/7.3_Summary_of_Commands
+    - file: M_7_SCRIPTING_WITH_BASH/1_Practice
+      title: Practice
+
+
+  - caption: 7. PROGRAMANDO CON BASH
+    chapters:
+    - file: N_7_PROGRAMANDO_CON_BASH/0_Overview
+      title: Lecciones
+      sections:
+      - file: N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.0_Trabajando_de_manera_remota
+      - file: N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.1_Programando_con_Bash
+      - file: N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.3_Resumen_de_comandos
+    - file: N_7_PROGRAMANDO_CON_BASH/1_Practica
+      title: Práctica
+
 
