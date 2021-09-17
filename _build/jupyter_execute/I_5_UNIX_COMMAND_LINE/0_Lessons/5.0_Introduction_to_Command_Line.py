@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # 
-# # <p style="color:#2C6A7F">Introduction to Command Line 
+# # <p style="color:#2C6A7F">5.0 Introduction to Command Line 
 # 
 # 
 # ***Author:  Dr. Alejandra Rougon*** 
@@ -55,3 +55,9 @@
 # * How to access the terminal in different OS
 # 
 # 
+
+# In[ ]:
+
+
+
+

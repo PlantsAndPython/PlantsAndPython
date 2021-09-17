@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # <p style="color:#2C6A7F"> 03. Resumen de comandos
+# # <p style="color:#2C6A7F">7.2 Resumen de comandos
 # ***Autora:  Dra. Alejandra Rougon*** 
 # 
 # <p style="color:#9D994B"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Este trabajo está bajo la licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Atribución-NonComercial 4.0 Licencia Internacional</a>.
@@ -43,3 +43,9 @@
 # 
 #  
 # 
+
+# In[ ]:
+
+
+
+

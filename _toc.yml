@@ -177,8 +177,8 @@ parts:
       - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.1_TheVirtual_Terminal
       - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.2_Exploring_Folders
       - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.3_Working_with_Files
-      - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.5_Copy_Move_and_Remove_Files
       - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.4_Options_and_Arguments
+      - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.5_Copy_Move_and_Remove_Files
     - file: I_5_UNIX_COMMAND_LINE/1_Practice
       title: Practice
 
@@ -229,7 +229,7 @@ parts:
       sections:
       - file: M_7_SCRIPTING_WITH_BASH/0_Lessons/7.0_WorkingRemotely
       - file: M_7_SCRIPTING_WITH_BASH/0_Lessons/7.1_Scripting_with_bash
-      - file: M_7_SCRIPTING_WITH_BASH/0_Lessons/7.3_Summary_of_Commands
+      - file: M_7_SCRIPTING_WITH_BASH/0_Lessons/7.2_Summary_of_Commands
     - file: M_7_SCRIPTING_WITH_BASH/1_Practice
       title: Practice
 
@@ -241,7 +241,7 @@ parts:
       sections:
       - file: N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.0_Trabajando_de_manera_remota
       - file: N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.1_Programando_con_Bash
-      - file: N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.3_Resumen_de_comandos
+      - file: N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.2_Resumen_de_comandos
     - file: N_7_PROGRAMANDO_CON_BASH/1_Practica
       title: Práctica
 

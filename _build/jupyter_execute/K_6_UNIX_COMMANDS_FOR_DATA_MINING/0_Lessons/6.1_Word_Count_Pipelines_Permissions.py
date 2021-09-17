@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # 
-# # <p style="color:#2C6A7F"> 02. Word Count, Pipelines & Permissions
+# # <p style="color:#2C6A7F">6.1 Word Count, Pipelines & Permissions
 # 
 # ***Author:  Alejandra Rougon*** 
 # 
@@ -159,3 +159,9 @@
 # * Change permissions with `chmod`
 # 
 # 
+
+# In[ ]:
+
+
+
+

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # <p style="color:#2C6A7F"> 03. Explorando directorios
+# # <p style="color:#2C6A7F">5.2 Explorando directorios
 # 
 # ***Autora:  Dra. Alejandra Rougon*** 
 # 
@@ -147,3 +147,9 @@
 # 
 # 
 # 
+
+# In[ ]:
+
+
+
+

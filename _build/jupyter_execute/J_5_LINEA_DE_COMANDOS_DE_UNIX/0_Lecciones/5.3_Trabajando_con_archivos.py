@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # 
-# # <p style="color:#2C6A7F"> 04. Trabajando con archivos
+# # <p style="color:#2C6A7F">5.3 Trabajando con archivos
 # 
 # ***Autora:  Dra. Alejandra Rougon*** 
 # 
@@ -181,3 +181,9 @@
 # > * Ver el contenido de los archivos con  `more`, `less`, `head` y `tail`
 # 
 # 
+
+# In[ ]:
+
+
+
+

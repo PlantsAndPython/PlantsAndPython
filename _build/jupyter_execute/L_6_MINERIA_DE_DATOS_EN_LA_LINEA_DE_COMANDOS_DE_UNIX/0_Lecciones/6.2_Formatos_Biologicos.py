@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # <p style="color:#2C6A7F"> 03. Formatos de Datos Biológicos
+# # <p style="color:#2C6A7F">6.2 Formatos de Datos Biológicos
 # 
 # ***Autora:  Dra. Alejandra Rougon*** 
 # 

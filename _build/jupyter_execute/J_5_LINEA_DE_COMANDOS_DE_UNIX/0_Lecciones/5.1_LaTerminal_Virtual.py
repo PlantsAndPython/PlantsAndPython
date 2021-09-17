@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # 
-# # <p style="color:#2C6A7F">02. Terminal Virtual
+# # <p style="color:#2C6A7F">5.1 Terminal Virtual
 # 
 # ***Autora:  Dra. Alejandra Rougon*** 
 # 
@@ -98,3 +98,9 @@
 # * Utilizar las diferentes secciones de la plataforma
 # * Crear un archivo y un directorio en la terminal en línea
 # 
+
+# In[ ]:
+
+
+
+

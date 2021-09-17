@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # 
-# # <p style="color:#2C6A7F"> 01. EDIT, SORT, CUT & GREP
+# # <p style="color:#2C6A7F">6.0 EDIT, SORT, CUT & GREP
 # 
 # 
 # ***Author:  Dr. Alejandra Rougon*** 
@@ -282,3 +282,9 @@
 # * Cut columns from files with `cut`
 # * Look for specific strings inside files with `grep`
 # 
+
+# In[ ]:
+
+
+
+

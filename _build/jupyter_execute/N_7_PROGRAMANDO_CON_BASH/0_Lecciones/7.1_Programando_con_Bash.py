@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # 
-# # <p style="color:#2C6A7F"> 03. Programando con Bash
+# # <p style="color:#2C6A7F">7.1 Programando con Bash
 # 
 # 
 # ***Autora:  Dra. Alejandra Rougon*** 

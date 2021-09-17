@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # 
-# # <p style="color:#2C6A7F"> 09. Trabajando de manera remota
+# # <p style="color:#2C6A7F">7.0 Trabajando de manera remota
 # ***Autora:  Alejandra Rougon*** 
 # 
 # 
@@ -54,3 +54,9 @@
 # 
 # 
 # 
+
+# In[ ]:
+
+
+
+

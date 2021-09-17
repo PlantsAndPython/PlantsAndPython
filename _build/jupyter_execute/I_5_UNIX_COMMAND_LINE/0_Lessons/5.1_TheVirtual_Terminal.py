@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # 
-# # <p style="color:#2C6A7F">02. Virtual Terminal
+# # <p style="color:#2C6A7F">5.1 Virtual Terminal
 # 
 # ***Author:  Dr. Alejandra Rougon*** 
 # 
@@ -103,3 +103,9 @@
 # * Create a file and a folder on your online terminal
 # 
 # 
+
+# In[ ]:
+
+
+
+

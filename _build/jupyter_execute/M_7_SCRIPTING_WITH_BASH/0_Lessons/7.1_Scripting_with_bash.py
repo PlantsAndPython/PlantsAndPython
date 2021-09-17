@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # 
-# # <p style="color:#2C6A7F"> 03. Scripting with Bash
+# # <p style="color:#2C6A7F">7.1 Scripting with Bash
 # 
 # 
 # ***Author:  Dr. Alejandra Rougon*** 

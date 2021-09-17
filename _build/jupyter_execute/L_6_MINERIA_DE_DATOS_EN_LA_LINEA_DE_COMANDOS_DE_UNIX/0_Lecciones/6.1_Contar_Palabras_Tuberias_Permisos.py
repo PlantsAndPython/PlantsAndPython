@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # 
-# # <p style="color:#2C6A7F"> 02. Contar palabras, tuberías & permisos
+# # <p style="color:#2C6A7F">6.0 Contar palabras, tuberías & permisos
 # 
 # ***Autora:  Alejandra Rougon*** 
 # 
@@ -165,3 +165,9 @@
 # * Cambiar permisos con `chmod`
 # 
 # 
+
+# In[ ]:
+
+
+
+

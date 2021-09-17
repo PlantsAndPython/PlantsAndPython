@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # 
-# # <p style="color:#2C6A7F"> 01. Editar, ordenar, cortar y grep
+# # <p style="color:#2C6A7F">6.0 Editar, ordenar, cortar y grep
 # 
 # 
 # ***Autora:  Dra. Alejandra Rougon*** 
@@ -287,3 +287,9 @@
 # * Cortar columnas con `cut`
 # * Buscar cadenas específicas  dentro de archivos con `grep`
 # 
+
+# In[ ]:
+
+
+
+

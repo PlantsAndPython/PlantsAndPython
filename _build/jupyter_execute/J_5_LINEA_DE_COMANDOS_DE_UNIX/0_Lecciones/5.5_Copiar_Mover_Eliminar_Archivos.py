@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # <p style="color:#2C6A7F"> 06. Copiar, mover y eliminar archivos
+# # <p style="color:#2C6A7F">5.5 Copiar, mover y eliminar archivos
 # 
 # 
 # ***Autora:  Dra. Alejandra Rougon*** 
@@ -134,3 +134,9 @@
 # * eliminar archivos y directorios `rm` & `rmdir`
 # * utilizar *wildcards* para seleccionar más de un archivo `*`
 # 
+
+# In[ ]:
+
+
+
+
