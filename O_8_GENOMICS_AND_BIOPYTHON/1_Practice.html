@@ -1,0 +1,1563 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice: How to Build a Genome &#8212; Plants &amp; Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Welcome / Bienvenid@" href="../P_9_COMPARATIVE_GENOMICS/0_Overview.html" />
+    <link rel="prev" title="Lesson 8.6 Using the high performance computing cluster (HPCC) at MSU" href="0_Lessons/8.1_HPCC.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00_Opening_page.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../00_PREFACE/01_Overview.html">
+   Welcome : Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/01_Welcome_Bienvenido/00_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/01_Welcome_Bienvenido/01_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00_PREFACE/Introduction_Illustration.html">
+   Introduction Illustration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00_PREFACE/Ilustracion_de_introduccion.html">
+   Ilustración de introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../00_PREFACE/02_Overview.html">
+   Getting Started : Empezando
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/00_Installing_Anaconda.html">
+     1. Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/01_Instalar_Anaconda.html">
+     1. Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/02_Coding_cells.html">
+     2. Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/03_Celdas_de_codigo.html">
+     2. Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/04_Markdown_cells.html">
+     3. Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/05_Celdas_de_markdown.html">
+     3. Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../00_PREFACE/03_Overview.html">
+   Using : Usando Jupyter Book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/03_Using_Usando_Jupyter_Book/How_to_use_this_Jupyter_Book.html">
+     How to use this Jupyter Book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/03_Using_Usando_Jupyter_Book/Como_usar_este_Jupyter_Book.html">
+     Cómo usar este Jupyter Book
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, lists, &amp; indexing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/Cover_image_1.html">
+   Cover Illustration
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.1_Functions.html">
+     1.1 Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.2_Indexing.html">
+     1.2 Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.3_Lists.html">
+     1.3 Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.4_Indexing_List_Elements.html">
+     1.4 Indexing List Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.5_Modifying_Lists.html">
+     1.5 Modifying Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.6_List_of_Lists.html">
+     1.6 List of Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.7_Slicing.html">
+     1.7 Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.8_Data_Types.html">
+     1.8 Data Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/2_Plants_And_Climate.html">
+   Plants &amp; Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, listas, &amp; INDEXACIÓN
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/Ilustracion_de_portada_1.html">
+   Ilustración de portada
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.1_Funciones.html">
+     1.1 Funciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.2_Indexacion.html">
+     1.2 Indexación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.3_Listas.html">
+     1.3 Listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.4_Indexando_los_elementos_de_una_lista.html">
+     1.4 Indexando los elementos de una lista
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.5_Modificando_listas.html">
+     1.5 Modificando listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.6_Lista_de_listas.html">
+     1.6 Lista de listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.7_Rebanar.html">
+     1.7 Rebanar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.8_Tipos_de_datos.html">
+     1.8 Tipos de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima.html">
+   Las plantas y el clima
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. Visualizing Data with Matplotlib
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/Cover_image_2.html">
+   Cover Illustration
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.0_Modules.html">
+     2.0 Modules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.1_Plots.html">
+     2.1 Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.2_Shape_Size_and_Color.html">
+     2.2 Shape, Size, and Color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.3_Legends.html">
+     2.3 Legends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.4_Subplots.html">
+     2.4 Subplots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/2_Leaf_And_Sunflower_Shapes.html">
+   Leaf &amp; Sunflower Shapes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. VISUALIZACIÓN DE DATOS CON MATPLOTLIB
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/Ilustracion_de_portada_2.html">
+   Ilustración de portada
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.0_Modulos.html">
+     2.0 Módulos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.1_Graficos.html">
+     2.1 Gráficos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.2_Forma_tamano_y_color.html">
+     2.2 Forma, tamaño y color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.3_Leyendas.html">
+     2.3 Leyendas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.4_Subgraficos.html">
+     2.4 Subgráficos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/2_Las_formas_de_las_hojas_y_girasoles.html">
+   Las formas de las hojas y girasoles
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; the Golden Angle
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/Cover_image_3.html">
+   Cover Illustration
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.0_Range_Function.html">
+     3.0 Range Function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.1_For_Loops.html">
+     3.1 For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.2_Counters.html">
+     3.2 Counters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.3_Using_Lists_and_Loops.html">
+     3.3 Using Lists and Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.4_Calculating_Fibonacci.html">
+     3.4 Calculating Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.5_While_Loops.html">
+     3.5 While Loops
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/2_Modeling_Sunflowers.html">
+   Modeling Sunflowers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. LOOPS &amp; EL ÁNGULO ÁUREO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/Ilustracion_de_portada_3.html">
+   Ilustración de portada
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.0_La_funcion_range.html">
+     3.0 La función range
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.1_Loops_for.html">
+     3.1 Loops for
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.2_Contadores.html">
+     3.2 Contadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.3_Usando_listas_y_loops.html">
+     3.3 Usando listas y loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci.html">
+     3.4 Calcular Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.5_Loops_while.html">
+     3.5 Loops while
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/2_Como_construir_un_girasol.html">
+   Cómo construir un girasol
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Data Analysis with Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/Cover_image_4.html">
+   Cover Illustration
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.0_Reading_in_Data.html">
+     4.0 Reading in Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.1_Head_and_Tail.html">
+     4.1 Head and Tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.2_Selecting_Columns.html">
+     4.2 Selecting Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.3_Descriptive_Statistics.html">
+     4.3 Descriptive Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.4_Masks.html">
+     4.4 Masks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.5_Using_iloc.html">
+     4.5 Using iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.6_Seaborn.html">
+     4.6 Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/2_Grapes_in_a_Warming_World.html">
+   Grapes in a Warming World
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Análisis de datos con pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/Ilustracion_de_portada_4.html">
+   Ilustración de portada
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.0_Leyendo_en_data.html">
+     4.0 Leyendo en data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.1_Head_y_tail.html">
+     4.1 Head y tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.2_Seleccionando_columnas.html">
+     4.2 Seleccionando columnas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.3_Estadisticas_descriptivas.html">
+     4.3 Estadísticas descriptivas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.4_Enmascaramiento.html">
+     4.4 Enmascaramiento
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.5_Usando_iloc.html">
+     4.5 Usando iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn.html">
+     4.6 Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/2_Vides_en_un_mundo_que_se_calienta.html">
+   Vides en un mundo que se calienta
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  5. Unix Command Line
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/Cover_image_5.html">
+   Cover Illustration
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Lessons/5.0_Introduction_to_Command_Line.html">
+     <p style="color:#2C6A7F">
+      5.0 Introduction to Command Line
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Lessons/5.1_TheVirtual_Terminal.html">
+     <p style="color:#2C6A7F">
+      5.1 Virtual Terminal
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Lessons/5.2_Exploring_Folders.html">
+     <p style="color:#2C6A7F">
+      5.2 Exploring Folders
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Lessons/5.3_Working_with_Files.html">
+     <p style="color:#2C6A7F">
+      5.3 Working with Files
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Lessons/5.4_Options_and_Arguments.html">
+     <p style="color:#2C6A7F">
+      5.4 Options and Arguments
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Lessons/5.5_Copy_Move_and_Remove_Files.html">
+     <p style="color:#2C6A7F">
+      5.5 Copy, Move &amp; Remove Files
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  5. LINEA DE COMANDOS DE UNIX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/Ilustracion_de_portada_5.html">
+   Ilustración de portada
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.0_IntroduccionLineaDeComandos.html">
+     <p style="color:#2C6A7F">
+      5.0 Introducción a la línea de comandos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.1_LaTerminal_Virtual.html">
+     <p style="color:#2C6A7F">
+      5.1 Terminal Virtual
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.2_ExplorandoDirectorios.html">
+     <p style="color:#2C6A7F">
+      5.2 Explorando directorios
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.3_Trabajando_con_archivos.html">
+     <p style="color:#2C6A7F">
+      5.3 Trabajando con archivos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.4_Opciones_y_Argumentos.html">
+     <p style="color:#2C6A7F">
+      5.4 Opciones y argumentos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.5_Copiar_Mover_Eliminar_Archivos.html">
+     <p style="color:#2C6A7F">
+      5.5 Copiar, mover y eliminar archivos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  6. Unix Commands For Data Mining
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.0_Edit_Sort_Cut_grep.html">
+     <p style="color:#2C6A7F">
+      6.0 EDIT, SORT, CUT &amp; GREP
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.1_Word_Count_Pipelines_Permissions.html">
+     <p style="color:#2C6A7F">
+      6.1 Word Count, Pipelines &amp; Permissions
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.2_Biological_Data_Formats.html">
+     <p style="color:#2C6A7F">
+      6.2 Biological Data Formats
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../K_6_UNIX_COMMANDS_FOR_DATA_MINING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  6. MINERIA DE DATOS EN LA LINEA DE COMANDOS DE UNIX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.0_Editar_Ordentar_Cortar_grep.html">
+     <p style="color:#2C6A7F">
+      6.0 Editar, ordenar, cortar y grep
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.1_Contar_Palabras_Tuberias_Permisos.html">
+     <p style="color:#2C6A7F">
+      6.1 Contar palabras, tuberías &amp; permisos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.2_Formatos_Biologicos.html">
+     <p style="color:#2C6A7F">
+      6.2 Formatos de Datos Biológicos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  7. SCRIPTING WITH BASH
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../M_7_SCRIPTING_WITH_BASH/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.0_WorkingRemotely.html">
+     <p style="color:#2C6A7F">
+      7.0 Working Remotely
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.1_Scripting_with_bash.html">
+     <p style="color:#2C6A7F">
+      7.1 Scripting with Bash
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.2_Summary_of_Commands.html">
+     <p style="color:#2C6A7F">
+      7.2 Summary of Commands
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../M_7_SCRIPTING_WITH_BASH/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  7. PROGRAMANDO CON BASH
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../N_7_PROGRAMANDO_CON_BASH/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.0_Trabajando_de_manera_remota.html">
+     <p style="color:#2C6A7F">
+      7.0 Trabajando de manera remota
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.1_Programando_con_Bash.html">
+     <p style="color:#2C6A7F">
+      7.1 Programando con Bash
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.2_Resumen_de_comandos.html">
+     <p style="color:#2C6A7F">
+      7.2 Resumen de comandos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../N_7_PROGRAMANDO_CON_BASH/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  8. GENOMICS AND BIOPYTHON
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lessons/8.0_Intro_to_Genomics_and_Biopython.html">
+     8.0 Introduction to plant genomics and working with sequences in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lessons/8.1_HPCC.html">
+     Lesson 8.6 Using the high performance computing cluster (HPCC) at MSU
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Practice: How to Build a Genome
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  9. COMPARATIVE GENOMICS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../P_9_COMPARATIVE_GENOMICS/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../P_9_COMPARATIVE_GENOMICS/0_Lessons/9.0_Comp_Genomics.html">
+     9.0 Genome visualization and comparative genomics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../P_9_COMPARATIVE_GENOMICS/1_Practice.html">
+   Practice: Genome visualization and comparative genomics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  10. RNASEQ ANALYSIS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Q_10_RNASEQ_ANALYSIS/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Q_10_RNASEQ_ANALYSIS/0_Lessons/10.0_RNAseq_analysis.html">
+     10.0 A short introduction to short read analysis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Q_10_RNASEQ_ANALYSIS/1_Practice.html">
+   Practice: Introduction to gene expression (RNAseq) analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  11. VARIANT DISCOVERY
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../R_11_VARIANT_DISCOVERY/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../R_11_VARIANT_DISCOVERY/0_Lessons/11.0_Variant_Discovery.html">
+     11.0 Variant discovery
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../R_11_VARIANT_DISCOVERY/1_Practice.html">
+   Practice: Variant discovery, genetic diversity, and population genetics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/O_8_GENOMICS_AND_BIOPYTHON/1_Practice.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2FO_8_GENOMICS_AND_BIOPYTHON/1_Practice.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/O_8_GENOMICS_AND_BIOPYTHON/1_Practice.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/O_8_GENOMICS_AND_BIOPYTHON/1_Practice.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Practice: How to Build a Genome
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#putting-it-all-together">
+     Putting it all together
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#challenge-problems-assembing-genomes-using-other-algorithms">
+   Challenge problems: Assembing genomes using other algorithms
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#which-algorithm-produces-the-best-results">
+     Which algorithm produces the best results?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-hifiasm-we-need-to-provide-the-following-infromation">
+       For hifiasm, we need to provide the following infromation:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><img alt="plants_python_logo.jpg" src="../_images/plants_python_logo.jpg" /></p>
+<div class="section" id="practice-how-to-build-a-genome">
+<h1>Practice: How to Build a Genome<a class="headerlink" href="#practice-how-to-build-a-genome" title="Permalink to this headline">¶</a></h1>
+<p>In this exercise, we will use Wtdbg2, a relatively new genome assembler that runs ~10 fold faster than the leading assemblers FALCON and CANU. This will allow us to assemble a high-quality genome in just a few minutes. Wtdbg2 is a <em>de novo</em> sequence assembler for long noisy reads produced by PacBio or Oxford Nanopore Technologies. It assembles raw reads without error correction and then builds the consensus from intermediate assembly output. Wtdbg2 is able to assemble the human and even the 32Gb Axolotl genome at a speed tens of times faster than CANU and FALCON while producing contigs of comparable base accuracy.</p>
+<p><img alt="building_genome.png" src="../_images/building_genome.png" /></p>
+<p>During assembly, wtdbg2 chops reads into 1024bp segments, merges similar segments into a vertex and connects vertices based on the segment adjacency on reads. The resulting graph is called fuzzy Bruijn graph (FBG). It is akin to De Bruijn graph but permits mismatches/gaps and keeps read paths when collapsing k-mers. The use of FBG distinguishes wtdbg2 from the majority of long-read assemblers.</p>
+<p>I have installed wtdbg2 on HPCC under the research space for our course:
+<code class="docutils literal notranslate"><span class="pre">/mnt/research/HRT841_F21/programs/wtdbg2/</span></code></p>
+<p>If we run <code class="docutils literal notranslate"><span class="pre">/mnt/research/HRT841_F21/programs/wtdbg2/wtdbg2</span> <span class="pre">--help</span></code> in terminal we get the following info:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>WTDBG: De novo assembler for long noisy sequences
+Author: Jue Ruan &lt;ruanjue@gmail.com&gt;
+Version: 2.5 (20190621)
+Usage: wtdbg2 [options] -i &lt;reads.fa&gt; -o &lt;prefix&gt; [reads.fa ...]
+Options:
+ -i &lt;string&gt; Long reads sequences file (REQUIRED; can be multiple), []
+ -o &lt;string&gt; Prefix of output files (REQUIRED), []
+ -t &lt;int&gt;    Number of threads, 0 for all cores, [4]
+ -f          Force to overwrite output files
+ -x &lt;string&gt; Presets, comma delimited, []
+        preset1/rsII/rs: -p 21 -S 4 -s 0.05 -L 5000
+                    preset2: -p 0 -k 15 -AS 2 -s 0.05 -L 5000
+                    preset3: -p 19 -AS 2 -s 0.05 -L 5000
+              sequel/sq
+           nanopore/ont:
+        (genome size &lt; 1G: preset2) -p 0 -k 15 -AS 2 -s 0.05 -L 5000
+        (genome size &gt;= 1G: preset3) -p 19 -AS 2 -s 0.05 -L 5000
+      preset4/corrected/ccs: -p 21 -k 0 -AS 4 -K 0.05 -s 0.5
+ -g &lt;number&gt; Approximate genome size (k/m/g suffix allowed) [0]
+ -X &lt;float&gt;  Choose the best &lt;float&gt; depth from input reads(effective with -g) [50.0]
+ -L &lt;int&gt;    Choose the longest subread and drop reads shorter than &lt;int&gt; (5000 recommended for PacBio) [0]
+             Negative integer indicate tidying read names too, e.g. -5000.
+ -k &lt;int&gt;    Kmer fsize, 0 &lt;= k &lt;= 23, [0]
+ -p &lt;int&gt;    Kmer psize, 0 &lt;= p &lt;= 23, [21]
+             k + p &lt;= 25, seed is &lt;k-mer&gt;+&lt;p-homopolymer-compressed&gt;
+ -K &lt;float&gt;  Filter high frequency kmers, maybe repetitive, [1000.05]
+             &gt;= 1000 and indexing &gt;= (1 - 0.05) * total_kmers_count
+ -S &lt;float&gt;  Subsampling kmers, 1/(&lt;-S&gt;) kmers are indexed, [4.00]
+             -S is very useful in saving memeory and speeding up
+             please note that subsampling kmers will have less matched length
+ -l &lt;float&gt;  Min length of alignment, [2048]
+ -m &lt;float&gt;  Min matched length by kmer matching, [200]
+ -R          Enable realignment mode
+ -A          Keep contained reads during alignment
+ -s &lt;float&gt;  Min similarity, calculated by kmer matched length / aligned length, [0.05]
+ -e &lt;int&gt;    Min read depth of a valid edge, [3]
+ -q          Quiet
+ -v          Verbose (can be multiple)
+ -V          Print version information and then exit
+ --help      Show more options`
+</pre></div>
+</div>
+<p>There is a lot to unpack here, but for our first assembly, we only need to set a few parameters and provide a few input files: <br>
+<code class="docutils literal notranslate"><span class="pre">-i</span></code> this is the file containing the raw long read sequences. For all of our unknown genomes, we will be using raw PacBio reads. These will be located under <code class="docutils literal notranslate"><span class="pre">/mnt/research/HRT841_F21/Genome_assembly/Unknown_sequences/</span></code> <br>
+Each set of raw PacBio sequences will have the prefix: <code class="docutils literal notranslate"><span class="pre">Unknown_PacBio_HiFiX.fasta</span></code> and each file represents sequence reads from a different plant species. There are 6 unknown sets of samples and you should assemble the sample corresponding to your group number. <br>
+<br>
+<code class="docutils literal notranslate"><span class="pre">-o</span></code> Sets the output prefix and directory of where the assembly files will go. We can set this to two places: your home directory <code class="docutils literal notranslate"><span class="pre">/mnt/home/MSU_net_ID</span></code> or <code class="docutils literal notranslate"><span class="pre">/mnt/scratch/MSU_net_ID</span></code>. Putting files in /scratch is preferable since you have <em>virtually</em> unlimited space. The downside is files are automatically removed from /scratch after 45 days, so any important files you want to keep should be removed before then. Do not write to the /HRT841_F21 reasearch space! <br>
+<br>
+<code class="docutils literal notranslate"><span class="pre">-t</span></code> Sets the number of threads or processors to use. Using more processors speeds up the job somewhat (but not always) proportionally, but jobs requesting more processors tend to take longer to launch in the queuing system. We will shoot for 8-12 in this case. <br>
+<br>
+<code class="docutils literal notranslate"><span class="pre">-x</span></code> Sets presets for graph construction and read utilization based on the seuqencing technology that was used (PacBio or Nanopore). Our data will be relatively old (~2-3 year) PacBio data, so we will set it as <code class="docutils literal notranslate"><span class="pre">-x</span> <span class="pre">rs</span></code><br>
+<br>
+<code class="docutils literal notranslate"><span class="pre">-g</span></code> Sets the approximate genome size of the organism. Our unknown species will have relatively small genomes ranging from 14-50 Mb, so we can set it as  20 megabases or <code class="docutils literal notranslate"><span class="pre">-g</span> <span class="pre">20m</span></code><br>
+<br>
+We will leave all other parameters as default, but these can be optimized.</p>
+<p>Because wtdbg2 has low memory and CPU requirements, and we’re assembling relatively small genomes, we can run this job on a developmental node. But, it is probably better to submit a job to the compute nodes via SLURM. I will provide examples for both. <br> <br></p>
+<p><strong>Running an assembly on a developmental node:</strong> There are several ways to access a developmental node from the head node, but the simplest is to use the HPCC module <code class="docutils literal notranslate"><span class="pre">powertools</span></code> to randomly assign us to a node without too many processes running. <br>
+First, we need to load the module <code class="docutils literal notranslate"><span class="pre">powertools</span></code> as follows. Powertools has lots of useful utilities, but we will use <code class="docutils literal notranslate"><span class="pre">dev</span></code></p>
+<p><img alt="hpcc_dev.png" src="../_images/hpcc_dev.png" /></p>
+<p>This will log us into a developmental node to run wtdbg2.</p>
+<p>We can run the following example command to launch the assembly on a developmental node on hpcc. <strong>Note: remember to change the directories to your correct path, change the sequence files to correspomnd with your group number, and change the output directory accordingly:</strong><br>
+<br>
+<code class="docutils literal notranslate"><span class="pre">/mnt/research/HRT841_F21/programs/wtdbg2/wtdbg2</span> <span class="pre">-x</span> <span class="pre">rs</span> <span class="pre">-g</span> <span class="pre">500m</span> <span class="pre">-i</span> <span class="pre">/mnt/research/HRT841_F21/Genome_assembly/Unknown_sequences/Unknown_PacBioHifi_01.fastq</span> <span class="pre">-o</span> <span class="pre">/mnt/scratch/vanbur31/test_assemblies/wtdbg2_unknown_1</span> <span class="pre">-t</span> <span class="pre">8</span></code></p>
+<p>Now that the assembly has finished, we need to turn the contig layout into actual sequences. We do this using <code class="docutils literal notranslate"><span class="pre">./wtpoa-cns</span></code> with the following command:
+<br>
+<code class="docutils literal notranslate"><span class="pre">/mnt/research/HRT841_F21/programs/wtdbg2/wtpoa-cns</span> <span class="pre">-i</span> <span class="pre">/mnt/scratch/vanbur31/test.ctg.lay.gz</span> <span class="pre">-fo</span> <span class="pre">/mnt/scratch/vanbur31/Unknown_assembly_01.fasta</span></code></p>
+<p>Where:
+<br>
+<code class="docutils literal notranslate"><span class="pre">-i</span></code> Sets the path for the inmput contig layout file showing how contigs are arranged in the assembly graph. <br>
+<br>
+<code class="docutils literal notranslate"><span class="pre">-t</span></code> Sets the number of threads or processors to use. Again, using more processors speeds up the job somewhat (but not always) proportionally, but jobs requesting more processors tend to take longer to launch in the queuing system. We will shoot for 12 in this case. <br>
+<br>
+<code class="docutils literal notranslate"><span class="pre">-fo</span></code> Sets the output path of the final assembly file. This is the file we ultimately care about. <br></p>
+<p><strong>Sumbitting an assembly job to SLURM:</strong> We learned how to submit a job to the queue using SLURM in the pre-class lesson. Below is an example SLURM submission script for running the assembly on the compute nodes at HPCC. You can copy this file, edit it in your favorite text editor, save it as <a class="reference external" href="http://assembly.sb">assembly.sb</a> in an appropriate directory on hpcc, and submit it to SLURM for scheduling. I would recommend saving this file to the same directory you will run the assembly in. It may take a few hours for this to run, and it may not finish until the next day. This is OK, and you can proceed to the lesson on BioPython in the meantime. <br>
+<strong>Note: Remember to change the directories, file names, and output file names before submitting the job to SLURM.</strong>
+<br>
+`#!/bin/bash –login
+########## SBATCH Lines for Resource Request ##########</p>
+<p>#SBATCH –time=24:00:00             # limit of wall clock time - how long the job will run (same as -t)
+#SBATCH –nodes=1                 # number of different nodes - could be an exact number or a range of nodes (same as -N)
+#SBATCH –ntasks=8                 # number of tasks - how many tasks (nodes) that you require (same as -n)
+#SBATCH –cpus-per-task=1           # number of CPUs (or cores) per task (same as -c)
+#SBATCH –mem-per-cpu=4g            # memory required per allocated CPU (or core) - amount of memory (in bytes)
+#SBATCH –job-name wtdbg2      # you can give your job a name for easier identification (same as -J)</p>
+<p>########## Command Lines to Run ##########</p>
+<p>cd /mnt/scratch/vanbur31/test_assemblies/ # change directories to where you want the assembly files to be output
+/mnt/research/HRT841_F21/programs/wtdbg2/wtdbg2 -x rs -g 500m -i /mnt/research/HRT841_F21/Genome_assembly/Unknown_sequences/Unknown_PacBioHifi_01.fastq -o /mnt/scratch/vanbur31/test_assemblies/wtdbg2_unknown_1 -t 8 # Command to be run
+/mnt/research/HRT841_F21/programs/wtdbg2/wtpoa-cns -i /mnt/scratch/vanbur31/test.ctg.lay.gz -fo /mnt/scratch/vanbur31/Unknown_assembly_01.fasta`
+<br></p>
+<p>This submission script might be wrapped oddly in Jupyter, you can see an example SLURM script for running wtdbg2 under: <code class="docutils literal notranslate"><span class="pre">/mnt/research/HRT841_F21/Slurm_example_scripts/wtdbg2_slurm_example.sb</span></code> <br>
+To submit our request, we simply use the command <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> while on a developmental node, and call the above submission script (which I have named <code class="docutils literal notranslate"><span class="pre">wtdbg2_slurm_example.sb</span></code>. Remember, you either need to be in the same directory as the submission script or, you can provide the full file path.
+<img alt="sbatch.png" src="../_images/sbatch.png" />
+This job has been given the ID 26795156, and will be run as soon as resources become available on hpcc. How will we know if the job is running? We can use the command <code class="docutils literal notranslate"><span class="pre">squeue</span></code> to see when the job is scheduled to run. You can do this on a job by job basis by providing the job ID or you can use the flag <code class="docutils literal notranslate"><span class="pre">-u</span></code> with your MSU netID to see all of the jobs you have currently in the queue:
+<img alt="squeue.png" src="../_images/squeue.png" />
+<br>
+It may take a while for the assembly to run, but you can check the progress by opening the slurm output log. In the meantime, you can work in groups learning about importing, processing, and analyzing sequences using the Python package Biopython.</p>
+<div class="section" id="putting-it-all-together">
+<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have our genome, it’s time to figure out what it is! Although, ideally you would know the species before you sequenced it… There are circumstances where you might not know the species though, such as microbiome metagenomics, pathology, forensics, etc.
+<br>
+There are several ways to do this, but the simplest is to align our sequences against a database of known sequences and return the best matches. There are  several tools that can do this and for simplicity, we will use BLAST. We will explore tools that can handle genome-scale alignments in later notebooks. For this exercise you will need to import the assembly (after downloading it to your local computer from HPCC), pull out a single or a few contigs, and use BLAST to figure out what species was sequenced. A few things to keep in mind: <br> <br>
+(1) The time it takes to run BLAST over the internet depends on the size and number of querie sequences. Create a single sequence record using Biopython and maybe even break the large contigs into multiple smaller fragments for BLAST. <br> <br>
+(2) A plant genome can be quite large (100-10,000 Gb in general), so you might not want to download the whole assembly to your local computer. You can use some UNIX commands to break up the output fasta file before downloading it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Answer</span>
+
+<span class="c1">## Use SeqIO.parse to import your sequence file</span>
+
+<span class="c1">## Use SeqIO.to_dict to create a dictionary to filter out a single record (contig) from the fasta file</span>
+
+<span class="c1">## Use SeqIO.write to write the single fasta sequence to a new file</span>
+
+<span class="c1">## Use SeqIO.read to read in the single entry fasta file</span>
+
+<span class="c1">## Use NCBIWWW.qblast to run a BLAST on your unknown sequence</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="challenge-problems-assembing-genomes-using-other-algorithms">
+<h1>Challenge problems: Assembing genomes using other algorithms<a class="headerlink" href="#challenge-problems-assembing-genomes-using-other-algorithms" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="which-algorithm-produces-the-best-results">
+<h2>Which algorithm produces the best results?<a class="headerlink" href="#which-algorithm-produces-the-best-results" title="Permalink to this headline">¶</a></h2>
+<p>Wtdgb2 does a fine job, but it is not optimized for assembling most plant genomes (in my experience). This may be due to the assembly approach (fuzzy de Brujin graph vs consensus overlap) or some other factors. There are other programs that consistently provide high quality genome assemblies such as <code class="docutils literal notranslate"><span class="pre">canu</span></code> and <code class="docutils literal notranslate"><span class="pre">hifiasm</span></code>.  Canu can assemble any long read sequences but hifiasm only works with low erorr rate Circular Consensus  PacBio sequences (css or HiFi reads) I have installed Canu and hifiasm on hpcc under: <br>
+<code class="docutils literal notranslate"><span class="pre">/mnt/ufs18/rs-008/HRT841_F21/programs/canu/</span></code>
+<code class="docutils literal notranslate"><span class="pre">/mnt/ufs18/rs-008/HRT841_F21/programs/hifiasm/</span></code></p>
+<p>Although they use fundamentally different algorithms, these programs have similar inputs as wbgt2 but they tend to be more CPU and memory intensive though, and can’t be run quickly on a developmental node.
+<br> Instead, we must submit the job to the queue via the Slurm workload manager. An example submission script can be found under: <br>
+<br>
+<code class="docutils literal notranslate"><span class="pre">/mnt/ufs18/rs-008/HRT841_F21/Slurm_example_scripts/canu_slurm_example.sb</span> <span class="pre">/mnt/ufs18/rs-008/HRT841_F21/Slurm_example_scripts/hifiasm_slurm_example.sb</span></code></p>
+<br> 
+### For Canu, we need to provide the following information: 
+<br>
+<br>
+`-d` Sets the directory to output assembly files. Canu generates A LOT of intermediate files, so if you don't have a lot of space, it's probably best to output it in `/scratch`
+<br>
+<br>
+`-p` Sets the file output names. Ideally this inlclude be the species name and some other identifiers. 
+<br>
+<br>
+`genomesize=` Sets the genome size in megabases (m) or gigabases (g). For example, a 1Gb genome could be set as 1000m or 1g
+<br>
+<br>
+`-pacbio-hifi` Specifies the type of data (raw or polished, nanopore or PacBio) and sets the path to the data for assembly. 
+<br>
+<br>
+<div class="section" id="for-hifiasm-we-need-to-provide-the-following-infromation">
+<h3>For hifiasm, we need to provide the following infromation:<a class="headerlink" href="#for-hifiasm-we-need-to-provide-the-following-infromation" title="Permalink to this headline">¶</a></h3>
+<br>
+<br>
+`-o` sets the output directory and prefix for the assembly. 
+`-t` sets the number of threads to use. More is always better, but without priority node access, 4-12 is a reasonable request for hpcc
+<br>
+Finally, we must provide the full path to the corrected, consensus pacbio Hifi reads
+<p>**Note: There is an art to submitting jobs on HPCC and having them start quickly. I would recommnd changing the number of CPUs or nodes as well as memory requirements to try and get the job to run more quickly.</p>
+<br>
+We can visualize the output assembly graphs or  `.gfa` files for these programs using the bandage: 
+<br>
+https://rrwick.github.io/Bandage/
+<br>
+The .gfa file will show ambigulities or uncertainties in the assembly. A well assembled genome will have few contigs (fragments) with few interactions. A problematic genome assemlby will look like a hairball, like shown below: <p><img alt="bandage_vis.png" src="../_images/bandage_vis.png" /></p>
+<hr class="docutils" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./O_8_GENOMICS_AND_BIOPYTHON"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="0_Lessons/8.1_HPCC.html" title="previous page">Lesson 8.6 Using the high performance computing cluster (HPCC) at MSU</a>
+    <a class='right-next' id="next-link" href="../P_9_COMPARATIVE_GENOMICS/0_Overview.html" title="next page">Welcome / Bienvenid&#64;</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By  <br/>
+        
+            &copy; Copyright By the authors.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

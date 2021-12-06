@@ -1,0 +1,2001 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice: Genome visualization and comparative genomics &#8212; Plants &amp; Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Welcome / Bienvenid@" href="../Q_10_RNASEQ_ANALYSIS/0_Overview.html" />
+    <link rel="prev" title="9.0 Genome visualization and comparative genomics" href="0_Lessons/9.0_Comp_Genomics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/plants_python_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Plants & Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00_Opening_page.html">
+   Welcome to / Bienvenid@ a Plants &amp; Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../00_PREFACE/01_Overview.html">
+   Welcome : Bienvenid@
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/01_Welcome_Bienvenido/00_Welcome.html">
+     Welcome to Plants &amp; Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/01_Welcome_Bienvenido/01_Bienvenido.html">
+     Bienvenid@ a Plants &amp; Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00_PREFACE/Introduction_Illustration.html">
+   Introduction Illustration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00_PREFACE/Ilustracion_de_introduccion.html">
+   Ilustración de introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../00_PREFACE/02_Overview.html">
+   Getting Started : Empezando
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/00_Installing_Anaconda.html">
+     1. Installing Anaconda and using Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/01_Instalar_Anaconda.html">
+     1. Instalar Anaconda y usar Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/02_Coding_cells.html">
+     2. Coding cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/03_Celdas_de_codigo.html">
+     2. Celdas de código
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/04_Markdown_cells.html">
+     3. Markdown cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/02_Getting_started_Empezando/05_Celdas_de_markdown.html">
+     3. Celdas de markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../00_PREFACE/03_Overview.html">
+   Using : Usando Jupyter Book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/03_Using_Usando_Jupyter_Book/How_to_use_this_Jupyter_Book.html">
+     How to use this Jupyter Book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00_PREFACE/03_Using_Usando_Jupyter_Book/Como_usar_este_Jupyter_Book.html">
+     Cómo usar este Jupyter Book
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, lists, &amp; indexing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/Cover_image_1.html">
+   Cover Illustration
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.1_Functions.html">
+     1.1 Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.2_Indexing.html">
+     1.2 Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.3_Lists.html">
+     1.3 Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.4_Indexing_List_Elements.html">
+     1.4 Indexing List Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.5_Modifying_Lists.html">
+     1.5 Modifying Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.6_List_of_Lists.html">
+     1.6 List of Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.7_Slicing.html">
+     1.7 Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.8_Data_Types.html">
+     1.8 Data Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_1_VARIABLES_LISTS_AND_INDEXING/2_Plants_And_Climate.html">
+   Plants &amp; Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  1. Variables, listas, &amp; INDEXACIÓN
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/Ilustracion_de_portada_1.html">
+   Ilustración de portada
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.0_Variables.html">
+     1.0 Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.1_Funciones.html">
+     1.1 Funciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.2_Indexacion.html">
+     1.2 Indexación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.3_Listas.html">
+     1.3 Listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.4_Indexando_los_elementos_de_una_lista.html">
+     1.4 Indexando los elementos de una lista
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.5_Modificando_listas.html">
+     1.5 Modificando listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.6_Lista_de_listas.html">
+     1.6 Lista de listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.7_Rebanar.html">
+     1.7 Rebanar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.8_Tipos_de_datos.html">
+     1.8 Tipos de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima.html">
+   Las plantas y el clima
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. Visualizing Data with Matplotlib
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/Cover_image_2.html">
+   Cover Illustration
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.0_Modules.html">
+     2.0 Modules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.1_Plots.html">
+     2.1 Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.2_Shape_Size_and_Color.html">
+     2.2 Shape, Size, and Color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.3_Legends.html">
+     2.3 Legends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.4_Subplots.html">
+     2.4 Subplots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/2_Leaf_And_Sunflower_Shapes.html">
+   Leaf &amp; Sunflower Shapes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  2. VISUALIZACIÓN DE DATOS CON MATPLOTLIB
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/Ilustracion_de_portada_2.html">
+   Ilustración de portada
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.0_Modulos.html">
+     2.0 Módulos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.1_Graficos.html">
+     2.1 Gráficos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.2_Forma_tamano_y_color.html">
+     2.2 Forma, tamaño y color
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.3_Leyendas.html">
+     2.3 Leyendas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.4_Subgraficos.html">
+     2.4 Subgráficos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/2_Las_formas_de_las_hojas_y_girasoles.html">
+   Las formas de las hojas y girasoles
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. Loops &amp; the Golden Angle
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/Cover_image_3.html">
+   Cover Illustration
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.0_Range_Function.html">
+     3.0 Range Function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.1_For_Loops.html">
+     3.1 For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.2_Counters.html">
+     3.2 Counters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.3_Using_Lists_and_Loops.html">
+     3.3 Using Lists and Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.4_Calculating_Fibonacci.html">
+     3.4 Calculating Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.5_While_Loops.html">
+     3.5 While Loops
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../E_3_LOOPS_AND_THE_GOLDEN_ANGLE/2_Modeling_Sunflowers.html">
+   Modeling Sunflowers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  3. LOOPS &amp; EL ÁNGULO ÁUREO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/Ilustracion_de_portada_3.html">
+   Ilustración de portada
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.0_La_funcion_range.html">
+     3.0 La función range
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.1_Loops_for.html">
+     3.1 Loops for
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.2_Contadores.html">
+     3.2 Contadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.3_Usando_listas_y_loops.html">
+     3.3 Usando listas y loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci.html">
+     3.4 Calcular Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.5_Loops_while.html">
+     3.5 Loops while
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../F_3_LOOPS_Y_EL_ANGULO_DORADO/2_Como_construir_un_girasol.html">
+   Cómo construir un girasol
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Data Analysis with Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/Cover_image_4.html">
+   Cover Illustration
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.0_Reading_in_Data.html">
+     4.0 Reading in Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.1_Head_and_Tail.html">
+     4.1 Head and Tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.2_Selecting_Columns.html">
+     4.2 Selecting Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.3_Descriptive_Statistics.html">
+     4.3 Descriptive Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.4_Masks.html">
+     4.4 Masks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.5_Using_iloc.html">
+     4.5 Using iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.6_Seaborn.html">
+     4.6 Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/1_Practice.html">
+   Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../G_4_DATA_ANALYSIS_WITH_PANDAS/2_Grapes_in_a_Warming_World.html">
+   Grapes in a Warming World
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  4. Análisis de datos con pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/Ilustracion_de_portada_4.html">
+   Ilustración de portada
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.0_Leyendo_en_data.html">
+     4.0 Leyendo en data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.1_Head_y_tail.html">
+     4.1 Head y tail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.2_Seleccionando_columnas.html">
+     4.2 Seleccionando columnas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.3_Estadisticas_descriptivas.html">
+     4.3 Estadísticas descriptivas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.4_Enmascaramiento.html">
+     4.4 Enmascaramiento
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.5_Usando_iloc.html">
+     4.5 Usando iloc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn.html">
+     4.6 Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../H_4_ANALISIS_DE_DATOS_CON_PANDAS/2_Vides_en_un_mundo_que_se_calienta.html">
+   Vides en un mundo que se calienta
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  5. Unix Command Line
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/Cover_image_5.html">
+   Cover Illustration
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Lessons/5.0_Introduction_to_Command_Line.html">
+     <p style="color:#2C6A7F">
+      5.0 Introduction to Command Line
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Lessons/5.1_TheVirtual_Terminal.html">
+     <p style="color:#2C6A7F">
+      5.1 Virtual Terminal
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Lessons/5.2_Exploring_Folders.html">
+     <p style="color:#2C6A7F">
+      5.2 Exploring Folders
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Lessons/5.3_Working_with_Files.html">
+     <p style="color:#2C6A7F">
+      5.3 Working with Files
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Lessons/5.4_Options_and_Arguments.html">
+     <p style="color:#2C6A7F">
+      5.4 Options and Arguments
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/0_Lessons/5.5_Copy_Move_and_Remove_Files.html">
+     <p style="color:#2C6A7F">
+      5.5 Copy, Move &amp; Remove Files
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../I_5_UNIX_COMMAND_LINE/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  5. LINEA DE COMANDOS DE UNIX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/Ilustracion_de_portada_5.html">
+   Ilustración de portada
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.0_IntroduccionLineaDeComandos.html">
+     <p style="color:#2C6A7F">
+      5.0 Introducción a la línea de comandos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.1_LaTerminal_Virtual.html">
+     <p style="color:#2C6A7F">
+      5.1 Terminal Virtual
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.2_ExplorandoDirectorios.html">
+     <p style="color:#2C6A7F">
+      5.2 Explorando directorios
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.3_Trabajando_con_archivos.html">
+     <p style="color:#2C6A7F">
+      5.3 Trabajando con archivos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.4_Opciones_y_Argumentos.html">
+     <p style="color:#2C6A7F">
+      5.4 Opciones y argumentos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.5_Copiar_Mover_Eliminar_Archivos.html">
+     <p style="color:#2C6A7F">
+      5.5 Copiar, mover y eliminar archivos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../J_5_LINEA_DE_COMANDOS_DE_UNIX/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  6. Unix Commands For Data Mining
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.0_Edit_Sort_Cut_grep.html">
+     <p style="color:#2C6A7F">
+      6.0 EDIT, SORT, CUT &amp; GREP
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.1_Word_Count_Pipelines_Permissions.html">
+     <p style="color:#2C6A7F">
+      6.1 Word Count, Pipelines &amp; Permissions
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.2_Biological_Data_Formats.html">
+     <p style="color:#2C6A7F">
+      6.2 Biological Data Formats
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../K_6_UNIX_COMMANDS_FOR_DATA_MINING/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  6. MINERIA DE DATOS EN LA LINEA DE COMANDOS DE UNIX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.0_Editar_Ordentar_Cortar_grep.html">
+     <p style="color:#2C6A7F">
+      6.0 Editar, ordenar, cortar y grep
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.1_Contar_Palabras_Tuberias_Permisos.html">
+     <p style="color:#2C6A7F">
+      6.1 Contar palabras, tuberías &amp; permisos
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.2_Formatos_Biologicos.html">
+     <p style="color:#2C6A7F">
+      6.2 Formatos de Datos Biológicos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  7. SCRIPTING WITH BASH
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../M_7_SCRIPTING_WITH_BASH/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.0_WorkingRemotely.html">
+     <p style="color:#2C6A7F">
+      7.0 Working Remotely
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.1_Scripting_with_bash.html">
+     <p style="color:#2C6A7F">
+      7.1 Scripting with Bash
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../M_7_SCRIPTING_WITH_BASH/0_Lessons/7.2_Summary_of_Commands.html">
+     <p style="color:#2C6A7F">
+      7.2 Summary of Commands
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../M_7_SCRIPTING_WITH_BASH/1_Practice.html">
+   Practice
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  7. PROGRAMANDO CON BASH
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../N_7_PROGRAMANDO_CON_BASH/0_Overview.html">
+   Lecciones
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.0_Trabajando_de_manera_remota.html">
+     <p style="color:#2C6A7F">
+      7.0 Trabajando de manera remota
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.1_Programando_con_Bash.html">
+     <p style="color:#2C6A7F">
+      7.1 Programando con Bash
+     </p>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.2_Resumen_de_comandos.html">
+     <p style="color:#2C6A7F">
+      7.2 Resumen de comandos
+     </p>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../N_7_PROGRAMANDO_CON_BASH/1_Practica.html">
+   Práctica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  8. GENOMICS AND BIOPYTHON
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../O_8_GENOMICS_AND_BIOPYTHON/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../O_8_GENOMICS_AND_BIOPYTHON/0_Lessons/8.0_Intro_to_Genomics_and_Biopython.html">
+     8.0 Introduction to plant genomics and working with sequences in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../O_8_GENOMICS_AND_BIOPYTHON/0_Lessons/8.1_HPCC.html">
+     Lesson 8.6 Using the high performance computing cluster (HPCC) at MSU
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../O_8_GENOMICS_AND_BIOPYTHON/1_Practice.html">
+   Practice: How to Build a Genome
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  9. COMPARATIVE GENOMICS
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="0_Lessons/9.0_Comp_Genomics.html">
+     9.0 Genome visualization and comparative genomics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Practice: Genome visualization and comparative genomics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  10. RNASEQ ANALYSIS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Q_10_RNASEQ_ANALYSIS/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Q_10_RNASEQ_ANALYSIS/0_Lessons/10.0_RNAseq_analysis.html">
+     10.0 A short introduction to short read analysis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Q_10_RNASEQ_ANALYSIS/1_Practice.html">
+   Practice: Introduction to gene expression (RNAseq) analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  11. VARIANT DISCOVERY
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../R_11_VARIANT_DISCOVERY/0_Overview.html">
+   Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../R_11_VARIANT_DISCOVERY/0_Lessons/11.0_Variant_Discovery.html">
+     11.0 Variant discovery
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../R_11_VARIANT_DISCOVERY/1_Practice.html">
+   Practice: Variant discovery, genetic diversity, and population genetics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/P_9_COMPARATIVE_GENOMICS/1_Practice.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PlantsAndPython/PlantsAndPython/issues/new?title=Issue%20on%20page%20%2FP_9_COMPARATIVE_GENOMICS/1_Practice.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/PlantsAndPython/PlantsAndPython/master?urlpath=tree/P_9_COMPARATIVE_GENOMICS/1_Practice.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/PlantsAndPython/PlantsAndPython/blob/master/P_9_COMPARATIVE_GENOMICS/1_Practice.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Practice: Genome visualization and comparative genomics
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#orthology-and-gene-family-analysis">
+     Orthology and Gene Family Analysis
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-problem-run-orthofinder-on-a-group-of-your-favorite-species">
+     Challenge problem: Run OrthoFinder on a group of your favorite species!
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#phylogenetics-with-bio-phylo">
+     Phylogenetics with Bio.Phylo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyzing-orthofinder-gene-family-results">
+   Analyzing Orthofinder gene family results
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-many-total-orthogroups-are-there-for-this-dataset">
+     How many total orthogroups are there for this dataset?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#which-species-has-the-most-genes-in-orthogroups">
+     Which species has the most genes in orthogroups?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#which-orthogroup-has-the-most-genes-in-it-across-all-species">
+     Which orthogroup has the most genes in it (across all species)?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#which-species-has-the-most-orthogroups-with-0-genes-why-do-you-think-that-is">
+     Which species has the most orthogroups with 0 genes? Why do you think that is?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bonus-challenge-plot-the-distribution-of-orthogroup-size">
+     Bonus challenge: Plot the distribution of orthogroup size
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bonus-challenge-2x-identify-orthogroups-that-are-expanded-in-one-species-of-your-choice-this-can-be-simply-based-on-some-cutoff-or-preferably-using-a-statistical-test">
+     BONUS challenge 2X: Identify orthogroups that are expanded in one species of your choice. This can be simply based on some cutoff, or preferably, using a statistical test.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><img alt="plants_python_logo.jpg" src="../_images/plants_python_logo.jpg" /></p>
+<div class="section" id="practice-genome-visualization-and-comparative-genomics">
+<h1>Practice: Genome visualization and comparative genomics<a class="headerlink" href="#practice-genome-visualization-and-comparative-genomics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="orthology-and-gene-family-analysis">
+<h2>Orthology and Gene Family Analysis<a class="headerlink" href="#orthology-and-gene-family-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Synteny is a good way to identify orthologous genes between species, but sometimes genes move around the genome, and when they are in new places, syntenic approaches are unable to identify orthologous gene pairs. Very distantly related species like rice and moss also have undergone massive strucutral rearrangements and polyploidy, so many of the genes are no longer in the same places. Alternatively, we can cluster similar groups of genes into gene families or <strong>orthogroups</strong>. Here, we essentially use BLAST and set a threshold to group genes together based on similarity. Orthogroup analysis is a powerful way to identify corresponding genes across dozens of different species. This can be used to assign function or to identify gene losses or expansions related to important traits.
+<br>
+We will use OrthoFinder to compare the gene content of 56 divere flowering plant genomes.
+<a class="reference external" href="https://github.com/davidemms/OrthoFinder">https://github.com/davidemms/OrthoFinder</a>
+<img alt="orthofinder.jpeg" src="../_images/orthofinder.jpeg" /></p>
+<p>OrthoFinder can be used to cluster genes into orthogroups for any number of species and typcially, more species = more power. The input for OrthoFinder is a set of protein sequences in fasta format for each species. OrthoFinder is computationally intensive (All vs all alignment + phylogenetic tree construction), so we ran this already on a set of 56 species (see below). I have provided an example submission script on HPCC if you’d like to run it yourself!</p>
+</div>
+<div class="section" id="challenge-problem-run-orthofinder-on-a-group-of-your-favorite-species">
+<h2>Challenge problem: Run OrthoFinder on a group of your favorite species!<a class="headerlink" href="#challenge-problem-run-orthofinder-on-a-group-of-your-favorite-species" title="Permalink to this headline">¶</a></h2>
+<p>I have provided orthofinder results for a group of ~21 species, but you can run Orthofinder on a different set of species of your choosing. Orthofinder is relatively CPU intensive, but this depends on the number of species you include in the analysis and the total number of genes. <br></p>
+<p>I put an example  slurm submission script for Orthofinder under <code class="docutils literal notranslate"><span class="pre">/mnt/ufs18/rs-007/REU_Plant_Genome_2021/Orthofinder</span></code> as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/bin/sh --login
+#SBATCH --time=96:00:00             # limit of wall clock time - how long the job will run (same as -t)
+#SBATCH --nodes=1                 # number of different nodes - could be an exact number or a range of nodes (same as -N)
+#SBATCH --ntasks=8                 # number of tasks - how many tasks (nodes) that you require (same as -n)
+#SBATCH --cpus-per-task=1           # number of CPUs (or cores) per task (same as -c)
+#SBATCH --mem-per-cpu=4g            # memory required per allocated CPU (or core) - amount of memory (in bytes)
+#SBATCH -J Orthofinder
+cd /mnt/ufs18/rs-007/REU_Plant_Genome_2021/Orthofinder/
+
+module purge
+module load iccifort/2019.5.281  impi/2018.5.288
+module load OrthoFinder/2.4.1-Python-3.7.4
+
+orthofinder -t 8 -a 8 -b /mnt/ufs18/rs-034/VanBuren_Lab/Bob/ -f /mnt/ufs18/rs-007/REU_Plant_Genome_2021/Orthofinder/Proteins_seqs/
+</pre></div>
+</div>
+<p>Here, I have requested 1 node with 8 cpus to run orthofinder. I have only included protein datasets from 8 species (under <code class="docutils literal notranslate"><span class="pre">/mnt/ufs18/rs-007/REU_Plant_Genome_2021/Orthofinder/Proteins_seqs/</span></code>), so this should run in a reasonable amount of time with these resources. I would typically request 96 processors, but this should be fine. I have requested a wall time of 96 hours and 4 Gb of memory per node. We need to load a few modules including the Intel compilers toolchain and Intel MPI Library, which are useful to create, maintain, and test advanced programs on high performance computing clusters. We will also load Orthofinder version 2.41 and specify the correct version of Python to run. We could also install OrthoFinder locally ourselves using a conda virtual environment, but we won’t get into that here. <strong>If you decide to run Orthofinder yourself, make sure to change the starting directory and the -b flag in the command, as this controls where the files will be output. DO NOT OUTPUT THEM IN THE COURSE DIRECTORY</strong>
+<br>
+If you want to run orthofinder of different/additional species, you simply need to download the protein file and include it in the directory containing protein sequences.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Answer</span>
+<span class="c1">## What species did you choose and what do the output files look like? </span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will use the output files you generated or the ones I provided for the remainder of this exercise.</p>
+</div>
+<div class="section" id="phylogenetics-with-bio-phylo">
+<h2>Phylogenetics with Bio.Phylo<a class="headerlink" href="#phylogenetics-with-bio-phylo" title="Permalink to this headline">¶</a></h2>
+<p>Orthofinder builds a consensus phylogenetic tree based on all of the individual gene trees it constructs for each orthogroup. We can visualize this tree using the Biopython function <code class="docutils literal notranslate"><span class="pre">Phylo</span></code>. This will give us a sense of the phylogenetic placement of the species we included. First, we need to import a few functions in Biopython as well as matplotlib:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+
+<span class="kn">from</span> <span class="nn">Bio</span> <span class="kn">import</span> <span class="n">Phylo</span>
+<span class="kn">from</span> <span class="nn">Bio.Phylo.Applications</span> <span class="kn">import</span> <span class="n">PhymlCommandline</span>
+<span class="kn">from</span> <span class="nn">Bio.Phylo.PAML</span> <span class="kn">import</span> <span class="n">codeml</span>
+<span class="kn">from</span> <span class="nn">Bio.Phylo.PhyloXML</span> <span class="kn">import</span> <span class="n">Phylogeny</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are more powerful things that can be done with <code class="docutils literal notranslate"><span class="pre">Phylo</span></code> , but for now, we will simply read the tree file output from OrthoFinder and plot it.
+<br>
+<br>
+<strong>Note: Remember to provide the path for the species tree file!</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span> <span class="o">=</span> <span class="n">Phylo</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;Practice9_SpeciesTree_rooted_node_labels.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;newick&quot;</span><span class="p">)</span> <span class="c1">## specify the location of the tree file and the format (in this case, newick)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Printing the tree object as a string gives us a look at the entire object hierarchy.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tree(rooted=False, weight=1.0)
+    Clade(name=&#39;N0&#39;)
+        Clade(branch_length=0.155854, name=&#39;A_trichopoda&#39;)
+        Clade(branch_length=0.155854, name=&#39;N1&#39;)
+            Clade(branch_length=0.0606656, name=&#39;N2&#39;)
+                Clade(branch_length=0.228865, name=&#39;M_acuminata&#39;)
+                Clade(branch_length=0.16245, name=&#39;N4&#39;)
+                    Clade(branch_length=0.0263692, name=&#39;N7&#39;)
+                        Clade(branch_length=0.152926, name=&#39;O_sativa&#39;)
+                        Clade(branch_length=0.0448504, name=&#39;N11&#39;)
+                            Clade(branch_length=0.0899464, name=&#39;B_distachyon&#39;)
+                            Clade(branch_length=0.0623047, name=&#39;N18&#39;)
+                                Clade(branch_length=0.021327, name=&#39;T_aestivum&#39;)
+                                Clade(branch_length=0.0322549, name=&#39;H_vulgare&#39;)
+                    Clade(branch_length=0.0475285, name=&#39;N8&#39;)
+                        Clade(branch_length=0.0375789, name=&#39;N12&#39;)
+                            Clade(branch_length=0.0473297, name=&#39;S_bicolor&#39;)
+                            Clade(branch_length=0.0853178, name=&#39;Z_mays&#39;)
+                        Clade(branch_length=0.0267575, name=&#39;N13&#39;)
+                            Clade(branch_length=0.125734, name=&#39;P_glaucum&#39;)
+                            Clade(branch_length=0.0458442, name=&#39;P_virgatum&#39;)
+            Clade(branch_length=0.0434707, name=&#39;N3&#39;)
+                Clade(branch_length=0.144636, name=&#39;N5&#39;)
+                    Clade(branch_length=0.142634, name=&#39;C_quinoa&#39;)
+                    Clade(branch_length=0.189526, name=&#39;A_hypochondriacus&#39;)
+                Clade(branch_length=0.0177019, name=&#39;N6&#39;)
+                    Clade(branch_length=0.0226836, name=&#39;N9&#39;)
+                        Clade(branch_length=0.018779, name=&#39;N14&#39;)
+                            Clade(branch_length=0.223986, name=&#39;H_annuus&#39;)
+                            Clade(branch_length=0.236829, name=&#39;D_carota&#39;)
+                        Clade(branch_length=0.0288145, name=&#39;N15&#39;)
+                            Clade(branch_length=0.213288, name=&#39;O_europaea&#39;)
+                            Clade(branch_length=0.0332987, name=&#39;N19&#39;)
+                                Clade(branch_length=0.1732, name=&#39;I_trifida&#39;)
+                                Clade(branch_length=0.0819983, name=&#39;N22&#39;)
+                                    Clade(branch_length=0.030284, name=&#39;N27&#39;)
+                                        Clade(branch_length=0.0595303, name=&#39;N32&#39;)
+                                            Clade(branch_length=0.0215345, name=&#39;C_baccatum&#39;)
+                                            Clade(branch_length=0.0155229, name=&#39;N38&#39;)
+                                                Clade(branch_length=0.0175606, name=&#39;C_chinense&#39;)
+                                                Clade(branch_length=0.0141036, name=&#39;C_annuum&#39;)
+                                        Clade(branch_length=0.0215106, name=&#39;N33&#39;)
+                                            Clade(branch_length=0.0271149, name=&#39;N39&#39;)
+                                                Clade(branch_length=0.0345668, name=&#39;L_lycopersicum&#39;)
+                                                Clade(branch_length=0.028645, name=&#39;S_tuberosum&#39;)
+                                            Clade(branch_length=0.057139, name=&#39;N40&#39;)
+                                                Clade(branch_length=0.0449735, name=&#39;S_aethiopicum&#39;)
+                                                Clade(branch_length=0.0930196, name=&#39;S_melongena&#39;)
+                                    Clade(branch_length=0.0237471, name=&#39;N28&#39;)
+                                        Clade(branch_length=0.0942438, name=&#39;P_axillaris&#39;)
+                                        Clade(branch_length=0.0726756, name=&#39;N_tabacum&#39;)
+                    Clade(branch_length=0.0108156, name=&#39;N10&#39;)
+                        Clade(branch_length=0.0181781, name=&#39;N16&#39;)
+                            Clade(branch_length=0.255678, name=&#39;K_fedtschenkoi&#39;)
+                            Clade(branch_length=0.185973, name=&#39;N20&#39;)
+                                Clade(branch_length=0.0428217, name=&#39;N23&#39;)
+                                    Clade(branch_length=0.0540807, name=&#39;A_thaliana&#39;)
+                                    Clade(branch_length=0.0438825, name=&#39;C_sativa&#39;)
+                                Clade(branch_length=0.0655039, name=&#39;N24&#39;)
+                                    Clade(branch_length=0.0264044, name=&#39;B_juncea&#39;)
+                                    Clade(branch_length=0.0195624, name=&#39;N29&#39;)
+                                        Clade(branch_length=0.0122517, name=&#39;B_oleracea&#39;)
+                                        Clade(branch_length=7.08878e-06, name=&#39;B_napus&#39;)
+                        Clade(branch_length=0.0173579, name=&#39;N17&#39;)
+                            Clade(branch_length=0.183085, name=&#39;V_vinifera&#39;)
+                            Clade(branch_length=0.0174968, name=&#39;N21&#39;)
+                                Clade(branch_length=0.0181073, name=&#39;N25&#39;)
+                                    Clade(branch_length=0.161275, name=&#39;G_hirsutum&#39;)
+                                    Clade(branch_length=0.153381, name=&#39;M_esculenta&#39;)
+                                Clade(branch_length=0.0120813, name=&#39;N26&#39;)
+                                    Clade(branch_length=0.0929668, name=&#39;N30&#39;)
+                                        Clade(branch_length=0.0530936, name=&#39;N34&#39;)
+                                            Clade(branch_length=0.0534037, name=&#39;G_max&#39;)
+                                            Clade(branch_length=0.0416739, name=&#39;N41&#39;)
+                                                Clade(branch_length=0.112257, name=&#39;V_radiata&#39;)
+                                                Clade(branch_length=0.0343089, name=&#39;P_vulgaris&#39;)
+                                        Clade(branch_length=0.0544206, name=&#39;N35&#39;)
+                                            Clade(branch_length=0.0883218, name=&#39;C_arietinum&#39;)
+                                            Clade(branch_length=0.0267305, name=&#39;N42&#39;)
+                                                Clade(branch_length=0.0655017, name=&#39;M_truncatula&#39;)
+                                                Clade(branch_length=0.0817244, name=&#39;P_sativum&#39;)
+                                    Clade(branch_length=0.0144576, name=&#39;N31&#39;)
+                                        Clade(branch_length=0.145725, name=&#39;N36&#39;)
+                                            Clade(branch_length=0.0259418, name=&#39;N43&#39;)
+                                                Clade(branch_length=0.0648684, name=&#39;C_melo&#39;)
+                                                Clade(branch_length=0.0127271, name=&#39;N47&#39;)
+                                                    Clade(branch_length=0.0306412, name=&#39;B_hispida&#39;)
+                                                    Clade(branch_length=0.0137207, name=&#39;N52&#39;)
+                                                        Clade(branch_length=0.0830025, name=&#39;L_siceraria&#39;)
+                                                        Clade(branch_length=0.0244921, name=&#39;C_lanatus&#39;)
+                                            Clade(branch_length=0.0544347, name=&#39;N44&#39;)
+                                                Clade(branch_length=0.0217733, name=&#39;C_maxima&#39;)
+                                                Clade(branch_length=0.015159, name=&#39;N48&#39;)
+                                                    Clade(branch_length=0.0346505, name=&#39;C_pepo&#39;)
+                                                    Clade(branch_length=0.020101, name=&#39;C_moschata&#39;)
+                                        Clade(branch_length=0.0667513, name=&#39;N37&#39;)
+                                            Clade(branch_length=0.0649491, name=&#39;N45&#39;)
+                                                Clade(branch_length=0.0266938, name=&#39;N49&#39;)
+                                                    Clade(branch_length=0.038294, name=&#39;R_chinensis&#39;)
+                                                    Clade(branch_length=0.0583631, name=&#39;F_annanassas&#39;)
+                                                Clade(branch_length=0.0964584, name=&#39;R_ideus&#39;)
+                                            Clade(branch_length=0.035775, name=&#39;N46&#39;)
+                                                Clade(branch_length=0.0557704, name=&#39;N50&#39;)
+                                                    Clade(branch_length=0.0174307, name=&#39;P_armeniaca&#39;)
+                                                    Clade(branch_length=0.0115406, name=&#39;N53&#39;)
+                                                        Clade(branch_length=0.0138808, name=&#39;P_persica&#39;)
+                                                        Clade(branch_length=0.00803339, name=&#39;P_dulcis&#39;)
+                                                Clade(branch_length=0.0722022, name=&#39;N51&#39;)
+                                                    Clade(branch_length=0.0532603, name=&#39;P_communis&#39;)
+                                                    Clade(branch_length=0.0247789, name=&#39;N54&#39;)
+                                                        Clade(branch_length=0.0200424, name=&#39;M_domestica&#39;)
+                                                        Clade(branch_length=0.0237431, name=&#39;M_baccata&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The Tree object contains global information about the tree, such as whether it’s rooted or unrooted. It has one root clade, and under that, it’s nested lists of clades all the way down to the tips.</p>
+<p>It’s hard to draw meaning from this, but we can draw the tree in a more informative way. The function draw_ascii creates a simple ASCII-art (plain text) dendrogram. This is a convenient visualization for interactive exploration, in case better graphical tools aren’t available.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Phylo</span><span class="o">.</span><span class="n">draw_ascii</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  _____________ A_trichopoda
+ |
+ |                    _____________________ M_acuminata
+ |                   |
+ |                   |                  ______________ O_sativa
+ |                   |                _|
+ |              _____|               | |     _______ B_distachyon
+ |             |     |               | |____|
+ |             |     |               |      |     __ T_aestivum
+_|             |     |               |      |____|
+ |             |     |_______________|           |___ H_vulgare
+ |             |                     |
+ |             |                     |        ___ S_bicolor
+ |             |                     |    ___|
+ |             |                     |   |   |_______ Z_mays
+ |             |                     |___|
+ |             |                         |   ___________ P_glaucum
+ |             |                         |__|
+ |             |                            |___ P_virgatum
+ |_____________|
+               |                  _____________ C_quinoa
+               |     ____________|
+               |    |            |__________________ A_hypochondriacus
+               |    |
+               |    |     _____________________ H_annuus
+               |    |   _|
+               |    |  | |______________________ D_carota
+               |    |  |
+               |    | _|   ____________________ O_europaea
+               |    || |  |
+               |    || |  |   ________________ I_trifida
+               |    || |  |  |
+               |____|| |__|  |                 _ C_baccatum
+                    ||    |  |           _____|
+                    ||    |  |          |     | _ C_chinense
+                    ||    |  |          |     ||
+                    ||    |__|          |      |_ C_annuum
+                    ||       |        __|
+                    ||       |       |  |     __ L_lycopersicum
+                    ||       |       |  |  __|
+                    ||       |       |  | |  |_ S_tuberosum
+                    ||       |       |  |_|
+                    ||       |_______|    |      ___ S_aethiopicum
+                    ||               |    |_____|
+                     |               |          |________ S_melongena
+                     |               |
+                     |               |  ________ P_axillaris
+                     |               |_|
+                     |                 |______ N_tabacum
+                     |
+                     |   _______________________ K_fedtschenkoi
+                     |  |
+                     | _|                      ____ A_thaliana
+                     || |                  ___|
+                     || |                 |   |___ C_sativa
+                     || |_________________|
+                     ||                   |      __ B_juncea
+                     ||                   |_____|
+                     ||                         | , B_oleracea
+                     ||                         |_|
+                      |                           | B_napus
+                      |
+                      |  ________________ V_vinifera
+                      | |
+                      | |   _______________ G_hirsutum
+                      | | ,|
+                      | | ||______________ M_esculenta
+                      |_| |
+                        | |               ____ G_max
+                        | |          ____|
+                        | |         |    |    _________ V_radiata
+                        | |         |    |___|
+                        | | ________|        |__ P_vulgaris
+                        |_||        |
+                          ||        |     _______ C_arietinum
+                          ||        |____|
+                          ||             |  ______ M_truncatula
+                          ||             |_|
+                          ||               |_______ P_sativum
+                          ||
+                          ||                  _____ C_melo
+                          ||               __|
+                          ||              |  | __ B_hispida
+                           |              |  ||
+                           |              |   | _______ L_siceraria
+                           | _____________|   ||
+                           ||             |    |_ C_lanatus
+                           ||             |
+                           ||             |     _ C_maxima
+                           ||             |____|
+                           ||                  |  __ C_pepo
+                           ||                  |_|
+                           ||                    |_ C_moschata
+                            |
+                            |               ___ R_chinensis
+                            |             _|
+                            |       _____| |_____ F_annanassas
+                            |      |     |
+                            |      |     |________ R_ideus
+                            |      |
+                            |______|        _ P_armeniaca
+                                   |   ____|
+                                   |  |    | _ P_persica
+                                   |  |    ||
+                                   |__|     | P_dulcis
+                                      |
+                                      |       ____ P_communis
+                                      |______|
+                                             |  _ M_domestica
+                                             |_|
+                                               |_ M_baccata
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here we can see we constructed OrthoGroups for 56 flowering plant species across ~20 plant families. See if you can figure out which species are which and read the tree correctly.</p>
+<p>You can also create a slightly nicer graphic using the draw function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Phylo</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">branch_labels</span><span class="o">=</span><span class="k">lambda</span> <span class="n">c</span><span class="p">:</span> <span class="n">c</span><span class="o">.</span><span class="n">branch_length</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/1_Practice_19_0.png" src="../_images/1_Practice_19_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="analyzing-orthofinder-gene-family-results">
+<h1>Analyzing Orthofinder gene family results<a class="headerlink" href="#analyzing-orthofinder-gene-family-results" title="Permalink to this headline">¶</a></h1>
+<p>Now that we have a good sense of the phylogenetic placement of our species, we can play around with the OrthoFinder results. The primary output of OrthoFinder is a csv file where each row is a different orthogroup and each column is a different species  The numbers correspond to the number of genes in that orthogroup for each species. We can use this to get simple metrics on or more complex dynamics of expansion and contraction of genes in specific lineages. In terms of downstream analyses, you could identify an orthogroup that contains your favorite gene and find the orthologous sequences in all your other species of interest. You could identify expanded or contracted orthogroups in one species and use Gene Ontology terms or other classifiers to see what those duplicated genes are likely involved in.
+<br>
+You could also use these orthogroups as common identifiers across species and map expression to each orthogroup (as we did in last year’s class porject).</p>
+<p>For simplicity, we will use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to read in, manipulate, and analyze our dataframe:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Practice9_Orthogroups.GeneCount.csv&quot;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Orthogroup</th>
+      <th>A_hypochondriacus</th>
+      <th>A_thaliana</th>
+      <th>A_trichopoda</th>
+      <th>B_distachyon</th>
+      <th>B_hispida</th>
+      <th>B_juncea</th>
+      <th>B_napus</th>
+      <th>B_oleracea</th>
+      <th>C_annuum</th>
+      <th>...</th>
+      <th>R_ideus</th>
+      <th>S_aethiopicum</th>
+      <th>S_bicolor</th>
+      <th>S_melongena</th>
+      <th>S_tuberosum</th>
+      <th>T_aestivum</th>
+      <th>V_radiata</th>
+      <th>V_vinifera</th>
+      <th>Z_mays</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>OG0000000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>16</td>
+      <td>0</td>
+      <td>12967</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>12989</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>OG0000001</td>
+      <td>0</td>
+      <td>2</td>
+      <td>13</td>
+      <td>0</td>
+      <td>12</td>
+      <td>19</td>
+      <td>1</td>
+      <td>0</td>
+      <td>66</td>
+      <td>...</td>
+      <td>5</td>
+      <td>29</td>
+      <td>0</td>
+      <td>4560</td>
+      <td>62</td>
+      <td>0</td>
+      <td>6</td>
+      <td>1</td>
+      <td>6</td>
+      <td>6079</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>OG0000002</td>
+      <td>38</td>
+      <td>6</td>
+      <td>4</td>
+      <td>3</td>
+      <td>7</td>
+      <td>26</td>
+      <td>22</td>
+      <td>10</td>
+      <td>129</td>
+      <td>...</td>
+      <td>132</td>
+      <td>85</td>
+      <td>2</td>
+      <td>66</td>
+      <td>74</td>
+      <td>5</td>
+      <td>22</td>
+      <td>9</td>
+      <td>1</td>
+      <td>3690</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>OG0000003</td>
+      <td>1</td>
+      <td>41</td>
+      <td>17</td>
+      <td>0</td>
+      <td>24</td>
+      <td>71</td>
+      <td>113</td>
+      <td>39</td>
+      <td>73</td>
+      <td>...</td>
+      <td>42</td>
+      <td>16</td>
+      <td>0</td>
+      <td>75</td>
+      <td>60</td>
+      <td>0</td>
+      <td>19</td>
+      <td>44</td>
+      <td>0</td>
+      <td>3215</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>OG0000004</td>
+      <td>8</td>
+      <td>33</td>
+      <td>1</td>
+      <td>25</td>
+      <td>18</td>
+      <td>62</td>
+      <td>106</td>
+      <td>47</td>
+      <td>60</td>
+      <td>...</td>
+      <td>84</td>
+      <td>22</td>
+      <td>33</td>
+      <td>39</td>
+      <td>51</td>
+      <td>132</td>
+      <td>30</td>
+      <td>46</td>
+      <td>22</td>
+      <td>3102</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 58 columns</p>
+</div></div></div>
+</div>
+<div class="section" id="how-many-total-orthogroups-are-there-for-this-dataset">
+<h2>How many total orthogroups are there for this dataset?<a class="headerlink" href="#how-many-total-orthogroups-are-there-for-this-dataset" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Answer</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="which-species-has-the-most-genes-in-orthogroups">
+<h2>Which species has the most genes in orthogroups?<a class="headerlink" href="#which-species-has-the-most-genes-in-orthogroups" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Answer</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="which-orthogroup-has-the-most-genes-in-it-across-all-species">
+<h2>Which orthogroup has the most genes in it (across all species)?<a class="headerlink" href="#which-orthogroup-has-the-most-genes-in-it-across-all-species" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Answer</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="which-species-has-the-most-orthogroups-with-0-genes-why-do-you-think-that-is">
+<h2>Which species has the most orthogroups with 0 genes? Why do you think that is?<a class="headerlink" href="#which-species-has-the-most-orthogroups-with-0-genes-why-do-you-think-that-is" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Answer</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bonus-challenge-plot-the-distribution-of-orthogroup-size">
+<h2>Bonus challenge: Plot the distribution of orthogroup size<a class="headerlink" href="#bonus-challenge-plot-the-distribution-of-orthogroup-size" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Answer</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bonus-challenge-2x-identify-orthogroups-that-are-expanded-in-one-species-of-your-choice-this-can-be-simply-based-on-some-cutoff-or-preferably-using-a-statistical-test">
+<h2>BONUS challenge 2X: Identify orthogroups that are expanded in one species of your choice. This can be simply based on some cutoff, or preferably, using a statistical test.<a class="headerlink" href="#bonus-challenge-2x-identify-orthogroups-that-are-expanded-in-one-species-of-your-choice-this-can-be-simply-based-on-some-cutoff-or-preferably-using-a-statistical-test" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Answer</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PlantsAndPython/PlantsAndPython",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./P_9_COMPARATIVE_GENOMICS"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="0_Lessons/9.0_Comp_Genomics.html" title="previous page">9.0 Genome visualization and comparative genomics</a>
+    <a class='right-next' id="next-link" href="../Q_10_RNASEQ_ANALYSIS/0_Overview.html" title="next page">Welcome / Bienvenid&#64;</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By  <br/>
+        
+            &copy; Copyright By the authors.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
