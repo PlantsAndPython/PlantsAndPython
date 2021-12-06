@@ -141,7 +141,7 @@ plt.xticks(rotation=90) #Rotates x axis labels so that they are readable
 
 # **Based on your graph, do you believe that latitude affects the harvest date?** Explain your reasoning. If harvest date changes going south to north, how does this impact your analysis of the effect of history and climate change on harvest date? If harvest date is not affected by latitude, what are the implications for your analysis then?
 
-# In[10]:
+# In[6]:
 
 
 # Provide your interpretation from your plot of the relationship between harvest date and latitude
@@ -159,7 +159,7 @@ plt.xticks(rotation=90) #Rotates x axis labels so that they are readable
 # 
 # **3. Using your new merged dataframe named "burgundy_switzerland", print out the earliest and latest year in your new merged data.**
 
-# In[ ]:
+# In[7]:
 
 
 # DO NOT DELETE THE PROVIDED CODE FOR MERGING DATAFRAMES
@@ -190,7 +190,7 @@ print(burgundy_switzerland.columns)
 # 
 # Using the seaborn `jointplot()` function (documentation [here](https://seaborn.pydata.org/generated/seaborn.jointplot.html)), make a scatterplot with distributions on the sides to look at this correaltion. **Make sure that your plot includes the regression line!**
 
-# In[13]:
+# In[8]:
 
 
 ### Put your code here
@@ -201,7 +201,7 @@ print(burgundy_switzerland.columns)
 # 
 # Do you think that harvest date between the two regions is correlated? Positive or negative? How variable is the data? Is the variability constant across harvest dates? What can you learn from your graph?
 
-# In[15]:
+# In[9]:
 
 
 # Provide your interpretation of your plot here
@@ -216,7 +216,7 @@ print(burgundy_switzerland.columns)
 # 
 # **Remember:** If you have already imported in `seaborn`, if you use `matplotlib` functions, your plots will still have the style of `seaborn` and you can refer to dataframes and specific columns within `matplotlib` functions that you have already learned about! Use `matplotlib` functions and refer to your dataframe and columns by name and see what happens!
 
-# In[ ]:
+# In[10]:
 
 
 ## DO NOT DELETE THE PROVIDED LINES OF CODE
@@ -231,7 +231,7 @@ plt.figure(figsize=(15,4))
 # 
 # **Hint**: you are plotting lots of data and it will be hard to see the underlying relationship because of overplotting. You can insert the `alpha` argument into the `scatter()` function to create transparency and see your data better. You can start with an alpha as low as 0.1 (e.g., `alpha=0.1`) and adjust it higher if you like.
 
-# In[ ]:
+# In[11]:
 
 
 ## DO NOT DELETE THE PROVIDED LINES OF CODE
@@ -244,7 +244,7 @@ plt.figure(figsize=(8,5))
 
 # **Question:** Based on your graph, is there a correaltion between harvest date and temperature anamoly? If so, is it positive or negative? Do you think the relationship is linear or is curved, like your temperature anomaly vs. year graph?
 
-# In[20]:
+# In[12]:
 
 
 # Write your thoughts here about the relationship between harvest date and temperature here
@@ -256,7 +256,7 @@ plt.figure(figsize=(8,5))
 # 
 # You set out to create a linear model predicting "harvest" as a function of "anomaly" and realize that this is wasy to do using the `sns.lmplot()` function! Read the documentation for `sns.lmplot()` [here](https://seaborn.pydata.org/generated/seaborn.lmplot.html) and make a plot, with a linear fit displayed, of harvest date versus temperature anomaly.
 
-# In[21]:
+# In[13]:
 
 
 # Make your sns.lmplot() here
@@ -265,7 +265,7 @@ plt.figure(figsize=(8,5))
 
 # There seems to be a lot of overplotting with too many points! In the cell below, use the `scatter=False` argument to remove the datapoints for us to see only the fitted line!
 
-# In[23]:
+# In[14]:
 
 
 # Remove the datapoints from your plot in this cell
@@ -273,7 +273,7 @@ plt.figure(figsize=(8,5))
 
 # Look at your fitted line and try to estimate the slope. Remember, the slope is the unit change in $y$ values divided by the unit change in $x$ values. For each degree Celsius, by how many days does the harvest change approximately?
 
-# In[25]:
+# In[15]:
 
 
 # Put your estimate of how many days the harvest changes per each degree of temperature anomaly in Celsius.
@@ -285,7 +285,7 @@ plt.figure(figsize=(8,5))
 # 
 # **Remember:** This list starts at 1900 to 2020 and indexing in python starts at 0.
 
-# In[12]:
+# In[16]:
 
 
 temp_anomaly = [-0.19,-0.23,-0.25,-0.28,-0.3,-0.33,-0.36,-0.37,-0.39,-0.4,-0.41,-0.38,
@@ -304,7 +304,7 @@ temp_anomaly = [-0.19,-0.23,-0.25,-0.28,-0.3,-0.33,-0.36,-0.37,-0.39,-0.4,-0.41,
 # 
 # **Hint:** Remember that -1 can index the last element of a list.
 
-# In[28]:
+# In[17]:
 
 
 # Put your answer here
@@ -312,7 +312,7 @@ temp_anomaly = [-0.19,-0.23,-0.25,-0.28,-0.3,-0.33,-0.36,-0.37,-0.39,-0.4,-0.41,
 
 # Reexamining your graph of temperature anomaly versus year, does your result make sense? What does this say about the pace of climate change and implications for agriculture?
 
-# In[ ]:
+# In[18]:
 
 
 # Write your thoughts about the pace of climate change and its implications

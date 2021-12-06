@@ -12,8 +12,8 @@
 # 
 # For this practice go to the folder  `Analysis` that you have created on the previous activity.
 # 
-# Download the following files and upload them to your [virtual terminal](https://bit.ly/3d9BRCG) <br>[Hp1.fasta](https://drive.google.com/file/d/1FfirIu5Opm5y6aFB9sl20djUSK2YNuhV/view?usp=sharing) (this file was used in the previous activity)<br> 
-# [Hp2.fasta](https://drive.google.com/file/d/1qzfHqaPpFriJ8BMxZ7hbiS1eE7_9Au4B/view?usp=sharing) <br>[Hp3.fasta](https://drive.google.com/file/d/1n5mEkiUrWZUT5WeaQ2ihAheM09X62zWP/view?usp=sharing)
+# Download the following files and upload them to your [virtual terminal](https://bit.ly/3d9BRCG) <br>[Hp1.fasta](https://drive.google.com/file/d/1JywPKMg_mtBeMPDYh_OORinlZc5VjTpj/view?usp=sharing) (this file was used in the previous activity)<br> 
+# [Hp2.fasta](https://drive.google.com/file/d/1OPMD4sggxe8-p381_6t15YE4o5ylu565/view?usp=sharing) <br>[Hp3.fasta](https://drive.google.com/file/d/1yg_su_cRH4c6UgpsonglH3mF8JezG4xZ/view?usp=sharing)
 # 
 # ### <p style="color:#7f2c40">🚴 Exercise 1
 # In the previous activity you answered the following questions for the file `Hp1.fasta`. 

@@ -11,8 +11,10 @@
 # 
 # Para esta práctica ve al directorio `Analysis` que habías creado en la actividad anterior.
 # 
-# Descarga los siguientes archivos y súbelos a tu [virtual terminal](https://bit.ly/3d9BRCG) <br>[Hp1.fasta](https://drive.google.com/file/d/1FfirIu5Opm5y6aFB9sl20djUSK2YNuhV/view?usp=sharing) (este archivo ya lo utilizaste en la actividad anterior) <br> 
-# [Hp2.fasta](https://drive.google.com/file/d/1qzfHqaPpFriJ8BMxZ7hbiS1eE7_9Au4B/view?usp=sharing) <br>[Hp3.fasta](https://drive.google.com/file/d/1n5mEkiUrWZUT5WeaQ2ihAheM09X62zWP/view?usp=sharing)
+# Descarga los siguientes archivos y súbelos a tu [virtual terminal](https://bit.ly/3d9BRCG) <br>[Hp1.fasta](https://drive.google.com/file/d/1JywPKMg_mtBeMPDYh_OORinlZc5VjTpj/view?usp=sharing) (este archivo ya lo utilizaste en la actividad anterior) <br> 
+# [Hp2.fasta](https://drive.google.com/file/d/1OPMD4sggxe8-p381_6t15YE4o5ylu565/view?usp=sharing) <br>[Hp3.fasta](https://drive.google.com/file/d/1yg_su_cRH4c6UgpsonglH3mF8JezG4xZ/view?usp=sharing)
+#    
+# 
 # 
 # ### <p style="color:#7f2c40">🚴 Ejercicio 1
 # En la actividad anterior contestaste las siguientes preguntas para el archivo 

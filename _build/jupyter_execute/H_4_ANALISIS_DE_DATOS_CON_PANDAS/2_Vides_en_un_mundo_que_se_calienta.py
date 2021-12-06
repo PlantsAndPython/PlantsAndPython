@@ -142,7 +142,7 @@ plt.xticks(rotation=90) #Gira las etiquetas del eje x para que sean legibles
 
 # **Según el diagrama, ¿crees que la latitud afecta la fecha de cosecha?** Explica tu razonamiento. Si la fecha de cosecha cambia de sur a norte, ¿cómo afecta esto tu análisis del efecto de la historia y el cambio climático en la fecha de cosecha? Si la fecha de cosecha no se ve afectada por la latitud, ¿cuáles son las implicaciones para tu análisis entonces? 
 
-# In[ ]:
+# In[6]:
 
 
 # Proporciona tu interpretación del diagrama de la relación entre la fecha de cosecha y la latitud 
@@ -161,7 +161,7 @@ plt.xticks(rotation=90) #Gira las etiquetas del eje x para que sean legibles
 # **3. Con tu nuevo marco de datos combinado llamado "burgundy_switzerland", imprime el año más antiguo y el más reciente en tus nuevos datos combinados.** 
 # 
 
-# In[ ]:
+# In[7]:
 
 
 # NO BORRES EL CÓDIGO PROPORCIONADO PARA FUSIONAR MARCOS DE DATOS
@@ -192,7 +192,7 @@ print(burgundy_switzerland.columns)
 # 
 # Usando la función seaborn `jointplot()` (documentación [aquí](https://seaborn.pydata.org/generated/seaborn.jointplot.html)), haz un diagrama de dispersión con distribuciones en los lados para ver esta correlación. **¡Asegúrate de que tu diagrama incluya la línea de regresión!** 
 
-# In[ ]:
+# In[8]:
 
 
 ### PON TU CÓDIGO AQUÍ
@@ -203,7 +203,7 @@ print(burgundy_switzerland.columns)
 # 
 # ¿Crees que la fecha de cosecha entre las dos regiones está correlacionada? ¿Positivamente o negativamente? ¿Qué tan variables son los datos? ¿La variabilidad es constante a lo largo de las fechas de cosecha? ¿Qué puedes aprender de tu diagrama? 
 
-# In[ ]:
+# In[9]:
 
 
 # Proporciona tu interpretación de tu diagrama aquí. 
@@ -217,7 +217,7 @@ print(burgundy_switzerland.columns)
 # 
 # **Recuerda:** Si ya has importado en `seaborn`, si usas las funciones de` matplotlib`, tus diagramas seguirán teniendo el estilo de `seaborn` y podrás consultar marcos de datos y columnas específicas dentro de las funciones de` matplotlib` que ¡ya has aprendido! Utiliza las funciones `matplotlib` y consulta tu marco de datos y columnas por nombre y ve qué sucede. 
 
-# In[ ]:
+# In[10]:
 
 
 ## NO BORRES LAS LÍNEAS DE CÓDIGO PROPORCIONADAS
@@ -232,7 +232,7 @@ plt.figure(figsize=(15,4))
 # 
 # **Sugerencia**: estás trazando una gran cantidad de datos y será difícil ver la relación subyacente debido a la superposición. Puedes insertar el argumento `alpha` en la función `scatter()` para crear transparencia y ver mejor tus datos. Puedes comenzar con un alfa tan bajo como 0.1 (por ejemplo, `alpha=0.1`) y ajustarlo más alto si lo deseas. 
 
-# In[ ]:
+# In[11]:
 
 
 ## NO BORRES LAS LÍNEAS DE CÓDIGO PROPORCIONADAS
@@ -245,7 +245,7 @@ plt.figure(figsize=(8,5))
 
 # **Pregunta:** Según tu diagrama, ¿existe una correlación entre la fecha de cosecha y la anomalía de temperatura? Si es así, ¿es positiva o negativa? ¿Crees que la relación es lineal o curva, como tu diagrama de anomalía de temperatura frente al año? 
 
-# In[ ]:
+# In[12]:
 
 
 # Escribe aquí tus pensamientos sobre la relación entre la fecha de cosecha y la temperatura aquí 
@@ -257,7 +257,7 @@ plt.figure(figsize=(8,5))
 # 
 # Te propusiste crear un modelo lineal que predice "cosecha" como una función de "anomalía" y te das cuenta de que esto es fácil de hacer usando la función `sns.lmplot()`! Lee la documentación de `sns.lmplot()` [aquí](https://seaborn.pydata.org/generated/seaborn.lmplot.html) y haz un gráfico, con un ajuste lineal mostrando, la fecha de cosecha frente a la anomalía de temperatura . 
 
-# In[ ]:
+# In[13]:
 
 
 # Haz tu sns.lmplot() aquí 
@@ -266,7 +266,7 @@ plt.figure(figsize=(8,5))
 
 # ¡Parece haber mucho sobretratamiento con demasiados puntos! En la celda de abajo, usa el argumento `scatter=False` para eliminar los puntos de datos para que podamos ver solo la línea ajustada. 
 
-# In[ ]:
+# In[14]:
 
 
 # Elimina los puntos de datos de tu diagrama en esta celda 
@@ -274,7 +274,7 @@ plt.figure(figsize=(8,5))
 
 # Mira la línea ajustada e intenta estimar la pendiente. Recuerda, la pendiente es el cambio unitario en los valores $y$ dividido por el cambio unitario en los valores $x$. Por cada grado Celsius, ¿cuántos días cambia aproximadamente la cosecha? 
 
-# In[ ]:
+# In[15]:
 
 
 # Pon tu estimación de cuántos días cambia la cosecha por cada grado de anomalía de temperatura en grados Celsius.
@@ -286,7 +286,7 @@ plt.figure(figsize=(8,5))
 # 
 # **Recuerda:** Esta lista comienza en 1900 a 2020 y la indexación en Python comienza en 0. 
 
-# In[18]:
+# In[16]:
 
 
 temp_anomaly = [-0.19,-0.23,-0.25,-0.28,-0.3,-0.33,-0.36,-0.37,-0.39,-0.4,-0.41,-0.38,
@@ -305,7 +305,7 @@ temp_anomaly = [-0.19,-0.23,-0.25,-0.28,-0.3,-0.33,-0.36,-0.37,-0.39,-0.4,-0.41,
 # 
 # **Sugerencia:** Recuerda que -1 puede indexar el último elemento de una lista. 
 
-# In[ ]:
+# In[17]:
 
 
 # PON TU CÓDIGO AQUÍ
@@ -313,7 +313,7 @@ temp_anomaly = [-0.19,-0.23,-0.25,-0.28,-0.3,-0.33,-0.36,-0.37,-0.39,-0.4,-0.41,
 
 # Al volver a examinar tu diagrama de anomalías de temperatura en función del año, ¿tiene sentido tu resultado? ¿Qué dice esto sobre el ritmo del cambio climático y las implicaciones para la agricultura? 
 
-# In[ ]:
+# In[18]:
 
 
 # Escribe tus pensamientos sobre el ritmo del cambio climático y sus implicaciones. 

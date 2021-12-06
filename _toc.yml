@@ -8,7 +8,10 @@ parts:
       sections:
       - file: 00_PREFACE/01_Welcome_Bienvenido/00_Welcome
       - file: 00_PREFACE/01_Welcome_Bienvenido/01_Bienvenido
-
+    - file: 00_PREFACE/Introduction_Illustration
+      title: "Introduction Illustration"
+    - file: 00_PREFACE/Ilustracion_de_introduccion
+      title: "Ilustración de introducción"
     - file: 00_PREFACE/02_Overview
       title: "Getting Started : Empezando"
       sections:
@@ -18,7 +21,6 @@ parts:
       - file: 00_PREFACE/02_Getting_started_Empezando/03_Celdas_de_codigo
       - file: 00_PREFACE/02_Getting_started_Empezando/04_Markdown_cells
       - file: 00_PREFACE/02_Getting_started_Empezando/05_Celdas_de_markdown
-
     - file: 00_PREFACE/03_Overview
       title: "Using : Usando Jupyter Book"
       sections:
@@ -28,8 +30,10 @@ parts:
 
   - caption: 1. Variables, lists, & indexing
     chapters:
+    - file: A_1_VARIABLES_LISTS_AND_INDEXING/Cover_image_1
+      title: "Cover Illustration"
     - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Overview
-      title: Lessons
+      title: "Lessons"
       sections:
       - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.0_Variables
       - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.1_Functions
@@ -41,15 +45,17 @@ parts:
       - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.7_Slicing
       - file: A_1_VARIABLES_LISTS_AND_INDEXING/0_Lessons/1.8_Data_Types
     - file: A_1_VARIABLES_LISTS_AND_INDEXING/1_Practice
-      title: Practice
+      title: "Practice"
     - file: A_1_VARIABLES_LISTS_AND_INDEXING/2_Plants_And_Climate
-      title: Plants & Climate
+      title: "Plants & Climate"
 
 
   - caption: 1. Variables, listas, & INDEXACIÓN
     chapters:
+    - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/Ilustracion_de_portada_1
+      title: "Ilustración de portada"
     - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Overview
-      title: Lecciones
+      title: "Lecciones"
       sections:
       - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.0_Variables
       - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.1_Funciones
@@ -61,15 +67,17 @@ parts:
       - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.7_Rebanar
       - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/0_Lecciones/1.8_Tipos_de_datos
     - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/1_Practica
-      title: Práctica
+      title: "Práctica"
     - file: B_1_VARIABLES_LISTAS_Y_INDEXACION/2_Las_plantas_y_el_clima
-      title: Las plantas y el clima
+      title: "Las plantas y el clima"
 
 
   - caption: 2. Visualizing Data with Matplotlib
     chapters:
+    - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/Cover_image_2
+      title: "Cover Illustration"
     - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Overview
-      title: Lessons
+      title: "Lessons"
       sections:
       - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.0_Modules
       - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.1_Plots
@@ -77,15 +85,17 @@ parts:
       - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.3_Legends
       - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/0_Lessons/2.4_Subplots
     - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/1_Practice
-      title: Practice
+      title: "Practice"
     - file: C_2_VISUALIZING_DATA_WITH_MATPLOTLIB/2_Leaf_And_Sunflower_Shapes
-      title: Leaf & Sunflower Shapes
+      title: "Leaf & Sunflower Shapes"
 
 
   - caption: 2. VISUALIZACIÓN DE DATOS CON MATPLOTLIB
     chapters:
+    - file: D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/Ilustracion_de_portada_2
+      title: "Ilustración de portada"
     - file: D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Overview
-      title: Lecciones
+      title: "Lecciones"
       sections:
       - file: D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.0_Modulos
       - file: D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.1_Graficos
@@ -93,15 +103,17 @@ parts:
       - file: D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.3_Leyendas
       - file: D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/0_Lecciones/2.4_Subgraficos
     - file: D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/1_Practica
-      title: Práctica
+      title: "Práctica"
     - file: D_2_VISUALIZACION_DE_DATOS_CON_MATPLOTLIB/2_Las_formas_de_las_hojas_y_girasoles
-      title: Las formas de las hojas y girasoles
+      title: "Las formas de las hojas y girasoles"
 
 
   - caption: 3. Loops & the Golden Angle
     chapters:
+    - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/Cover_image_3
+      title: "Cover Illustration"
     - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Overview
-      title: Lessons
+      title: "Lessons"
       sections:
       - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.0_Range_Function
       - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.1_For_Loops
@@ -110,15 +122,17 @@ parts:
       - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.4_Calculating_Fibonacci
       - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/0_Lessons/3.5_While_Loops
     - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/1_Practice
-      title: Practice
+      title: "Practice"
     - file: E_3_LOOPS_AND_THE_GOLDEN_ANGLE/2_Modeling_Sunflowers
-      title: Modeling Sunflowers
+      title: "Modeling Sunflowers"
 
 
   - caption: 3. LOOPS & EL ÁNGULO ÁUREO
     chapters:
+    - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/Ilustracion_de_portada_3
+      title: "Ilustración de portada"
     - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Overview
-      title: Lecciones
+      title: "Lecciones"
       sections:
       - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.0_La_funcion_range
       - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.1_Loops_for
@@ -127,15 +141,17 @@ parts:
       - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.4_Calcular_Fibonacci
       - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/0_Lecciones/3.5_Loops_while
     - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/1_Practica
-      title: Práctica
+      title: "Práctica"
     - file: F_3_LOOPS_Y_EL_ANGULO_DORADO/2_Como_construir_un_girasol
-      title: Cómo construir un girasol
+      title: "Cómo construir un girasol"
 
 
   - caption: 4. Data Analysis with Pandas
     chapters:
+    - file: G_4_DATA_ANALYSIS_WITH_PANDAS/Cover_image_4
+      title: "Cover Illustration"
     - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Overview
-      title: Lessons
+      title: "Lessons"
       sections:
       - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.0_Reading_in_Data
       - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.1_Head_and_Tail
@@ -145,15 +161,17 @@ parts:
       - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.5_Using_iloc
       - file: G_4_DATA_ANALYSIS_WITH_PANDAS/0_Lessons/4.6_Seaborn
     - file: G_4_DATA_ANALYSIS_WITH_PANDAS/1_Practice
-      title: Practice
+      title: "Practice"
     - file: G_4_DATA_ANALYSIS_WITH_PANDAS/2_Grapes_in_a_Warming_World
-      title: Grapes in a Warming World
+      title: "Grapes in a Warming World"
 
 
   - caption: 4. Análisis de datos con pandas
     chapters:
+    - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/Ilustracion_de_portada_4
+      title: "Ilustración de portada"
     - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Overview
-      title: Lecciones
+      title: "Lecciones"
       sections:
       - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.0_Leyendo_en_data
       - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.1_Head_y_tail
@@ -163,15 +181,17 @@ parts:
       - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.5_Usando_iloc
       - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/0_Lecciones/4.6_Seaborn
     - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/1_Practica
-      title: Práctica
+      title: "Práctica"
     - file: H_4_ANALISIS_DE_DATOS_CON_PANDAS/2_Vides_en_un_mundo_que_se_calienta
-      title: Vides en un mundo que se calienta
+      title: "Vides en un mundo que se calienta"
 
 
   - caption: 5. Unix Command Line
     chapters:
+    - file: I_5_UNIX_COMMAND_LINE/Cover_image_5
+      title: "Cover Illustration"
     - file: I_5_UNIX_COMMAND_LINE/0_Overview
-      title: Lessons
+      title: "Lessons"
       sections:
       - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.0_Introduction_to_Command_Line
       - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.1_TheVirtual_Terminal
@@ -180,13 +200,15 @@ parts:
       - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.4_Options_and_Arguments
       - file: I_5_UNIX_COMMAND_LINE/0_Lessons/5.5_Copy_Move_and_Remove_Files
     - file: I_5_UNIX_COMMAND_LINE/1_Practice
-      title: Practice
+      title: "Practice"
 
 
   - caption: 5. LINEA DE COMANDOS DE UNIX
     chapters:
+    - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/Ilustracion_de_portada_5
+      title: "Ilustración de portada"
     - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Overview
-      title: Lecciones
+      title: "Lecciones"
       sections:
       - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.0_IntroduccionLineaDeComandos
       - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.1_LaTerminal_Virtual
@@ -195,54 +217,90 @@ parts:
       - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.4_Opciones_y_Argumentos
       - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/5.5_Copiar_Mover_Eliminar_Archivos
     - file: J_5_LINEA_DE_COMANDOS_DE_UNIX/1_Practica
-      title: Práctica
+      title: "Práctica"
 
 
   - caption: 6. Unix Commands For Data Mining
     chapters:
     - file: K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Overview
-      title: Lessons
+      title: "Lessons"
       sections:
       - file: K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.0_Edit_Sort_Cut_grep
       - file: K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.1_Word_Count_Pipelines_Permissions
       - file: K_6_UNIX_COMMANDS_FOR_DATA_MINING/0_Lessons/6.2_Biological_Data_Formats
     - file: K_6_UNIX_COMMANDS_FOR_DATA_MINING/1_Practice
-      title: Practice
+      title: "Practice"
 
 
   - caption: 6. MINERIA DE DATOS EN LA LINEA DE COMANDOS DE UNIX
     chapters:
     - file: L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Overview
-      title: Lecciones
+      title: "Lecciones"
       sections:
       - file: L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.0_Editar_Ordentar_Cortar_grep
       - file: L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.1_Contar_Palabras_Tuberias_Permisos
       - file: L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/0_Lecciones/6.2_Formatos_Biologicos
     - file: L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/1_Practica
-      title: Práctica
+      title: "Práctica"
 
 
   - caption: 7. SCRIPTING WITH BASH
     chapters:
     - file: M_7_SCRIPTING_WITH_BASH/0_Overview
-      title: Lessons
+      title: "Lessons"
       sections:
       - file: M_7_SCRIPTING_WITH_BASH/0_Lessons/7.0_WorkingRemotely
       - file: M_7_SCRIPTING_WITH_BASH/0_Lessons/7.1_Scripting_with_bash
       - file: M_7_SCRIPTING_WITH_BASH/0_Lessons/7.2_Summary_of_Commands
     - file: M_7_SCRIPTING_WITH_BASH/1_Practice
-      title: Practice
+      title: "Practice"
 
 
   - caption: 7. PROGRAMANDO CON BASH
     chapters:
     - file: N_7_PROGRAMANDO_CON_BASH/0_Overview
-      title: Lecciones
+      title: "Lecciones"
       sections:
       - file: N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.0_Trabajando_de_manera_remota
       - file: N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.1_Programando_con_Bash
       - file: N_7_PROGRAMANDO_CON_BASH/0_Lecciones/7.2_Resumen_de_comandos
     - file: N_7_PROGRAMANDO_CON_BASH/1_Practica
-      title: Práctica
+      title: "Práctica"
 
+  - caption: 8. GENOMICS AND BIOPYTHON
+    chapters:
+    - file: O_8_GENOMICS_AND_BIOPYTHON/0_Overview
+      title: "Lessons"
+      sections:
+      - file: O_8_GENOMICS_AND_BIOPYTHON/0_Lessons/8.0_Intro_to_Genomics_and_Biopython
+      - file: O_8_GENOMICS_AND_BIOPYTHON/0_Lessons/8.1_HPCC
+    - file: O_8_GENOMICS_AND_BIOPYTHON/1_Practice
+      title: "Practice"
+
+  - caption: 9. COMPARATIVE GENOMICS
+    chapters:
+    - file: P_9_COMPARATIVE_GENOMICS/0_Overview
+      title: "Lessons"
+      sections:
+      - file: P_9_COMPARATIVE_GENOMICS/0_Lessons/9.0_Comp_Genomics
+    - file: P_9_COMPARATIVE_GENOMICS/1_Practice
+      title: "Practice"
+
+  - caption: 10. RNASEQ ANALYSIS
+    chapters:
+    - file: Q_10_RNASEQ_ANALYSIS/0_Overview
+      title: "Lessons"
+      sections:
+      - file: Q_10_RNASEQ_ANALYSIS/0_Lessons/10.0_RNAseq_analysis
+    - file: Q_10_RNASEQ_ANALYSIS/1_Practice
+      title: "Practice"
+
+  - caption: 11. VARIANT DISCOVERY
+    chapters:
+    - file: R_11_VARIANT_DISCOVERY/0_Overview
+      title: "Lessons"
+      sections:
+      - file: R_11_VARIANT_DISCOVERY/0_Lessons/11.0_Variant_Discovery
+    - file: R_11_VARIANT_DISCOVERY/1_Practice
+      title: "Practice"
 
